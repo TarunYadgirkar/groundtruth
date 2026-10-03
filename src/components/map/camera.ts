@@ -11,6 +11,7 @@ export const GLOBE: Cam = { lat: 38.5, lng: -97, range: 7_500_000, tilt: 0, head
 export const BUILDING_RANGE = 330;
 export const BUILDING_TILT = 60;
 export const DESCENT_MS = 8200;
+export const HOP_MS = 3600;
 export const ASCENT_MS = 2600;
 export const ORBIT_DEG = 25;
 export const ORBIT_MS = 18000;

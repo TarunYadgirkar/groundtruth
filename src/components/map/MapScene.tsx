@@ -10,6 +10,7 @@ import {
   BUILDING_RANGE,
   BUILDING_TILT,
   DESCENT_MS,
+  HOP_MS,
   GLOBE,
   ORBIT_MS,
   SPIN_DEG_PER_SEC,
@@ -32,12 +33,14 @@ export interface FlightTarget {
   lat: number;
   lng: number;
   height: number;
+  style: "cinematic" | "hop";
 }
 
 interface MapSceneProps {
   target: FlightTarget | null;
   prewarm: boolean;
   offset: ScreenOffset;
+  skip: boolean;
   reducedMotion: boolean;
   interactive: boolean;
   showMarker: boolean;
@@ -49,6 +52,7 @@ type Mode =
   | { kind: "spin" }
   | { kind: "probe"; final: Cam; height: number }
   | { kind: "descend"; final: Cam; start: number }
+  | { kind: "hop"; start: number; duration: number }
   | { kind: "orbit"; base: Cam; start: number }
   | { kind: "drift"; base: Cam; start: number }
   | { kind: "ascend"; from: Cam; start: number }
@@ -82,6 +86,27 @@ function probe(map: google.maps.maps3d.Map3DElement, final: Cam): () => void {
 }
 
 const MAX_ROOF_ABOVE_GROUND = 150;
+const INSTANT_SETTLE_MS = 200;
+const HOP_GRACE_MS = 1500;
+
+// Short hop for later lookups: Google's own fly-to arcs over the city and lands
+// relative to the ground, so no probe is needed.
+function hop(map: google.maps.maps3d.Map3DElement, final: Cam, offset: ScreenOffset, height: number, durationMillis: number): void {
+  const end = framed(final, offset, 1);
+  map.stopCameraAnimation();
+  map.flyCameraTo({
+    endCamera: { center: { lat: end.lat, lng: end.lng, altitude: height / 2 }, altitudeMode: "RELATIVE_TO_GROUND", range: final.range, tilt: final.tilt, heading: final.heading },
+    durationMillis,
+  });
+}
+
+// After a hop, the camera sits range·cos(tilt) above a look-at point that is height/2 above ground.
+function groundAfterHop(map: google.maps.maps3d.Map3DElement, final: Cam, height: number): number | null {
+  const cam = map.cameraPosition;
+  const camAlt = cam && typeof cam.altitude === "number" ? cam.altitude : NaN;
+  const ground = camAlt - final.range * Math.cos((final.tilt * Math.PI) / 180) - height / 2;
+  return Number.isFinite(ground) && ground > -100 && ground < 4000 ? ground : null;
+}
 
 // The probe asks for a camera PROBE_RANGE metres above the ground, so the camera's
 // absolute altitude minus that range is the ground elevation. The look-at point
@@ -96,7 +121,7 @@ function measure(map: google.maps.maps3d.Map3DElement, height: number): { ground
   return { ground, roof: Math.max(roof, ground + height * 0.5) };
 }
 
-export default function MapScene({ target, prewarm, offset, reducedMotion, interactive, showMarker, onProgress, onArrive }: MapSceneProps) {
+export default function MapScene({ target, prewarm, offset, skip, reducedMotion, interactive, showMarker, onProgress, onArrive }: MapSceneProps) {
   const mapRef = useRef<Map3DRef | null>(null);
   const modeRef = useRef<Mode>({ kind: "spin" });
   const cbRef = useRef({ onProgress, onArrive });
@@ -104,6 +129,7 @@ export default function MapScene({ target, prewarm, offset, reducedMotion, inter
   const [roofAlt, setRoofAlt] = useState<number | null>(null);
 
   const offsetRef = useRef(offset);
+  const measuredRef = useRef<{ id: string; m: ReturnType<typeof measure> } | null>(null);
 
   useEffect(() => {
     cbRef.current = { onProgress, onArrive };
@@ -127,27 +153,53 @@ export default function MapScene({ target, prewarm, offset, reducedMotion, inter
       modeRef.current = { kind: "probe", final, height: target.height };
       return map ? probe(map, final) : undefined;
     }
-    const m = map ? measure(map, target.height) : null;
-    if (map) map.dataset.surface = m ? `${Math.round(m.ground)}/${Math.round(m.roof)}` : "none";
-    const roof = m?.roof ?? target.height;
-    const landed: Cam = { ...final, alt: m ? (m.ground + roof) / 2 : target.height };
-    const arrive = () => {
+    const instant = skip || reducedMotion;
+    const land = (base: Cam, roof: number) => {
+      if (map) applyCam(map, framed(base, offsetRef.current, 1));
+      modeRef.current = reducedMotion ? { kind: "idle" } : { kind: "orbit", base, start: performance.now() };
       setRoofAlt(roof + RING_LIFT);
       cbRef.current.onProgress(1);
       cbRef.current.onArrive();
     };
-    if (reducedMotion) {
-      if (map) applyCam(map, framed(landed, offsetRef.current, 1));
-      modeRef.current = { kind: "idle" };
-      arrive();
+
+    if (target.style === "hop" && map) {
+      let done = false;
+      const finish = () => {
+        if (done) return;
+        done = true;
+        const ground = groundAfterHop(map, final, target.height) ?? 0;
+        land({ ...final, alt: ground + target.height / 2 }, ground + target.height);
+      };
+      const duration = instant ? 0 : HOP_MS;
+      hop(map, final, offsetRef.current, target.height, duration);
+      stepRef.current = -1;
+      modeRef.current = { kind: "hop", start: now, duration };
+      const onEnd = () => !instant && finish();
+      map.addEventListener("gmp-animationend", onEnd);
+      const t = window.setTimeout(finish, instant ? INSTANT_SETTLE_MS : HOP_MS + HOP_GRACE_MS);
+      return () => {
+        map.removeEventListener("gmp-animationend", onEnd);
+        window.clearTimeout(t);
+      };
+    }
+
+    if (measuredRef.current?.id !== target.id) {
+      measuredRef.current = { id: target.id, m: map ? measure(map, target.height) : null };
+    }
+    const m = measuredRef.current.m;
+    if (map) map.dataset.surface = m ? `${Math.round(m.ground)}/${Math.round(m.roof)}` : "none";
+    const roof = m?.roof ?? target.height;
+    const landed: Cam = { ...final, alt: m ? (m.ground + roof) / 2 : target.height };
+    if (instant) {
+      land(landed, roof);
       return;
     }
     if (map) applyCam(map, descentAt(landed, GLOBE.range, 0));
     stepRef.current = -1;
     modeRef.current = { kind: "descend", final: landed, start: now };
-    const t = window.setTimeout(arrive, DESCENT_MS);
+    const t = window.setTimeout(() => land(landed, roof), DESCENT_MS);
     return () => window.clearTimeout(t);
-  }, [target, prewarm, reducedMotion]);
+  }, [target, prewarm, skip, reducedMotion]);
 
   useEffect(() => {
     let raf = 0;
@@ -173,7 +225,13 @@ export default function MapScene({ target, prewarm, offset, reducedMotion, inter
           stepRef.current = s;
           cbRef.current.onProgress(u);
         }
-        if (u >= 1) modeRef.current = { kind: "orbit", base: mode.final, start: now };
+      } else if (mode.kind === "hop") {
+        const u = mode.duration > 0 ? Math.min(1, (now - mode.start) / mode.duration) : 1;
+        const s = Math.floor(u * PROGRESS_STEPS);
+        if (s !== stepRef.current) {
+          stepRef.current = s;
+          cbRef.current.onProgress(u);
+        }
       } else if (mode.kind === "orbit") {
         const u = Math.min(1, (now - mode.start) / ORBIT_MS);
         applyCam(map, framed(orbitAt(mode.base, u), offsetRef.current, 1));
