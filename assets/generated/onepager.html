@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Groundtruth one-pager</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@page { size: Letter; margin: 0.5in 0.55in; }
+:root { --ink:#1E2B26; --muted:#5F6A62; --accent:#C8452C; --hair:rgba(30,43,38,.15); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font: 9.4pt/1.38 'Atkinson Hyperlegible', sans-serif; color: var(--ink); background: #fff; }
+header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1.5px solid var(--ink); padding-bottom: 6px; margin-bottom: 8px; }
+h1 { font: 700 22pt/1 'Archivo', sans-serif; font-stretch: 125%; letter-spacing: -.01em; }
+.meta { font: 7.6pt/1.4 'JetBrains Mono', monospace; color: var(--muted); text-align: right; }
+.lede { font-size: 10.4pt; margin-bottom: 8px; text-wrap: pretty; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 18px; }
+h2 { font: 700 8pt/1 'JetBrains Mono', monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 2px 0 4px; }
+ul { padding-left: 13px; }
+li { margin-bottom: 2.5px; }
+b { font-weight: 700; }
+.mono { font-family: 'JetBrains Mono', monospace; font-size: 8pt; }
+table { width: 100%; border-collapse: collapse; font-size: 8.6pt; }
+td, th { text-align: left; padding: 2px 4px 2px 0; border-bottom: 1px solid var(--hair); vertical-align: top; }
+th { font: 500 7.4pt 'JetBrains Mono', monospace; color: var(--muted); }
+.pipe { display: flex; gap: 4px; align-items: center; font: 500 7.6pt 'JetBrains Mono', monospace; margin: 2px 0 6px; flex-wrap: wrap; }
+.pipe span { background: #F2EFE6; padding: 3px 6px; }
+.pipe i { color: var(--accent); font-style: normal; }
+footer { margin-top: 8px; border-top: 1px solid var(--hair); padding-top: 5px; font: 7.4pt/1.4 'JetBrains Mono', monospace; color: var(--muted); display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Groundtruth</h1>
+  <div class="meta">Hack-Nation 7 · RealPage: Rental Housing Law Navigator<br>Team Groundtruth (solo) · Tarun Yadgirkar</div>
+</header>
+
+<p class="lede"><b>Which rental housing laws apply at this address, on any date?</b> Groundtruth reads state and city housing law, turns it into structured rules with verbatim citations, places each apartment building in its legal jurisdiction, and decides which rules apply. The result for each rule is applies, unknown, superseded, not yet effective, or pending. Type an address, fly from orbit down to the building in Google's photoreal 3D, and drag a date slider to see laws take effect.</p>
+
+<div class="pipe"><span>70 law docs</span><i>→</i><span>Claude extraction (200 rules)</span><i>→</i><span>verbatim quote check 200/200</span><i>→</i><span>consolidation → 55 rules</span><i>→</i><span>Census geocoding → legal city</span><i>→</i><span>deterministic engine</span><i>→</i><span>500 lookups · T1–T5 · UI</span></div>
+
+<div class="grid">
+<section>
+  <h2>1 · Challenge and users</h2>
+  <ul>
+    <li>US rental law is layered: state, county and city rules, each with coverage tests and effective dates. The mailing city isn't always the legal city ("Dorchester" is Boston).</li>
+    <li><b>Users:</b> renters (know your rights), advocates and agencies (who a law covers), small landlords (obligations before acting).</li>
+  </ul>
+  <h2>2 · Tools and models</h2>
+  <ul>
+    <li><b>Claude Opus 5.5</b>: per-document rule extraction (structured outputs + Zod), cross-document consolidation, the grounded "ask about this address" answers, and new-law ingestion.</li>
+    <li><b>TypeScript rules engine</b> (no AI): coverage (units, year built vs certificate-of-occupancy cutoffs, owner type, restricted programs), dates, state-vs-local precedence, conflict flags.</li>
+    <li><b>Census Geocoder</b> + incorporated places for the legal city; Google geocoding for rooftop points.</li>
+    <li><b>Next.js 16, Google Maps 3D</b> (photoreal tiles), Motion, Vercel.</li>
+  </ul>
+  <h2>3 · What worked</h2>
+  <ul>
+    <li>All five change tests behave as specified: T1 flips 250 CA addresses; T2 hits only Hoboken and Jersey City (90); T3 flips 140 NJ addresses, with conflict flags on the 90 in Hoboken and Jersey City; T4 lists 110 MA addresses as pending; T5 returns 0.</li>
+    <li>An AI-assisted audit of 27 stratified addresses (all 9 cities and the edge cases) scored <b>precision/recall 0.92 → 0.98</b> after pipeline-only fixes.</li>
+    <li><span class="mono">/new-law</span>: paste an unseen ordinance and it is extracted, quote-checked and applied to 500 buildings in about 30 s (a fictional Cambridge ban gave 48 of 500).</li>
+  </ul>
+</section>
+<section>
+  <h2>4 · What was challenging</h2>
+  <ul>
+    <li><b>Missing facts.</b> Public records lack owner type and often units or year built. We infer unit ranges from assessor use codes, encode owner-exemption caps, and otherwise return <i>unknown</i> with the exact missing fact.</li>
+    <li><b>Over-splitting.</b> The first extraction produced 120 fragmentary rules. A granularity-aware consolidation pass brought it to 55, close to the answer key's ~58.</li>
+    <li><b>Link-only sources.</b> We captured 16 of 33 one page at a time, as the organizer allowed. ecode360 blocked capture, so Hoboken and Newark local rent control is a known gap.</li>
+    <li><b>Geocoding.</b> Fuzzy matches landed on the wrong building. We reject house-number mismatches and fall back to unambiguous postal neighborhoods (499 of 500 resolved).</li>
+  </ul>
+  <h2>5 · How the time was spent (≈ 20 h)</h2>
+  <table>
+    <tr><th>Hours</th><th>Work</th></tr>
+    <tr><td>0–1</td><td>Track choice, rules, starter pack</td></tr>
+    <tr><td>1–5</td><td>Extraction pipeline, geocoding, engine; UI built in parallel</td></tr>
+    <tr><td>5–9</td><td>Link-only capture, consolidation, submission JSON, three audit rounds</td></tr>
+    <tr><td>9–14</td><td>3D fly-in, time slider, ask bar, /changes, /new-law, deploy, QA</td></tr>
+    <tr><td>14–20</td><td>Camera polish, videos and narration, docs, submission</td></tr>
+  </table>
+  <h2>Responsible design</h2>
+  <ul>
+    <li>Every answer shows its citation, verbatim quote, source and retrieval date. Enacted, pending and failed law are kept separate. Not legal advice. AI runs server-side only and answers only from cited rules.</li>
+  </ul>
+  <h2>With 24 more hours</h2>
+  <ul><li>Capture the missing local ordinances through official channels, take owner type from public registries, and add a Spanish renter view.</li></ul>
+</section>
+</div>
+
+<footer><span>groundtruth-rho.vercel.app</span><span>github.com/TarunYadgirkar/groundtruth</span><span>Not legal advice</span></footer>
+</body>
+</html>
