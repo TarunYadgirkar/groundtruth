@@ -20,29 +20,29 @@ interface Line {
 
 const SCRIPTS: Record<string, { duration: number; lines: Line[] }> = {
   demo: {
-    duration: 56.4,
+    duration: 58.37,
     lines: [
-      { at: 0.3, until: 5.1, text: "Which rental housing laws apply at this address, on any date? This is Groundtruth." },
-      { at: 5.4, until: 18.0, text: "Type an address and we fly in from orbit. Groundtruth resolves the legal jurisdiction from Census boundaries, not just the mailing city, and tests every rule against this building's facts." },
-      { at: 18.4, until: 24.3, text: "Every rule cites its exact source text. Missing facts mean unknown, never a guess." },
-      { at: 24.6, until: 30.6, text: "Jump to July 2027: New Jersey's FAIR Act kicks in, flagged against Hoboken's own ban." },
-      { at: 30.9, until: 37.2, text: "Next, a building in Boston that's mailed as Dorchester." },
-      { at: 37.5, until: 42.2, text: "Legally Boston, and no rent cap: Massachusetts struck its ballot question." },
-      { at: 42.5, until: 49.1, text: "Paste a new ordinance. Claude extracts it, verifies the quote, and applies it to five hundred buildings." },
-      { at: 49.5, until: 56.2, text: "Forty-eight buildings affected, each with its source. Groundtruth. Not legal advice." },
+      { at: 0.3, until: 5.0, text: "Which housing laws apply at this address, on any date? Meet Groundtruth." },
+      { at: 5.4, until: 16.6, text: "Type an address and we fly in from orbit. Groundtruth resolves the legal jurisdiction, not just the mailing city." },
+      { at: 17.2, until: 23.2, text: "Every rule cites its exact source text. Missing facts mean unknown, never a guess." },
+      { at: 23.5, until: 29.6, text: "Jump to July 2027: New Jersey's FAIR Act kicks in, flagged against Hoboken's ban." },
+      { at: 29.9, until: 37.4, text: "Ask in plain English. My landlord wants ten percent more next month. Is that allowed?" },
+      { at: 37.7, until: 46.6, text: "Claude answers only from this building's cited rules, and highlights the rule it relied on." },
+      { at: 46.9, until: 51.7, text: "Paste a new ordinance: extracted, verified, and tested on five hundred buildings." },
+      { at: 51.9, until: 58.1, text: "Forty-eight buildings affected, each with its source. Groundtruth. Not legal advice." },
     ],
   },
   tech: {
-    duration: 55.53,
+    duration: 56.2,
     lines: [
-      { at: 0.3, until: 7.9, text: "Claude Opus 5.5 reads seventy law documents and returns two hundred candidate rules as structured outputs, validated with Zod." },
+      { at: 0.3, until: 7.9, text: "Claude Opus 5.5 reads seventy law documents and returns two hundred candidate rules, validated with Zod." },
       { at: 8.2, until: 13.3, text: "Every quote is checked word for word against its source. All two hundred matched." },
-      { at: 13.6, until: 19.3, text: "Duplicates merge into fifty-five rules. Then a deterministic engine, with no AI, applies coverage, dates and precedence." },
+      { at: 13.6, until: 19.3, text: "Duplicates merge into fifty-five rules, applied by a deterministic engine with no AI." },
       { at: 19.5, until: 26.5, text: "The five change tests run on that same engine, down to zero hits for Massachusetts' struck ballot question." },
-      { at: 26.8, until: 34.3, text: "The hard part: public records often lack units, year built or owner type. We infer units from assessor codes, otherwise we say unknown." },
-      { at: 34.6, until: 38.0, text: "That logic lives right here in the engine." },
-      { at: 38.2, until: 43.9, text: "What didn't work: a code publisher blocked capture, so Hoboken and Newark rent control is a known gap." },
-      { at: 44.2, until: 55.3, text: "An independent audit of twenty-seven addresses took precision and recall from point nine two to point nine eight. Built with Next.js, Google 3D Maps, and Claude." },
+      { at: 26.8, until: 34.3, text: "The hard part: public records often lack units or year built. We infer units from assessor codes, or say unknown." },
+      { at: 34.6, until: 38.6, text: "That logic lives right here in the engine." },
+      { at: 38.8, until: 44.5, text: "What didn't work: one code publisher blocked capture, so Hoboken and Newark are a known gap." },
+      { at: 44.8, until: 55.9, text: "An independent audit of twenty-seven addresses took precision and recall from point nine two to point nine eight. Built with Next.js, Google 3D Maps, and Claude." },
     ],
   },
 };
@@ -83,6 +83,7 @@ async function narrate(name: string, voiceId: string): Promise<void> {
     const slot = line.until - line.at;
     const tempo = len > slot ? Math.min(MAX_TEMPO, len / slot) : 1;
     if (len / tempo > slot + 0.4) console.warn(`${name} line ${i} runs long: ${len.toFixed(2)}s for a ${slot.toFixed(2)}s slot`);
+    console.log(`  ${name}[${i}] ${len.toFixed(2)}s / slot ${slot.toFixed(2)}s tempo ${tempo.toFixed(2)}`);
     parts.push({ file, at: line.at, tempo });
   }
 
