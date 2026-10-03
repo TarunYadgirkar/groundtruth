@@ -35,6 +35,7 @@ const STEPS = [
     name: "Lookups and changes",
     body: "The same engine answers any address on any date. Moving the date slider re-runs it in your browser, which is how the change tests are produced.",
     stat: ["5", "change tests"] as const,
+    link: { href: "/changes", label: "See who each change affects" },
   },
 ];
 
@@ -103,6 +104,11 @@ export default function MethodPage() {
                 <h3 className="text-body font-bold text-ink">{s.name}</h3>
                 <p className="flex-1 text-caption text-ink-muted">{s.body}</p>
                 <Stat value={s.stat[0]} label={s.stat[1]} />
+                {s.link && (
+                  <Link href={s.link.href} className="link text-caption text-ink">
+                    {s.link.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ol>

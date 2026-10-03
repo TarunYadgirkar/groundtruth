@@ -64,6 +64,9 @@ function OverflowMenu({ lat, lng }: { lat: number; lng: number }) {
             >
               Open in Google Maps <ArrowSquareOutIcon size={14} aria-hidden />
             </a>
+            <Link role="menuitem" href="/changes" className={item}>
+              Who each law change affects
+            </Link>
             <Link role="menuitem" href="/method" className={item}>
               How results are computed
             </Link>
