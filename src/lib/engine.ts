@@ -1,4 +1,4 @@
-import type { Address, Evaluation, LookupResult, Rule } from "./types";
+import type { Address, CheckRow, Evaluation, LookupResult, Rule } from "./types";
 
 export const DEFAULT_AS_OF = "2026-10-01";
 
@@ -60,17 +60,21 @@ function and(a: Tri, b: Tri): Tri {
 interface Check {
   covered: Tri;
   reasons: string[];
+  rows: CheckRow[];
 }
+
+const outcome = (t: Tri): CheckRow["outcome"] => (t === "yes" ? "pass" : t === "no" ? "fail" : "unknown");
 
 function unitsCheck(rule: Rule, units: UnitRange): Check {
   const { min_units, max_units } = rule.coverage;
-  if (min_units == null && max_units == null) return { covered: "yes", reasons: [] };
+  if (min_units == null && max_units == null) return { covered: "yes", reasons: [], rows: [] };
   const label = units.source === "record" ? `${units.min} units` : units.source === "use_description" ? `unit count inferred from use code (${units.min ?? "?"}–${units.max ?? "?"})` : "unit count not in records";
   let covered: Tri = "yes";
   if (min_units != null) covered = and(covered, units.min != null && units.min >= min_units ? "yes" : units.max != null && units.max < min_units ? "no" : "unknown");
   if (max_units != null) covered = and(covered, units.max != null && units.max <= max_units ? "yes" : units.min != null && units.min > max_units ? "no" : "unknown");
   const limits = [min_units != null ? `≥${min_units}` : null, max_units != null ? `≤${max_units}` : null].filter(Boolean).join(" and ");
-  return { covered, reasons: [`Rule covers buildings with ${limits} units; ${label}.`] };
+  const building = units.min == null && units.max == null ? "Not in records" : units.min === units.max ? `${units.min}` : `${units.min ?? "?"}–${units.max ?? "?"} (use code)`;
+  return { covered, reasons: [`Rule covers buildings with ${limits} units; ${label}.`], rows: [{ fact: "Units", building, requirement: `${limits} units`, outcome: outcome(covered) }] };
 }
 
 function cutoffCheck(rule: Rule, built: number | null, asOf: string): Check {
@@ -79,14 +83,16 @@ function cutoffCheck(rule: Rule, built: number | null, asOf: string): Check {
   const reasons: string[] = [];
   let covered: Tri = "yes";
   const needsYear = c.built_before || c.built_on_or_before || c.built_after || c.age_years_exempt != null;
-  if (!needsYear) return { covered, reasons };
-  if (built == null) return { covered: "unknown", reasons: ["Coverage depends on the building's age, which is not in the records."] };
+  const rows: CheckRow[] = [];
+  if (!needsYear) return { covered, reasons, rows };
+  if (built == null) return { covered: "unknown", reasons: ["Coverage depends on the building's age, which is not in the records."], rows: [{ fact: "Year built", building: "Not in records", requirement: "Age cutoff applies", outcome: "unknown" }] };
 
   const before = c.built_before ?? c.built_on_or_before;
   if (before) {
     const y = year(before);
     const t: Tri = built < y ? "yes" : built > y ? "no" : "unknown";
     covered = and(covered, t);
+    rows.push({ fact: c.cutoff_basis === "certificate_of_occupancy" ? "Certificate of occupancy" : "Year built", building: `${built}`, requirement: `${c.built_before ? "Before" : "On or before"} ${before}`, outcome: outcome(t) });
     reasons.push(
       t === "unknown"
         ? `Built ${built}, the same year as the ${before} ${basis} cutoff; the exact date is not in the records.`
@@ -97,12 +103,14 @@ function cutoffCheck(rule: Rule, built: number | null, asOf: string): Check {
     const y = year(c.built_after);
     const t: Tri = built > y ? "yes" : built < y ? "no" : "unknown";
     covered = and(covered, t);
+    rows.push({ fact: "Year built", building: `${built}`, requirement: `After ${c.built_after}`, outcome: outcome(t) });
     reasons.push(`Built ${built}; rule covers ${basis} after ${c.built_after}.`);
   }
   if (c.age_years_exempt != null) {
     const age = year(asOf) - built;
     const t: Tri = age > c.age_years_exempt + 1 ? "yes" : age < c.age_years_exempt ? "no" : "unknown";
     covered = and(covered, t);
+    rows.push({ fact: "Building age", building: `${age} years`, requirement: `Older than ${c.age_years_exempt} years`, outcome: outcome(t) });
     reasons.push(
       t === "no"
         ? `Built ${built}; buildings with a ${basis} within ${c.age_years_exempt} years are exempt.`
@@ -111,18 +119,18 @@ function cutoffCheck(rule: Rule, built: number | null, asOf: string): Check {
           : `Built ${built}; older than the ${c.age_years_exempt}-year new-construction exemption.`,
     );
   }
-  return { covered, reasons };
+  return { covered, reasons, rows };
 }
 
 function ownerCheck(rule: Rule, units: UnitRange): Check {
-  if (!rule.coverage.owner_type_dependent) return { covered: "yes", reasons: [] };
+  if (!rule.coverage.owner_type_dependent) return { covered: "yes", reasons: [], rows: [] };
   const cap = rule.coverage.owner_exemption_max_units;
   if (cap != null && units.min != null && units.min > cap)
-    return { covered: "yes", reasons: [`The owner-type exception only reaches buildings of ${cap} or fewer units; this one has at least ${units.min}.`] };
-  return { covered: "unknown", reasons: ["Coverage depends on the owner type or owner occupancy, which the records deliberately omit."] };
+    return { covered: "yes", reasons: [`The owner-type exception only reaches buildings of ${cap} or fewer units; this one has at least ${units.min}.`], rows: [{ fact: "Owner type", building: "Not in records", requirement: `Exception only for ≤${cap} units`, outcome: "pass" }] };
+  return { covered: "unknown", reasons: ["Coverage depends on the owner type or owner occupancy, which the records deliberately omit."], rows: [{ fact: "Owner type", building: "Not in records", requirement: "Depends on owner", outcome: "unknown" }] };
 }
 
-function evaluateOne(rule: Rule, a: Address, asOf: string): { result: LookupResult; reasons: string[] } | null {
+function evaluateOne(rule: Rule, a: Address, asOf: string): { result: LookupResult; reasons: string[]; rows: CheckRow[] } | null {
   const scope = inScope(rule, a);
   if (scope === "no" || rule.status === "failed") return null;
   const units = unitRange(a);
@@ -133,15 +141,20 @@ function evaluateOne(rule: Rule, a: Address, asOf: string): { result: LookupResu
   const covered = checks.reduce<Tri>((acc, c) => and(acc, c.covered), scope === "unknown" ? "unknown" : "yes");
   for (const c of checks) reasons.push(...c.reasons);
   if (covered === "no") return null;
+  const place = rule.level === "state" ? a.state : (a.legal_city ?? `${a.postal_city} (postal)`);
+  const rows: CheckRow[] = [{ fact: "Jurisdiction", building: place, requirement: rule.jurisdiction, outcome: outcome(scope) }, ...checks.flatMap((c) => c.rows)];
 
-  if (rule.status === "pending") return { result: "pending", reasons: ["Pending bill or proposal; not law.", ...reasons] };
+  if (rule.status === "pending") return { result: "pending", reasons: ["Pending bill or proposal; not law.", ...reasons], rows };
 
   const eff = normalizeDate(rule.effective_date);
-  if (eff && eff > asOf) return { result: "not_yet_effective", reasons: [`Enacted; takes effect ${eff}.`, ...reasons] };
-  if (!eff && rule.status === "not_yet_effective") return { result: "not_yet_effective", reasons: ["Enacted; not yet in effect.", ...reasons] };
-  if (eff) reasons.unshift(`In effect since ${eff}.`);
+  if (eff && eff > asOf) return { result: "not_yet_effective", reasons: [`Enacted; takes effect ${eff}.`, ...reasons], rows: [...rows, { fact: "Effective date", building: asOf, requirement: `On or after ${eff}`, outcome: "fail" }] };
+  if (!eff && rule.status === "not_yet_effective") return { result: "not_yet_effective", reasons: ["Enacted; not yet in effect.", ...reasons], rows };
+  if (eff) {
+    reasons.unshift(`In effect since ${eff}.`);
+    rows.push({ fact: "Effective date", building: asOf, requirement: `On or after ${eff}`, outcome: "pass" });
+  }
 
-  return { result: covered === "unknown" ? "unknown" : "applies", reasons };
+  return { result: covered === "unknown" ? "unknown" : "applies", reasons, rows };
 }
 
 export function evaluateAddress(address: Address, rules: Rule[], asOf: string = DEFAULT_AS_OF): Evaluation[] {
@@ -170,6 +183,7 @@ export function evaluateAddress(address: Address, rules: Rule[], asOf: string = 
       result,
       explanation: reasons.join(" "),
       conflict_flag: conflicts.length > 0,
+      checks: out.rows,
     };
   });
 }

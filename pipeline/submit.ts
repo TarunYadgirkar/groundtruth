@@ -72,7 +72,7 @@ function main(): void {
   fs.mkdirSync(OUT, { recursive: true });
   writeJson(path.join(OUT, "rules.json"), { rules });
 
-  const lookups = Object.fromEntries(addresses.map((a) => [a.address_id, evalAt(a, DEFAULT_AS_OF)]));
+  const lookups = Object.fromEntries(addresses.map((a) => [a.address_id, evalAt(a, DEFAULT_AS_OF).map(({ checks: _c, ...e }) => e)]));
   writeJson(path.join(OUT, "lookups.json"), { as_of: DEFAULT_AS_OF, lookups });
 
   const pick = (t: string) => rules.filter(selectors[t]);

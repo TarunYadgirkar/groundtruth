@@ -82,6 +82,12 @@ const ConsolidatedSchema = z.object({
 
 const SYSTEM = `You consolidate candidate rental-housing rule records, extracted per document by another model, into one authoritative rule set for an address-level lookup tool. Query date 2026-10-01.
 
+Granularity (important, this is scored against an answer key of roughly 58 rules across these 13 jurisdictions):
+- One final rule per jurisdiction x category x distinct law (a statute section or ordinance chapter). Typical: 0-2 rules per jurisdiction-category cell.
+- Fold procedural or subsidiary provisions (receipts, photos, walk-throughs, notices, interest, return deadlines, relocation amounts, eviction notice filing) into the requirement text of the headline rule they belong to. Do not output them as separate rules.
+- Keep separate records only when they are different laws (e.g. local rent control vs the state cap; a local algorithmic ban vs a state law; an enacted law vs a pending bill on the same topic).
+- Drop items that are not rules: motions or directives to study, informational guidance, enforcement-program descriptions.
+
 Tasks:
 1. Merge candidates describing the same legal rule (same jurisdiction, same provision) into one final rule. Pick as primary_candidate the candidate with quote_verified=true from the most official source (statute/ordinance text > government page > secondary).
 2. Never output a rule whose only support is unverified quotes; put those candidates in dropped with a reason. Drop candidates outside the six categories or outside the listed jurisdictions.

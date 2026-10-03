@@ -67,9 +67,17 @@ export interface Address {
   geocode_match: string | null;
 }
 
+export interface CheckRow {
+  fact: string;
+  building: string;
+  requirement: string;
+  outcome: "pass" | "fail" | "unknown";
+}
+
 export interface Evaluation {
   team_rule_id: string;
   result: LookupResult;
   explanation: string;
   conflict_flag: boolean;
+  checks?: CheckRow[];
 }
