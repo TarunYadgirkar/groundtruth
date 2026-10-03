@@ -54,3 +54,44 @@ Not counted as misses: Hoboken and Newark rent control, and the San Diego source
 - `unknown` is accepted for owner-type rules where the unit count is missing (Boston A/125, A/120).
 
 Under the README's 2× cost for misses, issue 4 (FN) weighs most per address, and issue 1 is the largest by volume.
+
+---
+
+## Round 2 (re-audit after pipeline fixes; 56 rules, ids renumbered)
+
+Same 27-address sample. I re-derived the expected results against the new rule ids. Old Berkeley Ellis relocation (old r-0004) is now merged into r-0003, so I don't count it as a miss.
+
+| Scope | Correct | False positive | Wrong value | False negative | Precision | Recall |
+|---|---|---|---|---|---|---|
+| 27-address sample | 284 | 0 | 5 | 0 | **0.983** (284/289) | **0.983** (284/289) |
+| All 500 (profile-extrapolated) | 5352 | 0 | 126 | 3 | **0.977** | **0.976** |
+
+Round 1 was 0.922 / 0.929 on the sample. The cost-weighted error, with misses counted at 2x, dropped from 4+21 to 0+5. T1–T5 still match `change_tests.json`. Conflict flags now sit only on the 90 Jersey City and Hoboken addresses. All 56 quoted_spans are verbatim.
+
+### Status of the 8 Round 1 issues
+
+| # | Issue | Status |
+|---|---|---|
+| 1 | NJ 30-year exemption reported as a rule | **Resolved.** Folded into r-0024 `age_years_exempt: 30`. |
+| 2 | LA JCO reported on RSO buildings | **Partial.** `built_after: 1978-10-01` was added, but see R2-2 below. |
+| 3 | Rules for a restricted population reported as "applies" | **Resolved.** r-0010 and r-0052 are `unknown`; the new r-0015 (HCA) is `unknown`. |
+| 4 | Cambridge ch. 8.71 missing | **Resolved.** r-0020 covers 50 addresses. |
+| 5 | JC rent control with no year | **Resolved.** r-0024 is `unknown`. |
+| 6 | A0009 geocoded to Boston | **Resolved.** Now Cambridge, but see the geocode regression R2-3. |
+| 7 | A0227 conflicting unit counts | **Resolved.** The unit range gives `unknown` for r-0039. |
+| 8 | Conflict-flag noise; r-0001 flag | **Mostly resolved.** 335 → 90 flagged addresses. r-0001 `conflict_flag` is still false despite the README §9 date dispute. |
+
+### Remaining issues, ranked
+
+1. **Regression: Berkeley r-0003 (just cause) and r-0006 (deposit interest) are `unknown` at all 40 addresses (80 wrong values).** Both now have `owner_type_dependent: true` with `owner_exemption_max_units: null`, so `ownerCheck` can never pass. The exemptions in D009 are owner-occupied duplex, shared kitchen or bath, and ADU pairs: "“Golden Duplex”: duplex that was owner-occupied on December 31, 1979". None of these can reach a 5+ unit building. Fix: set `owner_exemption_max_units: 2` on both. Also make the consolidator reject `owner_type_dependent: true` with a null cap, or have the engine warn on it.
+2. **Regression: LA JCO r-0026 is `unknown` at the 25 post-1978 addresses.** It has the same null-cap problem. This also pushes CA just cause r-0014 to `unknown` at 21 addresses where it should be `superseded`, for 46 wrong values in total. The owner exception is the owner's-roommate case, which old r-0025 capped at 1. Fix: set `owner_exemption_max_units: 1`.
+3. **Geocode regression: A0242 (Hyde Park) and A0344 (Jersey City) now have `legal_city: null`.** For A0344, postal equals the city, so the result degrades to `unknown` and is acceptable. For A0242, the postal city "Hyde Park" matches no rule jurisdiction, so it loses Boston r-0008, r-0010 and r-0011 (3 misses). Fix: when the geocoder returns no match, fall back to a postal-city alias table: the Boston neighborhoods Hyde Park, Dorchester, Roxbury, Allston, Brighton, Mattapan, Jamaica Plain, East and South Boston map to Boston; San Ysidro maps to San Diego. Also find out why A0344 lost the match it had in Round 1.
+4. **r-0014 (CA §1946.2) `effective_date` is 2024-04-01**, the operative date of the amended text. The Tenant Protection Act's just-cause rule has been in force since 2020-01-01, which is r-0016's date for the companion section. Any as-of query between 2020 and March 2024 would wrongly return `not_yet_effective`. Fix: set `effective_date: 2020-01-01` and keep the amendment dates in `conflict_note`.
+5. **Leftover source problems (no lookup impact):**
+   - r-0018's 2020-01-01 date still comes from D015's SB 329 sentence, which is about source of income, not criminal-history regulations. Cite it as unverified or drop it.
+   - r-0051's cutoff comes from D079, but the rule cites D083.
+   - r-0001 `conflict_flag` should be true.
+   - These quoted_spans are still headings that don't support their rules: r-0025 ("Legal Reasons for Eviction"), r-0028 ("Interest Payments on Security Deposits"), r-0027.
+   - r-0036 now has `owner_exemption_max_units: 3`. §4(6) exempts an owner-occupied two-family dwelling, so 2 is right unless the §4(7) three-unit elderly exemption is what's intended. Results are unchanged because no MA address is known to have ≤3 units.
+
+Fixing 1 and 2 should lift both precision and recall above 0.99 on all 500 addresses.

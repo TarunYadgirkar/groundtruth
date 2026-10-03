@@ -12,22 +12,22 @@
   {
     "jurisdiction": "Los Angeles, CA",
     "category": "algorithmic_rent_setting",
-    "note": "No enacted LA ordinance in corpus (only a council motion referencing SF); state AB 325 applies."
+    "note": "No enacted LA ordinance in corpus; state AB 325 applies."
   },
   {
     "jurisdiction": "San Francisco, CA",
     "category": "application_screening_fees",
-    "note": "No local rule in corpus; state Civ. Code § 1950.6 applies."
+    "note": "No local rule in corpus; state § 1950.6 applies."
   },
   {
     "jurisdiction": "San Diego, CA",
     "category": "rent_increase_limits",
-    "note": "No local rent control in corpus; state Civ. Code § 1947.12 applies."
+    "note": "No local rent control in corpus; state § 1947.12 applies."
   },
   {
     "jurisdiction": "San Diego, CA",
     "category": "security_deposits",
-    "note": "No local rule in corpus; state Civ. Code § 1950.5 applies."
+    "note": "No local rule in corpus; state § 1950.5 applies."
   },
   {
     "jurisdiction": "San Diego, CA",
@@ -77,12 +77,12 @@
   {
     "jurisdiction": "Hoboken, NJ",
     "category": "rent_increase_limits",
-    "note": "No Hoboken rent control source in corpus."
+    "note": "No Hoboken rent control document in corpus."
   },
   {
     "jurisdiction": "Hoboken, NJ",
     "category": "just_cause_eviction",
-    "note": "No local rule in corpus; NJ Anti-Eviction Act applies."
+    "note": "No local rule in corpus."
   },
   {
     "jurisdiction": "Hoboken, NJ",
@@ -102,66 +102,66 @@
   {
     "jurisdiction": "Newark, NJ",
     "category": "rent_increase_limits",
-    "note": "No Newark sources in corpus."
+    "note": "No Newark documents in corpus."
   },
   {
     "jurisdiction": "Newark, NJ",
     "category": "just_cause_eviction",
-    "note": "No Newark sources in corpus."
+    "note": "No Newark documents in corpus."
   },
   {
     "jurisdiction": "Newark, NJ",
     "category": "security_deposits",
-    "note": "No Newark sources in corpus."
+    "note": "No Newark documents in corpus."
   },
   {
     "jurisdiction": "Newark, NJ",
     "category": "application_screening_fees",
-    "note": "No Newark sources in corpus."
+    "note": "No Newark documents in corpus."
   },
   {
     "jurisdiction": "Newark, NJ",
     "category": "screening_restrictions",
-    "note": "No Newark sources in corpus."
+    "note": "No Newark documents in corpus."
   },
   {
     "jurisdiction": "Newark, NJ",
     "category": "algorithmic_rent_setting",
-    "note": "No Newark sources in corpus; NJ FAIR Act effective 2027-07-01."
+    "note": "No Newark documents in corpus; NJ FAIR Act effective 2027-07-01."
   },
   {
     "jurisdiction": "Boston, MA",
     "category": "security_deposits",
-    "note": "No local rule; G.L. c. 186 § 15B applies."
+    "note": "No local rule; M.G.L. c. 186 § 15B applies."
   },
   {
     "jurisdiction": "Boston, MA",
     "category": "application_screening_fees",
-    "note": "No local rule; G.L. c. 186 § 15B upfront-charge limit applies."
+    "note": "No local rule; M.G.L. c. 186 § 15B applies."
   },
   {
     "jurisdiction": "Boston, MA",
     "category": "algorithmic_rent_setting",
-    "note": "No Boston rule in corpus; state bills pending."
+    "note": "No local rule in corpus."
   },
   {
     "jurisdiction": "Cambridge, MA",
     "category": "rent_increase_limits",
-    "note": "G.L. c. 40P § 4 bars local rent control; no enforceable cap."
+    "note": "Local rent control barred by M.G.L. c. 40P § 4."
   },
   {
     "jurisdiction": "Cambridge, MA",
     "category": "security_deposits",
-    "note": "No local rule; G.L. c. 186 § 15B applies."
+    "note": "No local rule; state § 15B applies."
   },
   {
     "jurisdiction": "Cambridge, MA",
     "category": "application_screening_fees",
-    "note": "No local rule; G.L. c. 186 § 15B applies."
+    "note": "No local rule; state § 15B applies."
   },
   {
     "jurisdiction": "Cambridge, MA",
     "category": "algorithmic_rent_setting",
-    "note": "Only a policy order directing study or drafting (dropped); no enacted rule."
+    "note": "Only a policy order directing study; no enacted ordinance."
   }
 ]

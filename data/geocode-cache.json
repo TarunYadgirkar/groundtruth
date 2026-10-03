@@ -1738,9 +1738,9 @@
   "A0242": {
     "lat": null,
     "lng": null,
-    "match": null,
-    "legal_city": null,
-    "county": null
+    "match": "inferred from postal city \"Hyde Park\" (no street-level match)",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
   },
   "A0251": {
     "lat": 32.762436259509,
@@ -2424,9 +2424,9 @@
   "A0344": {
     "lat": null,
     "lng": null,
-    "match": null,
-    "legal_city": null,
-    "county": null
+    "match": "inferred from postal city \"Jersey City\" (no street-level match)",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
   },
   "A0350": {
     "lat": 40.735168801416,

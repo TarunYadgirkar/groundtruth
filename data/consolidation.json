@@ -4,17 +4,19 @@
       "key": "ca-1947.12-rent-cap",
       "primary_candidate": "c059",
       "merged_candidates": [
-        "c098"
+        "c059",
+        "c098",
+        "c110"
       ],
       "jurisdiction": "CA",
       "level": "state",
       "category": "rent_increase_limits",
       "status": "in_force",
       "title": "Tenant Protection Act (AB 1482) statewide rent increase cap",
-      "requirement": "An owner may not raise gross rent over any 12-month period by more than 5% plus the regional CPI change, or 10%, whichever is lower. The base is the lowest rent charged in the prior 12 months. No more than two increases are allowed per 12 months. Initial rent on a new tenancy is not capped where no prior tenant remains.",
+      "requirement": "Owners may not raise gross rent over any 12-month period by more than 5% plus regional CPI, or 10%, whichever is lower. The base is the lowest rent charged in the prior 12 months, and no more than two increases are allowed per 12 months. Rent may be reset on a new tenancy where no prior tenant remains. State law also requires 30 days' written notice for increases under 10%. Enforced by tenant civil action (overcharge damages, up to treble for willful conduct) and by the AG, city attorney or county counsel.",
       "key_value": "5% + CPI, max 10% per 12 months",
-      "coverage_conditions": "Residential real property statewide, including mobilehome park units for increases on or after 2021-02-18. Does not apply where stricter local rent control applies.",
-      "exemptions": "Housing with a certificate of occupancy issued within the previous 15 years (except mobilehomes). Deed-restricted or subsidized affordable housing. Dormitories. Owner-occupied duplexes where neither unit is an ADU/JADU. Separately alienable units (single-family homes, condos) not owned by a REIT, corporation, or LLC with a corporate member, if the statutory exemption notice was given. Units under stricter local rent control.",
+      "coverage_conditions": "Residential real property statewide, including mobilehome park units, unless covered by stricter local rent control or otherwise exempt.",
+      "exemptions": "Housing with a certificate of occupancy issued within the previous 15 years; deed-restricted or subsidized affordable housing; dormitories; owner-occupied duplexes (neither unit an ADU/JADU); separately alienable single-family homes and condos not owned by a REIT, corporation or LLC with a corporate member, where the exemption notice was given; units under stricter local rent control; mobilehome homeowners.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -24,20 +26,21 @@
         "age_years_exempt": 15,
         "cutoff_basis": "certificate_of_occupancy",
         "owner_type_dependent": true,
-        "unverifiable_conditions": "The single-family/condo exemption requires a non-corporate owner and a written exemption notice. The owner-occupied duplex exemption requires owner occupancy. Deed-restricted or subsidized affordable housing and dormitories are excluded.",
+        "unverifiable_conditions": "The single-family/condo exemption requires a non-corporate owner and written exemption notice. Deed-restricted or subsidized affordable housing and dormitories are excluded.",
         "owner_exemption_max_units": 2
       },
       "yields_to_local": true,
       "effective_date": "2020-01-01",
       "citation": "Cal. Civ. Code § 1947.12",
       "conflicts_with_keys": [],
-      "conflict_note": "AB 1482 took effect 2020-01-01 per the LAHD page. The current text (SB 567) is operative 2024-04-01. The cap applies to increases on or after 2019-03-15. The section is repealed 2030-01-01.",
+      "conflict_note": "Originally enacted by AB 1482, effective 2020-01-01, and applicable to increases on or after 2019-03-15 (mobilehomes 2021-02-18). The current text from SB 567 (Stats. 2023, ch. 290) is operative 2024-04-01. The section is repealed 2030-01-01. The 30-day notice rule (from c110) is summarized without a statutory citation.",
       "confidence": 0.9
     },
     {
       "key": "ca-1946.2-just-cause",
       "primary_candidate": "c056",
       "merged_candidates": [
+        "c056",
         "c057",
         "c058"
       ],
@@ -45,11 +48,11 @@
       "level": "state",
       "category": "just_cause_eviction",
       "status": "in_force",
-      "title": "Tenant Protection Act statewide just cause eviction",
-      "requirement": "After 12 months of continuous lawful occupancy (24 months if adult tenants were added), an owner may terminate only for an enumerated at-fault or no-fault just cause stated in the written notice. Curable violations require notice and an opportunity to cure. No-fault terminations require relocation assistance equal to one month's rent, paid within 15 calendar days, or a written waiver of the final month's rent. Owners must give a statutory notice of the rent cap and just cause protections in at least 12-point type. Noncompliance voids the termination notice.",
-      "key_value": "Just cause after 12 months; 1 month's rent relocation for no-fault",
-      "coverage_conditions": "Residential real property statewide, including mobilehome park units, after 12 months of occupancy. Displaced where a qualifying local just cause ordinance applies.",
-      "exemptions": "Certificate of occupancy within the previous 15 years. Transient hotels. Care facilities and dormitories. Shared bath or kitchen with a resident owner. Owner-occupied single-family home renting no more than 2 units or bedrooms. Owner-occupied duplexes. Non-corporate separately alienable units with notice. Deed-restricted or subsidized affordable housing.",
+      "title": "Tenant Protection Act statewide just cause eviction requirement",
+      "requirement": "After 12 months of continuous lawful occupancy (24 months for one tenant if adult tenants were added), the owner may terminate only for an enumerated at-fault or no-fault just cause stated in the written notice. Curable violations require notice and an opportunity to cure. For no-fault terminations the owner must pay relocation assistance equal to one month's rent within 15 calendar days, or waive the final month's rent. Owners must give tenants a 12-point statutory notice of the rent cap and just cause protections. Noncompliant termination notices are void.",
+      "key_value": "Just cause after 12 months; no-fault relocation = 1 month's rent",
+      "coverage_conditions": "Residential real property in California, including mobilehome park units, after 12 months of tenancy. Displaced where a qualifying local just cause ordinance applies.",
+      "exemptions": "Transient hotels; nonprofit hospitals and care facilities; dormitories; tenant shares bath or kitchen with a resident owner; owner-occupied single-family home renting up to two units or bedrooms; owner-occupied duplexes; certificate of occupancy within the previous 15 years; non-corporate-owned separately alienable units with notice; deed-restricted or subsidized affordable housing.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -59,28 +62,30 @@
         "age_years_exempt": 15,
         "cutoff_basis": "certificate_of_occupancy",
         "owner_type_dependent": true,
-        "unverifiable_conditions": "Requires 12 months of occupancy. The separately alienable exemption depends on non-corporate ownership plus written notice. Owner-occupancy and shared-facility exemptions apply. Affordable housing is excluded. Displaced by qualifying local ordinances.",
+        "unverifiable_conditions": "Requires 12 or 24 months of occupancy. The separately-alienable-unit exemption requires non-corporate ownership plus written notice. Deed-restricted affordable housing is excluded.",
         "owner_exemption_max_units": 2
       },
       "yields_to_local": true,
-      "effective_date": "2024-04-01",
+      "effective_date": "2020-01-01",
       "citation": "Cal. Civ. Code § 1946.2",
       "conflicts_with_keys": [],
-      "conflict_note": "The current section is operative 2024-04-01 and was amended by AB 1529 effective 2026-01-01. The original TPA just cause rules date from 2020, but that is not stated in the cited text. The section is repealed 2030-01-01.",
-      "confidence": 0.88
+      "conflict_note": "Original Tenant Protection Act just cause rules date from 2020. The current text is operative 2024-04-01 and was amended by AB 1529 effective 2026-01-01. The section is repealed 2030-01-01.",
+      "confidence": 0.85
     },
     {
       "key": "ca-gov-66300.6-hca-relocation",
       "primary_candidate": "c115",
-      "merged_candidates": [],
+      "merged_candidates": [
+        "c115"
+      ],
       "jurisdiction": "CA",
       "level": "state",
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Housing Crisis Act relocation for lower-income households displaced by demolition",
-      "requirement": "Lower-income households displaced by demolition of protected units for new housing must receive relocation benefits equal to those public entities pay under Gov. Code § 7260 et seq. In Los Angeles, the higher of the HCA or city amounts applies.",
+      "requirement": "Lower-income households displaced by demolition of protected units for new housing must receive relocation benefits equal to those required of public entities under Gov. Code § 7260 et seq.",
       "key_value": null,
-      "coverage_conditions": "Lower-income (80% AMI or below) households in protected units demolished for new construction.",
+      "coverage_conditions": "Lower-income (80% AMI or below) households in protected units demolished for new housing development.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -91,18 +96,18 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "RESTRICTED: lower-income households in protected units demolished for new housing development",
+        "unverifiable_conditions": "RESTRICTED: lower-income households in protected units demolished for new housing development.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": null,
       "citation": "Cal. Gov. Code § 66300.6(b)(4)(A) (SB 330, as amended by SB 8 and AB 1218)",
       "conflicts_with_keys": [],
-      "conflict_note": "The effective date is not stated in the source.",
-      "confidence": 0.7
+      "conflict_note": "In Los Angeles, the higher of the HCA or city amounts applies.",
+      "confidence": 0.65
     },
     {
-      "key": "ca-1950.5-security-deposits",
+      "key": "ca-1950.5-security-deposit",
       "primary_candidate": "c060",
       "merged_candidates": [
         "c026",
@@ -112,6 +117,7 @@
         "c030",
         "c031",
         "c032",
+        "c060",
         "c061",
         "c062",
         "c063",
@@ -125,11 +131,11 @@
       "level": "state",
       "category": "security_deposits",
       "status": "in_force",
-      "title": "California security deposit cap and handling rules",
-      "requirement": "The deposit is capped at one month's rent, furnished or unfurnished. Qualifying small landlords may charge two months, but not to service members; a higher service-member deposit must be explained and returned after 6 months. Deposits may not be labeled nonrefundable. The landlord must offer a pre-move-out initial inspection. Required photos: move-out photos from 2025-04-01, and move-in photos for tenancies beginning on or after 2025-07-01. Deductions are limited to unpaid rent, damage beyond ordinary wear and tear, cleaning to move-in condition, and restoration. Within 21 days the landlord must return the deposit with an itemized statement and receipts, plus proof of repairs from 2025. Return must be electronic if rent was paid electronically (from 2026-01-01). Bad-faith retention exposes the landlord to up to 2x the deposit plus actual damages.",
+      "title": "Security deposit cap and handling (Civ. Code § 1950.5, AB 12)",
+      "requirement": "Security, however denominated, may not exceed one month's rent in addition to first month's rent. Qualifying small landlords may charge two months, except to service members. Security may not be labeled nonrefundable. Handling requirements:\n- Offer a pre-move-out initial inspection.\n- Deduct only unpaid rent, damage beyond ordinary wear and tear, and cleaning to move-in condition.\n- Take photos at move-in (tenancies from 2025-07-01) and at move-out before and after repairs (from 2025-04-01).\n- Return the balance with an itemized statement and receipts within 21 days.\n- Return electronically if rent was paid electronically.\n- Return any extra service-member security after 6 months.\nBad-faith retention exposes the landlord to up to 2x the deposit plus actual damages.",
       "key_value": "1 month's rent (2 months for qualifying small landlords); 21-day return",
-      "coverage_conditions": "Residential rental agreements statewide; the cap applies to security collected on or after 2024-07-01.",
-      "exemptions": "Small landlord exception: a natural person or an LLC of natural persons owning no more than 2 rental properties with no more than 4 units total may collect 2 months, but not from service members.",
+      "coverage_conditions": "Residential rental agreements in California. The cap applies to security demanded or collected on or after 2024-07-01.",
+      "exemptions": "Small landlords (natural persons or LLCs of natural persons owning no more than two rental properties with no more than four units total) may charge up to two months' rent, except to service members.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -139,24 +145,25 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": true,
-        "unverifiable_conditions": "The small-landlord two-month exception depends on ownership form and statewide portfolio size.",
+        "unverifiable_conditions": "The small-landlord exception depends on the statewide portfolio and ownership form.",
         "owner_exemption_max_units": 4
       },
       "yields_to_local": false,
       "effective_date": "2024-07-01",
-      "citation": "Cal. Civ. Code § 1950.5 (AB 12)",
+      "citation": "Cal. Civ. Code § 1950.5",
       "conflicts_with_keys": [],
-      "conflict_note": "The 2024-07-01 date is for the AB 12 one-month cap. The other subdivisions have staggered dates: proof of repairs 2025-01-01, move-out photos 2025-04-01, move-in photos 2025-07-01, electronic return 2026-01-01.",
+      "conflict_note": "The one-month cap (AB 12) took effect 2024-07-01. The prior limits were 2 months unfurnished and 3 months furnished. Subsidiary provisions took effect later: move-out photos and proof of repairs 2025-04-01/2025-01-01, move-in photos 2025-07-01, and electronic return (AB 414) 2026-01-01.",
       "confidence": 0.9
     },
     {
-      "key": "ca-1950.6-screening-fee-cap",
+      "key": "ca-1950.6-screening-fee",
       "primary_candidate": "c069",
       "merged_candidates": [
         "c013",
         "c051",
         "c052",
         "c053",
+        "c069",
         "c070",
         "c071",
         "c072"
@@ -165,11 +172,11 @@
       "level": "state",
       "category": "application_screening_fees",
       "status": "in_force",
-      "title": "California application screening fee cap and conditions",
-      "requirement": "The screening fee is limited to actual out-of-pocket cost and may not exceed $30 per applicant, CPI-adjusted from 1998 ($68.96 in 2026). No fee may be charged if no unit is available. A fee may be charged only under a first-qualified-applicant process or with a full refund to non-selected applicants (within 7 days of selection or 30 days of submission). The landlord must give an itemized receipt and a copy of the credit report within 7 days. Unused portions must be refunded.",
-      "key_value": "$30 CPI-adjusted ($68.96 for 2026)",
-      "coverage_conditions": "Landlords and agents screening applicants, guarantors, and cosigners for residential rental units in California.",
-      "exemptions": "Does not preempt housing-assistance program fee rules.",
+      "title": "Application screening fee cap and conditions",
+      "requirement": "A screening fee may not exceed actual out-of-pocket cost and may not exceed $30 per applicant, CPI-adjusted from 1998 ($68.96 for 2026). No fee may be charged if no unit is or will soon be available. A fee is allowed only under one of two processes:\n- First-come, first-qualified review against written criteria, refunding applicants not considered.\n- Full refund to non-selected applicants within 7 days of selection or 30 days of submission.\nThe landlord must give an itemized receipt and a copy of the credit report within 7 days, and refund unused portions.",
+      "key_value": "$30 CPI-adjusted ($68.96 in 2026)",
+      "coverage_conditions": "Landlords and agents charging residential rental applicants, including guarantors and cosigners.",
+      "exemptions": "Does not preempt fee rules of federal or state housing assistance programs.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -186,16 +193,17 @@
       "effective_date": null,
       "citation": "Cal. Civ. Code § 1950.6",
       "conflicts_with_keys": [],
-      "conflict_note": "The current text was amended by AB 1170, effective 2026-01-01. The underlying cap predates this amendment, but no source states its original effective date. The $68.96 figure for 2026 comes from the Berkeley Rent Board.",
+      "conflict_note": "The original effective date is not stated in the corpus. The latest amendment is AB 1170, effective 2026-01-01. The first-qualified/refund process appears to reflect 2024 amendments effective 2025-01-01.",
       "confidence": 0.88
     },
     {
-      "key": "ca-feha-12955-source-of-income",
+      "key": "ca-gov-12955-source-of-income",
       "primary_candidate": "c073",
       "merged_candidates": [
         "c047",
         "c048",
         "c049",
+        "c073",
         "c074",
         "c075",
         "c076"
@@ -204,11 +212,11 @@
       "level": "state",
       "category": "screening_restrictions",
       "status": "in_force",
-      "title": "FEHA source-of-income protection and subsidy-applicant screening limits",
-      "requirement": "Owners may not discriminate based on source of income, including Section 8, VASH, and other housing subsidies; 'No Section 8' policies are barred. For subsidized applicants, an income standard must be based only on the tenant's portion of rent. Credit history may not be used unless the applicant is offered the option of alternative evidence of ability to pay (SB 267). Income standards must count the aggregate income of co-residents.",
+      "title": "FEHA source-of-income discrimination ban and subsidy-holder screening limits",
+      "requirement": "Owners may not discriminate based on source of income, including Section 8 and VASH vouchers, and may not maintain 'No Section 8' policies. For applicants with a government rent subsidy:\n- Income standards must be based only on the tenant's portion of rent.\n- Credit history may be used only if the applicant is offered the option to provide verifiable alternative evidence of ability to pay.\nIncome standards must count the aggregate income of co-residents.",
       "key_value": null,
-      "coverage_conditions": "Housing accommodations in California.",
-      "exemptions": "An owner-occupant renting to one additional person. An inquiry about the level or source of income alone is not discrimination.",
+      "coverage_conditions": "Owners of housing accommodations in California.",
+      "exemptions": "An owner-occupant renting to one additional person is exempt from certain FEHA housing provisions. Inquiring about level or source of income is not by itself discrimination.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -218,31 +226,32 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": true,
-        "unverifiable_conditions": "The credit history and income standard rules apply only to applicants with a government rent subsidy.",
+        "unverifiable_conditions": "The subsidy-related screening limits apply only to applicants with a government rent subsidy.",
         "owner_exemption_max_units": 1
       },
       "yields_to_local": false,
       "effective_date": "2020-01-01",
-      "citation": "Cal. Gov. Code § 12955 (SB 329, SB 267)",
+      "citation": "Cal. Gov. Code § 12955(a), (n), (o), (p) (SB 329; SB 267)",
       "conflicts_with_keys": [],
-      "conflict_note": "Subsidies were added to source of income effective 2020-01-01 (SB 329). The SB 267 credit-history provisions are effective 2024-01-01.",
-      "confidence": 0.88
+      "conflict_note": "SB 329 extended source of income to housing subsidies effective 2020-01-01. The SB 267 credit-history and income-standard provisions are in the current text effective 2024-01-01.",
+      "confidence": 0.85
     },
     {
-      "key": "ca-feha-criminal-history-regs",
+      "key": "ca-crc-criminal-history",
       "primary_candidate": "c050",
       "merged_candidates": [
-        "c046"
+        "c046",
+        "c050"
       ],
       "jurisdiction": "CA",
       "level": "state",
       "category": "screening_restrictions",
       "status": "in_force",
       "title": "FEHA / Civil Rights Council limits on criminal history screening",
-      "requirement": "No blanket bans on applicants with criminal records. Providers may not consider arrests without conviction, sealed or expunged records, or juvenile records. A denial based on a conviction must be directly related to tenancy safety, considering its nature and severity.",
+      "requirement": "Housing providers may not use blanket bans on people with criminal histories. They may not consider arrests not leading to conviction, sealed or expunged records, or juvenile records. A denial based on a conviction must be directly related to tenancy safety, considering the nature and severity of the offense and the time elapsed.",
       "key_value": "No blanket criminal-record bans",
-      "coverage_conditions": "Housing providers and tenant screening companies in California.",
-      "exemptions": "An owner-occupant renting to one additional person.",
+      "coverage_conditions": "Most housing providers and tenant screening companies in California.",
+      "exemptions": "An owner occupying a home and renting to one additional person.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -257,15 +266,16 @@
       },
       "yields_to_local": false,
       "effective_date": "2020-01-01",
-      "citation": "Cal. Fair Employment and Housing Act; Civil Rights Council criminal history housing regulations (CCR section not given)",
+      "citation": "California Fair Employment and Housing Act; Civil Rights Council criminal history housing regulations",
       "conflicts_with_keys": [],
-      "conflict_note": "The effective date comes from a secondary source (CAA). The regulation section number is not cited.",
-      "confidence": 0.78
+      "conflict_note": "The specific CCR section is not cited in the corpus.",
+      "confidence": 0.8
     },
     {
-      "key": "ca-bpc-16729-ab325-common-pricing-algorithm",
+      "key": "ca-bpc-16729-pricing-algorithm",
       "primary_candidate": "c054",
       "merged_candidates": [
+        "c054",
         "c055",
         "c077",
         "c078"
@@ -275,10 +285,10 @@
       "category": "algorithmic_rent_setting",
       "status": "in_force",
       "title": "AB 325 Cartwright Act ban on common pricing algorithms",
-      "requirement": "No person may use or distribute a common pricing algorithm as part of a contract, combination, or conspiracy to restrain trade. A common pricing algorithm is one used by two or more persons that uses competitor data. No person may use or distribute such an algorithm while coercing another person to adopt its recommended price or terms. This general antitrust law applies to landlords and rent software. Penalties are criminal and civil, including treble damages.",
+      "requirement": "No person may use or distribute a common pricing algorithm as part of a contract, combination or conspiracy to restrain trade. No person may use or distribute one while coercing another to adopt its recommended price or terms. A common pricing algorithm is one used by two or more persons that relies on competitor data. The ban applies to rental housing as general antitrust law.",
       "key_value": null,
-      "coverage_conditions": "Any person using or distributing a common pricing algorithm in California, including rental housing.",
-      "exemptions": "End consumers. Single-firm algorithms that use only the firm's own data.",
+      "coverage_conditions": "Any person using, distributing, selling or licensing a common pricing algorithm in California, including landlords and rental software vendors.",
+      "exemptions": "End consumers; single-firm algorithms using only the business's own data.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -288,34 +298,35 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only where a common pricing algorithm is used as part of an agreement or with coercion.",
+        "unverifiable_conditions": "Requires use of a common pricing algorithm as part of an agreement to restrain trade, or coercion.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": "2026-01-01",
       "citation": "Cal. Bus. & Prof. Code § 16729 (AB 325, Stats. 2025, ch. 338)",
       "conflicts_with_keys": [],
-      "conflict_note": "The effective date is inferred from the default January 1 rule; the bill was chaptered 2025-10-06.",
-      "confidence": 0.82
+      "conflict_note": "The effective date is inferred from the default rule; the bill was chaptered 2025-10-06. This is a general antitrust statute, not housing-specific.",
+      "confidence": 0.8
     },
     {
-      "key": "berkeley-rent-stabilization-rent-ceiling",
+      "key": "berkeley-13.76-rent-control",
       "primary_candidate": "c034",
       "merged_candidates": [
         "c016",
         "c017",
         "c018",
+        "c034",
         "c035"
       ],
       "jurisdiction": "Berkeley, CA",
       "level": "city",
       "category": "rent_increase_limits",
       "status": "in_force",
-      "title": "Berkeley Rent Stabilization Ordinance rent ceilings / Annual General Adjustment",
-      "requirement": "Increases on fully covered units are limited to the Annual General Adjustment, set at 65% of the Bay Area CPI change and capped at 5% by Measure BB. The 2026 AGA is 1.0%, effective no earlier than 2026-01-01, for eligible landlords who meet Regulation 1148 conditions. Banked AGAs may be used. Capital improvement petitions are allowed only for completed work. For tenancies starting on or after 2024-02-06, utilities may be charged only within base rent or if separately metered in the tenant's name.",
-      "key_value": "2026 AGA 1.0%; max AGA 5%",
-      "coverage_conditions": "Units in multifamily properties with a certificate of occupancy on or before June 1980. Single-family homes whose tenancy began before 1996. Rooming houses with 5 or more rooms rented separately. Certain subsidized units.",
-      "exemptions": "Partially covered (no rent ceiling): new construction with a certificate of occupancy after June 1980; most single-family homes and condos; Section 202/811 units; HUD-insured project-based units. Fully exempt: Golden Duplexes; units with a kitchen or bath shared with the owner; owner-occupied ADU properties (tenancies after 2018-11-07); dorms; nonprofit co-ops. The 2026 AGA excludes Costa-Hawkins tenancies begun on or after 2025-01-01.",
+      "title": "Berkeley Rent Stabilization Ordinance rent ceilings and Annual General Adjustment",
+      "requirement": "For fully covered units, rent increases are limited to the Annual General Adjustment (AGA). The AGA is 65% of Bay Area CPI, capped at 5% by Measure BB; the 2026 AGA is 1.0%, effective no earlier than 2026-01-01. Landlords may use banked AGAs up to the rent ceiling. Capital improvement petitions are allowed only for completed improvements. For tenancies starting on or after 2024-02-06, utilities may be charged only in base rent or if separately metered in the tenant's name.",
+      "key_value": "AGA 1.0% for 2026; AGA capped at 5%",
+      "coverage_conditions": "Most units in multifamily properties with a certificate of occupancy on or before June 1980. Also single-family homes with tenancies that began before 1996, rooming houses, and many subsidized units.",
+      "exemptions": "New construction with a CO after June 1980 (partially covered, no rent ceiling); most single-family homes and condos with tenancies from 1996 onward; Section 202/811 and HUD-insured project units; Golden Duplexes; owner shared kitchen/bath units; owner-occupied ADU properties; dorms; nonprofit cooperatives.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -325,22 +336,23 @@
         "age_years_exempt": null,
         "cutoff_basis": "certificate_of_occupancy",
         "owner_type_dependent": true,
-        "unverifiable_conditions": "Single-family homes and condos are covered only if the tenancy began before 1996. Coverage depends on subsidy type and HUD mortgage status. Golden Duplex, shared kitchen/bath, and ADU owner-occupancy exemptions apply. Landlord AGA eligibility depends on Regulation 1148.",
-        "owner_exemption_max_units": null
+        "unverifiable_conditions": "Single-family homes and condos are covered only if the tenancy began before 1996. Coverage of subsidized units depends on subsidy type and HUD mortgage status. Golden Duplex, shared kitchen/bath and ADU owner-occupancy exemptions apply. The 2026 AGA excludes tenancies from 2025-01-01 onward with Costa-Hawkins-set rents.",
+        "owner_exemption_max_units": 2
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "Berkeley Mun. Code ch. 13.76 (§ 13.76.110A), as amended by Measure BB (Nov. 2024); Rent Board Reg. 1148",
+      "citation": "Berkeley Mun. Code ch. 13.76 (incl. § 13.76.110A), as amended by Measure BB (Nov. 2024); Rent Board Reg. 1148",
       "conflicts_with_keys": [],
-      "conflict_note": "Sources describe the cutoff as both 'built before 1980' and 'certificate of occupancy after June 1980'; this record uses a certificate of occupancy on or before 1980-06-30. Measure BB's effective date is not stated. The 1.0% AGA applies to 2026 only.",
+      "conflict_note": "City sources describe the cutoff both as 'built before 1980' and as 'Certificate of Occupancy after June 1980'; the cutoff encoded here is a CO on or before 1980-06-30. Measure BB (Nov. 2024) amended the ordinance, and its effective date is not stated.",
       "confidence": 0.82
     },
     {
-      "key": "berkeley-just-cause-eviction",
+      "key": "berkeley-13.76-just-cause",
       "primary_candidate": "c019",
       "merged_candidates": [
         "c011",
         "c012",
+        "c019",
         "c020",
         "c021",
         "c022",
@@ -353,11 +365,11 @@
       "level": "city",
       "category": "just_cause_eviction",
       "status": "in_force",
-      "title": "Berkeley Rent Stabilization and Eviction for Good Cause Ordinance – just cause",
-      "requirement": "Tenants in fully or partially covered units may be evicted only for an enumerated just cause. Measure BB adds the following limits. No eviction for nonpayment below one month's HUD Fair Market Rent. No eviction for refusing to sign a substantially similar lease. Lease-breach evictions require actual harm and unreasonable conduct. Notices must reference Rent Board counseling and be filed with the Rent Board within 3 business days of service. A Notice of Tenant Rights is due within 15 days of the start of tenancies begun on or after 2024-12-20. Owner move-in evictions (and Ellis withdrawals, under the Ellis Implementation Ordinance) require relocation assistance, indexed annually: $19,413 standard plus $6,471 for qualifying households in 2026.",
-      "key_value": "2026 relocation $19,413 (+$6,471 qualifying)",
-      "coverage_conditions": "All fully and partially covered units, including new construction, single-family homes, condos, and subsidized units.",
-      "exemptions": "Golden Duplexes. Units with a kitchen or bath shared with an owner who lived there at the start of the tenancy. Owner-occupied ADU properties (tenancies after 2018-11-07). Dorms. Nonprofit cooperatives.",
+      "title": "Berkeley Rent Stabilization and Eviction for Just Cause Ordinance",
+      "requirement": "Tenants in fully or partially covered units may be evicted only for an enumerated just cause. Measure BB added these limits:\n- No nonpayment eviction for debt under one month's HUD Fair Market Rent.\n- No eviction for refusing a substantially similar new lease.\n- Lease-breach evictions require actual harm and unreasonable conduct.\nTermination notices must reference the Rent Board, and notices and complaints must be filed with the Board within 3 business days. A notice of tenant rights is due within 15 days of tenancy start (tenancies from 2024-12-20). Owner move-in and Ellis Act evictions require relocation assistance of $19,413, plus $6,471 for qualifying households (2026, CPI-indexed annually).",
+      "key_value": "OMI/Ellis relocation $19,413 (+$6,471 qualifying), 2026",
+      "coverage_conditions": "All fully and partially covered units, including new construction, single-family homes, condominiums and subsidized units.",
+      "exemptions": "Golden Duplexes (owner-occupied since 1979); units where the tenant shares a kitchen or bath with the resident owner; tenancies after 2018-11-07 on owner-occupied ADU properties; university dorms; nonprofit cooperatives.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -367,20 +379,21 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": true,
-        "unverifiable_conditions": "Exemptions depend on owner occupancy (Golden Duplex, shared kitchen/bath, ADU), tenancy start date, and dorm/co-op status.",
-        "owner_exemption_max_units": null
+        "unverifiable_conditions": "Exemptions depend on owner occupancy (Golden Duplex, shared facilities, ADU), dorm status or cooperative status.",
+        "owner_exemption_max_units": 2
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "Berkeley Rent Stabilization and Eviction for Good Cause Ordinance (BMC ch. 13.76), as amended by Measure BB; Berkeley Ellis Implementation Ordinance",
+      "citation": "Berkeley Mun. Code ch. 13.76 (Rent Stabilization and Eviction for Good Cause Ordinance), as amended by Measure BB; Berkeley Ellis Implementation Ordinance",
       "conflicts_with_keys": [],
-      "conflict_note": "Measure BB's effective date is not stated. The 2026 relocation amounts are effective 2026-01-01.",
+      "conflict_note": "Measure BB amendments date from Nov. 2024. The 2026 relocation amounts were approved 2025-10-16 and took effect 2026-01-01. Ellis relocation comes from the separate Ellis Implementation Ordinance at the same amounts.",
       "confidence": 0.85
     },
     {
       "key": "berkeley-deposit-interest",
       "primary_candidate": "c033",
       "merged_candidates": [
+        "c033",
         "c037"
       ],
       "jurisdiction": "Berkeley, CA",
@@ -388,10 +401,10 @@
       "category": "security_deposits",
       "status": "in_force",
       "title": "Berkeley security deposit interest",
-      "requirement": "For fully or partially covered units, landlords must pay tenants interest on security deposits annually, plus a prorated amount at move-out.",
+      "requirement": "Landlords of fully or partially covered units must pay tenants interest on security deposits at the end of each year, and a prorated amount on mid-year move-out.",
       "key_value": "Annual interest, prorated at move-out",
-      "coverage_conditions": "Units fully or partially covered by the Berkeley Rent Ordinance.",
-      "exemptions": "Fully exempt units (Golden Duplexes, shared kitchen/bath with owner, owner-occupied ADU properties, dorms, nonprofit co-ops).",
+      "coverage_conditions": "Fully and partially covered units under the Berkeley Rent Ordinance.",
+      "exemptions": "Golden Duplexes; owner shared kitchen/bath units; owner-occupied ADU properties (tenancies after 2018-11-07); dorms; nonprofit cooperatives.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -401,28 +414,29 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": true,
-        "unverifiable_conditions": "Exemptions depend on owner occupancy and dorm/co-op status.",
-        "owner_exemption_max_units": null
+        "unverifiable_conditions": "Exemptions depend on owner occupancy and on dorm or cooperative status.",
+        "owner_exemption_max_units": 2
       },
       "yields_to_local": false,
       "effective_date": null,
       "citation": "Berkeley Rent Stabilization and Eviction for Good Cause Ordinance (security deposit interest)",
       "conflicts_with_keys": [],
-      "conflict_note": "The interest rate and code section are not stated.",
+      "conflict_note": "The interest rate and code section are not stated in the corpus.",
       "confidence": 0.8
     },
     {
-      "key": "berkeley-bmc-13.78-screening-fees",
+      "key": "berkeley-13.78-screening-fees",
       "primary_candidate": "c015",
       "merged_candidates": [
-        "c014"
+        "c014",
+        "c015"
       ],
       "jurisdiction": "Berkeley, CA",
       "level": "city",
       "category": "application_screening_fees",
       "status": "in_force",
-      "title": "Berkeley tenant screening fee rules (BMC ch. 13.78)",
-      "requirement": "Owners may not charge existing tenants a non-refundable fee to renew a tenancy or to add or replace roommates. Owners charging a screening fee must give, before receiving it, a clear Tenant Screening Fee Rights Statement and the state fee cap under Civ. Code § 1950.6(b). These rules apply notwithstanding contrary lease terms.",
+      "title": "Berkeley tenant screening fee rights notice and ban on non-refundable renewal fees",
+      "requirement": "Owners who charge a screening or credit report fee must first give a clear and conspicuous Tenant Screening Fee Rights Statement, along with the Civ. Code § 1950.6(b) fee cap. Owners may not charge existing tenants non-refundable fees to renew a tenancy or to add, replace or remove roommates, regardless of lease terms.",
       "key_value": "$0 non-refundable renewal/roommate fees",
       "coverage_conditions": "Owners and agents of residential rental property in Berkeley.",
       "exemptions": null,
@@ -443,12 +457,13 @@
       "citation": "Berkeley Mun. Code §§ 13.78.010, 13.78.016",
       "conflicts_with_keys": [],
       "conflict_note": null,
-      "confidence": 0.87
+      "confidence": 0.88
     },
     {
-      "key": "berkeley-bmc-13.106-fair-chance",
+      "key": "berkeley-13.106-fair-chance",
       "primary_candidate": "c009",
       "merged_candidates": [
+        "c009",
         "c010"
       ],
       "jurisdiction": "Berkeley, CA",
@@ -456,10 +471,10 @@
       "category": "screening_restrictions",
       "status": "in_force",
       "title": "Ronald V. Dellums Fair Chance Access to Housing Ordinance",
-      "requirement": "Housing providers may not ask about or use criminal history or background checks in advertising, applications, selection, or tenancy decisions. Any action based on criminal history requires written notice and an opportunity to respond. Providers must post the Notice to Rental Applicants and Tenants. Penalties include fines of $1,000 to $10,000 per violation plus damages.",
+      "requirement": "Housing providers may not ask about or use criminal history or background checks in advertising, applications, tenant selection or tenancy decisions. Any adverse action based on criminal history requires written notice and an opportunity to respond. The Notice to Rental Applicants must be posted on application materials.",
       "key_value": "No criminal history inquiry or use",
       "coverage_conditions": "Rental housing providers in Berkeley.",
-      "exemptions": "Owner-occupied properties of 1-3 units. Lifetime sex offender registrants. Limited exemptions for public housing and Section 8. Owner move-back agreements. Sublets and roommate additions.",
+      "exemptions": "Owner-occupied properties of 1-3 units where an owner lives on site; lifetime sex offender registrants; limited public housing and Section 8 exemptions; owner move-back agreements; existing-tenant sublets and roommates.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -469,20 +484,21 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": true,
-        "unverifiable_conditions": "Public housing/Section 8, owner move-back, and sublet/roommate exemptions apply.",
+        "unverifiable_conditions": "Exemptions for lifetime sex offenders, public housing and Section 8, owner move-back agreements, and sublets or roommate additions.",
         "owner_exemption_max_units": 3
       },
       "yields_to_local": false,
       "effective_date": null,
       "citation": "Berkeley Mun. Code ch. 13.106",
       "conflicts_with_keys": [],
-      "conflict_note": "Passed 2020-04-14; the effective date is not stated.",
-      "confidence": 0.86
+      "conflict_note": "Passed by the City Council 2020-04-14; the effective date is not stated.",
+      "confidence": 0.85
     },
     {
-      "key": "berkeley-bmc-13.63-algorithmic-ban",
+      "key": "berkeley-13.63-algorithmic-ban",
       "primary_candidate": "c001",
       "merged_candidates": [
+        "c001",
         "c002",
         "c005",
         "c087"
@@ -492,10 +508,10 @@
       "category": "algorithmic_rent_setting",
       "status": "in_force",
       "title": "Berkeley ban on coordinated pricing algorithms",
-      "requirement": "Landlords may not use a coordinated pricing algorithm, meaning one that uses nonpublic competitor data less than 90 days old, to set rents or occupancy. No one may sell, license, or provide such algorithms to Berkeley landlords. Each unit-month is a separate violation, with civil penalties up to $1,000. Both the City Attorney and tenants may sue.",
+      "requirement": "Landlords may not use a coordinated pricing algorithm (one relying on nonpublic competitor data less than 90 days old) to set rents or occupancy. No one may sell or license such algorithms to Berkeley landlords. Each unit-month is a separate violation, with civil penalties up to $1,000. The City Attorney and tenants may sue.",
       "key_value": "Up to $1,000 per violation (per unit per month)",
-      "coverage_conditions": "Landlords of residential units in Berkeley and vendors of covered algorithms.",
-      "exemptions": "Aggregated or anonymous reports that do not recommend rents. Affordable-housing rent or income limit tools. Market research for financing, appraisals, or software testing.",
+      "coverage_conditions": "Landlords of residential units in Berkeley, and vendors supplying them.",
+      "exemptions": "Aggregated or anonymous reports not recommending rents; affordable-housing rent/income limit tools; market research for financing, appraisal or software testing.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -505,31 +521,32 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only where the landlord uses a qualifying algorithm.",
+        "unverifiable_conditions": "Applies only where a coordinated pricing algorithm using nonpublic competitor data is used.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": "2026-01",
       "citation": "Berkeley Mun. Code § 13.63.030 (Ord. No. 7,992-N.S.)",
       "conflicts_with_keys": [],
-      "conflict_note": "Sources disagree on timing. The ordinance PDF shows passage to print on 2025-11-18 and adoption on 2025-12-02, with no stated effective date. Morgan Lewis gives January 2026, consistent with the 30-day rule. The RealPage challenge was dismissed with prejudice on 2026-01-14.",
-      "confidence": 0.82
+      "conflict_note": "The ordinance was passed to print 2025-11-18 and adopted 2025-12-02, with no stated effective date. A secondary source gives January 2026, consistent with the 30-day rule. It amends existing BMC ch. 13.63. RealPage's challenge was dismissed with prejudice 2026-01-14.",
+      "confidence": 0.8
     },
     {
-      "key": "sf-rent-ordinance-annual-increase",
-      "primary_candidate": "c184",
+      "key": "sf-37-rent-control",
+      "primary_candidate": "c179",
       "merged_candidates": [
-        "c179"
+        "c179",
+        "c184"
       ],
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "rent_increase_limits",
       "status": "in_force",
       "title": "San Francisco Rent Ordinance annual allowable increase",
-      "requirement": "For rent-controlled units, the annual increase is limited to the Rent Board's allowable amount. It is 1.6% of base rent for 2026-03-01 through 2027-02-28.",
-      "key_value": "1.6% (3/1/2026–2/28/2027)",
-      "coverage_conditions": "Units covered by the Rent Ordinance's rent increase limits.",
-      "exemptions": "Units first receiving a certificate of occupancy after 1979-06-13. Costa-Hawkins-eligible tenancies. Some units whose rent is regulated by another agency.",
+      "requirement": "For rent-controlled units, annual increases are limited to the Rent Board's allowable increase. The rate is 1.6% of base rent for 2026-03-01 through 2027-02-28.",
+      "key_value": "1.6% (3/1/2026-2/28/2027)",
+      "coverage_conditions": "Rent-controlled units under S.F. Admin. Code ch. 37.",
+      "exemptions": "Units first receiving a certificate of occupancy after June 13, 1979; Costa-Hawkins-eligible tenancies; some units whose rent is regulated by another agency.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -539,20 +556,21 @@
         "age_years_exempt": null,
         "cutoff_basis": "certificate_of_occupancy",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Costa-Hawkins-eligible tenancies (e.g., single-family homes and condos) and agency-regulated units are excluded.",
+        "unverifiable_conditions": "Costa-Hawkins-exempt tenancies (e.g., single-family homes and condos) and agency-regulated units are excluded.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": null,
       "citation": "S.F. Admin. Code ch. 37 (Rent Ordinance)",
       "conflicts_with_keys": [],
-      "conflict_note": "The rate resets each March 1 (prior rates: 1.4% for 2025-26, 1.7% for 2024-25). The certificate of occupancy cutoff comes from the SF just cause overview page.",
-      "confidence": 0.83
+      "conflict_note": "The rate resets each March 1 (1.4% for 2025-26). The CO cutoff comes from the SF just cause overview (c178).",
+      "confidence": 0.82
     },
     {
       "key": "sf-37.9-just-cause",
       "primary_candidate": "c178",
       "merged_candidates": [
+        "c178",
         "c181",
         "c182",
         "c183",
@@ -565,10 +583,10 @@
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "San Francisco Rent Ordinance just cause eviction and relocation",
-      "requirement": "Landlords of covered units must have one of 17 enumerated just causes, and it must be the dominant motive. Lease expiration or a change of ownership is not just cause. Relocation applies to notices served 3/1/26–2/28/27. Under § 37.9C (owner/relative move-in, demolition, temporary capital improvement, substantial rehab): $8,245 per tenant, max $24,733 per unit, plus $5,497 per elderly (60+) or disabled tenant or household with minor children. Ellis Act evictions under § 37.9A: $11,110.05 per tenant, max $33,330.13 per unit, plus $7,443.90 per elderly (62+) or disabled tenant. Temporary displacements under 20 days are governed by Cal. Civ. Code § 1947.9: $446 per day per household plus moving expenses.",
-      "key_value": "17 just causes; § 37.9C relocation $8,245/tenant (max $24,733/unit)",
-      "coverage_conditions": "Rental units covered by the Rent Ordinance's eviction provisions, including post-1979 certificate of occupancy units and Costa-Hawkins tenancies that are exempt from rent limits.",
-      "exemptions": "Units outside Rent Ordinance coverage (not enumerated in the source).",
+      "requirement": "Eviction from a covered unit requires one of 17 just causes that is the landlord's dominant motive. Lease expiration or a change of ownership is not just cause. Relocation payments for notices served 2026-03-01 to 2027-02-28:\n- Owner/relative move-in, demolition, capital improvement or substantial rehab (§ 37.9C): $8,245 per tenant, max $24,733 per unit, plus $5,497 per elderly or disabled tenant or household with minor children.\n- Ellis Act (§ 37.9A): $11,110.05 per tenant, max $33,330.13 per unit, plus $7,443.90 per elderly (62+) or disabled tenant.\n- Temporary capital-improvement displacement under 20 days (Civ. Code § 1947.9): $446 per day plus moving expenses.",
+      "key_value": "17 just causes; § 37.9C relocation $8,245/tenant (2026-27)",
+      "coverage_conditions": "Units covered by the Rent Ordinance's eviction provisions, including post-1979 units and Costa-Hawkins tenancies.",
+      "exemptions": "Units not covered by the Rent Ordinance (not listed in the source).",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -578,28 +596,30 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "The unit must be covered by the Rent Ordinance eviction provisions; specific exemptions are not stated.",
+        "unverifiable_conditions": "The unit must be covered by the Rent Ordinance's eviction provisions.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "S.F. Admin. Code §§ 37.9(a), 37.9A, 37.9C; Cal. Civ. Code § 1947.9",
+      "citation": "S.F. Admin. Code §§ 37.9, 37.9A, 37.9C; Cal. Civ. Code § 1947.9",
       "conflicts_with_keys": [],
-      "conflict_note": "Relocation rates adjust each March 1. The Ellis section number is inferred from a form label.",
-      "confidence": 0.87
+      "conflict_note": "Relocation rates adjust each March 1. The archive dates § 37.9C rates to 2006-08-10.",
+      "confidence": 0.88
     },
     {
-      "key": "sf-deposit-interest",
+      "key": "sf-ch49-deposit-interest",
       "primary_candidate": "c185",
-      "merged_candidates": [],
+      "merged_candidates": [
+        "c185"
+      ],
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "security_deposits",
       "status": "in_force",
       "title": "San Francisco security deposit interest",
       "requirement": "Landlords must pay interest on security deposits at the Rent Board rate. The rate is 4.2% for 2026-03-01 through 2027-02-28.",
-      "key_value": "4.2% (3/1/2026–2/28/2027)",
-      "coverage_conditions": "Security deposits held for San Francisco rental units subject to the interest requirement.",
+      "key_value": "4.2% (3/1/2026-2/28/2027)",
+      "coverage_conditions": "Security deposits held for San Francisco rental units.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -615,21 +635,23 @@
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "San Francisco security deposit interest requirement (S.F. Admin. Code ch. 49)",
+      "citation": "S.F. Admin. Code ch. 49 (security deposit interest)",
       "conflicts_with_keys": [],
-      "conflict_note": "The Chapter 49 citation is not stated on the source page. Prior rates were 5.0% (2025-26) and 5.2% (2024-25).",
-      "confidence": 0.75
+      "conflict_note": "The ch. 49 citation is not stated in the source. Prior rates were 5.0% (2025-26) and 5.2% (2024-25).",
+      "confidence": 0.72
     },
     {
-      "key": "sf-fair-chance-housing",
+      "key": "sf-fair-chance",
       "primary_candidate": "c177",
-      "merged_candidates": [],
+      "merged_candidates": [
+        "c177"
+      ],
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "screening_restrictions",
       "status": "in_force",
       "title": "San Francisco Fair Chance Ordinance (affordable housing)",
-      "requirement": "Affordable housing providers are restricted in how they may use arrest or conviction history of applicants and residents.",
+      "requirement": "Providers making affordable housing decisions may not unfairly use an applicant's or resident's arrest or conviction history.",
       "key_value": null,
       "coverage_conditions": "Affordable housing decisions in San Francisco.",
       "exemptions": null,
@@ -642,14 +664,14 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "RESTRICTED: affordable housing providers/decisions",
+        "unverifiable_conditions": "RESTRICTED: affordable housing providers and applicants.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": null,
       "citation": "San Francisco Fair Chance Ordinance",
       "conflicts_with_keys": [],
-      "conflict_note": "The source is a one-line agency summary with no code section or effective date.",
+      "conflict_note": "Agency landing page only; no code citation or effective date.",
       "confidence": 0.55
     },
     {
@@ -658,16 +680,17 @@
       "merged_candidates": [
         "c003",
         "c085",
-        "c091"
+        "c091",
+        "c180"
       ],
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "algorithmic_rent_setting",
       "status": "in_force",
       "title": "San Francisco ban on algorithmic rent-setting devices",
-      "requirement": "Prohibits the sale or use of algorithmic devices that use nonpublic competitor data to set rents or manage occupancy. Tenants or the City Attorney may sue for damages, an injunction, and civil penalties up to $1,000 per violation. Each unit-month may be a separate violation.",
+      "requirement": "The sale or use of algorithmic devices that analyze nonpublic competitor data to set rents or manage occupancy is prohibited. Tenants or the City Attorney may sue for damages, injunctive relief and civil penalties up to $1,000 per violation. Each unit-month may be a separate violation.",
       "key_value": "Up to $1,000 per violation",
-      "coverage_conditions": "Residential units in San Francisco; sellers and users of covered devices.",
+      "coverage_conditions": "Residential units in San Francisco.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -678,20 +701,21 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only where a qualifying algorithmic device is used.",
+        "unverifiable_conditions": "Applies only where a device using nonpublic competitor data is used.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": "2024-10-14",
       "citation": "S.F. Admin. Code § 37.10C",
       "conflicts_with_keys": [],
-      "conflict_note": null,
+      "conflict_note": "Approved by the Board of Supervisors in July 2024.",
       "confidence": 0.92
     },
     {
-      "key": "la-rso-rent-increase",
+      "key": "la-rso-rent-control",
       "primary_candidate": "c099",
       "merged_candidates": [
+        "c099",
         "c100",
         "c107",
         "c108",
@@ -701,11 +725,11 @@
       "level": "city",
       "category": "rent_increase_limits",
       "status": "in_force",
-      "title": "Los Angeles Rent Stabilization Ordinance allowable rent increase",
-      "requirement": "RSO rent may be raised once every 12 months by the LAHD allowable percentage, which was 3% for 2025-07-01 to 2026-06-30. From 2026-02-02, no additional utility percentage and no 10% increase for an added dependent are allowed. A 10% increase for an added non-dependent tenant remains, imposed within 60 days. RSO and SCEP fees may be passed through ($1.61 and $2.83 per month) after registration and notice. Larger increases require LAHD approval.",
-      "key_value": "3% (7/1/2025–6/30/2026); no utility add-on from 2026-02-02",
-      "coverage_conditions": "Rental units in the City of Los Angeles first built on or before 1978-10-01, plus replacement units under LAMC 151.28. Includes two or more single-family homes on one parcel, ADUs, and others.",
-      "exemptions": "Rent is unregulated for condo/townhome tenancies begun after 1995-12-31. Luxury and temporary exemptions. A single-family dwelling alone on a parcel is not covered.",
+      "title": "Los Angeles Rent Stabilization Ordinance allowable annual increase",
+      "requirement": "RSO rent may be raised once every 12 months by the LAHD allowable percentage (3% for 2025-07-01 to 2026-06-30). Effective 2026-02-02, there is no added utility percentage and no 10% increase for an added dependent; 10% for an added non-dependent tenant remains. RSO and SCEP fees may be passed through after registration and notice. Larger increases require LAHD approval.",
+      "key_value": "3% (7/1/2025-6/30/2026); once per 12 months",
+      "coverage_conditions": "Rental units in the City of Los Angeles first built or certified on or before 1978-10-01, plus LAMC 151.28 replacement units. Includes apartments, condos, duplexes, two or more single-family dwellings on a parcel, ADUs and similar unit types.",
+      "exemptions": "Rent is unregulated for condo and townhome tenancies commenced after 1995-12-31. A single-family dwelling alone on a parcel is not covered. Luxury and temporary exemptions apply.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -713,111 +737,41 @@
         "built_on_or_before": "1978-10-01",
         "built_after": null,
         "age_years_exempt": null,
-        "cutoff_basis": "year_built",
+        "cutoff_basis": "certificate_of_occupancy",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Replacement units are covered regardless of age. A lone single-family dwelling on a parcel is excluded. Condo/townhome tenancies after 1995 and luxury exemptions apply.",
+        "unverifiable_conditions": "Replacement units are covered regardless of age. A single-family dwelling alone on a parcel is generally not covered. Condo/townhome tenancies after 1995 are rent-unregulated. Luxury and temporary exemptions apply.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "Los Angeles Rent Stabilization Ordinance, LAMC Ch. XV, § 151.00 et seq.",
+      "citation": "LAMC Ch. XV, § 151.00 et seq. (Rent Stabilization Ordinance)",
       "conflicts_with_keys": [],
-      "conflict_note": "The formula changed 2026-02-02, eliminating the utility and dependent add-ons. The 3% figure applied only through 2026-06-30; the LAHD calculator retrieved 2026-10-01 still shows it, and the 2026-27 percentage is not stated. The page keys coverage on 'first built'; the ordinance may key on certificate of occupancy.",
+      "conflict_note": "LAHD describes coverage as 'first built on or before October 1, 1978'; the cutoff is encoded on the certificate of occupancy. The 3% figure expired 2026-06-30, and the allowable increase from 2026-07-01 onward (under the amended formula) is not stated in the corpus. The utility and dependent add-ons were eliminated 2026-02-02.",
       "confidence": 0.8
     },
     {
       "key": "la-rso-just-cause",
       "primary_candidate": "c101",
       "merged_candidates": [
+        "c094",
+        "c095",
         "c096",
         "c097",
+        "c101",
         "c102",
         "c103",
         "c104",
         "c111",
-        "c112",
-        "c113",
-        "c114"
+        "c112"
       ],
       "jurisdiction": "Los Angeles, CA",
       "level": "city",
       "category": "just_cause_eviction",
       "status": "in_force",
-      "title": "Los Angeles RSO eviction grounds, notices and relocation",
-      "requirement": "RSO units may be evicted only for enumerated at-fault or no-fault reasons. Nonpayment evictions require arrears above one month's Fair Market Rent (from 2023-03-27). Termination notices must be filed with LAHD within 3 business days. No-fault evictions require a prior Declaration of Intent to Evict and relocation assistance made available within 15 days. Relocation amounts for 7/1/2026–6/30/2027 are $11,000–$14,400 for eligible tenants and $23,150–$27,400 for qualified tenants, with reduced Mom & Pop amounts. A Notice of Right to Counsel is required from 2025-08-20. Demolition or conversion relocation is also owed under LAMC 47.06/47.07. Enhanced relocation applies to lower-income tenants of Protected Units demolished for new construction (Resident Protections Ordinance 188481/188482).",
-      "key_value": "Relocation 2026-27: $11,000–$27,400",
-      "coverage_conditions": "RSO units (first built on or before 1978-10-01, plus replacement units).",
-      "exemptions": "Reduced Mom & Pop relocation for small owners doing owner/relative move-ins. No relocation for at-fault evictions.",
-      "coverage": {
-        "min_units": null,
-        "max_units": null,
-        "built_before": null,
-        "built_on_or_before": "1978-10-01",
-        "built_after": null,
-        "age_years_exempt": null,
-        "cutoff_basis": "year_built",
-        "owner_type_dependent": false,
-        "unverifiable_conditions": "Relocation amount depends on tenant age, disability, minor children, tenancy length and income. Replacement units are covered regardless of age.",
-        "owner_exemption_max_units": null
-      },
-      "yields_to_local": false,
-      "effective_date": null,
-      "citation": "LAMC §§ 151.09, 151.09.G, 151.30, 47.06, 47.07; Ord. Nos. 188481, 188482",
-      "conflicts_with_keys": [],
-      "conflict_note": "Relocation amounts reset each July 1. Bulletin A says the notice is filed within 3 days; Bulletin B says 3 business days.",
-      "confidence": 0.83
-    },
-    {
-      "key": "la-jco-just-cause",
-      "primary_candidate": "c092",
-      "merged_candidates": [
-        "c093",
-        "c094",
-        "c095",
-        "c106"
-      ],
-      "jurisdiction": "Los Angeles, CA",
-      "level": "city",
-      "category": "just_cause_eviction",
-      "status": "in_force",
-      "title": "Los Angeles Just Cause Ordinance (non-RSO units)",
-      "requirement": "For non-RSO units, after 6 months of tenancy or expiration of the original lease, a landlord may terminate only for enumerated at-fault or no-fault reasons. No-fault evictions require relocation assistance under LAMC 165.06. A JCO single-family home owned by a qualifying natural person pays one month's rent. A Declaration of Intent to Evict must be filed and notices filed with LAHD within 3 business days. The FMR nonpayment threshold applies. Landlords must provide the Notice of Renters' Protections (tenancies begun or renewed on or after 2023-01-27) and the Notice of Right to Counsel (from 2025-08-20).",
-      "key_value": null,
-      "coverage_conditions": "Residential units in the City of Los Angeles not regulated by the RSO, including single-family homes and buildings newer than 1978-10-01.",
-      "exemptions": "Transient hotels. Licensed care facilities. Fraternity/sorority houses. The owner's roommate. Certain co-ops, nonprofit and government-owned housing.",
-      "coverage": {
-        "min_units": null,
-        "max_units": null,
-        "built_before": null,
-        "built_on_or_before": null,
-        "built_after": "1978-10-01",
-        "age_years_exempt": null,
-        "cutoff_basis": "year_built",
-        "owner_type_dependent": true,
-        "unverifiable_conditions": "Requires 6 months of tenancy or lease expiration. Also covers older single-family dwellings alone on a parcel (not RSO). Owner's-roommate and facility exceptions apply.",
-        "owner_exemption_max_units": null
-      },
-      "yields_to_local": false,
-      "effective_date": null,
-      "citation": "Los Angeles Just Cause Ordinance, LAMC § 165.00 et seq.",
-      "conflicts_with_keys": [],
-      "conflict_note": "The effective date and section numbers are not stated on the LAHD pages.",
-      "confidence": 0.8
-    },
-    {
-      "key": "la-rso-deposit-interest",
-      "primary_candidate": "c105",
-      "merged_candidates": [
-        "c116"
-      ],
-      "jurisdiction": "Los Angeles, CA",
-      "level": "city",
-      "category": "security_deposits",
-      "status": "in_force",
-      "title": "Los Angeles RSO security deposit interest",
-      "requirement": "Landlords of RSO units must pay interest on security deposits at a City-set annual rate (4.320% for 2025). Payment is monthly or annually, as direct payment or rent credit, and the method must be notified in writing.",
-      "key_value": "City-set annual rate (4.320% for 2025)",
-      "coverage_conditions": "Units subject to the Los Angeles RSO.",
+      "title": "Los Angeles RSO just cause eviction and relocation",
+      "requirement": "Landlords of RSO units may evict only for listed at-fault or no-fault reasons. Nonpayment evictions require arrears above one month's HUD Fair Market Rent (from 2023-03-27). No-fault evictions require filing a Declaration of Intent to Evict with LAHD before serving notice, plus relocation paid within 15 days. Relocation for 7/1/2026-6/30/2027: eligible tenants $11,000/$14,400; qualified tenants $23,150/$27,400; reduced Mom & Pop amounts for owner move-in. All termination notices must be filed with LAHD within 3 business days. Landlords must give the Notice of Renters' Protections (tenancies from 2023-01-27) and the Notice of Right to Counsel (from 2025-08-20).",
+      "key_value": "Relocation $11,000-$27,400 (7/1/2026-6/30/2027)",
+      "coverage_conditions": "RSO units in the City of Los Angeles.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -826,22 +780,129 @@
         "built_on_or_before": "1978-10-01",
         "built_after": null,
         "age_years_exempt": null,
-        "cutoff_basis": "year_built",
+        "cutoff_basis": "certificate_of_occupancy",
         "owner_type_dependent": false,
-        "unverifiable_conditions": null,
+        "unverifiable_conditions": "RSO replacement units are covered regardless of age. A single-family dwelling alone on a parcel falls under the JCO instead. Relocation amounts depend on tenant age, disability, income and tenure.",
+        "owner_exemption_max_units": null
+      },
+      "yields_to_local": false,
+      "effective_date": null,
+      "citation": "LAMC §§ 151.09, 151.09.G, 151.30",
+      "conflicts_with_keys": [],
+      "conflict_note": "Relocation amounts adjust each July 1. Bulletin A says notice copies are due within 3 days and Bulletin B says within 3 business days.",
+      "confidence": 0.82
+    },
+    {
+      "key": "la-jco-just-cause",
+      "primary_candidate": "c092",
+      "merged_candidates": [
+        "c092",
+        "c093",
+        "c106",
+        "c113"
+      ],
+      "jurisdiction": "Los Angeles, CA",
+      "level": "city",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "Los Angeles Just Cause Ordinance (non-RSO units)",
+      "requirement": "For non-RSO units, after 6 months of tenancy or expiration of the original lease, landlords may terminate only for enumerated at-fault or no-fault reasons. The same Fair Market Rent nonpayment threshold and 3-business-day LAHD notice filing apply. No-fault terminations require relocation assistance at the RSO amounts, or one month's rent for a single-family home owned by a qualifying natural person. Separately, LAMC 47.06-47.07 require relocation for demolition or condo/commercial conversion regardless of RSO/JCO coverage.",
+      "key_value": null,
+      "coverage_conditions": "Residential units in the City of Los Angeles not regulated by the RSO, including newer buildings and single-family dwellings.",
+      "exemptions": "Transient hotels; licensed care facilities; fraternity and sorority houses; owner's roommate; some cooperatives, nonprofit facilities and government-owned properties.",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": "1978-10-01",
+        "age_years_exempt": null,
+        "cutoff_basis": "certificate_of_occupancy",
+        "owner_type_dependent": true,
+        "unverifiable_conditions": "Also covers older non-RSO units, such as a single-family dwelling alone on a parcel. Requires 6 months of tenancy or lease expiration. Owner's-roommate and facility-type exceptions apply.",
+        "owner_exemption_max_units": 1
+      },
+      "yields_to_local": false,
+      "effective_date": null,
+      "citation": "LAMC § 165.00 et seq. (Just Cause Ordinance), incl. §§ 165.03, 165.05.B.5, 165.06; LAMC §§ 47.06, 47.07",
+      "conflicts_with_keys": [],
+      "conflict_note": "The effective date is not stated in the corpus.",
+      "confidence": 0.8
+    },
+    {
+      "key": "la-rpo-demolition-relocation",
+      "primary_candidate": "c114",
+      "merged_candidates": [
+        "c114"
+      ],
+      "jurisdiction": "Los Angeles, CA",
+      "level": "city",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "Los Angeles Resident Protections Ordinance (demolition of Protected Units)",
+      "requirement": "Owners who demolish a Protected Unit for new construction must pay enhanced relocation to lower-income tenants. Standardized amounts for 7/1/2026-6/30/2027 are $115,480 (extremely low income), $96,750 (very low) and $87,450 (low). Tenants may remain up to 6 months before construction. Penalties start at $250,000 per displaced unit.",
+      "key_value": "$87,450-$115,480 (7/1/2026-6/30/2027)",
+      "coverage_conditions": "Protected Units demolished for new construction. These include RSO units, units with recent affordability covenants or lower-income occupancy, and units Ellis-withdrawn in the past 10 years.",
+      "exemptions": "Households above low income receive only the RSO/JCO amounts.",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "RESTRICTED: lower-income (80% AMI or below) households in Protected Units demolished for new construction.",
+        "owner_exemption_max_units": null
+      },
+      "yields_to_local": false,
+      "effective_date": "2025-02-11",
+      "citation": "Los Angeles Ordinance Nos. 188481 and 188482",
+      "conflicts_with_keys": [],
+      "conflict_note": "The source gives 2025-02-11 as both the adoption and effective date; the actual effective date may be later.",
+      "confidence": 0.7
+    },
+    {
+      "key": "la-151.06.02-deposit-interest",
+      "primary_candidate": "c116",
+      "merged_candidates": [
+        "c105",
+        "c116"
+      ],
+      "jurisdiction": "Los Angeles, CA",
+      "level": "city",
+      "category": "security_deposits",
+      "status": "in_force",
+      "title": "Los Angeles RSO security deposit interest",
+      "requirement": "Landlords of RSO units must pay interest on security deposits at the annual City-set rate (4.320% for 2025). Interest is paid monthly or annually, by direct payment or rent credit, with written notice of the chosen method.",
+      "key_value": "City-set annual rate (4.320% for 2025)",
+      "coverage_conditions": "RSO units in the City of Los Angeles.",
+      "exemptions": null,
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": "1978-10-01",
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "certificate_of_occupancy",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "The unit must be RSO-covered.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": "1990-11-01",
       "citation": "LAMC § 151.06.02",
       "conflicts_with_keys": [],
-      "conflict_note": "The 2026 rate is not shown. The effective date is the accrual start stated in the code text.",
-      "confidence": 0.78
+      "conflict_note": "Secondary source; the 2026 rate is not shown.",
+      "confidence": 0.8
     },
     {
       "key": "sd-98.07-just-cause",
       "primary_candidate": "c164",
       "merged_candidates": [
+        "c164",
         "c165",
         "c166",
         "c167",
@@ -857,11 +918,11 @@
       "level": "city",
       "category": "just_cause_eviction",
       "status": "in_force",
-      "title": "San Diego Residential Tenant Protections – just cause",
-      "requirement": "From the start of a tenancy over 30 days, a landlord may terminate only for enumerated at-fault or no-fault just cause, with a cure notice for curable violations. No-fault terminations require relocation of 2 months' rent (3 months for tenants 62+ or disabled), paid within 15 days or waived. A 5-year right of first offer applies after certain no-fault evictions. Landlords must give a written tenant protections notice with the SDHC guide. Buyouts must exceed the relocation amount, with disclosures. Termination notices must be filed with SDHC within 3 business days, effective 30 days after the SDHC portal launches. Noncompliant notices are void.",
-      "key_value": "Relocation 2 months' rent (3 for seniors/disabled)",
-      "coverage_conditions": "Residential rental property in San Diego, including mobilehome-park units; tenancies over 30 days. Excludes fixed-term leases of 3 months or less.",
-      "exemptions": "Certificate of occupancy within 15 years. Deed-restricted or subsidized affordable housing (Section 8 still covered). Hotels and short-term rentals. Care facilities and dorms. Shared bath or kitchen with a resident landlord. Owner-occupied single-family homes renting no more than 2 units or bedrooms. Owner-occupied duplexes. Non-corporate separately alienable units with notice.",
+      "title": "San Diego Residential Tenant Protections (just cause from start of tenancy)",
+      "requirement": "A landlord may not terminate a tenancy of more than 30 days without enumerated at-fault or no-fault just cause. Curable violations require a cure notice. No-fault terminations require relocation of 2 months' rent (3 months for seniors 62+ or disabled tenants), paid within 15 days or as a rent waiver. Displaced tenants have a 5-year right of first offer. Tenants must receive a 12-point protections notice and the SDHC guide. Buyouts must exceed the relocation amount and meet disclosure rules. Termination notices must be filed with SDHC within 3 business days once the SDHC portal is live.",
+      "key_value": "No-fault relocation: 2 months' rent (3 for seniors/disabled)",
+      "coverage_conditions": "Residential rental property in the City of San Diego, including mobilehome-park rentals, for tenancies over 30 days. Fixed-term leases of 3 months or less are excluded.",
+      "exemptions": "Transient and short-term rentals; deed-restricted or subsidized affordable housing (Section 8 still covered); care and dorm facilities; shared kitchen/bath with a resident owner; owner-occupied single-family homes renting up to 2 units; owner-occupied two-unit structures; certificate of occupancy within 15 years; non-corporate-owned separately alienable units with notice.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -871,21 +932,22 @@
         "age_years_exempt": 15,
         "cutoff_basis": "certificate_of_occupancy",
         "owner_type_dependent": true,
-        "unverifiable_conditions": "The separately alienable exemption requires a non-corporate owner plus notice. Owner-occupancy and shared-facility exemptions apply. Affordable housing is excluded. The SDHC filing requirement depends on the portal launch.",
+        "unverifiable_conditions": "The separately-alienable exemption requires a non-corporate owner and written notice. Deed-restricted or subsidized affordable housing is excluded.",
         "owner_exemption_max_units": 2
       },
       "yields_to_local": false,
       "effective_date": "2023-06-24",
-      "citation": "San Diego Mun. Code ch. 9, art. 8, div. 7 (§ 98.0701 et seq.; O-21647 N.S., amended O-21769 N.S.)",
+      "citation": "San Diego Mun. Code ch. 9, art. 8, div. 7 (§§ 98.0701-98.0710; O-21647 N.S.)",
       "conflicts_with_keys": [],
-      "conflict_note": "Amended by O-21769, effective 2024-03-28. The SDHC filing requirement (§ 98.0706(a)(2)) was not in effect as of 2023, and whether the portal has launched is unverified.",
+      "conflict_note": "Amended by O-21769 N.S., effective 2024-03-28. The SDHC filing requirement (§ 98.0706(a)(2)) applies only 30 days after the portal launches, and the launch date is unverified.",
       "confidence": 0.9
     },
     {
-      "key": "sd-98.1101-algorithmic-ban",
+      "key": "sd-98.11-algorithmic-ban",
       "primary_candidate": "c086",
       "merged_candidates": [
         "c004",
+        "c086",
         "c169",
         "c170"
       ],
@@ -893,11 +955,11 @@
       "level": "city",
       "category": "algorithmic_rent_setting",
       "status": "in_force",
-      "title": "San Diego automated rent price-fixing prohibition",
-      "requirement": "Landlords may not use algorithmic devices that process nonpublic competitor data to set or recommend rents or occupancy, and such devices may not be sold or licensed to landlords. Tenants may sue for damages, an injunction, and penalties up to $1,000 per violation. Each month and each property is a separate violation.",
+      "title": "San Diego ban on algorithmic rent-setting devices",
+      "requirement": "Landlords may not use algorithmic devices relying on nonpublic competitor data to set rents or occupancy, and devices may not be sold or licensed to landlords. Tenants may sue for damages, injunctive relief and penalties up to $1,000 per violation. Each month and each property may be a separate violation.",
       "key_value": "Up to $1,000 per violation",
-      "coverage_conditions": "Landlords of residential rental property in San Diego; device vendors.",
-      "exemptions": "Reports on aggregated nonpublic data more than 90 days old, or public data, that do not recommend rates. Affordable-housing program tools.",
+      "coverage_conditions": "Residential rental property in the City of San Diego.",
+      "exemptions": "Reports using aggregated data more than 90 days old or public data that do not recommend rates; affordable-housing compliance tools (per draft text).",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -912,16 +974,17 @@
       },
       "yields_to_local": false,
       "effective_date": "2025-06",
-      "citation": "San Diego Mun. Code §§ 98.1101–98.1104",
+      "citation": "San Diego Mun. Code §§ 98.1101-98.1104",
       "conflicts_with_keys": [],
-      "conflict_note": "The date and in-force status come from the Morgan Lewis summary (June 2025). The city's draft ordinance materials (O-2025-107, Feb. 2025) were used only for substance, not for dates.",
-      "confidence": 0.75
+      "conflict_note": "The adopted ordinance text is not in the corpus. A secondary source reports it in force from June 2025. The Feb. 2025 draft (O-2025-107) was used only for exemptions.",
+      "confidence": 0.72
     },
     {
       "key": "santa-ana-rso-rent-cap",
       "primary_candidate": "c192",
       "merged_candidates": [
         "c189",
+        "c192",
         "c195",
         "c199"
       ],
@@ -930,10 +993,10 @@
       "category": "rent_increase_limits",
       "status": "in_force",
       "title": "Santa Ana Rent Stabilization Ordinance annual cap",
-      "requirement": "Rent may be increased once a year by no more than the lower of 3% or 80% of the CPI change, and 0% if CPI is negative. The maximum is 2.87% for 9/1/2026–8/31/2027. Owners may petition for a fair-return increase. Owners must give written notice of the ordinance and tenant rights at lease start and with any rent increase notice.",
-      "key_value": "Lower of 3% or 80% CPI; 2.87% for 9/1/2026–8/31/2027",
-      "coverage_conditions": "Residential units in buildings constructed on or before 1995-02-01, and mobile home spaces offered for rent on or before 1990-01-01.",
-      "exemptions": "Buildings constructed after 1995-02-01. Mobile home spaces first offered for rent after 1990-01-01.",
+      "requirement": "Rent may be raised once a year by no more than the lesser of 3% or 80% of CPI change, with 0% if CPI is negative. The maximum is 2.87% for 2026-09-01 to 2027-08-31. Owners must give written notice of the ordinance and tenant rights at lease start and with any rent increase. Owners may petition for a fair-return increase.",
+      "key_value": "Lesser of 3% or 80% CPI; 2.87% (9/1/2026-8/31/2027)",
+      "coverage_conditions": "Residential rental units in buildings constructed on or before 1995-02-01, and mobile home spaces offered for rent on or before 1990-01-01.",
+      "exemptions": "Buildings constructed after 1995-02-01; mobile home spaces first offered for rent after 1990-01-01.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -943,7 +1006,7 @@
         "age_years_exempt": null,
         "cutoff_basis": "year_built",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Costa-Hawkins may exempt single-family homes and condos (not stated by the city).",
+        "unverifiable_conditions": "Costa-Hawkins may further exempt single-family homes and condos (not stated by the city).",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
@@ -959,6 +1022,7 @@
       "merged_candidates": [
         "c190",
         "c191",
+        "c193",
         "c194",
         "c196",
         "c200"
@@ -968,10 +1032,10 @@
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Santa Ana Just Cause Eviction Ordinance",
-      "requirement": "After 30 days of tenancy, an owner may terminate only for an enumerated at-fault or no-fault just cause stated in writing, with a cure notice for curable violations. No-fault terminations require 3 months' relocation assistance or a waiver of the final 3 months' rent. Owners must notify tenants of the protections at lease commencement or renewal.",
-      "key_value": "3 months' relocation for no-fault",
+      "requirement": "After 30 days of tenancy, owners may terminate only for an enumerated just cause stated in a written notice, with a cure notice for curable violations. No-fault terminations require 3 months' relocation assistance or waiver of the final 3 months' rent. Owners must notify tenants of the ordinance's protections.",
+      "key_value": "No-fault relocation: 3 months' rent",
       "coverage_conditions": "Residential tenancies in Santa Ana lasting more than 30 days.",
-      "exemptions": "Housing produced in the last 15 years. Deed-restricted affordable housing. Transient occupancy. Care facilities. Dorms. Shared living quarters.",
+      "exemptions": "Housing produced in the last 15 years; deed-restricted affordable housing; hotels and transient occupancy; hospitals and care facilities; dormitories; shared living quarters.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -981,21 +1045,22 @@
         "age_years_exempt": 15,
         "cutoff_basis": "year_built",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Deed-restricted affordable housing, transient, care, dorm and shared-quarters exclusions apply.",
+        "unverifiable_conditions": "Deed-restricted affordable housing, transient occupancy, care facilities, dorms and shared quarters are excluded.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": "2021-11-19",
       "citation": "Santa Ana Just Cause Eviction Ordinance (2021)",
       "conflicts_with_keys": [],
-      "conflict_note": "'Produced in the last 15 years' is not specified as construction date or certificate of occupancy.",
-      "confidence": 0.83
+      "conflict_note": "'Housing produced in the last 15 years' does not specify construction versus CO date.",
+      "confidence": 0.82
     },
     {
-      "key": "santa-ana-ns-3090-algorithmic-ban",
+      "key": "santa-ana-ns3090-algorithmic-ban",
       "primary_candidate": "c088",
       "merged_candidates": [
         "c006",
+        "c088",
         "c197",
         "c198"
       ],
@@ -1003,11 +1068,11 @@
       "level": "city",
       "category": "algorithmic_rent_setting",
       "status": "in_force",
-      "title": "Santa Ana ban on anticompetitive automated rent price-fixing (Ord. NS-3090)",
-      "requirement": "Prohibits the sale, licensing, provision and use of algorithmic rent-setting devices that use nonpublic competitor data for residential rentals. Tenants may bring private claims for up to $1,000 per violation per month, plus attorney's fees. Code enforcement also applies.",
+      "title": "Santa Ana ban on anticompetitive automated rent price-fixing",
+      "requirement": "The sale, licensing, provision or use of algorithmic rent-setting software relying on nonpublic competitor data is prohibited for Santa Ana residential rentals. Tenants may sue for damages, injunctive relief and up to $1,000 per violation per month.",
       "key_value": "Up to $1,000 per violation per month",
-      "coverage_conditions": "Landlords of residential rental property in Santa Ana; device sellers and licensors.",
-      "exemptions": "Software relying solely on public or aggregate historical data. Affordable-housing compliance tools.",
+      "coverage_conditions": "Residential rental property in Santa Ana, and software vendors.",
+      "exemptions": "Software using only public or aggregate historical data; affordable-housing compliance tools.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -1017,26 +1082,178 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only where a covered device is used.",
+        "unverifiable_conditions": "Applies only where covered software is used.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": "2026-04-02",
       "citation": "Santa Ana Ordinance No. NS-3090",
       "conflicts_with_keys": [],
-      "conflict_note": "Sources differ. First reading was 2026-02-17 (PublicCEO, which reports it as pending). Final adoption was about 2026-03-03 (OCBJ, which says March 2026). Morgan Lewis gives an effective date of 2026-04-02, consistent with the 30-day rule.",
+      "conflict_note": "First reading was 2026-02-17 and final adoption about 2026-03-03. OCBJ implies effect in March 2026, while Morgan Lewis gives 2026-04-02, consistent with the 30-day rule.",
       "confidence": 0.78
+    },
+    {
+      "key": "jc-260-rent-control",
+      "primary_candidate": "c084",
+      "merged_candidates": [
+        "c084"
+      ],
+      "jurisdiction": "Jersey City, NJ",
+      "level": "city",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Jersey City Rent Control Ordinance (Chapter 260)",
+      "requirement": "Rent increases on covered units are regulated by the Rent Control Ordinance, administered by the Office of Landlord/Tenant Relations. Increases beyond standard CPI-based limits require application, such as for capital improvement or hardship. Tenants may file illegal-rent complaints.",
+      "key_value": null,
+      "coverage_conditions": "Rental properties with 5 or more units in Jersey City.",
+      "exemptions": "All 1-4 unit properties. Other exemptions are available by Rent Control Exemption Request. Newly constructed multiple dwellings are exempt from municipal rent control for 30 years after completion (N.J.S.A. 2A:42-84.5).",
+      "coverage": {
+        "min_units": 5,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": 30,
+        "cutoff_basis": "year_built",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Ordinance exemptions granted by request; HUD-subsidized and NJHMFA-financed units are not subject to municipal rent control.",
+        "owner_exemption_max_units": null
+      },
+      "yields_to_local": false,
+      "effective_date": null,
+      "citation": "Jersey City Municipal Code ch. 260",
+      "conflicts_with_keys": [],
+      "conflict_note": "The increase formula is not stated. The 30-year exemption comes from state law per the NJ DCA guide (c159).",
+      "confidence": 0.7
+    },
+    {
+      "key": "jc-218-12-algorithmic-ban",
+      "primary_candidate": "c089",
+      "merged_candidates": [
+        "c007",
+        "c083",
+        "c089"
+      ],
+      "jurisdiction": "Jersey City, NJ",
+      "level": "city",
+      "category": "algorithmic_rent_setting",
+      "status": "in_force",
+      "title": "Jersey City ban on algorithmic rent coordination services",
+      "requirement": "Landlords may not use algorithmic rent coordination services, such as RealPage, that rely on nonpublic data. Enforcement is public and private, with fines up to $2,000 per day.",
+      "key_value": "Fines up to $2,000 per day",
+      "coverage_conditions": "Residential landlords in Jersey City.",
+      "exemptions": "Reportedly excludes real estate agents.",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Applies only where an algorithmic rent coordination service is used.",
+        "owner_exemption_max_units": null
+      },
+      "yields_to_local": false,
+      "effective_date": "2025-06",
+      "citation": "Jersey City Code § 218-12",
+      "conflicts_with_keys": [
+        "nj-pl2026-c43-fair-act"
+      ],
+      "conflict_note": "The NJ FAIR Act (P.L.2026, c.43, effective 2027-07-01) § 6(b) bars conflicting municipal ordinances and may preempt this ban. Sources are secondary.",
+      "confidence": 0.7
+    },
+    {
+      "key": "hoboken-158-algorithmic-ban",
+      "primary_candidate": "c090",
+      "merged_candidates": [
+        "c008",
+        "c090"
+      ],
+      "jurisdiction": "Hoboken, NJ",
+      "level": "city",
+      "category": "algorithmic_rent_setting",
+      "status": "in_force",
+      "title": "Hoboken ban on algorithmic rent coordination",
+      "requirement": "Landlords may not use software, algorithms or data-sharing platforms to coordinate or recommend rents, lease terms or occupancy.",
+      "key_value": null,
+      "coverage_conditions": "Residential landlords in Hoboken.",
+      "exemptions": null,
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Applies only where covered software or platforms are used.",
+        "owner_exemption_max_units": null
+      },
+      "yields_to_local": false,
+      "effective_date": "2025-07",
+      "citation": "Hoboken City Code ch. 158 (cited as 158-2)",
+      "conflicts_with_keys": [
+        "nj-pl2026-c43-fair-act"
+      ],
+      "conflict_note": "The NJ FAIR Act § 6(b) may preempt conflicting municipal ordinances from 2027-07-01. The citation format is unverified.",
+      "confidence": 0.65
+    },
+    {
+      "key": "nj-2a18-61.1-anti-eviction",
+      "primary_candidate": "c148",
+      "merged_candidates": [
+        "c148",
+        "c149",
+        "c150",
+        "c151",
+        "c152",
+        "c153",
+        "c154"
+      ],
+      "jurisdiction": "NJ",
+      "level": "state",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "New Jersey Anti-Eviction Act good-cause requirement",
+      "requirement": "A residential landlord may not evict, or fail to renew a written or oral lease, without one of the statutory good causes, served with the required notices. Related protections:\n- Illegal-occupancy evictions require relocation of 6x monthly rent.\n- Self-help lockouts are illegal (N.J.S.A. 2A:39-1).\n- Reprisal is barred (2A:42-10.10).\n- Foreclosure is not grounds for eviction, and new owners must notify tenants within 10 business days (2A:50-69).\n- Eligible senior and disabled tenants in conversions get up to 40 years of protected tenancy (2A:18-61.22).\n- Landlords of buildings with more than 2 units must distribute the Truth in Renting statement (46:8-43).",
+      "key_value": "Good cause required (statutory grounds)",
+      "coverage_conditions": "Most residential rentals in New Jersey, including single-family homes, apartments, mobile homes and rooming houses.",
+      "exemptions": "Owner-occupied premises with two or fewer rental units; transient or seasonal hotel/motel guests; units held in trust for a developmentally disabled family member.",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": true,
+        "unverifiable_conditions": "Transient/seasonal and trust-unit exemptions.",
+        "owner_exemption_max_units": 3
+      },
+      "yields_to_local": false,
+      "effective_date": null,
+      "citation": "N.J.S.A. 2A:18-61.1 et seq.",
+      "conflicts_with_keys": [],
+      "conflict_note": null,
+      "confidence": 0.88
     },
     {
       "key": "nj-2a18-61.1f-unconscionable-rent",
       "primary_candidate": "c159",
-      "merged_candidates": [],
+      "merged_candidates": [
+        "c159",
+        "c160"
+      ],
       "jurisdiction": "NJ",
       "level": "state",
       "category": "rent_increase_limits",
       "status": "in_force",
-      "title": "No unconscionable rent increases (Anti-Eviction Act)",
-      "requirement": "There is no statewide numeric cap, but increases may not be unconscionable and must comply with any municipal rent ordinance. An increase takes effect only after a valid notice to quit and notice of increase.",
+      "title": "No unconscionable rent increases",
+      "requirement": "There is no statewide numeric cap, but rent increases must not be unconscionable and must comply with municipal rent ordinances. An increase takes effect only after valid notice to quit and notice of increase. Rents may not be raised to cover costs resulting solely from a condo, co-op or fee-simple conversion.",
       "key_value": "No numeric cap; unconscionability standard",
       "coverage_conditions": "Residential tenancies covered by the Anti-Eviction Act.",
       "exemptions": "Owner-occupied premises with two or fewer rental units.",
@@ -1054,117 +1271,16 @@
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "N.J.S.A. 2A:18-61.1(f)",
+      "citation": "N.J.S.A. 2A:18-61.1(f); N.J.S.A. 2A:18-61.31",
       "conflicts_with_keys": [],
-      "conflict_note": "Municipal rent control may impose stricter caps. Under N.J.S.A. 2A:42-84.5, new multiple dwellings are exempt from local rent control for 30 years.",
-      "confidence": 0.78
-    },
-    {
-      "key": "nj-2a18-61.31-conversion-rent-increase",
-      "primary_candidate": "c160",
-      "merged_candidates": [],
-      "jurisdiction": "NJ",
-      "level": "state",
-      "category": "rent_increase_limits",
-      "status": "in_force",
-      "title": "No rent increases to cover condo/co-op conversion costs",
-      "requirement": "In buildings converted to condominium, cooperative or fee simple ownership, rents may not be raised to cover costs resulting solely from the conversion. Increases for new services or amenities are allowed.",
-      "key_value": null,
-      "coverage_conditions": "All tenants in buildings undergoing conversion.",
-      "exemptions": "Increases for new services or amenities.",
-      "coverage": {
-        "min_units": null,
-        "max_units": null,
-        "built_before": null,
-        "built_on_or_before": null,
-        "built_after": null,
-        "age_years_exempt": null,
-        "cutoff_basis": "none",
-        "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only to buildings undergoing conversion.",
-        "owner_exemption_max_units": null
-      },
-      "yields_to_local": false,
-      "effective_date": null,
-      "citation": "N.J.S.A. 2A:18-61.31",
-      "conflicts_with_keys": [],
-      "conflict_note": null,
-      "confidence": 0.75
-    },
-    {
-      "key": "nj-anti-eviction-act",
-      "primary_candidate": "c148",
-      "merged_candidates": [
-        "c149",
-        "c150",
-        "c152",
-        "c153",
-        "c154"
-      ],
-      "jurisdiction": "NJ",
-      "level": "state",
-      "category": "just_cause_eviction",
-      "status": "in_force",
-      "title": "New Jersey Anti-Eviction Act good-cause requirement",
-      "requirement": "A landlord may not evict or refuse to renew a lease without a statutory good cause, with a Notice to Quit (and a Notice to Cease where applicable). Illegal-occupancy evictions require relocation of 6x monthly rent. Self-help lockouts are illegal (N.J.S.A. 2A:39-1). Foreclosure is not grounds for eviction; new owners must give English/Spanish notice within 10 business days (2A:50-69). Eligible senior or disabled tenants in converted buildings may get up to 40 years of protected tenancy (2A:18-61.22). Landlords must distribute the Truth in Renting statement in buildings with 3 or more units (46:8-43).",
-      "key_value": "Good cause required (grounds a–r)",
-      "coverage_conditions": "Most residential rentals, including single-family homes, apartments, mobile homes, and rooming houses.",
-      "exemptions": "Owner-occupied premises with 2-3 units and no more than 2 rental units. Transient or seasonal hotel guests. Units held in trust for a developmentally disabled family member.",
-      "coverage": {
-        "min_units": null,
-        "max_units": null,
-        "built_before": null,
-        "built_on_or_before": null,
-        "built_after": null,
-        "age_years_exempt": null,
-        "cutoff_basis": "none",
-        "owner_type_dependent": true,
-        "unverifiable_conditions": "Transient/seasonal and disabled-family-trust exemptions apply.",
-        "owner_exemption_max_units": 3
-      },
-      "yields_to_local": false,
-      "effective_date": null,
-      "citation": "N.J.S.A. 2A:18-61.1 et seq.",
-      "conflicts_with_keys": [],
-      "conflict_note": null,
-      "confidence": 0.87
-    },
-    {
-      "key": "nj-2a42-10.10-anti-reprisal",
-      "primary_candidate": "c151",
-      "merged_candidates": [],
-      "jurisdiction": "NJ",
-      "level": "state",
-      "category": "just_cause_eviction",
-      "status": "in_force",
-      "title": "New Jersey anti-reprisal protection",
-      "requirement": "A landlord may not evict, substantially alter the lease, or refuse to renew in reprisal for a tenant enforcing legal rights, making good-faith code complaints, or joining a tenant organization.",
-      "key_value": null,
-      "coverage_conditions": "Rental dwellings, including mobile homes.",
-      "exemptions": "Owner-occupied two- or three-family dwellings.",
-      "coverage": {
-        "min_units": null,
-        "max_units": null,
-        "built_before": null,
-        "built_on_or_before": null,
-        "built_after": null,
-        "age_years_exempt": null,
-        "cutoff_basis": "none",
-        "owner_type_dependent": true,
-        "unverifiable_conditions": null,
-        "owner_exemption_max_units": 3
-      },
-      "yields_to_local": false,
-      "effective_date": null,
-      "citation": "N.J.S.A. 2A:42-10.10",
-      "conflicts_with_keys": [],
-      "conflict_note": null,
+      "conflict_note": "New Jersey has no state rent control law; municipal ordinances may impose caps.",
       "confidence": 0.8
     },
     {
-      "key": "nj-security-deposit-act",
+      "key": "nj-46-8-19-security-deposit",
       "primary_candidate": "c155",
       "merged_candidates": [
+        "c155",
         "c156",
         "c157"
       ],
@@ -1172,11 +1288,11 @@
       "level": "state",
       "category": "security_deposits",
       "status": "in_force",
-      "title": "New Jersey Security Deposit Act",
-      "requirement": "The deposit may not exceed 1.5 months' rent, including pet deposits and prepaid rent, and annual increases are limited to 10%. It must be held in trust in an interest-bearing NJ account, with written notice of the account within 30 days and interest paid annually. The landlord must return the deposit plus interest, less itemized deductions, within 30 days. The deadline is 5 business days after fire, flood, condemnation or evacuation. Wrongful withholding carries double damages.",
-      "key_value": "1.5 months' rent; 30-day return",
-      "coverage_conditions": "Most residential rentals, including mobile homes.",
-      "exemptions": "Owner-occupied two- or three-family dwellings unless the tenant opts in. Seasonal rentals of 125 days or less.",
+      "title": "NJ Security Deposit Act",
+      "requirement": "Deposits may not exceed 1.5 months' rent, including pet deposits and prepaid rent, and annual deposit increases are capped at 10%. Deposits must be held in an interest-bearing NJ account, with written bank notice within 30 days and interest paid annually. The deposit plus interest, less itemized deductions, must be returned within 30 days of termination (5 business days after a fire, flood or similar displacement). Wrongful withholding is subject to double damages.",
+      "key_value": "1.5x monthly rent; 30-day return",
+      "coverage_conditions": "Most residential rentals in New Jersey.",
+      "exemptions": "Owner-occupied two- or three-family dwellings, unless the tenant opts in; seasonal rentals of 125 days or less.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -1186,29 +1302,31 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": true,
-        "unverifiable_conditions": "Seasonal rental exemption; tenant opt-in in owner-occupied 2-3 family dwellings.",
+        "unverifiable_conditions": "Seasonal-rental exemption; tenant opt-in for owner-occupied 2-3 family dwellings.",
         "owner_exemption_max_units": 3
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "N.J.S.A. 46:8-19 et seq. (46:8-19, 46:8-21.1, 46:8-21.2)",
+      "citation": "N.J.S.A. 46:8-19, 46:8-21.1, 46:8-21.2",
       "conflicts_with_keys": [],
       "conflict_note": null,
-      "confidence": 0.88
+      "confidence": 0.9
     },
     {
-      "key": "nj-46:8-18.1-application-fee-cap",
+      "key": "nj-46-8-18.1-application-fee-cap",
       "primary_candidate": "c147",
-      "merged_candidates": [],
+      "merged_candidates": [
+        "c147"
+      ],
       "jurisdiction": "NJ",
       "level": "state",
       "category": "application_screening_fees",
       "status": "in_force",
-      "title": "New Jersey rental application fee cap",
-      "requirement": "A landlord or agent may not charge an application or similar fee above $50, CPI-adjusted annually from 2027-01-01. Penalties are $500, $750, and then $1,000, with refund to the applicant.",
+      "title": "NJ residential rental application fee cap",
+      "requirement": "A landlord or agent may not charge an application or similar fee above $50. The cap is CPI-adjusted annually from 2027-01-01.",
       "key_value": "$50 max",
       "coverage_conditions": "Residential rental property other than units in one- or two-family dwellings.",
-      "exemptions": "One- and two-family dwellings. Real estate licensees unless the licensee is the landlord.",
+      "exemptions": "One- and two-family dwellings; Real Estate Commission licensees unless the licensee is the landlord.",
       "coverage": {
         "min_units": 3,
         "max_units": null,
@@ -1218,20 +1336,21 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": null,
+        "unverifiable_conditions": "The licensee exemption applies unless the licensee is the landlord.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": "2026-05-01",
       "citation": "N.J.S.A. 46:8-18.1 (P.L. 2025, c.405)",
       "conflicts_with_keys": [],
-      "conflict_note": "The effective date is computed from approval on 2026-01-20 (first day of the fourth month following).",
-      "confidence": 0.87
+      "conflict_note": "The effective date is computed from enactment on 2026-01-20 (first day of the fourth month following).",
+      "confidence": 0.88
     },
     {
-      "key": "nj-fair-chance-in-housing-act",
+      "key": "nj-46-8-52-fair-chance-housing",
       "primary_candidate": "c143",
       "merged_candidates": [
+        "c143",
         "c144",
         "c145",
         "c146"
@@ -1240,11 +1359,11 @@
       "level": "state",
       "category": "screening_restrictions",
       "status": "in_force",
-      "title": "New Jersey Fair Chance in Housing Act",
-      "requirement": "Housing providers may not inquire about criminal records before a conditional offer. After an offer, they may consider only specified convictions within lookback periods (1st degree 6 years, 2nd/3rd degree 4 years, 4th degree 1 year; lifetime for listed crimes), with an individualized assessment. Arrests, expunged records and juvenile records may never be considered. No ads excluding people with records. No drug or alcohol testing of applicants. Penalties are up to $1,000, $5,000, or $10,000, enforced by the Division on Civil Rights.",
+      "title": "Fair Chance in Housing Act",
+      "requirement": "Housing providers may not ask about criminal records before a conditional offer, except about methamphetamine production on federally assisted premises or lifetime sex-offender registration. Arrests, expunged or sealed records and juvenile adjudications may never be considered. After an offer, only specified convictions within lookback periods may be considered (1st degree 6 years; 2nd/3rd 4 years; 4th 1 year; lifetime for listed crimes), with an individualized assessment. Advertisements excluding people with records and drug or alcohol testing of applicants are prohibited.",
       "key_value": "No criminal inquiry before conditional offer",
       "coverage_conditions": "Housing providers of rental dwelling units in New Jersey.",
-      "exemptions": "Owner-occupied premises of no more than 4 units. Methamphetamine production on federally assisted premises and lifetime sex-offender registration may be considered.",
+      "exemptions": "Owner-occupied premises of not more than four units.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -1259,26 +1378,27 @@
       },
       "yields_to_local": false,
       "effective_date": "2022-01-01",
-      "citation": "N.J.S.A. 46:8-52 et seq. (P.L. 2021, c.110)",
+      "citation": "N.J.S.A. 46:8-55 to -60 (P.L. 2021, c.110)",
       "conflicts_with_keys": [],
-      "conflict_note": "The effective date is computed from the 'seventh month' clause after approval on 2021-06-18.",
+      "conflict_note": "The effective date is computed from approval on 2021-06-18 (first day of the seventh month following).",
       "confidence": 0.82
     },
     {
       "key": "nj-lad-source-of-income",
       "primary_candidate": "c158",
       "merged_candidates": [
+        "c158",
         "c161"
       ],
       "jurisdiction": "NJ",
       "level": "state",
       "category": "screening_restrictions",
       "status": "in_force",
-      "title": "NJ Law Against Discrimination – source of lawful income",
-      "requirement": "Landlords may not refuse to rent or otherwise discriminate based on protected classes, including source of lawful income or rent payment (e.g., Section 8 vouchers). Fines are up to $10,000 for a first offense.",
+      "title": "NJ Law Against Discrimination: source of lawful income",
+      "requirement": "Landlords may not refuse to rent or otherwise discriminate based on protected classes. These include the source of lawful income or rent payment (e.g., Section 8 vouchers), race, creed, sex, familial status, disability, gender identity and sexual orientation.",
       "key_value": null,
       "coverage_conditions": "Rentals of real property in New Jersey.",
-      "exemptions": "One unit in an owner-occupied two-family dwelling. Rooms in an owner-occupied single-family home. Certain religious and age-restricted exceptions.",
+      "exemptions": "One unit in an owner-occupied two-family dwelling; rooms in an owner-occupied one-family home; certain religious and age-restricted housing.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -1299,21 +1419,22 @@
       "confidence": 0.85
     },
     {
-      "key": "nj-fair-act-algorithmic-ban",
+      "key": "nj-pl2026-c43-fair-act",
       "primary_candidate": "c162",
       "merged_candidates": [
         "c142",
+        "c162",
         "c163"
       ],
       "jurisdiction": "NJ",
       "level": "state",
       "category": "algorithmic_rent_setting",
       "status": "not_yet_effective",
-      "title": "FAIR Act – Forbidding the Algorithmic Inflation of Rent",
-      "requirement": "Rental property owners and their agents may not pay for or use the services of a coordinator, meaning algorithmic revenue management software using competitors' nonpublic data to set or recommend rents, terms or occupancy. Coordinators may not facilitate anticompetitive agreements or parallel pricing coordination. Violations are violations of the NJ Antitrust Act, and an AG complaint portal will be created. Municipalities may not enact conflicting ordinances (§ 6(b)).",
-      "key_value": "Ban on algorithmic rent coordinators",
-      "coverage_conditions": "All owners of residential dwelling units used as a primary residence in New Jersey, and software coordinators.",
-      "exemptions": "Government affordability controls. Research not used for pricing. Free public rent estimates. Equal-access brokerage databases. Non-AI spreadsheets. Medical, long-term care and correctional facilities.",
+      "title": "Forbidding the Algorithmic Inflation of Rent (FAIR) Act",
+      "requirement": "Rental property owners and their agents may not pay for or use the services of a coordinator, meaning algorithmic revenue management software that uses competitors' nonpublic, competitively sensitive data to set or recommend rents, terms or occupancy. Coordinators may not facilitate anticompetitive agreements, perform coordinating functions or engage in parallel pricing coordination. Violations are violations of the NJ Antitrust Act, and the AG must set up a complaint portal.",
+      "key_value": "Ban on algorithmic coordinators",
+      "coverage_conditions": "All residential rental property owners in New Jersey, and software providers and coordinators.",
+      "exemptions": "Government affordability programs; research not used for pricing; free public rent estimates; equal-access brokerage databases that do not recommend prices; non-AI spreadsheets requiring human analysis.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -1323,139 +1444,35 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only where coordinator software is used.",
+        "unverifiable_conditions": null,
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": "2027-07-01",
-      "citation": "P.L. 2026, c.43 (N.J.S.A. 56:9-20 to -26)",
+      "citation": "P.L. 2026, c.43 (N.J.S.A. 56:9-20 et seq.)",
       "conflicts_with_keys": [
-        "jersey-city-218-12-algorithmic-ban",
+        "jc-218-12-algorithmic-ban",
         "hoboken-158-algorithmic-ban"
       ],
-      "conflict_note": "Approved 2026-07-20; effective on the first day of the twelfth month following (2027-07-01). Section 6(b) bars conflicting municipal ordinances, which may preempt the Jersey City and Hoboken algorithmic bans once effective.",
+      "conflict_note": "Approved 2026-07-20 and effective on the first day of the twelfth month following (2027-07-01). Section 6(b) prohibits conflicting municipal ordinances, which may preempt the Jersey City and Hoboken bans.",
       "confidence": 0.85
     },
     {
-      "key": "jersey-city-260-rent-control",
-      "primary_candidate": "c084",
-      "merged_candidates": [],
-      "jurisdiction": "Jersey City, NJ",
-      "level": "city",
-      "category": "rent_increase_limits",
-      "status": "in_force",
-      "title": "Jersey City Rent Control Ordinance (Chapter 260)",
-      "requirement": "Rent increases on covered units are regulated under Chapter 260 (CPI-based) and administered by the Office of Landlord/Tenant Relations. Increases beyond the standard limit require application (capital improvement, hardship). Tenants may file illegal-rent complaints.",
-      "key_value": null,
-      "coverage_conditions": "Rental properties with 5 or more units.",
-      "exemptions": "All 1-4 unit properties. Other exemptions by Rent Control Exemption Request. Under state law (N.J.S.A. 2A:42-84.5), new multiple dwellings are exempt for 30 years after construction, and HUD/NJHMFA units are exempt.",
-      "coverage": {
-        "min_units": 5,
-        "max_units": null,
-        "built_before": null,
-        "built_on_or_before": null,
-        "built_after": null,
-        "age_years_exempt": 30,
-        "cutoff_basis": "year_built",
-        "owner_type_dependent": false,
-        "unverifiable_conditions": "Other Chapter 260 exemptions are granted by application. HUD-subsidized and NJHMFA-financed units are not subject to municipal rent control.",
-        "owner_exemption_max_units": null
-      },
-      "yields_to_local": false,
-      "effective_date": null,
-      "citation": "Jersey City Municipal Code Chapter 260",
-      "conflicts_with_keys": [],
-      "conflict_note": "The allowable increase formula is not stated. The 30-year new-construction exemption comes from the DCA guide's statement of N.J.S.A. 2A:42-84.5.",
-      "confidence": 0.7
-    },
-    {
-      "key": "jersey-city-218-12-algorithmic-ban",
-      "primary_candidate": "c089",
-      "merged_candidates": [
-        "c007",
-        "c083"
-      ],
-      "jurisdiction": "Jersey City, NJ",
-      "level": "city",
-      "category": "algorithmic_rent_setting",
-      "status": "in_force",
-      "title": "Jersey City ban on algorithmic rent coordination services",
-      "requirement": "Landlords may not use algorithmic rent coordination services (e.g., RealPage) that rely on nonpublic competitor data. Enforcement is public and private, with fines up to $2,000 per day.",
-      "key_value": "Fines up to $2,000 per day",
-      "coverage_conditions": "Residential landlords in Jersey City.",
-      "exemptions": "Reportedly excludes real estate agents.",
-      "coverage": {
-        "min_units": null,
-        "max_units": null,
-        "built_before": null,
-        "built_on_or_before": null,
-        "built_after": null,
-        "age_years_exempt": null,
-        "cutoff_basis": "none",
-        "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only where an algorithmic coordination service is used.",
-        "owner_exemption_max_units": null
-      },
-      "yields_to_local": false,
-      "effective_date": "2025-06",
-      "citation": "Jersey City Code § 218-12",
-      "conflicts_with_keys": [
-        "nj-fair-act-algorithmic-ban"
-      ],
-      "conflict_note": "The effective month comes from a secondary source. The NJ FAIR Act (effective 2027-07-01) bars conflicting municipal ordinances and may preempt this ban.",
-      "confidence": 0.7
-    },
-    {
-      "key": "hoboken-158-algorithmic-ban",
-      "primary_candidate": "c090",
-      "merged_candidates": [
-        "c008"
-      ],
-      "jurisdiction": "Hoboken, NJ",
-      "level": "city",
-      "category": "algorithmic_rent_setting",
-      "status": "in_force",
-      "title": "Hoboken ban on algorithmic rent coordination",
-      "requirement": "Landlords may not use software, algorithms or data-sharing platforms to coordinate or recommend rents, lease terms or occupancy.",
-      "key_value": null,
-      "coverage_conditions": "Residential landlords in Hoboken.",
-      "exemptions": null,
-      "coverage": {
-        "min_units": null,
-        "max_units": null,
-        "built_before": null,
-        "built_on_or_before": null,
-        "built_after": null,
-        "age_years_exempt": null,
-        "cutoff_basis": "none",
-        "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only where covered software is used.",
-        "owner_exemption_max_units": null
-      },
-      "yields_to_local": false,
-      "effective_date": "2025-07",
-      "citation": "Hoboken City Code ch. 158",
-      "conflicts_with_keys": [
-        "nj-fair-act-algorithmic-ban"
-      ],
-      "conflict_note": "The secondary source cites 'ch. 158-2', and the effective month is from that source. The NJ FAIR Act may preempt this ban once effective (2027-07-01).",
-      "confidence": 0.68
-    },
-    {
-      "key": "ma-ip-25-21-rent-control-ballot",
+      "key": "ma-ip-25-21-rent-control-failed",
       "primary_candidate": "c138",
       "merged_candidates": [
+        "c138",
         "c141"
       ],
       "jurisdiction": "MA",
       "level": "state",
       "category": "rent_increase_limits",
       "status": "failed",
-      "title": "Initiative Petition 25-21 statewide rent cap (struck by SJC)",
-      "requirement": "Would have repealed G.L. c. 40P and capped annual increases at the lesser of CPI or 5%. The SJC barred it from the November 2026 ballot (Cella v. Attorney General) because its religious exemption violated Article 48. It is not law, and c. 40P's ban on rent control remains.",
-      "key_value": "Lesser of CPI or 5% (proposed, not law)",
-      "coverage_conditions": "Most residential rental units statewide (as proposed).",
-      "exemptions": "As proposed: owner-occupied buildings of 4 or fewer units; units less than 10 years old; certain publicly regulated units; short-term rentals; educational, religious or nonprofit facilities.",
+      "title": "Initiative Petition 25-21 statewide rent control (struck from 2026 ballot)",
+      "requirement": "The petition would have repealed G.L. c. 40P and capped annual increases at the lesser of CPI or 5%. The SJC barred it from the November 2026 ballot, so it is not law. Massachusetts has no rent cap, and c. 40P bars local rent control.",
+      "key_value": "Proposed: lesser of CPI or 5% (not law)",
+      "coverage_conditions": "Most residential rental units statewide, as proposed.",
+      "exemptions": "Proposed: owner-occupied buildings of 4 or fewer units; units under 10 years old; certain public, short-term, educational, religious and nonprofit units.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -1465,22 +1482,23 @@
         "age_years_exempt": 10,
         "cutoff_basis": "year_built",
         "owner_type_dependent": true,
-        "unverifiable_conditions": "The measure never took effect.",
+        "unverifiable_conditions": "Measure never took effect.",
         "owner_exemption_max_units": 4
       },
       "yields_to_local": false,
       "effective_date": null,
       "citation": "Initiative Petition 25-21; Cella v. Attorney General, SJC-13893 (2026)",
       "conflicts_with_keys": [],
-      "conflict_note": "Struck 2026-06-23; one blog teaser says June 24. Proponents may refile, possibly in 2028.",
+      "conflict_note": "Decided 2026-06-23 because the religious exemption violated Article 48. A refiling is possible (proponents mention 2028).",
       "confidence": 0.9
     },
     {
-      "key": "ma-186-notice-to-quit",
+      "key": "ma-186-11-12-notice-to-quit",
       "primary_candidate": "c125",
       "merged_candidates": [
         "c123",
         "c124",
+        "c125",
         "c126",
         "c140"
       ],
@@ -1488,8 +1506,8 @@
       "level": "state",
       "category": "just_cause_eviction",
       "status": "in_force",
-      "title": "Massachusetts notice-to-quit and nonpayment cure rules (no statewide just cause)",
-      "requirement": "Massachusetts has no just-cause requirement. A tenancy at will ends on notice equal to the rental period or 30 days, whichever is longer, up to 3 months. For nonpayment, a 14-day notice to quit is required. Tenants at will may cure within 10 days, once per 12 months; written-lease tenants may cure by the answer date. A continuance of at least 7 days applies when nonpayment stems from government payment delays. Nonpayment notices must include the state form (§ 31), or courts will not accept filings.",
+      "title": "Massachusetts notice-to-quit requirements (no just-cause requirement)",
+      "requirement": "A tenancy at will may be ended on written notice of one rental period or 30 days, whichever is longer, up to a maximum of 3 months. Nonpayment requires a 14-day notice to quit. Tenants at will may cure within 10 days, once per 12 months; written-lease tenants may cure by the answer date. A 7-day continuance applies when nonpayment was caused by government payment delay. Nonpayment notices must include the state form on rental assistance (§ 31), or the court will not accept the filing.",
       "key_value": "14-day nonpayment notice; 30-day/rental-period at-will notice",
       "coverage_conditions": "Residential tenancies in Massachusetts.",
       "exemptions": null,
@@ -1502,29 +1520,31 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Cure rights depend on tenancy type and prior notices.",
+        "unverifiable_conditions": "The right to cure depends on prior notices and on lease type.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "Mass. Gen. Laws ch. 186, §§ 11, 12, 31",
+      "citation": "M.G.L. c. 186, §§ 11, 12, 31",
       "conflicts_with_keys": [],
-      "conflict_note": "These are procedural notice rules, not just-cause limits.",
+      "conflict_note": "These are procedural notice rules; Massachusetts has no just-cause eviction statute.",
       "confidence": 0.82
     },
     {
       "key": "ma-186-18-anti-retaliation",
       "primary_candidate": "c135",
-      "merged_candidates": [],
+      "merged_candidates": [
+        "c135"
+      ],
       "jurisdiction": "MA",
       "level": "state",
       "category": "just_cause_eviction",
       "status": "in_force",
-      "title": "Massachusetts anti-retaliation (reprisal presumption)",
-      "requirement": "Landlords may not retaliate for tenants' code complaints, enforcement of rights, or union activity. A termination notice (other than for nonpayment), rent increase, or substantial change within 6 months of protected activity creates a rebuttable presumption of reprisal. Damages are 1-3 months' rent or actual damages, plus fees.",
-      "key_value": "6-month presumption",
-      "coverage_conditions": "Residential tenants in Massachusetts.",
-      "exemptions": "The presumption does not apply to nonpayment notices.",
+      "title": "Massachusetts anti-retaliation protection",
+      "requirement": "Landlords may not retaliate against tenants for enforcing housing laws, reporting violations, complaining in writing or organizing. A termination notice (other than for nonpayment), rent increase or substantial change within 6 months of protected activity is presumed retaliatory. Damages are 1-3 months' rent or actual damages, plus fees.",
+      "key_value": "6-month rebuttable presumption",
+      "coverage_conditions": "Residential tenants in Massachusetts who engaged in protected activity.",
+      "exemptions": "The presumption does not apply to nonpayment termination notices.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -1539,7 +1559,7 @@
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "Mass. Gen. Laws ch. 186, § 18",
+      "citation": "M.G.L. c. 186, § 18",
       "conflicts_with_keys": [],
       "conflict_note": null,
       "confidence": 0.8
@@ -1548,6 +1568,7 @@
       "key": "ma-186-15b-security-deposit",
       "primary_candidate": "c128",
       "merged_candidates": [
+        "c128",
         "c129",
         "c130",
         "c131",
@@ -1560,8 +1581,8 @@
       "category": "security_deposits",
       "status": "in_force",
       "title": "Massachusetts security deposit law",
-      "requirement": "The deposit may not exceed one month's rent. It requires a receipt and a statement of condition within 10 days. It must be held in a separate interest-bearing Massachusetts bank account, with a receipt within 30 days. Interest of 5% (or the bank rate) is paid annually. The deposit must be returned within 30 days of termination, less only permitted deductions with a sworn itemization, and transferred to a successor owner with notice within 45 days. An optional fee in lieu of deposit is allowed under EOHLC regulations, with fees plus deposit not exceeding one month's rent. Violations bring forfeiture and treble damages.",
-      "key_value": "1 month's rent; 30-day return",
+      "requirement": "A security deposit may not exceed one month's rent. Handling requirements:\n- Hold the deposit in a separate interest-bearing Massachusetts bank account, with a receipt giving bank details within 30 days.\n- Provide a statement of condition within 10 days.\n- Pay 5% annual interest (or the bank rate, if lower).\n- Return the deposit within 30 days after the tenancy ends, deducting only for unpaid rent and damage beyond normal wear and tear, with a sworn itemization.\n- Transfer the deposit to any successor owner, who must give notice within 45 days.\nA regulation-authorized optional fee in lieu of a deposit may be offered; fees plus deposit may not exceed one month's rent. Violations can mean forfeiture of the deposit and treble damages.",
+      "key_value": "1 month's rent; 30-day return; 5% interest",
       "coverage_conditions": "Residential tenancies in Massachusetts.",
       "exemptions": "Vacation or recreational tenancies of 100 days or less.",
       "coverage": {
@@ -1578,24 +1599,25 @@
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "Mass. Gen. Laws ch. 186, § 15B",
+      "citation": "M.G.L. c. 186, § 15B",
       "conflicts_with_keys": [],
-      "conflict_note": "Whether EOHLC fee-in-lieu regulations have been promulgated is not stated.",
+      "conflict_note": "The fee-in-lieu option depends on EOHLC regulations, whose status is unknown.",
       "confidence": 0.9
     },
     {
-      "key": "ma-186-15b-upfront-fee-limit",
+      "key": "ma-186-15b-upfront-charges",
       "primary_candidate": "c127",
       "merged_candidates": [
+        "c127",
         "c136"
       ],
       "jurisdiction": "MA",
       "level": "state",
       "category": "application_screening_fees",
       "status": "in_force",
-      "title": "Massachusetts ban on upfront charges beyond first, last, deposit and lock",
-      "requirement": "At or before the start of a tenancy, a lessor or the lessor's agent may require only first month's rent, last month's rent, a security deposit of up to one month, and the cost of a lock and key. Application fees and other upfront charges are prohibited, and conflicting lease terms are void. Tenants have recovered treble damages for unlawful application fees.",
-      "key_value": "No application fees",
+      "title": "Massachusetts limit on upfront charges (no application fees)",
+      "requirement": "At or before the start of a tenancy, a lessor or the lessor's agent may require only first month's rent, last month's rent, a security deposit of up to one month's rent, and the cost of a new lock and key. Application and all other upfront fees are prohibited.",
+      "key_value": "Only first, last, security, lock/key",
       "coverage_conditions": "All residential tenancies in Massachusetts.",
       "exemptions": "Vacation or recreational tenancies of 100 days or less.",
       "coverage": {
@@ -1612,25 +1634,26 @@
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "Mass. Gen. Laws ch. 186, § 15B(1)(b), as amended by St. 2025, c. 9, §§ 54-55",
+      "citation": "M.G.L. c. 186, § 15B(1)(b)",
       "conflicts_with_keys": [],
-      "conflict_note": "The core limit dates from the 1970s. The 2025 amendment, effective 2025-08-01, extends it to the lessor's agents.",
+      "conflict_note": "The limit has been in place since the 1970s per a secondary source. St. 2025, c. 9 extended it to lessors' agents effective 2025-08-01.",
       "confidence": 0.88
     },
     {
-      "key": "ma-112-87ddd.5-broker-fee",
+      "key": "ma-112-87ddd-broker-fee",
       "primary_candidate": "c139",
       "merged_candidates": [
-        "c137"
+        "c137",
+        "c139"
       ],
       "jurisdiction": "MA",
       "level": "state",
       "category": "application_screening_fees",
       "status": "in_force",
       "title": "Massachusetts broker fee paid only by the hiring party",
-      "requirement": "A licensed broker may contract with either the tenant or the landlord, not both. Any fee may be paid only by the party that engaged the broker. Under 254 CMR 7.00, brokers charging tenants must give written fee disclosure at the first meeting.",
-      "key_value": "Broker fee paid only by the hiring party",
-      "coverage_conditions": "Residential rentals in Massachusetts involving a licensed broker or salesperson.",
+      "requirement": "A licensed broker may contract with either the tenant or the landlord, not both. Any fee may be paid only by the party that engaged the broker. Brokers must disclose fee terms in writing (254 CMR 7.00).",
+      "key_value": "Fee paid only by the party that hired the broker",
+      "coverage_conditions": "Residential rentals in Massachusetts involving a licensed broker.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -1641,20 +1664,21 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only where a broker is involved.",
+        "unverifiable_conditions": "Applies only where a licensed broker is involved.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": "2025-08-01",
-      "citation": "Mass. Gen. Laws ch. 112, § 87DDD½, as amended by St. 2025, c. 9, § 43",
+      "citation": "M.G.L. c. 112, § 87DDD½, as amended by St. 2025, c. 9, § 43",
       "conflicts_with_keys": [],
-      "conflict_note": "The 254 CMR 7.00 disclosure source is an archived secondary article.",
+      "conflict_note": "The 254 CMR 7.00 disclosure detail comes from an archived secondary article.",
       "confidence": 0.88
     },
     {
       "key": "ma-151b-4-source-of-income",
       "primary_candidate": "c120",
       "merged_candidates": [
+        "c120",
         "c121",
         "c122"
       ],
@@ -1662,11 +1686,11 @@
       "level": "state",
       "category": "screening_restrictions",
       "status": "in_force",
-      "title": "Massachusetts housing discrimination ban including public assistance / housing subsidy",
-      "requirement": "Landlords may not discriminate against recipients of public assistance or housing subsidies (including vouchers) or because of program requirements. They may not refuse to rent, or make inquiries, based on other protected classes. They may not refuse to rent to households with children.",
+      "title": "Massachusetts housing discrimination ban incl. public assistance and housing subsidy",
+      "requirement": "Rental providers may not discriminate against recipients of public assistance or housing subsidies (including vouchers), or because of program requirements. They also may not refuse to rent based on protected characteristics or children, or make inquiries about protected characteristics.",
       "key_value": null,
       "coverage_conditions": "Persons furnishing rental accommodations in Massachusetts.",
-      "exemptions": "For § 4(7) and § 4(11): one unit in an owner-occupied two-family dwelling. For children: certain small dwellings with elderly or infirm occupants and temporary leasing of a principal residence.",
+      "exemptions": "The general protected-class and children provisions (§ 4(6), (7), (11)) exempt a unit in an owner-occupied two-family dwelling and certain small elderly-occupied dwellings. The subsidy provision (§ 4(10)) has no such exemption.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -1675,31 +1699,31 @@
         "built_after": null,
         "age_years_exempt": null,
         "cutoff_basis": "none",
-        "owner_type_dependent": true,
-        "unverifiable_conditions": "The § 4(10) source-of-income ban has no owner-occupancy exemption; the other subsections do.",
-        "owner_exemption_max_units": 3
+        "owner_type_dependent": false,
+        "unverifiable_conditions": null,
+        "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "Mass. Gen. Laws ch. 151B, § 4(6), (7), (10), (11)",
+      "citation": "M.G.L. c. 151B, § 4(6), (7), (10), (11)",
       "conflicts_with_keys": [],
       "conflict_note": null,
-      "confidence": 0.88
+      "confidence": 0.85
     },
     {
-      "key": "ma-h5222-algorithmic-rent-fixing-bill",
+      "key": "ma-h5222-algorithmic-pending",
       "primary_candidate": "c117",
       "merged_candidates": [
-        "c081"
+        "c117"
       ],
       "jurisdiction": "MA",
       "level": "state",
       "category": "algorithmic_rent_setting",
       "status": "pending",
-      "title": "H.5222 – preventing algorithmic rent fixing (pending)",
-      "requirement": "A pending bill would address algorithmic rent fixing in rental housing. It is not enacted.",
+      "title": "H.5222 Act preventing algorithmic rent fixing (pending)",
+      "requirement": "A pending bill to prevent algorithmic rent fixing in the rental market. It is not law.",
       "key_value": null,
-      "coverage_conditions": "Massachusetts rental housing (bill text not shown).",
+      "coverage_conditions": "Massachusetts rental housing (bill text not provided).",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -1710,30 +1734,32 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Bill text and scope unknown.",
+        "unverifiable_conditions": "Bill text unknown.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "Mass. H.5222, 194th General Court (new draft of H.1564)",
+      "citation": "Mass. H.5222, 194th General Court",
       "conflicts_with_keys": [],
       "conflict_note": "Reported favorably 2026-03-12 and referred to House Ways and Means.",
       "confidence": 0.7
     },
     {
-      "key": "ma-s2983-algorithmic-rent-setting-bill",
+      "key": "ma-s2983-algorithmic-pending",
       "primary_candidate": "c119",
       "merged_candidates": [
-        "c118"
+        "c081",
+        "c118",
+        "c119"
       ],
       "jurisdiction": "MA",
       "level": "state",
       "category": "algorithmic_rent_setting",
       "status": "pending",
-      "title": "S.2983 – prohibiting algorithmic rent setting (pending)",
-      "requirement": "A pending Senate bill would prohibit algorithmic rent setting. It is not enacted.",
+      "title": "S.2983 Act prohibiting algorithmic rent setting (pending)",
+      "requirement": "A pending Senate bill to prohibit algorithmic rent setting. It is not law.",
       "key_value": null,
-      "coverage_conditions": "Massachusetts rental housing (bill text not shown).",
+      "coverage_conditions": "Massachusetts rental housing (bill text not provided).",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -1744,28 +1770,30 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Bill text and scope unknown.",
+        "unverifiable_conditions": "Bill text unknown.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "Mass. S.2983, 194th General Court (new draft of S.994 and S.1016)",
+      "citation": "Mass. S.2983, 194th General Court",
       "conflicts_with_keys": [],
       "conflict_note": "Reported favorably 2026-03-12 and referred to Senate Ways and Means.",
       "confidence": 0.8
     },
     {
-      "key": "boston-h3744-rent-stabilization",
+      "key": "boston-h3744-rent-stabilization-failed",
       "primary_candidate": "c040",
-      "merged_candidates": [],
+      "merged_candidates": [
+        "c040"
+      ],
       "jurisdiction": "Boston, MA",
       "level": "city",
       "category": "rent_increase_limits",
       "status": "failed",
-      "title": "Boston home rule petition for rent stabilization (H.3744, 193rd)",
-      "requirement": "A home rule petition to authorize Boston rent stabilization was sent to a study order and not enacted. It imposes no rent cap; G.L. c. 40P bars local rent control.",
+      "title": "Boston rent stabilization home rule petition (H.3744) - not enacted",
+      "requirement": "The petition would have authorized Boston rent stabilization. It was sent to a study order and not enacted, so Boston has no rent cap. G.L. c. 40P bars local rent control.",
       "key_value": null,
-      "coverage_conditions": "Would have applied to Boston rental housing.",
+      "coverage_conditions": "Boston residential rentals, as proposed.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -1781,23 +1809,25 @@
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "Mass. H.3744, 193rd General Court (2023-2024)",
+      "citation": "Mass. H.3744, 193rd General Court",
       "conflicts_with_keys": [],
-      "conflict_note": "Accompanied a study order (H5035) on 2024-09-09; the session ended without enactment.",
-      "confidence": 0.78
+      "conflict_note": "Accompanied study order H5035 on 2024-09-09; the session ended without enactment.",
+      "confidence": 0.75
     },
     {
-      "key": "boston-h3744-eviction-protections",
+      "key": "boston-h3744-eviction-protections-failed",
       "primary_candidate": "c041",
-      "merged_candidates": [],
+      "merged_candidates": [
+        "c041"
+      ],
       "jurisdiction": "Boston, MA",
       "level": "city",
       "category": "just_cause_eviction",
       "status": "failed",
-      "title": "Boston home rule petition for tenant eviction protections (H.3744, 193rd)",
-      "requirement": "A home rule petition to authorize Boston eviction protections was sent to a study order and not enacted. It imposes no just-cause requirement.",
+      "title": "Boston tenant eviction protections home rule petition (H.3744) - not enacted",
+      "requirement": "The petition would have authorized Boston tenant eviction protections. It was not enacted, so there is no just-cause requirement from it.",
       "key_value": null,
-      "coverage_conditions": "Would have applied to Boston tenancies.",
+      "coverage_conditions": "Boston residential tenancies, as proposed.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -1813,27 +1843,28 @@
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "Mass. H.3744, 193rd General Court (2023-2024)",
+      "citation": "Mass. H.3744, 193rd General Court",
       "conflicts_with_keys": [],
-      "conflict_note": "Accompanied a study order on 2024-09-09; not enacted.",
+      "conflict_note": "Accompanied study order H5035 on 2024-09-09; not enacted.",
       "confidence": 0.75
     },
     {
-      "key": "boston-hsna-notice",
+      "key": "boston-10-11.7-hsna",
       "primary_candidate": "c045",
       "merged_candidates": [
         "c043",
-        "c044"
+        "c044",
+        "c045"
       ],
       "jurisdiction": "Boston, MA",
       "level": "city",
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Boston Housing Stability Notification Act",
-      "requirement": "Landlords and foreclosing owners ending a tenancy must give the Notice of Tenants' Rights and Resources with any notice to quit or non-renewal. They must submit a copy of the notice and tenant contact information to the City via the online portal. The requirement cannot be waived. Penalties are a warning, then $300 per day; a violation does not halt the eviction.",
-      "key_value": "$300/day after warning",
-      "coverage_conditions": "All Boston landlords serving a notice to quit or non-renewal.",
-      "exemptions": "Hospitals and health facilities; nonprofit short-term substance abuse treatment facilities.",
+      "requirement": "Landlords and foreclosing owners ending a tenancy must give the City's Notice of Tenants' Rights and Resources with the notice to quit or non-renewal. They must submit the notice and tenant contact information to the City's portal. The first offense draws a warning, then $300 per day. Violations do not halt the eviction, and the requirements cannot be waived.",
+      "key_value": "Notice with notice to quit; $300/day fine",
+      "coverage_conditions": "All landlords and foreclosing owners ending tenancies in Boston.",
+      "exemptions": "Hospitals, skilled nursing and health facilities; nonprofit short-term substance abuse treatment facilities.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -1843,31 +1874,32 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Triggered only when a termination notice is served.",
+        "unverifiable_conditions": "Triggered only by a notice to quit or non-renewal.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": "2020-11-06",
-      "citation": "Boston City Code § 10-11.7 (Housing Stability Notification Act)",
+      "citation": "Boston City Ordinances § 10-11.7 (Housing Stability Notification Act)",
       "conflicts_with_keys": [],
-      "conflict_note": "Passed October 2020. Section 10-11.7 may be the penalty provision.",
-      "confidence": 0.86
+      "conflict_note": "Passed October 2020. The § 10-11.7 citation is taken from the penalty table.",
+      "confidence": 0.85
     },
     {
-      "key": "boston-fair-chance-tenant-selection",
+      "key": "boston-dnd-fair-chance-policy",
       "primary_candidate": "c038",
       "merged_candidates": [
+        "c038",
         "c039"
       ],
       "jurisdiction": "Boston, MA",
       "level": "city",
       "category": "screening_restrictions",
       "status": "in_force",
-      "title": "Boston Fair Chance Tenant Selection Policy (DND-funded / IDP units)",
-      "requirement": "Covered providers may not use blanket criminal bans. They may not consider non-conviction arrests, sealed or juvenile records, or convictions older than 5 years. They may not use credit scores; credit history may be used only in lieu of rental history.",
+      "title": "Boston Fair Chance Tenant Selection Policy (DND-funded and IDP units)",
+      "requirement": "Covered providers may not use blanket criminal-record bans. They may not consider arrests without conviction, sealed or juvenile records, or convictions older than 5 years. They may not use credit scores, may use credit history only in lieu of rental history, and may not reject applicants for lack of credit history alone.",
       "key_value": "No convictions older than 5 years; no credit scores",
-      "coverage_conditions": "Providers with DND funding or land, BPDA Inclusionary Development Policy units, and the OFHE Affirmative Marketing Program.",
-      "exemptions": "Convictions directly related to the housing or posing unreasonable risk. Federal or state requirements preempt.",
+      "coverage_conditions": "Housing providers receiving DND funding or land, and BPDA Inclusionary Development Policy income-restricted units.",
+      "exemptions": "Direct relationship or substantial-risk cases; current criminal behavior; federal and state requirements.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -1877,28 +1909,30 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "RESTRICTED: DND-funded or DND-land housing providers and BPDA Inclusionary Development Policy income-restricted units",
+        "unverifiable_conditions": "RESTRICTED: DND-funded or DND-land housing and BPDA IDP income-restricted units.",
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": "2017-02",
       "citation": "Boston DND Fair Chance Tenant Selection Policy (Feb. 2017)",
       "conflicts_with_keys": [],
-      "conflict_note": "This is an agency funding policy, not a codified ordinance.",
-      "confidence": 0.7
+      "conflict_note": "An agency funding policy, not a codified ordinance.",
+      "confidence": 0.72
     },
     {
       "key": "boston-fair-housing-rental-assistance",
       "primary_candidate": "c042",
-      "merged_candidates": [],
+      "merged_candidates": [
+        "c042"
+      ],
       "jurisdiction": "Boston, MA",
       "level": "city",
       "category": "screening_restrictions",
       "status": "in_force",
       "title": "Boston fair housing ban on rental assistance discrimination",
-      "requirement": "Landlords may not refuse applicants or tenants because of rental assistance (e.g., Section 8 or veterans vouchers) or other protected classes. Enforced by the Boston Fair Housing Commission.",
+      "requirement": "Landlords may not discriminate based on rental assistance, such as refusing Section 8 or veterans vouchers, or based on other protected classes. The Boston Fair Housing Commission enforces this.",
       "key_value": null,
-      "coverage_conditions": "Housing transactions in Boston.",
+      "coverage_conditions": "Renting housing in Boston.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -1914,24 +1948,26 @@
       },
       "yields_to_local": false,
       "effective_date": null,
-      "citation": "Boston fair housing ordinance enforced by the Boston Fair Housing Commission (citation not stated)",
+      "citation": "Boston fair housing law enforced by the Boston Fair Housing Commission",
       "conflicts_with_keys": [],
-      "conflict_note": "The page does not say whether the protection derives from the city ordinance or from G.L. c. 151B.",
+      "conflict_note": "No ordinance citation is given; the protection may derive from M.G.L. c. 151B.",
       "confidence": 0.6
     },
     {
       "key": "cambridge-14.04-fair-housing",
       "primary_candidate": "c079",
-      "merged_candidates": [],
+      "merged_candidates": [
+        "c079"
+      ],
       "jurisdiction": "Cambridge, MA",
       "level": "city",
       "category": "screening_restrictions",
       "status": "in_force",
       "title": "Cambridge Fair Housing Ordinance (incl. source of income)",
-      "requirement": "Landlords and agents may not discriminate in renting, viewing or tenancy terms based on protected categories, including source of income (Section 8, public benefits). Reasonable uniform standards such as ability to pay are allowed. Fines are up to $300 per violation.",
+      "requirement": "Landlords and agents may not discriminate in renting, viewing or tenancy terms based on protected categories, including source of income such as Section 8 and public benefits. Reasonable uniform standards, such as ability to pay, are allowed.",
       "key_value": null,
       "coverage_conditions": "Rental housing in Cambridge.",
-      "exemptions": "Owner-occupied two-family dwellings.",
+      "exemptions": "Two-family dwellings where the owner lives in the building.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -1948,22 +1984,24 @@
       "effective_date": null,
       "citation": "Cambridge Municipal Code ch. 14.04",
       "conflicts_with_keys": [],
-      "conflict_note": "Summary page; no effective date given.",
-      "confidence": 0.82
+      "conflict_note": null,
+      "confidence": 0.85
     },
     {
       "key": "cambridge-8.71-tenant-rights-notice",
       "primary_candidate": "c082",
-      "merged_candidates": [],
+      "merged_candidates": [
+        "c082"
+      ],
       "jurisdiction": "Cambridge, MA",
       "level": "city",
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Cambridge Tenants Rights and Resources Notification Ordinance",
-      "requirement": "Owners and managers must give the City's Tenants Rights and Resources Guide at the start of a tenancy and when taking steps to terminate it (notice to quit, summary process). The fine is $300 per day. This is a notice rule only, not a just-cause limit.",
-      "key_value": "$300/day",
+      "requirement": "Owners, landlords and managers must give tenants the City's Tenants Rights and Resources Guide at the start of a tenancy and when taking steps to terminate it (notice to quit or summary process). The fine is $300 per day.",
+      "key_value": "$300/day fine",
       "coverage_conditions": "All residential rental agreements in Cambridge, including tenancies at will.",
-      "exemptions": "Hospitals and health facilities. Nonprofit short-term substance abuse facilities. Short-term rentals.",
+      "exemptions": "Hospital and health facilities; nonprofit short-term substance abuse treatment; short-term rentals.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -1973,25 +2011,21 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Excludes health facilities and short-term rentals.",
+        "unverifiable_conditions": null,
         "owner_exemption_max_units": null
       },
       "yields_to_local": false,
       "effective_date": null,
       "citation": "Cambridge Municipal Code ch. 8.71",
       "conflicts_with_keys": [],
-      "conflict_note": "The page was first posted 2020-10-14; the effective date is not stated.",
+      "conflict_note": "A notice requirement only; it does not restrict eviction grounds.",
       "confidence": 0.85
     }
   ],
   "dropped": [
     {
       "candidate": "c080",
-      "reason": "Cambridge policy order only directs the city manager to develop options or ordinance language. It is a directive, not an enacted rule."
-    },
-    {
-      "candidate": "c110",
-      "reason": "Procedural 30-day rent-increase notice summarized on a city page without any statute identified (it is not part of Civ. Code § 1947.12). Unsupported citation, so omitted."
+      "reason": "Cambridge City Council policy order directing the city manager to develop options; not an enacted rule."
     }
   ],
   "gaps": [
@@ -2008,22 +2042,22 @@
     {
       "jurisdiction": "Los Angeles, CA",
       "category": "algorithmic_rent_setting",
-      "note": "No enacted LA ordinance in corpus (only a council motion referencing SF); state AB 325 applies."
+      "note": "No enacted LA ordinance in corpus; state AB 325 applies."
     },
     {
       "jurisdiction": "San Francisco, CA",
       "category": "application_screening_fees",
-      "note": "No local rule in corpus; state Civ. Code § 1950.6 applies."
+      "note": "No local rule in corpus; state § 1950.6 applies."
     },
     {
       "jurisdiction": "San Diego, CA",
       "category": "rent_increase_limits",
-      "note": "No local rent control in corpus; state Civ. Code § 1947.12 applies."
+      "note": "No local rent control in corpus; state § 1947.12 applies."
     },
     {
       "jurisdiction": "San Diego, CA",
       "category": "security_deposits",
-      "note": "No local rule in corpus; state Civ. Code § 1950.5 applies."
+      "note": "No local rule in corpus; state § 1950.5 applies."
     },
     {
       "jurisdiction": "San Diego, CA",
@@ -2073,12 +2107,12 @@
     {
       "jurisdiction": "Hoboken, NJ",
       "category": "rent_increase_limits",
-      "note": "No Hoboken rent control source in corpus."
+      "note": "No Hoboken rent control document in corpus."
     },
     {
       "jurisdiction": "Hoboken, NJ",
       "category": "just_cause_eviction",
-      "note": "No local rule in corpus; NJ Anti-Eviction Act applies."
+      "note": "No local rule in corpus."
     },
     {
       "jurisdiction": "Hoboken, NJ",
@@ -2098,67 +2132,67 @@
     {
       "jurisdiction": "Newark, NJ",
       "category": "rent_increase_limits",
-      "note": "No Newark sources in corpus."
+      "note": "No Newark documents in corpus."
     },
     {
       "jurisdiction": "Newark, NJ",
       "category": "just_cause_eviction",
-      "note": "No Newark sources in corpus."
+      "note": "No Newark documents in corpus."
     },
     {
       "jurisdiction": "Newark, NJ",
       "category": "security_deposits",
-      "note": "No Newark sources in corpus."
+      "note": "No Newark documents in corpus."
     },
     {
       "jurisdiction": "Newark, NJ",
       "category": "application_screening_fees",
-      "note": "No Newark sources in corpus."
+      "note": "No Newark documents in corpus."
     },
     {
       "jurisdiction": "Newark, NJ",
       "category": "screening_restrictions",
-      "note": "No Newark sources in corpus."
+      "note": "No Newark documents in corpus."
     },
     {
       "jurisdiction": "Newark, NJ",
       "category": "algorithmic_rent_setting",
-      "note": "No Newark sources in corpus; NJ FAIR Act effective 2027-07-01."
+      "note": "No Newark documents in corpus; NJ FAIR Act effective 2027-07-01."
     },
     {
       "jurisdiction": "Boston, MA",
       "category": "security_deposits",
-      "note": "No local rule; G.L. c. 186 § 15B applies."
+      "note": "No local rule; M.G.L. c. 186 § 15B applies."
     },
     {
       "jurisdiction": "Boston, MA",
       "category": "application_screening_fees",
-      "note": "No local rule; G.L. c. 186 § 15B upfront-charge limit applies."
+      "note": "No local rule; M.G.L. c. 186 § 15B applies."
     },
     {
       "jurisdiction": "Boston, MA",
       "category": "algorithmic_rent_setting",
-      "note": "No Boston rule in corpus; state bills pending."
+      "note": "No local rule in corpus."
     },
     {
       "jurisdiction": "Cambridge, MA",
       "category": "rent_increase_limits",
-      "note": "G.L. c. 40P § 4 bars local rent control; no enforceable cap."
+      "note": "Local rent control barred by M.G.L. c. 40P § 4."
     },
     {
       "jurisdiction": "Cambridge, MA",
       "category": "security_deposits",
-      "note": "No local rule; G.L. c. 186 § 15B applies."
+      "note": "No local rule; state § 15B applies."
     },
     {
       "jurisdiction": "Cambridge, MA",
       "category": "application_screening_fees",
-      "note": "No local rule; G.L. c. 186 § 15B applies."
+      "note": "No local rule; state § 15B applies."
     },
     {
       "jurisdiction": "Cambridge, MA",
       "category": "algorithmic_rent_setting",
-      "note": "Only a policy order directing study or drafting (dropped); no enacted rule."
+      "note": "Only a policy order directing study; no enacted ordinance."
     }
   ]
 }

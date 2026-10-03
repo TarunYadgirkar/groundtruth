@@ -3867,9 +3867,9 @@
     "use_description": "APT 7-30 UNITS",
     "lat": null,
     "lng": null,
-    "legal_city": null,
-    "county": null,
-    "geocode_match": null
+    "legal_city": "Boston",
+    "county": "Suffolk County",
+    "geocode_match": "inferred from postal city \"Hyde Park\" (no street-level match)"
   },
   {
     "address_id": "A0243",
@@ -5499,9 +5499,9 @@
     "use_description": "4S-B-44U",
     "lat": null,
     "lng": null,
-    "legal_city": null,
-    "county": null,
-    "geocode_match": null
+    "legal_city": "Jersey City",
+    "county": "Hudson County",
+    "geocode_match": "inferred from postal city \"Jersey City\" (no street-level match)"
   },
   {
     "address_id": "A0345",
