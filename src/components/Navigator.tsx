@@ -30,6 +30,20 @@ interface Selection {
 
 const EXIT_MS = 350;
 const DARK_MS = 450;
+const PREWARM_MS = 1700;
+const SHIFT_AT = 0.8;
+const PANEL_MIN = 420;
+const PANEL_MAX = 540;
+const PANEL_VW = 0.35;
+const SHEET_SHIFT = 0.34;
+
+function screenOffset(isDesktop: boolean) {
+  if (typeof window === "undefined") return { x: 0, y: 0, viewportHeight: 900 };
+  const w = window.innerWidth;
+  const h = window.innerHeight;
+  if (isDesktop) return { x: Math.min(PANEL_MAX, Math.max(PANEL_MIN, w * PANEL_VW)) / 2, y: 0, viewportHeight: h };
+  return { x: 0, y: h * SHEET_SHIFT, viewportHeight: h };
+}
 const LANDING_FILTER = "grayscale(0.85) sepia(0.18) contrast(0.92) brightness(1.04)";
 
 const wait = (ms: number) => new Promise((r) => window.setTimeout(r, ms));
@@ -85,27 +99,64 @@ export default function Navigator() {
     return geocoderRef.current;
   }, []);
 
+  const [flightStyle, setFlightStyle] = useState<"cinematic" | "hop">("cinematic");
+  const [skip, setSkip] = useState(false);
+  const skipRef = useRef(false);
+  const waitersRef = useRef(new Set<() => void>());
+  const hasFlownRef = useRef(false);
+  const phaseRef = useRef<Phase>("landing");
+
+  useEffect(() => {
+    phaseRef.current = phase;
+  }, [phase]);
+
+  const skippableWait = useCallback((ms: number) => {
+    if (skipRef.current || ms <= 0) return Promise.resolve();
+    return new Promise<void>((resolve) => {
+      const done = () => {
+        window.clearTimeout(t);
+        waitersRef.current.delete(done);
+        resolve();
+      };
+      const t = window.setTimeout(done, ms);
+      waitersRef.current.add(done);
+    });
+  }, []);
+
+  const requestSkip = useCallback(() => {
+    skipRef.current = true;
+    setSkip(true);
+    waitersRef.current.forEach((done) => done());
+  }, []);
+
   const fly = useCallback(
     async (resolve: () => Promise<Selection | string>) => {
       const id = ++runId.current;
+      const hopping = hasFlownRef.current && !reduce;
+      const fromLanding = phaseRef.current === "landing";
+      skipRef.current = false;
+      setSkip(false);
       setError(null);
-      setPhase("exiting");
+      if (fromLanding || !hopping) setPhase("exiting");
       const pending = resolve().catch(() => "Something went wrong placing that address. Try again.");
-      await wait(reduce ? 0 : EXIT_MS);
+      if (fromLanding) await skippableWait(reduce ? 0 : EXIT_MS);
       if (id !== runId.current) return;
-      setPhase("locating");
-      const [outcome] = await Promise.all([pending, wait(reduce ? 0 : DARK_MS)]);
+      if (!hopping) setPhase("locating");
+      const [outcome] = await Promise.all([pending, hopping ? Promise.resolve() : skippableWait(reduce ? 0 : DARK_MS)]);
       if (id !== runId.current) return;
       if (typeof outcome === "string") {
         setPhase("landing");
         setError(outcome);
         return;
       }
+      setFlightStyle(hopping ? "hop" : "cinematic");
       setProgress(0);
       setSelection(outcome);
+      if (!hopping) await skippableWait(reduce ? 0 : PREWARM_MS);
+      if (id !== runId.current) return;
       setPhase("flying");
     },
-    [reduce],
+    [reduce, skippableWait],
   );
 
   const selectSample = useCallback(
@@ -173,28 +224,48 @@ export default function Navigator() {
     return () => window.removeEventListener("popstate", onPop);
   }, [selectSample]);
 
-  const onArrive = useCallback(() => setPhase("revealed"), []);
+  const onArrive = useCallback(() => {
+    hasFlownRef.current = true;
+    setPhase("revealed");
+  }, []);
+
+  const canSkip = phase === "locating" || phase === "flying";
+
+  useEffect(() => {
+    if (!canSkip) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && requestSkip();
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [canSkip, requestSkip]);
 
   const evaluations = useMemo(() => (selection ? evaluate(selection.address, asOf) : []), [selection, asOf]);
   const ruleCount = useMemo(() => (selection ? rulesForPlace(selection.address).length : 0), [selection]);
 
   const inFlight = phase === "flying" || phase === "revealed";
+  const onMap = inFlight || phase === "locating";
   const target = useMemo(
-    () => (selection && inFlight ? { id: selection.address.address_id, lat: selection.lat, lng: selection.lng, height: buildingHeight(selection.address.units) } : null),
-    [selection, inFlight],
+    () =>
+      selection && onMap
+        ? { id: selection.address.address_id, lat: selection.lat, lng: selection.lng, height: buildingHeight(selection.address.units), style: flightStyle }
+        : null,
+    [selection, onMap, flightStyle],
   );
-  const scrim = phase === "locating" ? 0.94 : phase === "flying" && !mapFailed ? 0.55 * (1 - Math.min(1, progress * 1.4)) : 0;
-  const mapShift = phase === "revealed" ? (isDesktop ? "translateX(calc(var(--panel-w) / -2))" : "translateY(-34dvh)") : "none";
+  const scrim = phase === "locating" ? 1 : phase === "flying" && flightStyle === "cinematic" && !mapFailed ? 0.55 * (1 - Math.min(1, progress * 1.4)) : 0;
+  const offset = useMemo(() => screenOffset(isDesktop), [isDesktop]);
+  const mapShift = phase === "revealed" || (phase === "flying" && progress >= SHIFT_AT) ? (isDesktop ? "translateX(calc(var(--panel-w) / -2))" : "translateY(-34dvh)") : "none";
 
   return (
     <div className={`relative h-dvh w-full overflow-hidden ${mapFailed ? "bg-paper" : "bg-night"} [--panel-w:clamp(420px,35vw,540px)]`} data-phase={phase}>
       <div
-        className="absolute inset-0 transition-[transform,filter] duration-[1400ms] ease-[var(--ease-out)]"
-        style={{ transform: mapShift, filter: phase === "landing" || phase === "exiting" ? LANDING_FILTER : "none" }}
+        className="absolute inset-0 transition-[filter] duration-[1400ms] ease-[var(--ease-out)]"
+        style={{ filter: phase === "landing" || phase === "exiting" ? LANDING_FILTER : "none" }}
       >
         <div className="absolute inset-0" style={{ opacity: mapFailed ? 0 : 1 }}>
         <MapScene
           target={target}
+          prewarm={phase === "locating"}
+          offset={offset}
+          skip={skip}
           reducedMotion={reduce}
           interactive={phase === "revealed"}
           showMarker={phase === "revealed"}
@@ -202,7 +273,11 @@ export default function Navigator() {
           onArrive={onArrive}
         />
         </div>
-        {mapFailed && selection && inFlight && <SurveyPlate lat={selection.lat} lng={selection.lng} progress={phase === "revealed" ? 1 : progress} />}
+        {mapFailed && selection && inFlight && (
+          <div className="absolute inset-0 transition-transform duration-[1400ms] ease-[var(--ease-out)]" style={{ transform: mapShift }}>
+            <SurveyPlate lat={selection.lat} lng={selection.lng} progress={phase === "revealed" ? 1 : progress} />
+          </div>
+        )}
       </div>
 
       <SurveyBackdrop opacity={phase === "landing" ? 1 : 0} />
@@ -217,10 +292,9 @@ export default function Navigator() {
 
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute inset-0 transition-transform duration-[1400ms] ease-[var(--ease-out)]"
+        className="pointer-events-none absolute inset-0"
         style={{
-          transform: mapShift,
-          background: "radial-gradient(circle at 50% 50%, transparent 0, transparent 14%, rgba(18,26,23,0.32) 46%, rgba(18,26,23,0.55) 100%)",
+          background: `radial-gradient(circle at ${isDesktop ? "calc(50% - var(--panel-w) / 2) 50%" : "50% 16dvh"}, transparent 0, transparent 14%, rgba(18,26,23,0.32) 46%, rgba(18,26,23,0.55) 100%)`,
         }}
         initial={false}
         animate={{ opacity: phase === "revealed" ? 1 : 0 }}
@@ -250,6 +324,26 @@ export default function Navigator() {
       {phase === "flying" && selection && !reduce && (
         <FlightHud address={selection.address} lat={selection.lat} lng={selection.lng} ruleCount={ruleCount} progress={progress} onPaper={mapFailed} />
       )}
+
+      {canSkip && (
+        <button type="button" tabIndex={-1} aria-hidden className="absolute inset-0 z-[25] cursor-default" onClick={requestSkip} />
+      )}
+      <AnimatePresence>
+        {canSkip && !reduce && (
+          <motion.button
+            key="skip"
+            type="button"
+            onClick={requestSkip}
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0, transition: { delay: 0.6, type: "spring", duration: 0.4, bounce: 0 } }}
+            exit={{ opacity: 0, transition: { duration: 0.15 } }}
+            className="absolute bottom-16 right-4 z-30 flex h-9 items-center gap-2 rounded-[var(--radius-control)] bg-night/70 px-3 font-mono text-[0.75rem] uppercase tracking-[0.06em] text-paper shadow-[0_0_0_1px_rgba(242,239,230,0.12)] backdrop-blur-md transition-[background-color,scale] duration-150 hover:bg-night/85 active:scale-[0.96] sm:bottom-20 sm:right-8"
+          >
+            Skip <span aria-hidden>›</span>
+            <kbd className="rounded-[3px] bg-paper/10 px-1.5 py-0.5 text-[0.6875rem] text-paper/70">Esc</kbd>
+          </motion.button>
+        )}
+      </AnimatePresence>
 
       <AnimatePresence>
         {inFlight && selection && <TopBar key="top" address={selection.address} onSearch={reset} dark={phase === "flying"} />}
