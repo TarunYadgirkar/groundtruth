@@ -18,6 +18,7 @@ interface LandingProps {
   onSelect: (a: Address) => void;
   onLookupFree: (q: string) => void;
   error: string | null;
+  autoFocus: boolean;
 }
 
 const enter = (i: number, reduce: boolean | null) => ({
@@ -26,16 +27,17 @@ const enter = (i: number, reduce: boolean | null) => ({
   transition: { duration: 0.7, ease: EASE, delay: 0.25 + i * 0.1 },
 });
 
-export default function Landing({ onSelect, onLookupFree, error }: LandingProps) {
+export default function Landing({ onSelect, onLookupFree, error, autoFocus }: LandingProps) {
   const reduce = useReducedMotion();
   const [query, setQuery] = useState("");
   const [exampleIdx, setExampleIdx] = useState(0);
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
-    if (reduce) return;
+    if (reduce || paused) return;
     const id = window.setInterval(() => setExampleIdx((i) => (i + 1) % EXAMPLES.length), EXAMPLE_MS);
     return () => window.clearInterval(id);
-  }, [reduce]);
+  }, [reduce, paused]);
 
   const example = EXAMPLES[exampleIdx];
 
@@ -64,10 +66,17 @@ export default function Landing({ onSelect, onLookupFree, error }: LandingProps)
         </motion.p>
 
         <motion.div {...enter(3, reduce)} className="relative z-20 mt-10 w-full max-w-[680px]">
-          <SearchBar value={query} onChange={setQuery} onSelect={onSelect} onLookupFree={onLookupFree} />
+          <SearchBar value={query} onChange={setQuery} onSelect={onSelect} onLookupFree={onLookupFree} autoFocus={autoFocus} />
         </motion.div>
 
-        <motion.div {...enter(4, reduce)} className="mt-5 flex h-6 items-center gap-2 text-ui text-ink-muted">
+        <motion.div
+          {...enter(4, reduce)}
+          className="mt-5 flex h-6 items-center gap-2 text-ui text-ink-muted"
+          onPointerEnter={() => setPaused(true)}
+          onPointerLeave={() => setPaused(false)}
+          onFocus={() => setPaused(true)}
+          onBlur={() => setPaused(false)}
+        >
           <span>Try</span>
           <AnimatePresence mode="wait" initial={false}>
             {example && (

@@ -67,7 +67,7 @@ export default function Navigator() {
       const id = ++runId.current;
       setError(null);
       setPhase("exiting");
-      const pending = resolve();
+      const pending = resolve().catch(() => "Something went wrong placing that address. Try again.");
       await wait(reduce ? 0 : EXIT_MS);
       if (id !== runId.current) return;
       setPhase("locating");
@@ -129,8 +129,11 @@ export default function Navigator() {
     if (phase === "landing") writeUrl(null, asOf);
   }, [phase, selection, asOf]);
 
+  const [returned, setReturned] = useState(false);
+
   const reset = useCallback(() => {
     runId.current++;
+    setReturned(true);
     setSelection(null);
     setPhase("landing");
   }, []);
@@ -140,12 +143,11 @@ export default function Navigator() {
   const evaluations = useMemo(() => (selection ? evaluate(selection.address, asOf) : []), [selection, asOf]);
   const ruleCount = useMemo(() => (selection ? rulesForPlace(selection.address).length : 0), [selection]);
 
-  const target = useMemo(
-    () => (selection && (phase === "flying" || phase === "revealed") ? { id: selection.address.address_id, lat: selection.lat, lng: selection.lng } : null),
-    [selection, phase],
-  );
-
   const inFlight = phase === "flying" || phase === "revealed";
+  const target = useMemo(
+    () => (selection && inFlight ? { id: selection.address.address_id, lat: selection.lat, lng: selection.lng } : null),
+    [selection, inFlight],
+  );
   const scrim = phase === "locating" ? 0.94 : phase === "flying" && !mapFailed ? 0.55 * (1 - Math.min(1, progress * 1.4)) : 0;
   const mapShift = phase === "revealed" ? (isDesktop ? "translateX(calc(var(--panel-w) / -2))" : "translateY(-34dvh)") : "none";
 
@@ -191,7 +193,7 @@ export default function Navigator() {
       />
 
       <AnimatePresence>
-        {phase === "landing" && <Landing key="landing" onSelect={selectSample} onLookupFree={lookupFree} error={error} />}
+        {phase === "landing" && <Landing key="landing" onSelect={selectSample} onLookupFree={lookupFree} error={error} autoFocus={returned} />}
       </AnimatePresence>
 
       <AnimatePresence>

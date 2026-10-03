@@ -114,6 +114,10 @@ function ShareButton({ address, asOf }: { address: Address; asOf: string }) {
 }
 
 export default function PanelHeader({ address, lat, lng, asOf }: PanelHeaderProps) {
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  useEffect(() => {
+    headingRef.current?.focus({ preventScroll: true });
+  }, []);
   const city = address.legal_city ?? address.postal_city;
   const mailedDifferently = address.postal_city && address.postal_city !== city;
 
@@ -131,7 +135,7 @@ export default function PanelHeader({ address, lat, lng, asOf }: PanelHeaderProp
         </div>
       </div>
       <div>
-        <h2 className="font-wide text-headline text-ink">{address.street_address}</h2>
+        <h2 ref={headingRef} tabIndex={-1} className="font-wide text-headline text-ink focus:outline-none">{address.street_address}</h2>
         <p className="mt-1.5 text-ui text-ink-muted">
           {city}, {address.state} {address.zip}
           {address.county && <span> · {address.county}</span>}

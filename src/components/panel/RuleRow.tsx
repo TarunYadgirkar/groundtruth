@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowSquareOutIcon, CaretDownIcon, FlagIcon } from "@phosphor-icons/react";
 import { ruleById } from "@/lib/data";
 import { formatDate } from "@/lib/labels";
@@ -11,7 +11,7 @@ import StatusPill from "./StatusPill";
 interface RuleRowProps {
   rule: Rule;
   evaluation: Evaluation;
-  highlighted: boolean;
+  highlight: number | null;
 }
 
 function safeUrl(url: string): string | undefined {
@@ -30,15 +30,23 @@ function conflictTargets(rule: Rule): string {
     .join(", ");
 }
 
-export default function RuleRow({ rule, evaluation, highlighted }: RuleRowProps) {
+export default function RuleRow({ rule, evaluation, highlight }: RuleRowProps) {
   const [open, setOpen] = useState(false);
   const bodyId = useId();
   const ref = useRef<HTMLLIElement>(null);
-  const isOpen = open || highlighted;
+  const [seenHighlight, setSeenHighlight] = useState<number | null>(null);
+  const reduce = useReducedMotion();
+  const highlighted = highlight !== null;
+  const isOpen = open;
+
+  if (highlight !== seenHighlight) {
+    setSeenHighlight(highlight);
+    if (highlight !== null) setOpen(true);
+  }
 
   useEffect(() => {
-    if (highlighted) ref.current?.scrollIntoView({ behavior: "smooth", block: "center" });
-  }, [highlighted]);
+    if (highlight !== null) ref.current?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+  }, [highlight, reduce]);
 
   const href = safeUrl(rule.source_url);
 

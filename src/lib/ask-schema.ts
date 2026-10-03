@@ -1,5 +1,11 @@
 import { z } from "zod";
 
+const IsoDayInRange = z
+  .string()
+  .regex(/^\d{4}-\d{2}-\d{2}$/)
+  .refine((d) => !Number.isNaN(Date.parse(`${d}T00:00:00Z`)) && d >= "2024-01-01" && d <= "2028-01-01");
+const SafeText = (max: number) => z.string().max(max).regex(/^[\p{L}\p{N} .,'#&/-]*$/u);
+
 export const UiAction = z.union([
   z.object({ type: z.literal("HIGHLIGHT_RULE"), rule_id: z.string() }),
   z.object({ type: z.literal("SET_AS_OF"), date: z.string().describe("ISO date YYYY-MM-DD between 2024-01-01 and 2028-01-01") }),
@@ -16,8 +22,8 @@ export type UiAction = z.infer<typeof UiAction>;
 
 const AddressInput = z.object({
   address_id: z.string().max(80),
-  street_address: z.string().max(200),
-  postal_city: z.string().max(80),
+  street_address: SafeText(200),
+  postal_city: SafeText(80),
   state: z.enum(["CA", "NJ", "MA"]),
   zip: z.string().max(12),
   year_built: z.number().int().nullable(),
@@ -26,16 +32,18 @@ const AddressInput = z.object({
   use_description: z.string().max(120),
   lat: z.number().nullable(),
   lng: z.number().nullable(),
-  legal_city: z.string().max(80).nullable(),
+  legal_city: SafeText(80).nullable(),
   county: z.string().max(80).nullable(),
   geocode_match: z.string().max(40).nullable(),
 });
 
 export const AskRequest = z.object({
   question: z.string().trim().min(3).max(500),
-  asOf: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  asOf: IsoDayInRange,
   address_id: z.string().max(80).optional(),
   live_address: AddressInput.optional(),
 });
+
+export const isIsoDayInRange = (d: string) => IsoDayInRange.safeParse(d).success;
 
 export type AskRequest = z.infer<typeof AskRequest>;

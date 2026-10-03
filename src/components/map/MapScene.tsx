@@ -83,7 +83,7 @@ export default function MapScene({ target, reducedMotion, interactive, showMarke
     let raf = 0;
     let last = performance.now();
     const tick = (now: number) => {
-      const dt = now - last;
+      const dt = Math.min(now - last, 50);
       last = now;
       const map = mapRef.current?.map3d ?? null;
       const mode = modeRef.current;
@@ -126,6 +126,8 @@ export default function MapScene({ target, reducedMotion, interactive, showMarke
       style={{ pointerEvents: interactive ? "auto" : "none" }}
       onPointerDown={stopOrbit}
       onWheel={stopOrbit}
+      onKeyDown={stopOrbit}
+      onTouchStart={stopOrbit}
     >
       <Map3D
         ref={mapRef}

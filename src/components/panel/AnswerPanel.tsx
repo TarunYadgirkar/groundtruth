@@ -49,7 +49,7 @@ function SectionTitle({ children, count }: { children: React.ReactNode; count?: 
 
 export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, evaluations, ruleCount, isDesktop }: AnswerPanelProps) {
   const [ready, setReady] = useState(false);
-  const [highlight, setHighlight] = useState<string | null>(null);
+  const [highlight, setHighlight] = useState<{ id: string; nonce: number } | null>(null);
   const city = address.legal_city ?? address.postal_city;
   const placeRules = useMemo(() => rulesForPlace(address), [address]);
 
@@ -86,7 +86,7 @@ export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, eva
         if (a.type === "SET_AS_OF") onAsOfChange(a.date);
       }
       const h = actions.find((a) => a.type === "HIGHLIGHT_RULE");
-      if (h && h.type === "HIGHLIGHT_RULE") setHighlight(h.rule_id);
+      if (h && h.type === "HIGHLIGHT_RULE") setHighlight({ id: h.rule_id, nonce: Date.now() });
     },
     [onAsOfChange],
   );
@@ -145,7 +145,7 @@ export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, eva
                       ) : (
                         <ul className="flex flex-col divide-y divide-hairline">
                           {list.map((r) => (
-                            <RuleRow key={r.rule.team_rule_id} rule={r.rule} evaluation={r.evaluation} highlighted={highlight === r.rule.team_rule_id} />
+                            <RuleRow key={r.rule.team_rule_id} rule={r.rule} evaluation={r.evaluation} highlight={highlight?.id === r.rule.team_rule_id ? highlight.nonce : null} />
                           ))}
                         </ul>
                       )}
@@ -167,7 +167,7 @@ export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, eva
                     </div>
                     <ul className="mt-1 flex flex-col divide-y divide-hairline">
                       {sortRows(pending).map((r) => (
-                        <RuleRow key={r.rule.team_rule_id} rule={r.rule} evaluation={r.evaluation} highlighted={highlight === r.rule.team_rule_id} />
+                        <RuleRow key={r.rule.team_rule_id} rule={r.rule} evaluation={r.evaluation} highlight={highlight?.id === r.rule.team_rule_id ? highlight.nonce : null} />
                       ))}
                     </ul>
                   </motion.section>

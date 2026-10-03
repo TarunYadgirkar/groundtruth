@@ -18,6 +18,7 @@ interface SearchBarProps {
   value: string;
   onChange: (v: string) => void;
   inputRef?: React.Ref<HTMLInputElement>;
+  autoFocus?: boolean;
 }
 
 function facts(a: Address): string {
@@ -26,7 +27,7 @@ function facts(a: Address): string {
   return `${built} · ${units}`;
 }
 
-export default function SearchBar({ onSelect, onLookupFree, value, onChange, inputRef }: SearchBarProps) {
+export default function SearchBar({ onSelect, onLookupFree, value, onChange, inputRef, autoFocus }: SearchBarProps) {
   const listId = useId();
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
@@ -58,7 +59,8 @@ export default function SearchBar({ onSelect, onLookupFree, value, onChange, inp
       setActive((i) => (options.length ? (Math.min(i, options.length - 1) - 1 + options.length) % options.length : 0));
     } else if (e.key === "Enter") {
       e.preventDefault();
-      choose(options[activeIndex]);
+      if (!showList) setOpen(true);
+      else choose(options[activeIndex]);
     } else if (e.key === "Escape") {
       if (open) setOpen(false);
       else onChange("");
@@ -77,7 +79,8 @@ export default function SearchBar({ onSelect, onLookupFree, value, onChange, inp
           ref={inputRef}
           role="combobox"
           aria-expanded={showList}
-          aria-controls={listId}
+          aria-controls={showList ? listId : undefined}
+          autoFocus={autoFocus}
           aria-autocomplete="list"
           aria-activedescendant={showList ? `${listId}-opt-${activeIndex}` : undefined}
           autoComplete="off"
@@ -89,7 +92,10 @@ export default function SearchBar({ onSelect, onLookupFree, value, onChange, inp
             setActive(0);
             setOpen(true);
           }}
-          onFocus={() => setOpen(true)}
+          onFocus={() => {
+            if (blurTimer.current) window.clearTimeout(blurTimer.current);
+            setOpen(true);
+          }}
           onBlur={() => {
             blurTimer.current = window.setTimeout(() => setOpen(false), 120);
           }}
