@@ -32,8 +32,14 @@ export const STATE_NAME: Record<Address["state"], string> = {
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+export function isIsoDay(s: string | null): s is string {
+  return !!s && /^\d{4}-\d{2}-\d{2}$/.test(s);
+}
+
 export function formatDate(iso: string): string {
   const [y, m, d] = iso.split("-").map(Number);
+  if (!m) return String(y);
+  if (!d) return `${MONTHS[m - 1]} ${y}`;
   return `${MONTHS[m - 1]} ${d}, ${y}`;
 }
 

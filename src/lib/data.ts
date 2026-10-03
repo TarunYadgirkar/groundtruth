@@ -1,10 +1,10 @@
 import type { Address, Evaluation, Rule } from "./types";
 
-// Data source. Addresses are real pipeline output. To switch rules and the engine
-// to real output, point the next two imports at "@/data/rules.json" and "./engine".
+// Data source: pipeline output. For offline UI work, swap these three imports to
+// "@/data/mock/addresses.json", "@/data/mock/rules.json" and "./mock-engine".
 import addressesJson from "@/data/addresses.json";
-import rulesJson from "@/data/mock/rules.json";
-import { evaluateAddress } from "./mock-engine";
+import rulesJson from "@/data/rules.json";
+import { evaluateAddress } from "./engine";
 
 function titleCase(s: string): string {
   return s.toLowerCase().replace(/\b([a-z])/g, (m) => m.toUpperCase());

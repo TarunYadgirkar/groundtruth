@@ -2,7 +2,7 @@
 
 import { useId, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { DEFAULT_AS_OF, SLIDER_MAX, SLIDER_MIN, TEST_DATES, dayToIso, formatDate, isoToDay } from "@/lib/labels";
+import { DEFAULT_AS_OF, isIsoDay, SLIDER_MAX, SLIDER_MIN, TEST_DATES, dayToIso, formatDate, isoToDay } from "@/lib/labels";
 import type { Rule } from "@/lib/types";
 
 interface TimeSliderProps {
@@ -27,7 +27,7 @@ function buildTicks(rules: Rule[]): Tick[] {
   const map = new Map<string, string[]>();
   for (const r of rules) {
     const d = r.effective_date;
-    if (!d || d < SLIDER_MIN || d > SLIDER_MAX) continue;
+    if (!isIsoDay(d) || d < SLIDER_MIN || d > SLIDER_MAX) continue;
     map.set(d, [...(map.get(d) ?? []), r.title]);
   }
   return [...map.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([date, titles]) => ({ date, titles }));
