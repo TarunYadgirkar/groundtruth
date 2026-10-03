@@ -30,6 +30,20 @@ interface Selection {
 
 const EXIT_MS = 350;
 const DARK_MS = 450;
+const PREWARM_MS = 1700;
+const SHIFT_AT = 0.8;
+const PANEL_MIN = 420;
+const PANEL_MAX = 540;
+const PANEL_VW = 0.35;
+const SHEET_SHIFT = 0.34;
+
+function screenOffset(isDesktop: boolean) {
+  if (typeof window === "undefined") return { x: 0, y: 0, viewportHeight: 900 };
+  const w = window.innerWidth;
+  const h = window.innerHeight;
+  if (isDesktop) return { x: Math.min(PANEL_MAX, Math.max(PANEL_MIN, w * PANEL_VW)) / 2, y: 0, viewportHeight: h };
+  return { x: 0, y: h * SHEET_SHIFT, viewportHeight: h };
+}
 const LANDING_FILTER = "grayscale(0.85) sepia(0.18) contrast(0.92) brightness(1.04)";
 
 const wait = (ms: number) => new Promise((r) => window.setTimeout(r, ms));
@@ -81,6 +95,8 @@ export default function Navigator() {
       }
       setProgress(0);
       setSelection(outcome);
+      await wait(reduce ? 0 : PREWARM_MS);
+      if (id !== runId.current) return;
       setPhase("flying");
     },
     [reduce],
@@ -145,22 +161,26 @@ export default function Navigator() {
   const ruleCount = useMemo(() => (selection ? rulesForPlace(selection.address).length : 0), [selection]);
 
   const inFlight = phase === "flying" || phase === "revealed";
+  const onMap = inFlight || phase === "locating";
   const target = useMemo(
-    () => (selection && inFlight ? { id: selection.address.address_id, lat: selection.lat, lng: selection.lng, height: buildingHeight(selection.address.units) } : null),
-    [selection, inFlight],
+    () => (selection && onMap ? { id: selection.address.address_id, lat: selection.lat, lng: selection.lng, height: buildingHeight(selection.address.units) } : null),
+    [selection, onMap],
   );
-  const scrim = phase === "locating" ? 0.94 : phase === "flying" && !mapFailed ? 0.55 * (1 - Math.min(1, progress * 1.4)) : 0;
-  const mapShift = phase === "revealed" ? (isDesktop ? "translateX(calc(var(--panel-w) / -2))" : "translateY(-34dvh)") : "none";
+  const scrim = phase === "locating" ? 1 : phase === "flying" && !mapFailed ? 0.55 * (1 - Math.min(1, progress * 1.4)) : 0;
+  const offset = useMemo(() => screenOffset(isDesktop), [isDesktop]);
+  const mapShift = phase === "revealed" || (phase === "flying" && progress >= SHIFT_AT) ? (isDesktop ? "translateX(calc(var(--panel-w) / -2))" : "translateY(-34dvh)") : "none";
 
   return (
     <div className={`relative h-dvh w-full overflow-hidden ${mapFailed ? "bg-paper" : "bg-night"} [--panel-w:clamp(420px,35vw,540px)]`} data-phase={phase}>
       <div
-        className="absolute inset-0 transition-[transform,filter] duration-[1400ms] ease-[var(--ease-out)]"
-        style={{ transform: mapShift, filter: phase === "landing" || phase === "exiting" ? LANDING_FILTER : "none" }}
+        className="absolute inset-0 transition-[filter] duration-[1400ms] ease-[var(--ease-out)]"
+        style={{ filter: phase === "landing" || phase === "exiting" ? LANDING_FILTER : "none" }}
       >
         <div className="absolute inset-0" style={{ opacity: mapFailed ? 0 : 1 }}>
         <MapScene
           target={target}
+          prewarm={phase === "locating"}
+          offset={offset}
           reducedMotion={reduce}
           interactive={phase === "revealed"}
           showMarker={phase === "revealed"}
@@ -168,7 +188,11 @@ export default function Navigator() {
           onArrive={onArrive}
         />
         </div>
-        {mapFailed && selection && inFlight && <SurveyPlate lat={selection.lat} lng={selection.lng} progress={phase === "revealed" ? 1 : progress} />}
+        {mapFailed && selection && inFlight && (
+          <div className="absolute inset-0 transition-transform duration-[1400ms] ease-[var(--ease-out)]" style={{ transform: mapShift }}>
+            <SurveyPlate lat={selection.lat} lng={selection.lng} progress={phase === "revealed" ? 1 : progress} />
+          </div>
+        )}
       </div>
 
       <SurveyBackdrop opacity={phase === "landing" ? 1 : 0} />
@@ -183,10 +207,9 @@ export default function Navigator() {
 
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute inset-0 transition-transform duration-[1400ms] ease-[var(--ease-out)]"
+        className="pointer-events-none absolute inset-0"
         style={{
-          transform: mapShift,
-          background: "radial-gradient(circle at 50% 50%, transparent 0, transparent 14%, rgba(18,26,23,0.32) 46%, rgba(18,26,23,0.55) 100%)",
+          background: `radial-gradient(circle at ${isDesktop ? "calc(50% - var(--panel-w) / 2) 50%" : "50% 16dvh"}, transparent 0, transparent 14%, rgba(18,26,23,0.32) 46%, rgba(18,26,23,0.55) 100%)`,
         }}
         initial={false}
         animate={{ opacity: phase === "revealed" ? 1 : 0 }}
