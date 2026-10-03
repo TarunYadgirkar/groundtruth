@@ -55,7 +55,7 @@ export default function AskBar({ address, asOf, onActions }: AskBarProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4, transition: { duration: 0.12 } }}
             transition={{ type: "spring", duration: 0.35, bounce: 0 }}
-            className="relative rounded-[var(--radius-control)] bg-surface-sunk px-3 py-2.5 shadow-[inset_0_0_0_1px_var(--hairline)]"
+            className="relative max-h-[30vh] overflow-y-auto rounded-[var(--radius-control)] bg-surface-sunk px-3 py-2.5 shadow-[inset_0_0_0_1px_var(--hairline)]"
             aria-live="polite"
           >
             <div className="flex items-start justify-between gap-2">
