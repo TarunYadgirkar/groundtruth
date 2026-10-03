@@ -15,6 +15,7 @@ const STEPS = [
     name: "Extract",
     body: "Claude reads each official document in the corpus and writes structured rule records: who is covered, from when, and the exact sentence that says so.",
     stat: [num(S.rulesExtracted), "rule records"] as const,
+    link: { href: "/new-law", label: "Try it on a new law" },
   },
   {
     name: "Verify quotes",

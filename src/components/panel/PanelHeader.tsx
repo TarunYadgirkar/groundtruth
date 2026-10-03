@@ -67,6 +67,9 @@ function OverflowMenu({ lat, lng }: { lat: number; lng: number }) {
             <Link role="menuitem" href="/changes" className={item}>
               Who each law change affects
             </Link>
+            <Link role="menuitem" href="/new-law" className={item}>
+              Test a new law
+            </Link>
             <Link role="menuitem" href="/method" className={item}>
               How results are computed
             </Link>

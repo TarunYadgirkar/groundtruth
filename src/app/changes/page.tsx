@@ -128,6 +128,9 @@ export default function ChangesPage() {
           Groundtruth
         </Link>
         <nav className="flex gap-5 text-ui">
+          <Link href="/new-law" className="link text-ink">
+            Test a new law
+          </Link>
           <Link href="/method" className="link text-ink">
             How it works
           </Link>
