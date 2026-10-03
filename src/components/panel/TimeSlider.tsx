@@ -121,7 +121,7 @@ export default function TimeSlider({ asOf, onChange, rules }: TimeSliderProps) {
         <span>2028</span>
       </div>
 
-      <div className="flex flex-wrap items-center gap-1.5" role="group" aria-label="Test dates">
+      <div className="-mx-1 flex items-center gap-1.5 overflow-x-auto px-1 pb-0.5 [scrollbar-width:none]" role="group" aria-label="Test dates">
         {[DEFAULT_AS_OF, ...TEST_DATES].map((d) => {
           const active = d === asOf;
           return (
@@ -130,7 +130,7 @@ export default function TimeSlider({ asOf, onChange, rules }: TimeSliderProps) {
               type="button"
               aria-pressed={active}
               onClick={() => onChange(d)}
-              className={`tnum h-7 rounded-[var(--radius-chip)] px-2 font-mono text-[0.75rem] transition-[background-color,color,box-shadow,scale] duration-150 active:scale-[0.96] ${
+              className={`tnum h-7 shrink-0 rounded-[var(--radius-chip)] px-2 font-mono text-[0.75rem] transition-[background-color,color,box-shadow,scale] duration-150 active:scale-[0.96] ${
                 active ? "bg-ink text-paper" : "bg-surface-sunk text-ink shadow-[inset_0_0_0_1px_var(--hairline)] hover:bg-paper"
               }`}
             >

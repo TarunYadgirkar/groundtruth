@@ -108,8 +108,11 @@ export default function Navigator() {
     [fly],
   );
 
+  const initialSearch = useRef<string | null>(null);
+
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
+    initialSearch.current ??= window.location.search;
+    const params = new URLSearchParams(initialSearch.current);
     const a = ADDRESSES.find((x) => x.address_id === params.get("a"));
     const d = params.get("asOf");
     if (!a) return;
@@ -144,7 +147,7 @@ export default function Navigator() {
 
   const inFlight = phase === "flying" || phase === "revealed";
   const scrim = phase === "locating" ? 0.94 : phase === "flying" && !mapFailed ? 0.55 * (1 - Math.min(1, progress * 1.4)) : 0;
-  const mapShift = phase === "revealed" ? (isDesktop ? "translateX(calc(var(--panel-w) / -2))" : "translateY(-28dvh)") : "none";
+  const mapShift = phase === "revealed" ? (isDesktop ? "translateX(calc(var(--panel-w) / -2))" : "translateY(-34dvh)") : "none";
 
   return (
     <div className={`relative h-dvh w-full overflow-hidden ${mapFailed ? "bg-paper" : "bg-night"} [--panel-w:clamp(420px,35vw,540px)]`} data-phase={phase}>

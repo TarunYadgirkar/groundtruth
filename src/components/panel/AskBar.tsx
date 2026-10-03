@@ -79,9 +79,15 @@ export default function AskBar({ address, asOf, onActions }: AskBarProps) {
                   <p className="mt-1.5 flex flex-wrap gap-1 font-mono text-[0.6875rem] text-ink-muted">
                     Cites
                     {state.data.cited_rule_ids.map((r) => (
-                      <span key={r} className="rounded-[3px] bg-paper px-1 text-ink">
+                      <button
+                        key={r}
+                        type="button"
+                        onClick={() => onActions([{ type: "HIGHLIGHT_RULE", rule_id: r }])}
+                        aria-label={`Show rule ${r}`}
+                        className="link rounded-[3px] bg-paper px-1 text-ink"
+                      >
                         {r}
-                      </span>
+                      </button>
                     ))}
                   </p>
                 )}

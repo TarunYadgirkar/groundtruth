@@ -105,7 +105,7 @@ export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, eva
       className={
         isDesktop
           ? "absolute inset-y-0 right-0 z-30 flex w-[var(--panel-w)] flex-col bg-surface shadow-[-1px_0_0_0_var(--hairline-strong),-24px_0_48px_-24px_rgba(18,26,23,0.35)]"
-          : "absolute inset-x-0 bottom-0 z-30 flex h-[64dvh] flex-col rounded-t-[var(--radius-panel)] bg-surface shadow-[0_-1px_0_0_var(--hairline-strong),0_-24px_48px_-24px_rgba(18,26,23,0.35)]"
+          : "absolute inset-x-0 bottom-0 z-30 flex h-[68dvh] flex-col rounded-t-[var(--radius-panel)] bg-surface shadow-[0_-1px_0_0_var(--hairline-strong),0_-24px_48px_-24px_rgba(18,26,23,0.35)]"
       }
     >
       {!isDesktop && <div aria-hidden className="mx-auto mt-2 h-1 w-9 shrink-0 rounded-full bg-hairline-strong" />}
