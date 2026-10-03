@@ -88,6 +88,7 @@ function probe(map: google.maps.maps3d.Map3DElement, final: Cam): () => void {
 const MAX_ROOF_ABOVE_GROUND = 150;
 const INSTANT_SETTLE_MS = 200;
 const HOP_GRACE_MS = 1500;
+const MAP_WAIT_MS = 6000;
 
 // Short hop for later lookups: Google's own fly-to arcs over the city and lands
 // relative to the ground, so no probe is needed.
@@ -123,10 +124,12 @@ function measure(map: google.maps.maps3d.Map3DElement, height: number): { ground
 
 export default function MapScene({ target, prewarm, offset, skip, reducedMotion, interactive, showMarker, onProgress, onArrive }: MapSceneProps) {
   const mapRef = useRef<Map3DRef | null>(null);
+  const readyRef = useRef(false);
   const modeRef = useRef<Mode>({ kind: "spin" });
   const cbRef = useRef({ onProgress, onArrive });
   const stepRef = useRef(-1);
   const [roofAlt, setRoofAlt] = useState<number | null>(null);
+  const [mapReady, setMapReady] = useState(false);
 
   const offsetRef = useRef(offset);
   const measuredRef = useRef<{ id: string; m: ReturnType<typeof measure> } | null>(null);
@@ -140,6 +143,7 @@ export default function MapScene({ target, prewarm, offset, skip, reducedMotion,
     const map = mapRef.current?.map3d ?? null;
     const now = performance.now();
     if (!target) {
+      if (modeRef.current.kind === "spin") return;
       if (!map || reducedMotion) {
         if (map) applyCam(map, GLOBE);
         modeRef.current = { kind: reducedMotion ? "idle" : "spin" };
@@ -154,6 +158,16 @@ export default function MapScene({ target, prewarm, offset, skip, reducedMotion,
       return map ? probe(map, final) : undefined;
     }
     const instant = skip || reducedMotion;
+    // A deep link can land before the 3D map element exists. Wait for it, but still
+    // reveal the panel if the map never shows up.
+    if (!map && !mapReady) {
+      const t = window.setTimeout(() => {
+        setRoofAlt(target.height + RING_LIFT);
+        cbRef.current.onProgress(1);
+        cbRef.current.onArrive();
+      }, MAP_WAIT_MS);
+      return () => window.clearTimeout(t);
+    }
     const land = (base: Cam, roof: number) => {
       if (map) applyCam(map, framed(base, offsetRef.current, 1));
       modeRef.current = reducedMotion ? { kind: "idle" } : { kind: "orbit", base, start: performance.now() };
@@ -162,7 +176,9 @@ export default function MapScene({ target, prewarm, offset, skip, reducedMotion,
       cbRef.current.onArrive();
     };
 
-    if (target.style === "hop" && map) {
+    // Reduced motion lands with a zero-length ground-relative hop: there is no probe
+    // window to measure terrain in, and the hop needs none.
+    if (map && (target.style === "hop" || reducedMotion)) {
       let done = false;
       const finish = () => {
         if (done) return;
@@ -199,7 +215,7 @@ export default function MapScene({ target, prewarm, offset, skip, reducedMotion,
     modeRef.current = { kind: "descend", final: landed, start: now };
     const t = window.setTimeout(() => land(landed, roof), DESCENT_MS);
     return () => window.clearTimeout(t);
-  }, [target, prewarm, skip, reducedMotion]);
+  }, [target, prewarm, skip, reducedMotion, mapReady]);
 
   useEffect(() => {
     let raf = 0;
@@ -209,6 +225,10 @@ export default function MapScene({ target, prewarm, offset, skip, reducedMotion,
       last = now;
       const map = mapRef.current?.map3d ?? null;
       const mode = modeRef.current;
+      if (map && !readyRef.current) {
+        readyRef.current = true;
+        setMapReady(true);
+      }
       if (map) step(map, mode, now, dt);
       raf = requestAnimationFrame(tick);
     };
