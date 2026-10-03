@@ -40,7 +40,7 @@ export default function FlightHud({ address, lat, lng, ruleCount, progress, onPa
   const visible = lines.filter((_, i) => progress >= STAGES[i]);
 
   return (
-    <div aria-live="polite" className="pointer-events-none absolute bottom-10 left-4 z-30 flex flex-col gap-2 sm:bottom-14 sm:left-10">
+    <div aria-live="polite" className={`pointer-events-none absolute bottom-16 left-4 z-30 flex flex-col gap-1.5 rounded-[var(--radius-control)] px-3.5 py-3 sm:bottom-20 sm:left-8 ${onPaper ? "" : "bg-night/70 shadow-[0_0_0_1px_rgba(242,239,230,0.12)] backdrop-blur-md"}`}>
       <AnimatePresence initial={false}>
         {visible.map((l, i) => {
           const isCurrent = i === visible.length - 1;
@@ -50,7 +50,7 @@ export default function FlightHud({ address, lat, lng, ruleCount, progress, onPa
               initial={{ opacity: 0, x: -8 }}
               animate={{ opacity: isCurrent ? 1 : 0.55, x: 0 }}
               transition={{ type: "spring", duration: 0.4, bounce: 0 }}
-              className={`font-mono text-[0.75rem] leading-5 tracking-[0.06em] ${onPaper ? "text-ink" : "text-paper [text-shadow:0_1px_8px_rgba(0,0,0,0.6)]"}`}
+              className={`font-mono text-[0.75rem] leading-5 tracking-[0.06em] ${onPaper ? "text-ink" : "text-paper"}`}
             >
               <span className="uppercase">
                 <span className={isCurrent ? (onPaper ? "text-accent-ink" : "text-accent-on-dark") : ""}>{l.label}</span>

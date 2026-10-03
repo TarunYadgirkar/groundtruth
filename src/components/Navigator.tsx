@@ -16,6 +16,7 @@ import TopBar from "./flight/TopBar";
 import AnswerPanel from "./panel/AnswerPanel";
 import { useMapFailed } from "./map/MapProvider";
 import SurveyPlate from "./map/SurveyPlate";
+import { buildingHeight } from "./map/camera";
 
 const MapScene = dynamic(() => import("./map/MapScene"), { ssr: false });
 
@@ -145,7 +146,7 @@ export default function Navigator() {
 
   const inFlight = phase === "flying" || phase === "revealed";
   const target = useMemo(
-    () => (selection && inFlight ? { id: selection.address.address_id, lat: selection.lat, lng: selection.lng } : null),
+    () => (selection && inFlight ? { id: selection.address.address_id, lat: selection.lat, lng: selection.lng, height: buildingHeight(selection.address.units) } : null),
     [selection, inFlight],
   );
   const scrim = phase === "locating" ? 0.94 : phase === "flying" && !mapFailed ? 0.55 * (1 - Math.min(1, progress * 1.4)) : 0;

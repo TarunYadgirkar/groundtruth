@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AltitudeMode, Pin } from "@vis.gl/react-google-maps";
 import { Map3D, MapMode, Marker3D, Polyline3D, type Map3DRef } from "@vis.gl/react-google-maps/3d";
 import { reportMapFailure } from "./MapProvider";
@@ -9,6 +9,9 @@ import {
   BUILDING_RANGE,
   BUILDING_TILT,
   DESCENT_MS,
+  FINAL_MS,
+  HANDOFF_RANGE,
+  HANDOFF_TILT,
   GLOBE,
   ORBIT_MS,
   SPIN_DEG_PER_SEC,
@@ -26,6 +29,7 @@ export interface FlightTarget {
   id: string;
   lat: number;
   lng: number;
+  height: number;
 }
 
 interface MapSceneProps {
@@ -39,7 +43,8 @@ interface MapSceneProps {
 
 type Mode =
   | { kind: "spin" }
-  | { kind: "descend"; from: Cam; to: Cam; start: number }
+  | { kind: "descend"; from: Cam; to: Cam; start: number; final: Cam; height: number }
+  | { kind: "final"; final: Cam }
   | { kind: "orbit"; base: Cam; start: number }
   | { kind: "ascend"; from: Cam; start: number }
   | { kind: "idle" };
@@ -50,10 +55,31 @@ export default function MapScene({ target, reducedMotion, interactive, showMarke
   const mapRef = useRef<Map3DRef | null>(null);
   const modeRef = useRef<Mode>({ kind: "spin" });
   const cbRef = useRef({ onProgress, onArrive });
+  const [roofAlt, setRoofAlt] = useState<number | null>(null);
 
   useEffect(() => {
     cbRef.current = { onProgress, onArrive };
   });
+
+  const landAt = useCallback((map: google.maps.maps3d.Map3DElement, final: Cam, height: number, durationMillis: number) => {
+    let done = false;
+    const arrive = () => {
+      if (done || modeRef.current.kind !== "final") return;
+      done = true;
+      map.removeEventListener("gmp-animationend", arrive);
+      const base = readCam(map);
+      setRoofAlt((base.alt ?? 0) + 6);
+      modeRef.current = reducedMotion ? { kind: "idle" } : { kind: "orbit", base, start: performance.now() };
+      cbRef.current.onProgress(1);
+      cbRef.current.onArrive();
+    };
+    map.addEventListener("gmp-animationend", arrive);
+    window.setTimeout(arrive, durationMillis + 1500);
+    map.flyCameraTo({
+      endCamera: { center: { lat: final.lat, lng: final.lng, altitude: height }, altitudeMode: "RELATIVE_TO_GROUND", range: final.range, tilt: final.tilt, heading: final.heading },
+      durationMillis,
+    });
+  }, [reducedMotion]);
 
   useEffect(() => {
     const map = mapRef.current?.map3d;
@@ -67,17 +93,17 @@ export default function MapScene({ target, reducedMotion, interactive, showMarke
       modeRef.current = { kind: "ascend", from: readCam(map), start: now };
       return;
     }
-    const to: Cam = { lat: target.lat, lng: target.lng, range: BUILDING_RANGE, tilt: BUILDING_TILT, heading: headingFor(target.id) };
+    const heading = headingFor(target.id);
+    const final: Cam = { lat: target.lat, lng: target.lng, range: BUILDING_RANGE, tilt: BUILDING_TILT, heading };
     if (reducedMotion) {
-      if (map) applyCam(map, to);
-      modeRef.current = { kind: "idle" };
-      cbRef.current.onProgress(1);
-      cbRef.current.onArrive();
+      modeRef.current = { kind: "final", final };
+      if (map) landAt(map, final, target.height, 0);
       return;
     }
+    const handoff: Cam = { lat: target.lat, lng: target.lng, range: HANDOFF_RANGE, tilt: HANDOFF_TILT, heading };
     const from = map ? readCam(map) : GLOBE;
-    modeRef.current = { kind: "descend", from: { ...from, tilt: 0 }, to, start: now };
-  }, [target, reducedMotion]);
+    modeRef.current = { kind: "descend", from: { ...from, tilt: 0, alt: 0 }, to: handoff, start: now, final, height: target.height };
+  }, [target, reducedMotion, landAt]);
 
   useEffect(() => {
     let raf = 0;
@@ -95,9 +121,9 @@ export default function MapScene({ target, reducedMotion, interactive, showMarke
         const u = Math.min(1, (now - mode.start) / DESCENT_MS);
         if (map) applyCam(map, descentAt(mode.from, mode.to, u));
         cbRef.current.onProgress(u);
-        if (u >= 1) {
-          modeRef.current = { kind: "orbit", base: mode.to, start: now };
-          cbRef.current.onArrive();
+        if (u >= 1 && map) {
+          modeRef.current = { kind: "final", final: mode.final };
+          landAt(map, mode.final, mode.height, FINAL_MS);
         }
       }
       if (mode.kind === "orbit" && map) {
@@ -114,7 +140,7 @@ export default function MapScene({ target, reducedMotion, interactive, showMarke
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [reducedMotion]);
+  }, [reducedMotion, landAt]);
 
   const stopOrbit = () => {
     if (modeRef.current.kind === "orbit") modeRef.current = { kind: "idle" };
@@ -140,20 +166,19 @@ export default function MapScene({ target, reducedMotion, interactive, showMarke
         onError={reportMapFailure}
         style={{ width: "100%", height: "100%" }}
       >
-        {showMarker && target && (
+        {showMarker && target && roofAlt !== null && (
           <>
             <Polyline3D
-              coordinates={ringPath(target.lat, target.lng, RING_METERS)}
-              altitudeMode={AltitudeMode.RELATIVE_TO_GROUND}
+              coordinates={ringPath(target.lat, target.lng, RING_METERS, roofAlt)}
+              altitudeMode={AltitudeMode.ABSOLUTE}
               strokeColor="#C8452C"
-              strokeWidth={6}
+              strokeWidth={5}
               outerColor="#FBFAF5"
-              outerWidth={0.5}
-              drawsOccludedSegments
+              outerWidth={0.6}
             />
             <Marker3D
-              position={{ lat: target.lat, lng: target.lng, altitude: 60 }}
-              altitudeMode={AltitudeMode.RELATIVE_TO_GROUND}
+              position={{ lat: target.lat, lng: target.lng, altitude: roofAlt + 40 }}
+              altitudeMode={AltitudeMode.ABSOLUTE}
               extruded
             >
               <Pin background="#C8452C" borderColor="#1E2B26" glyphColor="#FBFAF5" />

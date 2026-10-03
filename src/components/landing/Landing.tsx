@@ -114,7 +114,7 @@ export default function Landing({ onSelect, onLookupFree, error, autoFocus }: La
 
       <motion.footer
         {...enter(5, reduce)}
-        className="flex flex-col items-center gap-1 pb-6 text-center font-mono text-[0.75rem] text-ink-muted sm:flex-row sm:justify-between"
+        className="flex flex-col items-center gap-1 pb-12 text-center font-mono text-[0.75rem] text-ink-muted sm:flex-row sm:justify-between"
       >
         <span className="tnum">500 sample buildings · CA · NJ · MA · as of Oct 1, 2026</span>
         <span>Not legal advice · Sources: public law as retrieved 2026-10-01</span>
