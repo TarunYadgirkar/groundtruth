@@ -5,6 +5,7 @@ import type { Address, Evaluation, Rule } from "./types";
 import addressesJson from "@/data/addresses.json";
 import rulesJson from "@/data/rules.json";
 import { evaluateAddress } from "./engine";
+import { formatDate } from "./labels";
 
 function titleCase(s: string): string {
   return s.toLowerCase().replace(/\b([a-z])/g, (m) => m.toUpperCase());
@@ -27,3 +28,9 @@ export function rulesForPlace(address: Address): Rule[] {
   const city = `${address.legal_city}, ${address.state}`;
   return RULES.filter((r) => r.jurisdiction === address.state || r.jurisdiction === city);
 }
+
+const RETRIEVED_DAYS = [...new Set(RULES.map((r) => r.retrieved_at?.slice(0, 10)).filter((d): d is string => !!d))].sort();
+const [FIRST_RETRIEVED, LAST_RETRIEVED] = [RETRIEVED_DAYS[0], RETRIEVED_DAYS.at(-1)];
+
+export const SOURCES_RETRIEVED =
+  FIRST_RETRIEVED === LAST_RETRIEVED ? formatDate(FIRST_RETRIEVED) : `${formatDate(FIRST_RETRIEVED)} to ${formatDate(LAST_RETRIEVED ?? FIRST_RETRIEVED)}`;
