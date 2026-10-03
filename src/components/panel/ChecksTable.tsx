@@ -1,4 +1,5 @@
 import { CheckIcon, QuestionIcon, XIcon } from "@phosphor-icons/react";
+import { ruleById } from "@/lib/data";
 import { STATUS_LABEL } from "@/lib/labels";
 import type { CheckRow, Evaluation } from "@/lib/types";
 import { STATUS_STYLE } from "./StatusPill";
@@ -13,10 +14,14 @@ function deciding(checks: CheckRow[]): CheckRow | undefined {
   return checks.find((c) => c.outcome === "unknown") ?? checks.find((c) => c.outcome === "fail");
 }
 
+function readable(text: string): string {
+  return text.replace(/r-\d{4}/g, (id) => ruleById(id)?.title ?? id);
+}
+
 function verdict(evaluation: Evaluation, checks: CheckRow[]): string {
   const d = deciding(checks);
   if (evaluation.result === "unknown" && d) return `the ${d.fact.toLowerCase()} is not in public records`;
-  return evaluation.explanation;
+  return readable(evaluation.explanation);
 }
 
 export default function ChecksTable({ evaluation }: { evaluation: Evaluation }) {
@@ -64,7 +69,7 @@ export default function ChecksTable({ evaluation }: { evaluation: Evaluation }) 
         </strong>
         {verdict(evaluation, checks)}
       </p>
-      {checks.length > 0 && evaluation.result === "unknown" && <p className="text-caption text-ink-muted">{evaluation.explanation}</p>}
+      {checks.length > 0 && evaluation.result === "unknown" && <p className="text-caption text-ink-muted">{readable(evaluation.explanation)}</p>}
     </div>
   );
 }

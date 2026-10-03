@@ -13,6 +13,7 @@ interface RuleRowProps {
   rule: Rule;
   evaluation: Evaluation;
   highlight: number | null;
+  placeIds: ReadonlySet<string>;
 }
 
 function safeUrl(url: string): string | undefined {
@@ -24,14 +25,19 @@ function safeUrl(url: string): string | undefined {
   }
 }
 
-function conflictTargets(rule: Rule): string {
+function sourceLabel(url: string): string {
+  return new URL(url).hostname.replace(/^www\./, "");
+}
+
+function conflictTargets(rule: Rule, placeIds: ReadonlySet<string>): string {
   return rule.conflicts_with
-    .map((id) => ruleById(id)?.jurisdiction ?? id)
+    .filter((id) => placeIds.has(id))
+    .map((id) => ruleById(id)?.title ?? id)
     .filter((v, i, a) => a.indexOf(v) === i)
     .join(", ");
 }
 
-export default function RuleRow({ rule, evaluation, highlight }: RuleRowProps) {
+export default function RuleRow({ rule, evaluation, highlight, placeIds }: RuleRowProps) {
   const [open, setOpen] = useState(false);
   const bodyId = useId();
   const ref = useRef<HTMLLIElement>(null);
@@ -108,7 +114,7 @@ export default function RuleRow({ rule, evaluation, highlight }: RuleRowProps) {
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[0.75rem] text-ink-muted">
                 {href ? (
                   <a href={href} target="_blank" rel="noopener noreferrer" className="link inline-flex items-center gap-1 text-ink">
-                    {rule.source_doc_id ?? "Source"} <ArrowSquareOutIcon size={12} aria-hidden />
+                    Source: {sourceLabel(href)} <ArrowSquareOutIcon size={12} aria-hidden />
                     <span className="sr-only">(opens in a new tab)</span>
                   </a>
                 ) : (
@@ -124,7 +130,7 @@ export default function RuleRow({ rule, evaluation, highlight }: RuleRowProps) {
                 <div className="flex gap-2 rounded-[var(--radius-chip)] bg-accent-wash px-3 py-2 text-caption text-ink">
                   <FlagIcon size={14} weight="fill" aria-hidden className="mt-0.5 shrink-0 text-accent" />
                   <span>
-                    <strong className="font-bold">Flagged for human review.</strong> This rule may conflict with {conflictTargets(rule) || "another rule"} at this
+                    <strong className="font-bold">Flagged for human review.</strong> This rule may conflict with {conflictTargets(rule, placeIds) || "another rule"} at this
                     address. Groundtruth shows both instead of picking one.
                   </span>
                 </div>

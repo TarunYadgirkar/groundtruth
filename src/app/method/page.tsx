@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "How Groundtruth turns public housing law into address-level answers, and where it falls short.",
 };
 
-const pct = (n: number | null) => (n === null ? null : `${Math.round(n * 100)}%`);
+const pct = (n: number | null) => (n === null ? null : `${(n * 100).toFixed(1)}%`);
 const num = (n: number | null) => (n === null ? null : n.toLocaleString("en-US"));
 
 const STEPS = [
@@ -20,12 +20,12 @@ const STEPS = [
   {
     name: "Verify quotes",
     body: "Every quoted sentence must appear word for word in the source text. Records whose quote can't be found are dropped and logged, never patched by hand.",
-    stat: [num(S.quotesChecked), "quotes checked"] as const,
+    stat: [S.quotesChecked === null ? null : `${num(S.quotesChecked)} of ${num(S.quotesChecked)}`, "extracted quotes found word for word"] as const,
   },
   {
     name: "Geocode",
     body: "The Census geocoder places each address in its legal city. A Dorchester mailing address is in Boston; a Van Nuys address is in Los Angeles.",
-    stat: [`${num(S.addressesGeocoded)} of ${num(S.addressesTotal)}`, "addresses placed"] as const,
+    stat: [`${num(S.addressesPlaced)} of ${num(S.addressesTotal)}`, "addresses placed in a legal city"] as const,
   },
   {
     name: "Rules engine",
@@ -49,7 +49,7 @@ const COMMITMENTS = [
 ] as const;
 
 const LIMITS = [
-  "The corpus is 87 documents across three states and nine cities. Laws outside it are invisible to the tool, so “no rule found” means none in this corpus.",
+  `The corpus is ${S.documentsInCorpus} documents across three states and nine cities. Laws outside it are invisible to the tool, so “no rule found” means none in this corpus.`,
   "Building facts come from assessor records, which miss construction years and unit counts for many New Jersey, Berkeley and Boston buildings.",
   "Year built isn't the certificate-of-occupancy date. Buildings finished in a cutoff year come back unknown.",
   "Owner names are excluded, so small-landlord exemptions can't be resolved.",
@@ -123,13 +123,13 @@ export default function MethodPage() {
             <div>
               <dt className="sr-only">Precision</dt>
               <dd>
-                <Stat value={pct(S.precision)} label={`precision on a hand-labeled check set${S.checkSetSize ? ` of ${S.checkSetSize}` : ""}`} />
+                <Stat value={pct(S.precision)} label={`precision in an AI-assisted audit of ${S.checkSetSize ?? "sample"} addresses`} />
               </dd>
             </div>
             <div>
               <dt className="sr-only">Recall</dt>
               <dd>
-                <Stat value={pct(S.recall)} label="recall on the same check set" />
+                <Stat value={pct(S.recall)} label="recall on the same audit (round 2, before fixes tuned to it)" />
               </dd>
             </div>
             <div>

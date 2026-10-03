@@ -2,12 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowSquareOutIcon, FlagIcon } from "@phosphor-icons/react/dist/ssr";
 import { CHANGE_TESTS, groupByCity, type ChangeTest } from "@/lib/change-tests";
-import { formatDate } from "@/lib/labels";
+import { SOURCES_RETRIEVED } from "@/lib/data";
+import { STATUS_LABEL, formatDate } from "@/lib/labels";
+import type { LookupResult } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Who each law change affects · Groundtruth",
   description: "The five change tests T1 to T5: which sample buildings each law change reaches, and where conflicts need review.",
 };
+
+function humanize(notes: string): string {
+  return notes.replace(/\b(applies|unknown|superseded|not_yet_effective|pending)\b/g, (m) => STATUS_LABEL[m as LookupResult].toLowerCase());
+}
 
 function safeUrl(url: string): string | undefined {
   try {
@@ -71,7 +77,7 @@ function TestSection({ t }: { t: ChangeTest }) {
             );
           })}
         </ul>
-        <p className="text-caption text-ink-muted">{t.notes}</p>
+        <p className="text-caption text-ink-muted">{humanize(t.notes)}</p>
       </div>
 
       <div className="flex flex-col gap-4">
@@ -164,7 +170,7 @@ export default function ChangesPage() {
 
       <footer className="border-t border-hairline">
         <div className="mx-auto max-w-5xl px-4 py-6 font-mono text-[0.75rem] text-ink-muted sm:px-8">
-          Not legal advice · Sources: public law as retrieved 2026-10-01 · Default query date {formatDate("2026-10-01")}
+          Not legal advice · Sources: public law as retrieved {SOURCES_RETRIEVED} · Default query date {formatDate("2026-10-01")}
         </div>
       </footer>
     </div>

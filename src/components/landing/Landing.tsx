@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { WarningIcon } from "@phosphor-icons/react";
-import { ADDRESSES } from "@/lib/data";
+import { ADDRESSES, SOURCES_RETRIEVED } from "@/lib/data";
 import type { Address } from "@/lib/types";
 import SearchBar from "./SearchBar";
 
@@ -117,7 +117,7 @@ export default function Landing({ onSelect, onLookupFree, error, autoFocus }: La
         className="flex flex-col items-center gap-1 pb-12 text-center font-mono text-[0.75rem] text-ink-muted sm:flex-row sm:justify-between"
       >
         <span className="tnum">500 sample buildings · CA · NJ · MA · as of Oct 1, 2026</span>
-        <span>Not legal advice · Sources: public law as retrieved 2026-10-01</span>
+        <span>Not legal advice · Sources: public law as retrieved {SOURCES_RETRIEVED}</span>
       </motion.footer>
     </motion.div>
   );

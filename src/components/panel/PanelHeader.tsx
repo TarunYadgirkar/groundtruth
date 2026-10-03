@@ -151,6 +151,11 @@ export default function PanelHeader({ address, lat, lng, asOf }: PanelHeaderProp
             Mailed as {address.postal_city} <span className="text-accent">·</span> legally {city}
           </p>
         )}
+        {!address.legal_city && (
+          <p className="mt-1 font-mono text-[0.75rem] text-ink">
+            Legal city not confirmed <span className="text-accent">·</span> {address.postal_city} city rules show as unknown
+          </p>
+        )}
       </div>
       <BuildingFacts address={address} />
     </header>

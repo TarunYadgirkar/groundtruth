@@ -19,9 +19,14 @@ const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const DESCRIPTION = "Which housing laws apply at this address, on any date. Cited to the source text. Not legal advice.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://groundtruth-rho.vercel.app"),
   title: "Groundtruth",
-  description: "Which housing laws apply at this address, on any date. Cited to the source text. Not legal advice.",
+  description: DESCRIPTION,
+  openGraph: { title: "Groundtruth", description: DESCRIPTION, type: "website", siteName: "Groundtruth" },
+  twitter: { card: "summary_large_image", title: "Groundtruth", description: DESCRIPTION },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

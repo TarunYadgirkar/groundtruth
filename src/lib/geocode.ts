@@ -54,18 +54,18 @@ export async function geocodeFreeText(geocoder: google.maps.Geocoder, query: str
   };
 }
 
-export async function locate(geocoder: google.maps.Geocoder, a: Address): Promise<{ lat: number; lng: number } | null> {
-  if (a.lat !== null && a.lng !== null) return { lat: a.lat, lng: a.lng };
+async function firstHit(geocoder: google.maps.Geocoder, address: string): Promise<{ lat: number; lng: number } | null> {
   try {
-    const { results } = await withTimeout(
-      geocoder.geocode({
-        address: `${a.street_address}, ${a.postal_city}, ${a.state} ${a.zip}`,
-        componentRestrictions: { country: "US" },
-      }),
-    );
+    const { results } = await withTimeout(geocoder.geocode({ address, componentRestrictions: { country: "US" } }));
     const loc = results[0]?.geometry.location;
     return loc ? { lat: loc.lat(), lng: loc.lng() } : null;
   } catch {
     return null;
   }
+}
+
+export async function locate(geocoder: google.maps.Geocoder, a: Address): Promise<{ lat: number; lng: number } | null> {
+  if (a.lat !== null && a.lng !== null) return { lat: a.lat, lng: a.lng };
+  const place = `${a.postal_city}, ${a.state} ${a.zip}`.trim();
+  return (await firstHit(geocoder, `${a.street_address}, ${place}`)) ?? (await firstHit(geocoder, place));
 }

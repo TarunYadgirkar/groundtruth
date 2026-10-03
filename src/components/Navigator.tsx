@@ -48,14 +48,31 @@ const LANDING_FILTER = "grayscale(0.85) sepia(0.18) contrast(0.92) brightness(1.
 
 const wait = (ms: number) => new Promise((r) => window.setTimeout(r, ms));
 
+const GEOCODER_WAIT_MS = 8000;
+const GEOCODER_POLL_MS = 100;
+
 function writeUrl(sel: Selection | null, asOf: string) {
   const url = new URL(window.location.href);
+  const current = url.searchParams.get("a");
   url.search = "";
-  if (sel && !sel.address.address_id.startsWith("live-")) {
-    url.searchParams.set("a", sel.address.address_id);
+  const id = sel && !sel.address.address_id.startsWith("live-") ? sel.address.address_id : null;
+  if (id) {
+    url.searchParams.set("a", id);
     url.searchParams.set("asOf", asOf);
   }
-  window.history.replaceState(null, "", url);
+  if (url.href === window.location.href) return;
+  const isNewPlace = id !== null && id !== current;
+  if (isNewPlace) window.history.pushState(null, "", url);
+  else window.history.replaceState(null, "", url);
+}
+
+function readUrl(): { address: Address | null; asOf: string | null } {
+  const params = new URLSearchParams(window.location.search);
+  const d = params.get("asOf");
+  return {
+    address: ADDRESSES.find((x) => x.address_id === params.get("a")) ?? null,
+    asOf: d && /^\d{4}-\d{2}-\d{2}$/.test(d) ? d : null,
+  };
 }
 
 export default function Navigator() {
@@ -76,6 +93,11 @@ export default function Navigator() {
   useEffect(() => {
     geocoderRef.current = geocoder;
   }, [geocoder]);
+
+  const waitForGeocoder = useCallback(async () => {
+    for (let waited = 0; !geocoderRef.current && waited < GEOCODER_WAIT_MS; waited += GEOCODER_POLL_MS) await wait(GEOCODER_POLL_MS);
+    return geocoderRef.current;
+  }, []);
 
   const fly = useCallback(
     async (resolve: () => Promise<Selection | string>) => {
@@ -105,37 +127,33 @@ export default function Navigator() {
   const selectSample = useCallback(
     (address: Address) =>
       fly(async () => {
-        const g = geocoderRef.current;
-        const coords = address.lat !== null && address.lng !== null ? { lat: address.lat, lng: address.lng } : g ? await locate(g, address) : null;
+        if (address.lat !== null && address.lng !== null) return { address, lat: address.lat, lng: address.lng };
+        const g = await waitForGeocoder();
+        const coords = g ? await locate(g, address) : null;
         if (!coords) return "We couldn't place this address on the map. Try another address, or check your connection.";
         return { address, ...coords };
       }),
-    [fly],
+    [fly, waitForGeocoder],
   );
 
   const lookupFree = useCallback(
     (query: string) =>
       fly(async () => {
-        const g = geocoderRef.current;
+        const g = await waitForGeocoder();
         if (!g) return "Address lookup isn't available right now. Pick one of the sample buildings instead.";
         const out = await geocodeFreeText(g, query);
         if (!out.ok) return out.reason;
         return { address: out.address, lat: out.address.lat as number, lng: out.address.lng as number };
       }),
-    [fly],
+    [fly, waitForGeocoder],
   );
 
-  const initialSearch = useRef<string | null>(null);
-
   useEffect(() => {
-    initialSearch.current ??= window.location.search;
-    const params = new URLSearchParams(initialSearch.current);
-    const a = ADDRESSES.find((x) => x.address_id === params.get("a"));
-    const d = params.get("asOf");
-    if (!a) return;
+    const { address, asOf: d } = readUrl();
+    if (!address) return;
     const t = window.setTimeout(() => {
-      if (d && /^\d{4}-\d{2}-\d{2}$/.test(d)) setAsOf(d);
-      selectSample(a);
+      if (d) setAsOf(d);
+      selectSample(address);
     }, 0);
     return () => window.clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -143,7 +161,6 @@ export default function Navigator() {
 
   useEffect(() => {
     if (phase === "revealed") writeUrl(selection, asOf);
-    if (phase === "landing") writeUrl(null, asOf);
   }, [phase, selection, asOf]);
 
   const [returned, setReturned] = useState(false);
@@ -153,7 +170,24 @@ export default function Navigator() {
     setReturned(true);
     setSelection(null);
     setPhase("landing");
+    if (window.location.search) window.history.pushState(null, "", window.location.pathname);
   }, []);
+
+  useEffect(() => {
+    const onPop = () => {
+      const { address, asOf: d } = readUrl();
+      if (!address) {
+        runId.current++;
+        setSelection(null);
+        setPhase("landing");
+        return;
+      }
+      if (d) setAsOf(d);
+      selectSample(address);
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, [selectSample]);
 
   const onArrive = useCallback(() => setPhase("revealed"), []);
 
