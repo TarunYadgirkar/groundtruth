@@ -1,0 +1,40 @@
+{
+  "doc_id": "D078",
+  "url": "https://sf-hrc.org/fair-chance-ordinance",
+  "retrieved_at": "2026-10-01T22:37Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "SF-fair-chance-ordinance-housing-criminal-history",
+      "jurisdiction": "San Francisco, CA",
+      "level": "city",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "San Francisco Fair Chance Ordinance – criminal history in affordable housing decisions",
+      "requirement": "Protects applicants and residents with arrest or conviction history in affordable housing decisions. This page does not describe the specific limits on how housing providers may use that history.",
+      "key_value": null,
+      "coverage_conditions": "Affordable housing decisions in San Francisco that involve people with arrest or conviction history.",
+      "exemptions": null,
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Applies to affordable housing; the page does not define which properties qualify."
+      },
+      "yields_to_local": false,
+      "effective_date": null,
+      "enacted_date": null,
+      "penalty": null,
+      "citation": "San Francisco Fair Chance Ordinance",
+      "quoted_span": "San Francisco's Fair Chance Ordinance protects residents with arrest or conviction history in affordable housing decisions.",
+      "confidence": 0.6,
+      "conflict_note": "The source is a summary link on the HRC landing page. It gives no official code citation, effective date, or detailed requirements, and the scope is described only as affordable housing."
+    }
+  ],
+  "no_rule_findings": []
+}

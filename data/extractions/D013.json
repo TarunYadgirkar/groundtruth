@@ -1,0 +1,40 @@
+{
+  "doc_id": "D013",
+  "url": "https://www.boston.gov/housing-stability-notification-act",
+  "retrieved_at": "2026-10-01T22:35Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "BOSTON-HSNA-10-11.7-notice-of-tenant-rights",
+      "jurisdiction": "Boston, MA",
+      "level": "city",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "Housing Stability Notification Act – Notice of Tenants' Rights and Resources with notice to quit",
+      "requirement": "Any landlord ending a tenancy must give the tenant a Notice of Tenants' Rights and Resources at the same time as the notice to quit or notice of non-renewal. Landlords and foreclosing owners must also file the notice to quit or non-renewal, with tenant contact information, through the City's online portal.",
+      "key_value": "Notice required with every notice to quit/non-renewal; fine up to $300/day",
+      "coverage_conditions": "All landlords in Boston planning to end a tenancy agreement, and foreclosing owners for the city filing requirement.",
+      "exemptions": null,
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Applies only when a landlord is ending a tenancy, through a notice to quit or a notice of non-renewal."
+      },
+      "yields_to_local": false,
+      "effective_date": null,
+      "enacted_date": null,
+      "penalty": "Enforced by Inspectional Services: warning for the 1st offense, $300 per day for the 2nd and later offenses. A violation does not halt the eviction process.",
+      "citation": "City of Boston Ordinances Sec. 10-11.7 (Housing Stability Notification Act)",
+      "quoted_span": "The Housing Stability Notification Act requires any landlord to provide renters with a Notice of Tenant’s Rights and Resources when planning to end a tenancy agreement.",
+      "confidence": 0.6,
+      "conflict_note": "This is a notice and filing requirement, not a just-cause standard. It does not limit the grounds for eviction, and violations do not halt the eviction. It is classified under just_cause_eviction as the closest category. The page gives no effective date. Sec. 10-11.7 appears in the page's penalty listing and may be the enforcement section rather than the ordinance's own codification."
+    }
+  ],
+  "no_rule_findings": []
+}

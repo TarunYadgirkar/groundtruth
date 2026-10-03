@@ -1,0 +1,172 @@
+[
+  {
+    "jurisdiction": "MA",
+    "category": "rent_increase_limits",
+    "note": "No rent cap in force; M.G.L. c. 40P bars local rent control and the 2026 statewide ballot initiative was struck (recorded as failed rule)."
+  },
+  {
+    "jurisdiction": "Los Angeles, CA",
+    "category": "application_screening_fees",
+    "note": "No city-level screening fee rule in corpus; state Civ. Code 1950.6 applies."
+  },
+  {
+    "jurisdiction": "Los Angeles, CA",
+    "category": "screening_restrictions",
+    "note": "No city-level screening restriction in corpus; state FEHA rules apply."
+  },
+  {
+    "jurisdiction": "San Francisco, CA",
+    "category": "application_screening_fees",
+    "note": "No city-level screening fee rule in corpus; state Civ. Code 1950.6 applies."
+  },
+  {
+    "jurisdiction": "San Diego, CA",
+    "category": "rent_increase_limits",
+    "note": "No local rent control in corpus; state Civ. Code 1947.12 applies."
+  },
+  {
+    "jurisdiction": "San Diego, CA",
+    "category": "security_deposits",
+    "note": "No city-level deposit rule in corpus; state Civ. Code 1950.5 applies."
+  },
+  {
+    "jurisdiction": "San Diego, CA",
+    "category": "application_screening_fees",
+    "note": "No city-level screening fee rule in corpus."
+  },
+  {
+    "jurisdiction": "San Diego, CA",
+    "category": "screening_restrictions",
+    "note": "No city-level screening restriction in corpus."
+  },
+  {
+    "jurisdiction": "Santa Ana, CA",
+    "category": "security_deposits",
+    "note": "No city-level deposit rule in corpus."
+  },
+  {
+    "jurisdiction": "Santa Ana, CA",
+    "category": "application_screening_fees",
+    "note": "No city-level screening fee rule in corpus."
+  },
+  {
+    "jurisdiction": "Santa Ana, CA",
+    "category": "screening_restrictions",
+    "note": "No city-level screening restriction in corpus."
+  },
+  {
+    "jurisdiction": "Jersey City, NJ",
+    "category": "just_cause_eviction",
+    "note": "No city-level rule in corpus; state Anti-Eviction Act applies."
+  },
+  {
+    "jurisdiction": "Jersey City, NJ",
+    "category": "security_deposits",
+    "note": "No city-level deposit rule in corpus; state Security Deposit Law applies."
+  },
+  {
+    "jurisdiction": "Jersey City, NJ",
+    "category": "application_screening_fees",
+    "note": "No city-level rule in corpus; state N.J.S.A. 46:8-18.1 applies."
+  },
+  {
+    "jurisdiction": "Jersey City, NJ",
+    "category": "screening_restrictions",
+    "note": "No city-level rule in corpus; state Fair Chance in Housing Act and LAD apply."
+  },
+  {
+    "jurisdiction": "Hoboken, NJ",
+    "category": "rent_increase_limits",
+    "note": "No Hoboken rent control rule in corpus."
+  },
+  {
+    "jurisdiction": "Hoboken, NJ",
+    "category": "just_cause_eviction",
+    "note": "No city-level rule in corpus; state Anti-Eviction Act applies."
+  },
+  {
+    "jurisdiction": "Hoboken, NJ",
+    "category": "security_deposits",
+    "note": "No city-level rule in corpus."
+  },
+  {
+    "jurisdiction": "Hoboken, NJ",
+    "category": "application_screening_fees",
+    "note": "No city-level rule in corpus."
+  },
+  {
+    "jurisdiction": "Hoboken, NJ",
+    "category": "screening_restrictions",
+    "note": "No city-level rule in corpus."
+  },
+  {
+    "jurisdiction": "Newark, NJ",
+    "category": "rent_increase_limits",
+    "note": "No Newark rule in corpus."
+  },
+  {
+    "jurisdiction": "Newark, NJ",
+    "category": "just_cause_eviction",
+    "note": "No Newark rule in corpus; state Anti-Eviction Act applies."
+  },
+  {
+    "jurisdiction": "Newark, NJ",
+    "category": "security_deposits",
+    "note": "No Newark rule in corpus."
+  },
+  {
+    "jurisdiction": "Newark, NJ",
+    "category": "application_screening_fees",
+    "note": "No Newark rule in corpus."
+  },
+  {
+    "jurisdiction": "Newark, NJ",
+    "category": "screening_restrictions",
+    "note": "No Newark rule in corpus."
+  },
+  {
+    "jurisdiction": "Newark, NJ",
+    "category": "algorithmic_rent_setting",
+    "note": "No Newark rule in corpus; NJ FAIR Act effective 2027-07-01."
+  },
+  {
+    "jurisdiction": "Boston, MA",
+    "category": "rent_increase_limits",
+    "note": "No rent control in force; H.3744 home rule petition failed and c. 40P bars local rent control."
+  },
+  {
+    "jurisdiction": "Boston, MA",
+    "category": "security_deposits",
+    "note": "No city-level rule in corpus; M.G.L. c. 186 § 15B applies."
+  },
+  {
+    "jurisdiction": "Boston, MA",
+    "category": "application_screening_fees",
+    "note": "No city-level rule in corpus; M.G.L. c. 186 § 15B applies."
+  },
+  {
+    "jurisdiction": "Boston, MA",
+    "category": "algorithmic_rent_setting",
+    "note": "No Boston rule in corpus; state bills pending."
+  },
+  {
+    "jurisdiction": "Cambridge, MA",
+    "category": "rent_increase_limits",
+    "note": "No rent control in corpus; c. 40P bars local rent control."
+  },
+  {
+    "jurisdiction": "Cambridge, MA",
+    "category": "just_cause_eviction",
+    "note": "No Cambridge rule in corpus."
+  },
+  {
+    "jurisdiction": "Cambridge, MA",
+    "category": "security_deposits",
+    "note": "No city-level rule in corpus; M.G.L. c. 186 § 15B applies."
+  },
+  {
+    "jurisdiction": "Cambridge, MA",
+    "category": "application_screening_fees",
+    "note": "No city-level rule in corpus; M.G.L. c. 186 § 15B applies."
+  }
+]

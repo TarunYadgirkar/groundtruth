@@ -47,7 +47,7 @@ export function parseCsv(raw: string): Record<string, string>[] {
 
 export function loadCorpus(): CorpusDoc[] {
   const manifest = parseCsv(fs.readFileSync(path.join(STARTER, "corpus/corpus_manifest.csv"), "utf8"));
-  return manifest
+  const supplied = manifest
     .filter((r) => r.text_file)
     .map((r) => ({
       docId: r.doc_id,
@@ -57,6 +57,23 @@ export function loadCorpus(): CorpusDoc[] {
       retrievedAt: r.retrieved_at,
       text: fs.readFileSync(path.join(STARTER, "corpus", r.text_file), "utf8"),
     }));
+  const capturedDir = path.join(DATA, "captured");
+  if (!fs.existsSync(capturedDir)) return supplied;
+  const captured = manifest
+    .filter((r) => !r.text_file && fs.existsSync(path.join(capturedDir, `${r.doc_id}.txt`)))
+    .map((r) => {
+      const text = fs.readFileSync(path.join(capturedDir, `${r.doc_id}.txt`), "utf8");
+      const stamp = text.match(/^RETRIEVED: (\S+ \S+)/m)?.[1] ?? "";
+      return {
+        docId: r.doc_id,
+        jurisdictions: r.jurisdictions,
+        url: r.url,
+        sourceType: `${r.source_type} (captured link-only)`,
+        retrievedAt: stamp.replace(" ", "T") + "Z",
+        text,
+      };
+    });
+  return [...supplied, ...captured];
 }
 
 export function writeJson(file: string, value: unknown): void {

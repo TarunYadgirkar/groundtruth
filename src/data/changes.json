@@ -1,0 +1,5810 @@
+{
+  "T1": {
+    "affected_address_ids": [
+      "A0001",
+      "A0004",
+      "A0005",
+      "A0007",
+      "A0014",
+      "A0016",
+      "A0018",
+      "A0019",
+      "A0021",
+      "A0022",
+      "A0023",
+      "A0025",
+      "A0027",
+      "A0030",
+      "A0031",
+      "A0033",
+      "A0035",
+      "A0037",
+      "A0038",
+      "A0041",
+      "A0045",
+      "A0050",
+      "A0055",
+      "A0058",
+      "A0060",
+      "A0061",
+      "A0062",
+      "A0066",
+      "A0067",
+      "A0069",
+      "A0072",
+      "A0074",
+      "A0079",
+      "A0080",
+      "A0081",
+      "A0084",
+      "A0085",
+      "A0088",
+      "A0091",
+      "A0092",
+      "A0094",
+      "A0097",
+      "A0100",
+      "A0103",
+      "A0105",
+      "A0106",
+      "A0107",
+      "A0109",
+      "A0111",
+      "A0112",
+      "A0113",
+      "A0114",
+      "A0115",
+      "A0117",
+      "A0121",
+      "A0122",
+      "A0126",
+      "A0127",
+      "A0133",
+      "A0135",
+      "A0138",
+      "A0141",
+      "A0142",
+      "A0145",
+      "A0147",
+      "A0150",
+      "A0152",
+      "A0153",
+      "A0154",
+      "A0156",
+      "A0157",
+      "A0158",
+      "A0162",
+      "A0164",
+      "A0165",
+      "A0167",
+      "A0170",
+      "A0172",
+      "A0173",
+      "A0178",
+      "A0179",
+      "A0180",
+      "A0183",
+      "A0184",
+      "A0188",
+      "A0189",
+      "A0192",
+      "A0193",
+      "A0196",
+      "A0197",
+      "A0200",
+      "A0201",
+      "A0202",
+      "A0205",
+      "A0206",
+      "A0207",
+      "A0210",
+      "A0212",
+      "A0213",
+      "A0215",
+      "A0216",
+      "A0219",
+      "A0222",
+      "A0224",
+      "A0225",
+      "A0228",
+      "A0229",
+      "A0231",
+      "A0234",
+      "A0235",
+      "A0236",
+      "A0237",
+      "A0238",
+      "A0239",
+      "A0240",
+      "A0246",
+      "A0247",
+      "A0248",
+      "A0251",
+      "A0252",
+      "A0253",
+      "A0255",
+      "A0257",
+      "A0259",
+      "A0260",
+      "A0262",
+      "A0263",
+      "A0267",
+      "A0268",
+      "A0271",
+      "A0273",
+      "A0274",
+      "A0275",
+      "A0276",
+      "A0277",
+      "A0278",
+      "A0280",
+      "A0281",
+      "A0282",
+      "A0283",
+      "A0285",
+      "A0289",
+      "A0293",
+      "A0303",
+      "A0304",
+      "A0305",
+      "A0309",
+      "A0314",
+      "A0315",
+      "A0316",
+      "A0317",
+      "A0318",
+      "A0319",
+      "A0322",
+      "A0323",
+      "A0324",
+      "A0327",
+      "A0328",
+      "A0330",
+      "A0333",
+      "A0334",
+      "A0335",
+      "A0340",
+      "A0341",
+      "A0345",
+      "A0346",
+      "A0347",
+      "A0349",
+      "A0351",
+      "A0353",
+      "A0355",
+      "A0357",
+      "A0363",
+      "A0364",
+      "A0365",
+      "A0367",
+      "A0368",
+      "A0369",
+      "A0370",
+      "A0373",
+      "A0374",
+      "A0375",
+      "A0378",
+      "A0379",
+      "A0382",
+      "A0383",
+      "A0384",
+      "A0385",
+      "A0386",
+      "A0387",
+      "A0391",
+      "A0392",
+      "A0395",
+      "A0396",
+      "A0397",
+      "A0398",
+      "A0401",
+      "A0402",
+      "A0405",
+      "A0407",
+      "A0408",
+      "A0409",
+      "A0411",
+      "A0413",
+      "A0414",
+      "A0417",
+      "A0419",
+      "A0420",
+      "A0421",
+      "A0425",
+      "A0426",
+      "A0427",
+      "A0430",
+      "A0431",
+      "A0432",
+      "A0433",
+      "A0434",
+      "A0437",
+      "A0439",
+      "A0440",
+      "A0441",
+      "A0442",
+      "A0443",
+      "A0445",
+      "A0451",
+      "A0452",
+      "A0454",
+      "A0456",
+      "A0457",
+      "A0458",
+      "A0461",
+      "A0469",
+      "A0470",
+      "A0474",
+      "A0477",
+      "A0478",
+      "A0479",
+      "A0480",
+      "A0481",
+      "A0483",
+      "A0484",
+      "A0486",
+      "A0487",
+      "A0492",
+      "A0493",
+      "A0494",
+      "A0496",
+      "A0497",
+      "A0499",
+      "A0500"
+    ],
+    "conflict_flag_address_ids": [],
+    "notes": "CA AB 325 / SB 763: not_yet_effective on 2025-12-31, applies on 2026-01-02 for California addresses.",
+    "rule_ids": [
+      "r-0022",
+      "r-0023"
+    ],
+    "before_after": {
+      "A0001": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0004": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0005": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0007": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0014": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0016": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0018": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0019": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0021": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0022": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0023": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0025": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0027": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0030": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0031": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0033": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0035": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0037": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0038": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0041": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0045": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0050": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0055": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0058": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0060": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0061": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0062": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0066": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0067": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0069": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0072": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0074": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0079": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0080": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0081": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0084": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0085": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0088": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0091": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0092": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0094": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0097": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0100": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0103": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0105": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0106": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0107": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0109": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0111": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0112": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0113": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0114": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0115": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0117": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0121": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0122": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0126": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0127": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0133": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0135": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0138": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0141": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0142": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0145": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0147": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0150": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0152": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0153": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0154": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0156": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0157": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0158": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0162": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0164": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0165": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0167": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0170": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0172": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0173": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0178": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0179": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0180": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0183": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0184": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0188": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0189": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0192": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0193": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0196": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0197": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0200": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0201": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0202": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0205": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0206": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0207": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0210": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0212": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0213": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0215": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0216": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0219": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0222": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0224": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0225": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0228": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0229": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0231": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0234": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0235": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0236": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0237": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0238": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0239": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0240": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0246": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0247": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0248": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0251": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0252": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0253": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0255": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0257": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0259": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0260": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0262": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0263": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0267": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0268": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0271": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0273": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0274": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0275": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0276": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0277": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0278": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0280": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0281": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0282": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0283": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0285": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0289": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0293": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0303": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0304": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0305": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0309": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0314": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0315": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0316": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0317": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0318": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0319": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0322": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0323": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0324": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0327": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0328": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0330": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0333": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0334": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0335": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0340": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0341": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0345": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0346": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0347": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0349": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0351": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0353": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0355": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0357": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0363": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0364": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0365": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0367": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0368": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0369": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0370": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0373": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0374": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0375": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0378": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0379": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0382": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0383": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0384": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0385": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0386": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0387": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0391": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0392": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0395": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0396": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0397": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0398": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0401": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0402": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0405": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0407": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0408": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0409": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0411": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0413": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0414": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0417": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0419": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0420": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0421": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0425": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0426": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0427": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0430": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0431": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0432": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0433": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0434": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0437": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0439": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0440": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0441": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0442": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0443": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0445": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0451": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0452": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0454": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0456": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0457": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0458": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0461": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0469": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0470": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0474": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0477": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0478": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0479": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0480": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0481": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0483": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0484": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0486": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0487": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0492": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0493": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0494": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0496": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0497": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0499": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0500": {
+        "r-0022": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        },
+        "r-0023": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      }
+    }
+  },
+  "T2": {
+    "affected_address_ids": [
+      "A0002",
+      "A0008",
+      "A0012",
+      "A0017",
+      "A0026",
+      "A0032",
+      "A0040",
+      "A0042",
+      "A0047",
+      "A0049",
+      "A0051",
+      "A0078",
+      "A0087",
+      "A0089",
+      "A0099",
+      "A0101",
+      "A0102",
+      "A0108",
+      "A0116",
+      "A0119",
+      "A0125",
+      "A0131",
+      "A0136",
+      "A0139",
+      "A0160",
+      "A0161",
+      "A0163",
+      "A0168",
+      "A0171",
+      "A0177",
+      "A0181",
+      "A0182",
+      "A0185",
+      "A0186",
+      "A0187",
+      "A0208",
+      "A0223",
+      "A0227",
+      "A0241",
+      "A0243",
+      "A0244",
+      "A0250",
+      "A0254",
+      "A0256",
+      "A0261",
+      "A0265",
+      "A0266",
+      "A0269",
+      "A0270",
+      "A0279",
+      "A0287",
+      "A0288",
+      "A0299",
+      "A0308",
+      "A0320",
+      "A0321",
+      "A0325",
+      "A0344",
+      "A0348",
+      "A0350",
+      "A0359",
+      "A0360",
+      "A0372",
+      "A0377",
+      "A0388",
+      "A0389",
+      "A0393",
+      "A0394",
+      "A0399",
+      "A0404",
+      "A0410",
+      "A0415",
+      "A0416",
+      "A0418",
+      "A0424",
+      "A0435",
+      "A0436",
+      "A0438",
+      "A0447",
+      "A0450",
+      "A0455",
+      "A0459",
+      "A0462",
+      "A0471",
+      "A0472",
+      "A0475",
+      "A0482",
+      "A0489",
+      "A0490",
+      "A0495"
+    ],
+    "conflict_flag_address_ids": [
+      "A0002",
+      "A0008",
+      "A0012",
+      "A0017",
+      "A0026",
+      "A0032",
+      "A0040",
+      "A0042",
+      "A0047",
+      "A0049",
+      "A0051",
+      "A0078",
+      "A0087",
+      "A0089",
+      "A0099",
+      "A0101",
+      "A0102",
+      "A0108",
+      "A0116",
+      "A0119",
+      "A0125",
+      "A0131",
+      "A0136",
+      "A0139",
+      "A0160",
+      "A0161",
+      "A0163",
+      "A0168",
+      "A0171",
+      "A0177",
+      "A0181",
+      "A0182",
+      "A0185",
+      "A0186",
+      "A0187",
+      "A0208",
+      "A0223",
+      "A0227",
+      "A0241",
+      "A0243",
+      "A0244",
+      "A0250",
+      "A0254",
+      "A0256",
+      "A0261",
+      "A0265",
+      "A0266",
+      "A0269",
+      "A0270",
+      "A0279",
+      "A0287",
+      "A0288",
+      "A0299",
+      "A0308",
+      "A0320",
+      "A0321",
+      "A0325",
+      "A0344",
+      "A0348",
+      "A0350",
+      "A0359",
+      "A0360",
+      "A0372",
+      "A0377",
+      "A0388",
+      "A0389",
+      "A0393",
+      "A0394",
+      "A0399",
+      "A0404",
+      "A0410",
+      "A0415",
+      "A0416",
+      "A0418",
+      "A0424",
+      "A0435",
+      "A0436",
+      "A0438",
+      "A0447",
+      "A0450",
+      "A0455",
+      "A0459",
+      "A0462",
+      "A0471",
+      "A0472",
+      "A0475",
+      "A0482",
+      "A0489",
+      "A0490",
+      "A0495"
+    ],
+    "notes": "Hoboken ban only inside Hoboken, Jersey City ban only inside Jersey City (legal city from Census geocoding), neither in Newark.",
+    "rule_ids": [
+      "r-0050",
+      "r-0051"
+    ],
+    "before_after": {
+      "A0002": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0008": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0012": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0017": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0026": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0032": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0040": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0042": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0047": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0049": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0051": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0078": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0087": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0089": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0099": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0101": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0102": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0108": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0116": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0119": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0125": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0131": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0136": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0139": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0160": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0161": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0163": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0168": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0171": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0177": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0181": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0182": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0185": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0186": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0187": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0208": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0223": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0227": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0241": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0243": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0244": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0250": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0254": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0256": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0261": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0265": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0266": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0269": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0270": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0279": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0287": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0288": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0299": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0308": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0320": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0321": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0325": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0344": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0348": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0350": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0359": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0360": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0372": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0377": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0388": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0389": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0393": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0394": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0399": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0404": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0410": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0415": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0416": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0418": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0424": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0435": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0436": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0438": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0447": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0450": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0455": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0459": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0462": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0471": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0472": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0475": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0482": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0489": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0490": {
+        "r-0050": {
+          "before": "applies",
+          "after": "applies"
+        }
+      },
+      "A0495": {
+        "r-0051": {
+          "before": "applies",
+          "after": "applies"
+        }
+      }
+    }
+  },
+  "T3": {
+    "affected_address_ids": [
+      "A0002",
+      "A0003",
+      "A0008",
+      "A0011",
+      "A0012",
+      "A0013",
+      "A0017",
+      "A0020",
+      "A0026",
+      "A0028",
+      "A0029",
+      "A0032",
+      "A0040",
+      "A0042",
+      "A0044",
+      "A0047",
+      "A0049",
+      "A0051",
+      "A0057",
+      "A0059",
+      "A0076",
+      "A0078",
+      "A0087",
+      "A0089",
+      "A0090",
+      "A0099",
+      "A0101",
+      "A0102",
+      "A0104",
+      "A0108",
+      "A0110",
+      "A0116",
+      "A0119",
+      "A0120",
+      "A0125",
+      "A0129",
+      "A0130",
+      "A0131",
+      "A0132",
+      "A0136",
+      "A0137",
+      "A0139",
+      "A0146",
+      "A0148",
+      "A0159",
+      "A0160",
+      "A0161",
+      "A0163",
+      "A0168",
+      "A0171",
+      "A0177",
+      "A0181",
+      "A0182",
+      "A0185",
+      "A0186",
+      "A0187",
+      "A0190",
+      "A0204",
+      "A0208",
+      "A0223",
+      "A0227",
+      "A0241",
+      "A0243",
+      "A0244",
+      "A0249",
+      "A0250",
+      "A0254",
+      "A0256",
+      "A0261",
+      "A0264",
+      "A0265",
+      "A0266",
+      "A0269",
+      "A0270",
+      "A0279",
+      "A0287",
+      "A0288",
+      "A0296",
+      "A0297",
+      "A0299",
+      "A0307",
+      "A0308",
+      "A0311",
+      "A0313",
+      "A0320",
+      "A0321",
+      "A0325",
+      "A0326",
+      "A0329",
+      "A0331",
+      "A0337",
+      "A0338",
+      "A0343",
+      "A0344",
+      "A0348",
+      "A0350",
+      "A0352",
+      "A0358",
+      "A0359",
+      "A0360",
+      "A0371",
+      "A0372",
+      "A0377",
+      "A0381",
+      "A0388",
+      "A0389",
+      "A0390",
+      "A0393",
+      "A0394",
+      "A0399",
+      "A0400",
+      "A0404",
+      "A0410",
+      "A0412",
+      "A0415",
+      "A0416",
+      "A0418",
+      "A0424",
+      "A0428",
+      "A0435",
+      "A0436",
+      "A0438",
+      "A0447",
+      "A0448",
+      "A0449",
+      "A0450",
+      "A0455",
+      "A0459",
+      "A0460",
+      "A0462",
+      "A0471",
+      "A0472",
+      "A0475",
+      "A0476",
+      "A0482",
+      "A0489",
+      "A0490",
+      "A0491",
+      "A0495",
+      "A0498"
+    ],
+    "conflict_flag_address_ids": [
+      "A0002",
+      "A0008",
+      "A0012",
+      "A0017",
+      "A0026",
+      "A0032",
+      "A0040",
+      "A0042",
+      "A0047",
+      "A0049",
+      "A0051",
+      "A0078",
+      "A0087",
+      "A0089",
+      "A0099",
+      "A0101",
+      "A0102",
+      "A0108",
+      "A0116",
+      "A0119",
+      "A0125",
+      "A0131",
+      "A0136",
+      "A0139",
+      "A0160",
+      "A0161",
+      "A0163",
+      "A0168",
+      "A0171",
+      "A0177",
+      "A0181",
+      "A0182",
+      "A0185",
+      "A0186",
+      "A0187",
+      "A0208",
+      "A0223",
+      "A0227",
+      "A0241",
+      "A0243",
+      "A0244",
+      "A0250",
+      "A0254",
+      "A0256",
+      "A0261",
+      "A0265",
+      "A0266",
+      "A0269",
+      "A0270",
+      "A0279",
+      "A0287",
+      "A0288",
+      "A0299",
+      "A0308",
+      "A0320",
+      "A0321",
+      "A0325",
+      "A0344",
+      "A0348",
+      "A0350",
+      "A0359",
+      "A0360",
+      "A0372",
+      "A0377",
+      "A0388",
+      "A0389",
+      "A0393",
+      "A0394",
+      "A0399",
+      "A0404",
+      "A0410",
+      "A0415",
+      "A0416",
+      "A0418",
+      "A0424",
+      "A0435",
+      "A0436",
+      "A0438",
+      "A0447",
+      "A0450",
+      "A0455",
+      "A0459",
+      "A0462",
+      "A0471",
+      "A0472",
+      "A0475",
+      "A0482",
+      "A0489",
+      "A0490",
+      "A0495"
+    ],
+    "notes": "NJ FAIR Act: not_yet_effective on 2026-10-01, applies on 2027-07-02; Jersey City and Hoboken addresses flagged for possible preemption conflict with local bans.",
+    "rule_ids": [
+      "r-0088"
+    ],
+    "before_after": {
+      "A0002": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0003": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0008": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0011": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0012": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0013": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0017": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0020": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0026": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0028": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0029": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0032": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0040": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0042": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0044": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0047": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0049": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0051": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0057": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0059": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0076": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0078": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0087": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0089": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0090": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0099": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0101": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0102": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0104": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0108": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0110": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0116": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0119": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0120": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0125": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0129": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0130": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0131": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0132": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0136": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0137": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0139": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0146": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0148": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0159": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0160": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0161": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0163": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0168": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0171": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0177": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0181": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0182": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0185": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0186": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0187": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0190": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0204": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0208": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0223": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0227": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0241": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0243": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0244": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0249": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0250": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0254": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0256": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0261": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0264": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0265": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0266": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0269": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0270": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0279": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0287": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0288": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0296": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0297": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0299": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0307": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0308": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0311": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0313": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0320": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0321": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0325": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0326": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0329": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0331": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0337": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0338": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0343": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0344": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0348": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0350": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0352": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0358": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0359": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0360": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0371": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0372": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0377": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0381": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0388": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0389": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0390": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0393": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0394": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0399": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0400": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0404": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0410": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0412": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0415": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0416": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0418": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0424": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0428": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0435": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0436": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0438": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0447": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0448": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0449": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0450": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0455": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0459": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0460": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0462": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0471": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0472": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0475": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0476": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0482": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0489": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0490": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0491": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0495": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      },
+      "A0498": {
+        "r-0088": {
+          "before": "not_yet_effective",
+          "after": "applies"
+        }
+      }
+    }
+  },
+  "T4": {
+    "affected_address_ids": [
+      "A0006",
+      "A0009",
+      "A0010",
+      "A0015",
+      "A0024",
+      "A0034",
+      "A0036",
+      "A0039",
+      "A0043",
+      "A0046",
+      "A0048",
+      "A0052",
+      "A0053",
+      "A0054",
+      "A0056",
+      "A0063",
+      "A0064",
+      "A0065",
+      "A0068",
+      "A0070",
+      "A0071",
+      "A0073",
+      "A0075",
+      "A0077",
+      "A0082",
+      "A0083",
+      "A0086",
+      "A0093",
+      "A0095",
+      "A0096",
+      "A0098",
+      "A0118",
+      "A0123",
+      "A0124",
+      "A0128",
+      "A0134",
+      "A0140",
+      "A0143",
+      "A0144",
+      "A0149",
+      "A0151",
+      "A0155",
+      "A0166",
+      "A0169",
+      "A0174",
+      "A0175",
+      "A0176",
+      "A0191",
+      "A0194",
+      "A0195",
+      "A0198",
+      "A0199",
+      "A0203",
+      "A0209",
+      "A0211",
+      "A0214",
+      "A0217",
+      "A0218",
+      "A0220",
+      "A0221",
+      "A0226",
+      "A0230",
+      "A0232",
+      "A0233",
+      "A0242",
+      "A0245",
+      "A0258",
+      "A0272",
+      "A0284",
+      "A0286",
+      "A0290",
+      "A0291",
+      "A0292",
+      "A0294",
+      "A0295",
+      "A0298",
+      "A0300",
+      "A0301",
+      "A0302",
+      "A0306",
+      "A0310",
+      "A0312",
+      "A0332",
+      "A0336",
+      "A0339",
+      "A0342",
+      "A0354",
+      "A0356",
+      "A0361",
+      "A0362",
+      "A0366",
+      "A0376",
+      "A0380",
+      "A0403",
+      "A0406",
+      "A0422",
+      "A0423",
+      "A0429",
+      "A0444",
+      "A0446",
+      "A0453",
+      "A0463",
+      "A0464",
+      "A0465",
+      "A0466",
+      "A0467",
+      "A0468",
+      "A0473",
+      "A0485",
+      "A0488"
+    ],
+    "conflict_flag_address_ids": [],
+    "notes": "S.2983 / H.5222 reported as pending (not law); affected set = MA addresses that would be covered if enacted.",
+    "rule_ids": [
+      "r-0067",
+      "r-0068"
+    ],
+    "before_after": {
+      "A0006": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0009": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0010": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0015": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0024": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0034": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0036": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0039": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0043": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0046": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0048": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0052": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0053": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0054": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0056": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0063": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0064": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0065": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0068": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0070": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0071": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0073": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0075": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0077": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0082": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0083": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0086": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0093": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0095": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0096": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0098": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0118": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0123": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0124": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0128": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0134": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0140": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0143": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0144": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0149": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0151": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0155": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0166": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0169": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0174": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0175": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0176": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0191": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0194": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0195": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0198": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0199": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0203": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0209": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0211": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0214": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0217": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0218": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0220": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0221": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0226": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0230": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0232": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0233": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0242": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0245": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0258": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0272": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0284": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0286": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0290": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0291": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0292": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0294": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0295": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0298": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0300": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0301": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0302": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0306": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0310": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0312": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0332": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0336": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0339": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0342": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0354": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0356": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0361": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0362": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0366": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0376": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0380": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0403": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0406": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0422": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0423": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0429": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0444": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0446": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0453": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0463": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0464": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0465": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0466": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0467": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0468": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0473": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0485": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      },
+      "A0488": {
+        "r-0067": {
+          "before": "pending",
+          "after": "pending"
+        },
+        "r-0068": {
+          "before": "pending",
+          "after": "pending"
+        }
+      }
+    }
+  },
+  "T5": {
+    "affected_address_ids": [],
+    "conflict_flag_address_ids": [],
+    "notes": "Struck ballot question recorded as failed (r-0075); no rent cap reported for Boston or Cambridge.",
+    "rule_ids": [
+      "r-0075"
+    ],
+    "before_after": {}
+  }
+}

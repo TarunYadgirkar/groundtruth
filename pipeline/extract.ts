@@ -7,10 +7,10 @@ import { DATA, loadCorpus, writeJson, type CorpusDoc } from "./lib/corpus";
 import { ExtractionSchema, JURISDICTIONS, CATEGORIES, type Extraction } from "./lib/schema";
 
 const MODEL = "claude-opus-5-5";
-const CONCURRENCY = 8;
+const CONCURRENCY = 4;
 const OUT_DIR = path.join(DATA, "extractions");
 
-const client = new Anthropic();
+const client = new Anthropic({ maxRetries: 8 });
 
 const SYSTEM = `You extract U.S. rental housing rules from one source document into structured records for an address-level law lookup tool.
 
@@ -51,6 +51,20 @@ async function extractDoc(doc: CorpusDoc): Promise<Extraction> {
   return message.parsed_output;
 }
 
+async function withRetry<T>(fn: () => Promise<T>, label: string, attempts = 5): Promise<T> {
+  for (let i = 1; ; i++) {
+    try {
+      return await fn();
+    } catch (error) {
+      const retryable = error instanceof Anthropic.APIError && (error.status === undefined || error.status >= 500 || error.status === 429);
+      if (!retryable || i >= attempts) throw error;
+      const wait = 5000 * 2 ** (i - 1);
+      console.warn(`${label} retry ${i} in ${wait / 1000}s: ${error.message.slice(0, 80)}`);
+      await new Promise((r) => setTimeout(r, wait));
+    }
+  }
+}
+
 async function runPool<T>(items: T[], limit: number, worker: (item: T) => Promise<void>): Promise<void> {
   const queue = [...items];
   await Promise.all(
@@ -72,7 +86,7 @@ async function main(): Promise<void> {
     if (!force && fs.existsSync(file)) return;
     const started = Date.now();
     try {
-      const result = await extractDoc(doc);
+      const result = await withRetry(() => extractDoc(doc), doc.docId);
       writeJson(file, { doc_id: doc.docId, url: doc.url, retrieved_at: doc.retrievedAt, model: MODEL, ...result });
       console.log(`${doc.docId} ${result.rules.length} rules ${((Date.now() - started) / 1000).toFixed(0)}s`);
     } catch (error) {

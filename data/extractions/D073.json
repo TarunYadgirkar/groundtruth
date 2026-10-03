@@ -1,0 +1,71 @@
+{
+  "doc_id": "D073",
+  "url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+  "retrieved_at": "2026-10-01T22:37Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "SANDIEGO-SDMC-98.0704-just-cause",
+      "jurisdiction": "San Diego, CA",
+      "level": "city",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "San Diego Residential Tenant Protections Ordinance: just cause required for termination of tenancy",
+      "requirement": "A landlord may not terminate a tenancy without an enumerated at-fault or no-fault just cause. Owner move-in for leases entered on or after June 24, 2023 requires tenant written agreement or an express lease clause. Substantial-remodel terminations require permits and certified notices before termination.",
+      "key_value": "Just cause required; tenancy = >30 days occupancy",
+      "coverage_conditions": "Residential rental properties in the City of San Diego, including mobilehome units. Applies to tenancies where the tenant has a lawful right to occupy for more than 30 days. Excludes fixed-term leases of three months or less.",
+      "exemptions": "Exempt: hotels and short-term rentals; deed-restricted or subsidized affordable housing (but not Section 8); MRL mobilehomes; nonprofit hospitals and care facilities; dormitories; units sharing a bath or kitchen with a resident landlord; owner-occupied single-family homes (renting up to 2 bedrooms/ADUs/JADUs); owner-occupied duplexes; housing with a certificate of occupancy issued within the previous 15 years (except mobilehomes); separately alienable units not owned by a REIT, corporation, or LLC with a corporate member, where the required exemption notice is given.",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": 15,
+        "cutoff_basis": "certificate_of_occupancy",
+        "owner_type_dependent": true,
+        "unverifiable_conditions": "Exemption for separately alienable units requires a non-corporate/non-REIT landlord and written exemption notice to tenants. Other exemptions turn on owner occupancy, shared kitchen/bath, affordable-housing deed restrictions or subsidies, and tenancy length (>30 days; excludes fixed terms of 3 months or less)."
+      },
+      "yields_to_local": false,
+      "effective_date": "2023-06-24",
+      "enacted_date": "2023-05-25",
+      "penalty": "Tenant civil action for injunctive or equitable relief and money damages, including punitive damages. Wrongful eviction damages of at least 3x actual economic damages. Discretionary attorney's fees. Noncompliance is an affirmative defense and voids termination notices. City civil and criminal enforcement.",
+      "citation": "San Diego Mun. Code §§ 98.0701-98.0710 (O-21647 N.S., amended O-21769 N.S.)",
+      "quoted_span": "A landlord shall not terminate a tenancy without just cause.",
+      "confidence": 0.92,
+      "conflict_note": "Ordinance O-21647 N.S. was effective 6-24-2023. It was amended by O-21769 N.S. effective 3-28-2024, which added § 98.0710. The ordinance supplements Cal. Civ. Code § 1946.2."
+    },
+    {
+      "canonical_key": "SANDIEGO-SDMC-98.0706-no-fault-relocation",
+      "jurisdiction": "San Diego, CA",
+      "level": "city",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "San Diego no-fault termination: relocation assistance, notice, and right of first refusal",
+      "requirement": "For no-fault terminations, the landlord must pay relocation assistance of two months' actual rent (three months for senior or disabled tenants), either as a direct payment within 15 days or as a rent waiver. The landlord must give a 30/60-day notice stating the basis and the tenant's rights, and notify the Housing Commission. If the unit is re-offered for rent within five years after an owner move-in, government order, or demolition/remodel eviction, the landlord must first offer it to the displaced tenant.",
+      "key_value": "2 months' rent (3 months for seniors 62+ or disabled)",
+      "coverage_conditions": "Residential rental property in San Diego that is subject to the Residential Tenant Protections Division, where tenancy is terminated for no-fault just cause. Applies regardless of tenant income or length of tenancy.",
+      "exemptions": "Same exemptions as SDMC § 98.0703. No relocation is owed for government-order vacates where the tenant is found at fault.",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": 15,
+        "cutoff_basis": "certificate_of_occupancy",
+        "owner_type_dependent": true,
+        "unverifiable_conditions": "Same as § 98.0703 exemptions. Re-rental right requires the tenant to request an offer in writing within 30 days of the termination notice."
+      },
+      "yields_to_local": false,
+      "effective_date": "2023-06-24",
+      "enacted_date": "2023-05-25",
+      "penalty": "Failure to pay relocation: at least 3x the required relocation assistance plus actual economic damages. Failure to strictly comply voids the termination notice.",
+      "citation": "San Diego Mun. Code § 98.0706",
+      "quoted_span": "(A) The landlord shall provide a direct payment to the tenant.",
+      "confidence": 0.88,
+      "conflict_note": "Relocation assistance is credited against relocation owed under other laws. The Commission notice requirement does not apply until 30 days after the Commission's submission portal is established."
+    }
+  ],
+  "no_rule_findings": []
+}

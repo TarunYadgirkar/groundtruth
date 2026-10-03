@@ -1,0 +1,40 @@
+{
+  "doc_id": "D057",
+  "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXVI/Chapter112/Section87DDD%201~2",
+  "retrieved_at": "2026-10-01T22:56Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "MA-MGL-112-87DDD.5-broker-fee-payer",
+      "jurisdiction": "MA",
+      "level": "state",
+      "category": "application_screening_fees",
+      "status": "in_force",
+      "title": "Rental broker fee paid only by the party that hired the broker",
+      "requirement": "A licensed broker may contract solely with a prospective tenant or solely with a landlord. Any broker fee may only be paid by the party (landlord or tenant) who originally engaged and contracted with the broker, so tenants cannot be charged fees for a broker the landlord hired.",
+      "key_value": "Fee paid only by the party who engaged the broker",
+      "coverage_conditions": "Residential rental transactions in Massachusetts in which a licensed real estate broker or salesperson is engaged to find dwelling accommodations or tenants.",
+      "exemptions": null,
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Applies only where a licensed broker/salesperson is used; depends on which party engaged the broker."
+      },
+      "yields_to_local": false,
+      "effective_date": "2025-08-01",
+      "enacted_date": null,
+      "penalty": null,
+      "citation": "M.G.L. c. 112, § 87DDD1/2 (as amended by St. 2025, c. 9, § 43)",
+      "quoted_span": "Any fee shall only be paid by the party, lessor or tenant who originally engaged and entered into a contract with the licensed broker or salesperson.",
+      "confidence": 0.75,
+      "conflict_note": "Broker-fee rule classified under application_screening_fees as the closest category; it governs who pays broker fees, not application or screening fees as such. The prior text of the section (effective until Aug 1, 2025) only required broker licensing."
+    }
+  ],
+  "no_rule_findings": []
+}

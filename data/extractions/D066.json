@@ -1,0 +1,40 @@
+{
+  "doc_id": "D066",
+  "url": "https://pub.njleg.gov/bills/2024/PL25/405_.HTM",
+  "retrieved_at": "2026-10-01T22:37Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "NJ-46:8-18.1-application-fee-cap",
+      "jurisdiction": "NJ",
+      "level": "state",
+      "category": "application_screening_fees",
+      "status": "in_force",
+      "title": "Residential rental application fee capped at $50 (CPI-adjusted)",
+      "requirement": "A landlord or its agent may not require an application or similar fee to apply to lease or sublease a residential rental unit that exceeds $50. Starting January 1, 2027, the cap is adjusted annually by the Division of Consumer Affairs for CPI increases.",
+      "key_value": "$50 max, CPI-adjusted annually from 2027-01-01",
+      "coverage_conditions": "Applies to landlords and their agents for residential rental property leased or subleased for dwelling purposes, except units in one- or two-family dwellings.",
+      "exemptions": "Dwelling units in a one-family or two-family dwelling offered for rent; licensees of the NJ Real Estate Commission unless the licensee is the landlord of the property.",
+      "coverage": {
+        "min_units": 3,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Exemption for NJ Real Estate Commission licensees unless the licensee is the landlord."
+      },
+      "yields_to_local": false,
+      "effective_date": "2026-05-01",
+      "enacted_date": "2026-01-20",
+      "penalty": "Up to $500 for a first offense, up to $750 for a second, and up to $1,000 for each subsequent offense, enforced by summary proceedings under the Penalty Enforcement Law of 1999; the amount wrongfully charged is remitted to the applicant from the penalty.",
+      "citation": "N.J.S.A. 46:8-18.1 (P.L. 2025, c.405)",
+      "quoted_span": "1. a. A landlord, or\nagent thereof, shall not require an application or other similar fee to apply\nto lease or sublease a residential rental property for dwelling purposes, which\nexceeds $50.",
+      "confidence": 0.88,
+      "conflict_note": "Effective date computed: the act takes effect on the first day of the fourth month following enactment (approved January 20, 2026), which yields May 1, 2026. The first CPI adjustment applies beginning January 1, 2027."
+    }
+  ],
+  "no_rule_findings": []
+}

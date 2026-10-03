@@ -1,0 +1,40 @@
+{
+  "doc_id": "D044",
+  "url": "https://members.aagla.org/news/city-of-la-security-deposit-interest-requirement",
+  "retrieved_at": "2026-10-03T21:22Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "LA-LAMC-151.06.02-security-deposit-interest",
+      "jurisdiction": "Los Angeles, CA",
+      "level": "city",
+      "category": "security_deposits",
+      "status": "in_force",
+      "title": "LA RSO security deposit interest requirement",
+      "requirement": "Landlords of RSO-covered units in the City of Los Angeles must pay tenants interest on security deposits at the city's annually set rate, monthly or yearly, by direct payment or rent credit, and must notify tenants in writing of the chosen method.",
+      "key_value": "Annual city-set rate (e.g., 4.320% for calendar year 2025); paid monthly or yearly",
+      "coverage_conditions": "Rental units in the City of Los Angeles subject to the Los Angeles Rent Stabilization Ordinance (LARSO).",
+      "exemptions": null,
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Applies only to units subject to the LA Rent Stabilization Ordinance; RSO coverage criteria not stated in this document."
+      },
+      "yields_to_local": false,
+      "effective_date": "1990-11-01",
+      "enacted_date": null,
+      "penalty": "Non-compliance may be used as a defense in eviction proceedings (per source commentary).",
+      "citation": "Los Angeles Municipal Code § 151.06.02",
+      "quoted_span": "Interest shall begin accruing on November 1, 1990, on a monthly basis. A tenant shall be given the unpaid accrued interest in the form of either a direct payment or a credit against the tenant s rent.",
+      "confidence": 0.85,
+      "conflict_note": "Secondary source (landlord association, posted May 2025); rate table updated 5/21/25 and does not show 2026 rate. Effective date reflects interest accrual start date stated in quoted code text."
+    }
+  ],
+  "no_rule_findings": []
+}

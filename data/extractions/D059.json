@@ -1,0 +1,47 @@
+{
+  "doc_id": "D059",
+  "url": "https://www.wbur.org/news/2026/06/23/massachusetts-high-court-rent-control-ballot-question-struck",
+  "retrieved_at": "2026-10-03T21:22Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "MA-2026-rent-control-ballot-question",
+      "jurisdiction": "MA",
+      "level": "state",
+      "category": "rent_increase_limits",
+      "status": "failed",
+      "title": "2026 Massachusetts rent control ballot question (struck by Supreme Judicial Court)",
+      "requirement": "A proposed statewide initiative would have limited annual rent increases for residences. The Supreme Judicial Court ruled on June 23, 2026 that it cannot appear on the November 2026 ballot because it contained a religious exemption.",
+      "key_value": null,
+      "coverage_conditions": "Residential units statewide in Massachusetts, as proposed.",
+      "exemptions": "The proposal exempted several types of units, including units operated solely for religious purposes, plus other secular exemptions not detailed in the article.",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": null
+      },
+      "yields_to_local": false,
+      "effective_date": null,
+      "enacted_date": null,
+      "penalty": null,
+      "citation": "Massachusetts 2026 rent control initiative petition (struck by the Supreme Judicial Court, June 2026)",
+      "quoted_span": "The state’s Supreme Judicial Court ruled a ballot question seeking to bring rent control back to Massachusetts cannot go forward this November, because it includes a religious exemption.",
+      "confidence": 0.85,
+      "conflict_note": "The article gives no official petition number or cap formula. Supporters had pushed a compromise bill to be passed before July 1, but top lawmakers balked. Proponents may pursue a 2028 ballot petition. No rent cap is in force at the state level."
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "jurisdiction": "MA",
+      "category": "rent_increase_limits",
+      "finding": "The 2026 statewide rent control ballot question was struck by the Supreme Judicial Court and will not go before voters. No state rent cap was enacted, and the legislature did not pass the compromise bill.",
+      "quoted_span": "The state’s Supreme Judicial Court ruled a ballot question seeking to bring rent control back to Massachusetts cannot go forward this November, because it includes a religious exemption."
+    }
+  ]
+}

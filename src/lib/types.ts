@@ -19,6 +19,7 @@ export interface Coverage {
   age_years_exempt: number | null;
   cutoff_basis: "year_built" | "certificate_of_occupancy" | "none";
   owner_type_dependent: boolean;
+  owner_exemption_max_units: number | null;
   unverifiable_conditions: string | null;
 }
 

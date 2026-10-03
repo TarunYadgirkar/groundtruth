@@ -1,0 +1,40 @@
+{
+  "doc_id": "D023",
+  "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1946.2",
+  "retrieved_at": "2026-10-01T22:35Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "CA-CIV-1946.2-just-cause",
+      "jurisdiction": "CA",
+      "level": "state",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "Tenant Protection Act statewide just cause eviction requirement",
+      "requirement": "After a tenant has lawfully occupied a unit for 12 months (or 24 months if adult tenants were added), the owner may terminate the tenancy only for a listed at-fault or no-fault just cause, stated in the written notice. For no-fault terminations the owner must pay relocation assistance or waive the final month's rent equal to one month's rent, and curable lease violations require a notice to cure first.",
+      "key_value": "Just cause required after 12 months' occupancy; no-fault relocation = 1 month's rent (payment within 15 days or final-month rent waiver)",
+      "coverage_conditions": "Residential real property, including mobilehome park units, where the tenant has continuously and lawfully occupied for 12 months, or 24 months for at least one tenant if additional adult tenants were added before 24 months. Does not apply where a qualifying local just cause ordinance applies.",
+      "exemptions": "Transient/tourist hotels; nonprofit hospitals, religious, extended care, licensed elderly or adult residential facilities; school/college dormitories; units where the tenant shares a bathroom or kitchen with a resident owner; single-family owner-occupied residences renting no more than two units or bedrooms (including ADU/JADU); owner-occupied two-unit structures (neither an ADU/JADU) while the owner remains in occupancy; housing with a certificate of occupancy issued within the previous 15 years (except mobilehomes); separately alienable units (e.g., single-family homes, condos) not owned by a REIT, corporation, LLC with a corporate member, or mobilehome park management, provided the required exemption notice is given; deed-restricted or subsidized affordable housing; mobilehome homeowners; properties covered by a local just cause ordinance adopted on or before Sept 1, 2019 or a more protective later ordinance.",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": 15,
+        "cutoff_basis": "certificate_of_occupancy",
+        "owner_type_dependent": true,
+        "unverifiable_conditions": "Tenant occupancy duration (12/24 months); for separately alienable units, whether the owner is a REIT, corporation, or LLC with a corporate member and whether the statutory exemption notice was provided; owner occupancy and shared facilities; deed-restricted or subsidized affordable housing; whether a local just cause ordinance applies."
+      },
+      "yields_to_local": true,
+      "effective_date": "2024-04-01",
+      "enacted_date": null,
+      "penalty": "Noncompliant termination notice is void. An owner who attempts to recover possession in material violation is liable for actual damages, discretionary reasonable attorney's fees and costs, and up to three times actual damages plus punitive damages for willful, oppressive, fraudulent, or malicious conduct. The Attorney General, city attorney, or county counsel may seek injunctive relief.",
+      "citation": "Cal. Civ. Code § 1946.2",
+      "quoted_span": "Notwithstanding any other law, after a tenant has continuously and lawfully occupied a residential real property for 12 months, the owner of the residential real property shall not terminate a tenancy without just cause, which shall be stated in the written notice to terminate tenancy.",
+      "confidence": 0.9,
+      "conflict_note": "The text states this version became operative April 1, 2024. It was last amended by Stats. 2025, Ch. 203 (AB 1529), effective January 1, 2026. The section sunsets and is repealed as of January 1, 2030. The original just cause protections under AB 1482 date to 2020, but this document gives only the April 1, 2024 operative date for the current section."
+    }
+  ],
+  "no_rule_findings": []
+}
