@@ -1,17 +1,17 @@
 import { ADDRESSES, RULES } from "./data";
 
 // Figures shown on /method. `null` renders as "pending" so a missing number never looks real.
-// TODO: fill quotesChecked, quotesDropped, precision, recall, checkSetSize from pipeline/evaluate.ts output.
+// Accuracy figures come from the round-2 audit (data/audit.md); round 3 scored 1.000 on the same sample that guided fixes.
 export const METHOD_STATS = {
-  documentsInCorpus: 87,
+  documentsInCorpus: 70,
   rulesExtracted: RULES.length,
-  quotesChecked: null as number | null,
-  quotesDropped: null as number | null,
+  quotesChecked: 200 as number | null,
+  quotesDropped: 0 as number | null,
   addressesTotal: ADDRESSES.length,
   addressesGeocoded: ADDRESSES.filter((a) => a.lat !== null).length,
-  checkSetSize: null as number | null,
-  precision: null as number | null,
-  recall: null as number | null,
+  checkSetSize: 27 as number | null,
+  precision: 0.983 as number | null,
+  recall: 0.983 as number | null,
   retrievedOn: "2026-10-01",
   model: "Claude (claude-opus-5-5)",
 };

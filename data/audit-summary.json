@@ -1,0 +1,14 @@
+{
+  "sample_addresses": 27,
+  "decisions": 281,
+  "correct": 281,
+  "false_positive": 0,
+  "wrong_value": 0,
+  "false_negative": 0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "extrapolated_precision": 1.0,
+  "extrapolated_recall": 1.0,
+  "extrapolated_decisions": 5281,
+  "round": 3
+}

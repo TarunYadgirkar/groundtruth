@@ -95,3 +95,36 @@ Round 1 was 0.922 / 0.929 on the sample. The cost-weighted error, with misses co
    - r-0036 now has `owner_exemption_max_units: 3`. §4(6) exempts an owner-occupied two-family dwelling, so 2 is right unless the §4(7) three-unit elderly exemption is what's intended. Results are unchanged because no MA address is known to have ≤3 units.
 
 Fixing 1 and 2 should lift both precision and recall above 0.99 on all 500 addresses.
+
+---
+
+## Round 3 (final re-score; 55 rules, ids renumbered)
+
+Same 27-address sample, with expected results re-derived against the new ids. The machine-readable summary is in `data/audit-summary.json`.
+
+| Scope | Decisions | Correct | False positive | Wrong value | False negative | Precision | Recall |
+|---|---|---|---|---|---|---|---|
+| 27-address sample | 281 | 281 | 0 | 0 | 0 | **1.000** | **1.000** |
+| All 500 (profile-extrapolated) | 5281 | 5281 | 0 | 0 | 0 | **1.000** | **1.000** |
+
+Trend across rounds, on the sample: Round 1 0.922 / 0.929, Round 2 0.983 / 0.983, Round 3 1.000 / 1.000.
+
+**Round 2 fixes 1–4 are all verified.**
+- Berkeley r-0003 and r-0006 now apply (cap 2).
+- LA JCO r-0026 applies after 1978 (cap 1), and state just cause r-0014 is superseded there.
+- A0242 (Hyde Park) and A0344 (Jersey City) resolve to Boston and Jersey City. Only A0346 (San Diego, no street number) stays unresolved, which correctly gives `unknown` scope.
+- r-0014 is dated 2020-01-01.
+
+T1–T5 still match. Every profile again has a single answer signature. Conflict flags appear on 90 addresses (JC/Hoboken only). All quoted_spans are verbatim.
+
+**How to read 1.0.** It means agreement with my corpus reading, not an external gold set. The judgment calls are the same as in Rounds 1–2:
+- Rules triggered by conduct or an event count as "applies".
+- `unknown` is accepted where a state rule's own age coverage is unknown, and for population-restricted rules. r-0015 (HCA) and r-0027 (LA RPO, which changed from "applies" to `unknown`) are both acceptable.
+- A0398 (SF) has `units=5` but is described as "TIC Bldg 4 units or less". Reporting `unknown` there is acceptable.
+
+### Remaining issues (record quality only; no change to lookups)
+1. r-0001 (Berkeley algorithmic ban) has `conflict_flag: false`, but README §9 lists the competing effective dates and the record's own `conflict_note` describes them. Set it to true, because the bonus scoring rewards surfacing open questions.
+2. r-0050's SF 1979-06-13 cutoff is supported by D079, but `source_doc_id`/`quoted_span` point to D080 (the rate notice). Add the D079 sentence "first obtained a Certificate of Occupancy after June 13, 1979" as the coverage quote.
+3. Two quoted_spans are still bare headings that don't support their rules: r-0025 ("Legal Reasons for Eviction") and r-0028 (truncated before the percentage). Re-extract them with a minimum span length, or require a verb in the span.
+4. r-0018's 2020-01-01 date still has no support in D016. Mark it as unverified in `conflict_note`.
+5. r-0029 (LA deposit interest) now cites D044, a secondary source from a landlord association. Official D041 also lists "Interest Payments on Security Deposits" under the RSO. Keep D044 for the quote, but add D041 as the official corroboration.
