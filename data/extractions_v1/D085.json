@@ -1,0 +1,71 @@
+{
+  "doc_id": "D085",
+  "url": "https://santa-ana.gov/santa-ana-city-council-adopts-rent-stabilization-and-just-cause-eviction-ordinances-effective-nov-19",
+  "retrieved_at": "2026-10-01T22:37Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "SANTA-ANA-RSO-rent-cap",
+      "jurisdiction": "Santa Ana, CA",
+      "level": "city",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Santa Ana Rent Stabilization Ordinance – annual rent increase cap",
+      "requirement": "Annual residential rent increases are limited to the lower of 3% or 80% of the CPI change over the most recent 12-month period. No increase is allowed if CPI is negative. The City publishes the allowable increase by June 30 each year, effective September 1.",
+      "key_value": "Lower of 3% or 80% of CPI change; 0% if CPI negative",
+      "coverage_conditions": "Residential rental buildings constructed on or before February 1, 1995, and mobile home spaces offered for rent on or before January 1, 1990, in Santa Ana.",
+      "exemptions": "Residential buildings constructed after February 1, 1995; mobile home spaces offered for rent after January 1, 1990. Owners may petition for a fair-return increase above the cap.",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": "1995-02-01",
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "year_built",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Mobile home spaces covered only if offered for rent on or before January 1, 1990; fair-return petitions may allow higher increases; other state-law (e.g., Costa-Hawkins) exemptions not stated in this document"
+      },
+      "yields_to_local": false,
+      "effective_date": "2021-11-19",
+      "enacted_date": null,
+      "penalty": null,
+      "citation": "Santa Ana Rent Stabilization Ordinance (adopted 2021)",
+      "quoted_span": "Increase in residential rents are limited to the lower of 3% per year, or 80% of the percent change in the Consumer Price Index over the most recent 12-month period.",
+      "confidence": 0.82,
+      "conflict_note": "Source is a 2021 adoption press release with no municipal code citation or adoption date; later amendments are not reflected. The page lists a September 2026 Rent Stabilization newsletter, suggesting the program remains active as of the query date."
+    },
+    {
+      "canonical_key": "SANTA-ANA-JCEO-just-cause",
+      "jurisdiction": "Santa Ana, CA",
+      "level": "city",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "Santa Ana Just Cause Eviction Ordinance",
+      "requirement": "After a tenant has occupied for 30 days, an owner may terminate the tenancy only for a just cause, at-fault or no-fault, stated in a written notice, after first giving a notice and opportunity to cure. No-fault terminations require 3 months of relocation assistance or waiver of the final 3 months' rent.",
+      "key_value": "Just cause required after 30 days; 3 months relocation assistance or rent waiver for no-fault",
+      "coverage_conditions": "Residential tenancies in Santa Ana after 30 days of occupancy, excluding listed property types.",
+      "exemptions": "Housing produced in the last 15 years; deed-restricted affordable housing; hotel and transient occupancy; hospital and care facilities; dormitories; other shared living quarters.",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": 15,
+        "cutoff_basis": "year_built",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Tenancy must exceed 30 days; deed-restricted affordable housing, transient, care-facility, dormitory and shared-living exemptions"
+      },
+      "yields_to_local": false,
+      "effective_date": "2021-11-19",
+      "enacted_date": null,
+      "penalty": null,
+      "citation": "Santa Ana Just Cause Eviction Ordinance (adopted 2021)",
+      "quoted_span": "After 30 days, an owner shall not terminate a tenancy without just cause, which shall be stated in a written notice.",
+      "confidence": 0.82,
+      "conflict_note": "Source is a 2021 press release. It says 'housing produced in the last 15 years' without stating whether the cutoff is measured on construction or certificate of occupancy. No code citation is given, and later amendments are not reflected."
+    }
+  ],
+  "no_rule_findings": []
+}

@@ -1,17 +1,17 @@
 {
-  "A0004": {
-    "lat": 34.251842346844,
-    "lng": -118.293109199528,
-    "match": "10050 MOUNTAIR AVE, TUJUNGA, CA, 91042",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
-  },
   "A0005": {
     "lat": 37.869830696926,
     "lng": -122.279293972449,
     "match": "1609 ADDISON ST, BERKELEY, CA, 94703",
     "legal_city": "Berkeley",
     "county": "Alameda County"
+  },
+  "A0004": {
+    "lat": 34.251842346844,
+    "lng": -118.293109199528,
+    "match": "10050 MOUNTAIR AVE, TUJUNGA, CA, 91042",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
   },
   "A0001": {
     "lat": 34.096133031379,
@@ -20,33 +20,19 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0003": {
-    "lat": 40.724856764464,
-    "lng": -74.210426110952,
-    "match": "878 S 14TH ST, NEWARK, NJ, 07108",
-    "legal_city": "Newark",
-    "county": "Essex County"
-  },
   "A0006": {
-    "lat": 42.343794186875,
-    "lng": -71.08876547331,
-    "match": "71 WESTLAND AVE, BOSTON, MA, 02115",
+    "lat": 42.343782153564,
+    "lng": -71.088686987281,
+    "match": "census-clean: 69 WESTLAND AVE, BOSTON, MA, 02115",
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
   "A0002": {
-    "lat": 40.74981078208,
-    "lng": -74.03181724923,
-    "match": "1035 CLINTON ST, HOBOKEN, NJ, 07030",
+    "lat": 40.749764881522,
+    "lng": -74.03183135878,
+    "match": "census-clean: 1031 CLINTON ST, HOBOKEN, NJ, 07030",
     "legal_city": "Hoboken",
     "county": "Hudson County"
-  },
-  "A0009": {
-    "lat": 42.364216771469,
-    "lng": -71.11828649689,
-    "match": "census-clean: 5 WESTERN AVE, CAMBRIDGE, MA, 02163",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
   },
   "A0007": {
     "lat": 34.006235579229,
@@ -62,10 +48,10 @@
     "legal_city": "Jersey City",
     "county": "Hudson County"
   },
-  "A0011": {
-    "lat": 40.732646449965,
-    "lng": -74.156177797252,
-    "match": "836 RAYMOND BLVD, NEWARK, NJ, 07105",
+  "A0003": {
+    "lat": 40.724887410231,
+    "lng": -74.210414357377,
+    "match": "census-clean: 876 S 14TH ST, NEWARK, NJ, 07108",
     "legal_city": "Newark",
     "county": "Essex County"
   },
@@ -90,13 +76,6 @@
     "legal_city": "Newark",
     "county": "Essex County"
   },
-  "A0016": {
-    "lat": 37.801874337429,
-    "lng": -122.436684852142,
-    "match": "3515 FILLMORE ST, SAN FRANCISCO, CA, 94123",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
   "A0014": {
     "lat": 34.177801731811,
     "lng": -118.361636078081,
@@ -104,12 +83,33 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
+  "A0009": {
+    "lat": null,
+    "lng": null,
+    "match": "inferred from postal city \"Cambridge\" (no street-level match)",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
+  },
   "A0015": {
     "lat": 42.379980886163,
     "lng": -71.118720021347,
     "match": "15 EVERETT ST, CAMBRIDGE, MA, 02138",
     "legal_city": "Cambridge",
     "county": "Middlesex County"
+  },
+  "A0011": {
+    "lat": 40.732647093573,
+    "lng": -74.156148368781,
+    "match": "census-clean: 834 RAYMOND BLVD, NEWARK, NJ, 07105",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
+  "A0016": {
+    "lat": 37.801874337429,
+    "lng": -122.436684852142,
+    "match": "3515 FILLMORE ST, SAN FRANCISCO, CA, 94123",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
   },
   "A0017": {
     "lat": 40.7277629714,
@@ -139,20 +139,6 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0020": {
-    "lat": 40.771224225449,
-    "lng": -74.180587460657,
-    "match": "648 N 6TH ST, NEWARK, NJ, 07107",
-    "legal_city": "Newark",
-    "county": "Essex County"
-  },
-  "A0025": {
-    "lat": 37.863231048622,
-    "lng": -122.293815269518,
-    "match": "2341 8TH ST, BERKELEY, CA, 94710",
-    "legal_city": "Berkeley",
-    "county": "Alameda County"
-  },
   "A0022": {
     "lat": 34.163485706471,
     "lng": -118.368312978253,
@@ -181,12 +167,19 @@
     "legal_city": "Jersey City",
     "county": "Hudson County"
   },
-  "A0027": {
-    "lat": 37.773108534668,
-    "lng": -122.473684296131,
-    "match": "3918 FULTON ST, SAN FRANCISCO, CA, 94118",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
+  "A0025": {
+    "lat": 37.863231048622,
+    "lng": -122.293815269518,
+    "match": "2341 8TH ST, BERKELEY, CA, 94710",
+    "legal_city": "Berkeley",
+    "county": "Alameda County"
+  },
+  "A0020": {
+    "lat": 40.771163010071,
+    "lng": -74.180619526984,
+    "match": "census-clean: 646 N 6TH ST, NEWARK, NJ, 07107",
+    "legal_city": "Newark",
+    "county": "Essex County"
   },
   "A0028": {
     "lat": 40.768516151715,
@@ -195,13 +188,6 @@
     "legal_city": "Newark",
     "county": "Essex County"
   },
-  "A0030": {
-    "lat": 37.788524403095,
-    "lng": -122.440651886856,
-    "match": "2051 DIVISADERO ST, SAN FRANCISCO, CA, 94115",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
   "A0031": {
     "lat": 33.991312087929,
     "lng": -118.270046050706,
@@ -209,19 +195,19 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0029": {
-    "lat": 40.78286229736,
-    "lng": -74.166168698177,
-    "match": "284 VERONA AVE, NEWARK, NJ, 07104",
-    "legal_city": "Newark",
-    "county": "Essex County"
-  },
-  "A0033": {
-    "lat": 37.79964889858,
-    "lng": -122.405709002561,
-    "match": "1260 KEARNY ST, SAN FRANCISCO, CA, 94133",
+  "A0030": {
+    "lat": 37.788524403095,
+    "lng": -122.440651886856,
+    "match": "2051 DIVISADERO ST, SAN FRANCISCO, CA, 94115",
     "legal_city": "San Francisco",
     "county": "San Francisco County"
+  },
+  "A0029": {
+    "lat": 40.782807564387,
+    "lng": -74.165985399456,
+    "match": "census-clean: 280 VERONA AVE, NEWARK, NJ, 07104",
+    "legal_city": "Newark",
+    "county": "Essex County"
   },
   "A0032": {
     "lat": 40.7137999274,
@@ -230,10 +216,52 @@
     "legal_city": "Jersey City",
     "county": "Hudson County"
   },
+  "A0033": {
+    "lat": 37.79964889858,
+    "lng": -122.405709002561,
+    "match": "1260 KEARNY ST, SAN FRANCISCO, CA, 94133",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
+  "A0027": {
+    "lat": 37.773108534668,
+    "lng": -122.473684296131,
+    "match": "3918 FULTON ST, SAN FRANCISCO, CA, 94118",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
   "A0034": {
     "lat": 42.371703436562,
     "lng": -71.079128226997,
     "match": "25 GORE ST, CAMBRIDGE, MA, 02141",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
+  },
+  "A0036": {
+    "lat": 42.32946722555,
+    "lng": -71.054524489253,
+    "match": "33 WARD ST, SOUTH BOSTON, MA, 02127",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
+  },
+  "A0038": {
+    "lat": 37.757178828285,
+    "lng": -122.442397125228,
+    "match": "154 YUKON ST, SAN FRANCISCO, CA, 94114",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
+  "A0037": {
+    "lat": 34.058302827517,
+    "lng": -118.300824624602,
+    "match": "770 IROLO ST, LOS ANGELES, CA, 90005",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
+  },
+  "A0039": {
+    "lat": 42.379449621711,
+    "lng": -71.125838882455,
+    "match": "1 CRAIGIE ST, CAMBRIDGE, MA, 02138",
     "legal_city": "Cambridge",
     "county": "Middlesex County"
   },
@@ -244,75 +272,12 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0037": {
-    "lat": 34.058302827517,
-    "lng": -118.300824624602,
-    "match": "770 IROLO ST, LOS ANGELES, CA, 90005",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
-  },
-  "A0038": {
-    "lat": 37.757178828285,
-    "lng": -122.442397125228,
-    "match": "154 YUKON ST, SAN FRANCISCO, CA, 94114",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
-  "A0036": {
-    "lat": 42.32946722555,
-    "lng": -71.054524489253,
-    "match": "33 WARD ST, SOUTH BOSTON, MA, 02127",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
-  },
-  "A0040": {
-    "lat": 40.738840718117,
-    "lng": -74.041089522043,
-    "match": "75 JACKSON ST, HOBOKEN, NJ, 07030",
-    "legal_city": "Hoboken",
-    "county": "Hudson County"
-  },
-  "A0039": {
-    "lat": 42.379449621711,
-    "lng": -71.125838882455,
-    "match": "1 CRAIGIE ST, CAMBRIDGE, MA, 02138",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
-  },
   "A0041": {
     "lat": 37.744990908268,
     "lng": -122.421406384884,
     "match": "122 TIFFANY AVE, SAN FRANCISCO, CA, 94110",
     "legal_city": "San Francisco",
     "county": "San Francisco County"
-  },
-  "A0045": {
-    "lat": 34.241771886514,
-    "lng": -118.41212012105,
-    "match": "12829 BRANFORD ST, PACOIMA, CA, 91331",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
-  },
-  "A0044": {
-    "lat": 40.735737050359,
-    "lng": -74.237036956138,
-    "match": "775 SANDFORD AVE, NEWARK, NJ, 07106",
-    "legal_city": "Newark",
-    "county": "Essex County"
-  },
-  "A0042": {
-    "lat": 40.713202456168,
-    "lng": -74.077362139063,
-    "match": "320 FORREST ST, JERSEY CITY, NJ, 07304",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
-  },
-  "A0046": {
-    "lat": 42.365690566108,
-    "lng": -71.108340513884,
-    "match": "12 SODEN ST, CAMBRIDGE, MA, 02139",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
   },
   "A0043": {
     "lat": 42.390119763731,
@@ -321,12 +286,47 @@
     "legal_city": "Cambridge",
     "county": "Middlesex County"
   },
+  "A0042": {
+    "lat": 40.713202456168,
+    "lng": -74.077362139063,
+    "match": "320 FORREST ST, JERSEY CITY, NJ, 07304",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
+  },
+  "A0045": {
+    "lat": 34.241771886514,
+    "lng": -118.41212012105,
+    "match": "12829 BRANFORD ST, PACOIMA, CA, 91331",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
+  },
+  "A0040": {
+    "lat": 40.738767838556,
+    "lng": -74.041111798554,
+    "match": "census-clean: 69 JACKSON ST, HOBOKEN, NJ, 07030",
+    "legal_city": "Hoboken",
+    "county": "Hudson County"
+  },
   "A0047": {
     "lat": 40.698116647571,
     "lng": -74.090865859165,
     "match": "14 RUTGERS AVE, JERSEY CITY, NJ, 07305",
     "legal_city": "Jersey City",
     "county": "Hudson County"
+  },
+  "A0048": {
+    "lat": 42.343402761946,
+    "lng": -71.143549067491,
+    "match": "1619 COMMONWEALTH AVE, BRIGHTON, MA, 02135",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
+  },
+  "A0044": {
+    "lat": 40.735792625793,
+    "lng": -74.237007324819,
+    "match": "census-clean: 773 SANDFORD AVE, NEWARK, NJ, 07106",
+    "legal_city": "Newark",
+    "county": "Essex County"
   },
   "A0050": {
     "lat": 37.764124413322,
@@ -342,10 +342,17 @@
     "legal_city": "Hoboken",
     "county": "Hudson County"
   },
-  "A0048": {
-    "lat": 42.343402761946,
-    "lng": -71.143549067491,
-    "match": "1619 COMMONWEALTH AVE, BRIGHTON, MA, 02135",
+  "A0046": {
+    "lat": 42.365425650101,
+    "lng": -71.108291600506,
+    "match": "census-clean: 8 SODEN ST, CAMBRIDGE, MA, 02139",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
+  },
+  "A0052": {
+    "lat": 42.353518237841,
+    "lng": -71.125813095903,
+    "match": "88 GARDNER ST, ALLSTON, MA, 02134",
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
@@ -355,34 +362,6 @@
     "match": "65 OAKLAND AVE, JERSEY CITY, NJ, 07306",
     "legal_city": "Jersey City",
     "county": "Hudson County"
-  },
-  "A0052": {
-    "lat": 42.353518237841,
-    "lng": -71.125813095903,
-    "match": "88 GARDNER ST, ALLSTON, MA, 02134",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
-  },
-  "A0055": {
-    "lat": 37.782619210817,
-    "lng": -122.46876702789,
-    "match": "305 10TH AVE, SAN FRANCISCO, CA, 94118",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
-  "A0056": {
-    "lat": 42.345644184192,
-    "lng": -71.087947355571,
-    "match": "43 EDGERLY RD, BOSTON, MA, 02115",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
-  },
-  "A0057": {
-    "lat": 40.753432421375,
-    "lng": -74.174377039669,
-    "match": "57 STONE ST, NEWARK, NJ, 07104",
-    "legal_city": "Newark",
-    "county": "Essex County"
   },
   "A0053": {
     "lat": 42.345890982312,
@@ -398,12 +377,26 @@
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
-  "A0061": {
-    "lat": 37.785919313984,
-    "lng": -122.477559726965,
-    "match": "106 18TH AVE, SAN FRANCISCO, CA, 94121",
+  "A0055": {
+    "lat": 37.782619210817,
+    "lng": -122.46876702789,
+    "match": "305 10TH AVE, SAN FRANCISCO, CA, 94118",
     "legal_city": "San Francisco",
     "county": "San Francisco County"
+  },
+  "A0057": {
+    "lat": 40.753432421375,
+    "lng": -74.174377039669,
+    "match": "57 STONE ST, NEWARK, NJ, 07104",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
+  "A0058": {
+    "lat": 32.693817730505,
+    "lng": -117.126888325341,
+    "match": "3137 BOSTON AVE, SAN DIEGO, CA, 92113",
+    "legal_city": "San Diego",
+    "county": "San Diego County"
   },
   "A0060": {
     "lat": 34.174656039346,
@@ -412,17 +405,17 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0059": {
-    "lat": 40.729215526845,
-    "lng": -74.170855709577,
-    "match": "86 WALNUT ST, NEWARK, NJ, 07102",
-    "legal_city": "Newark",
-    "county": "Essex County"
+  "A0061": {
+    "lat": 37.785919313984,
+    "lng": -122.477559726965,
+    "match": "106 18TH AVE, SAN FRANCISCO, CA, 94121",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
   },
-  "A0063": {
-    "lat": 42.348290028212,
-    "lng": -71.069583391995,
-    "match": "11 CORTES ST, BOSTON, MA, 02116",
+  "A0056": {
+    "lat": 42.34565560843,
+    "lng": -71.087953685927,
+    "match": "census-clean: 41 EDGERLY RD, BOSTON, MA, 02115",
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
@@ -433,26 +426,19 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0058": {
-    "lat": 32.693817730505,
-    "lng": -117.126888325341,
-    "match": "3137 BOSTON AVE, SAN DIEGO, CA, 92113",
-    "legal_city": "San Diego",
-    "county": "San Diego County"
+  "A0063": {
+    "lat": 42.348290028212,
+    "lng": -71.069583391995,
+    "match": "11 CORTES ST, BOSTON, MA, 02116",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
   },
-  "A0064": {
-    "lat": 42.379416219968,
-    "lng": -71.125842851741,
-    "match": "26 CONCORD AVE, CAMBRIDGE, MA, 02138",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
-  },
-  "A0066": {
-    "lat": 34.0947022093,
-    "lng": -118.341484249454,
-    "match": "1318 N ORANGE DR, LOS ANGELES, CA, 90028",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
+  "A0059": {
+    "lat": 40.729245283506,
+    "lng": -74.170943860837,
+    "match": "census-clean: 84 WALNUT ST, NEWARK, NJ, 07102",
+    "legal_city": "Newark",
+    "county": "Essex County"
   },
   "A0065": {
     "lat": 42.284452236737,
@@ -461,19 +447,19 @@
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
+  "A0066": {
+    "lat": 34.0947022093,
+    "lng": -118.341484249454,
+    "match": "1318 N ORANGE DR, LOS ANGELES, CA, 90028",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
+  },
   "A0067": {
     "lat": 34.095045778052,
     "lng": -118.351799391859,
     "match": "1335 N VISTA ST, LOS ANGELES, CA, 90046",
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
-  },
-  "A0068": {
-    "lat": 42.345336985524,
-    "lng": -71.085769499369,
-    "match": "42 CLEARWAY ST, BOSTON, MA, 02115",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
   },
   "A0069": {
     "lat": 37.796874616444,
@@ -482,6 +468,20 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
+  "A0064": {
+    "lat": 42.379346098924,
+    "lng": -71.125715638744,
+    "match": "census-clean: 24 CONCORD AVE, CAMBRIDGE, MA, 02138",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
+  },
+  "A0070": {
+    "lat": 42.372611705618,
+    "lng": -71.103267573782,
+    "match": "43 FAYETTE ST, CAMBRIDGE, MA, 02139",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
+  },
   "A0072": {
     "lat": 37.764890627041,
     "lng": -122.467520089918,
@@ -489,10 +489,24 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0073": {
-    "lat": 42.368713915313,
-    "lng": -71.103956176776,
-    "match": "37 INMAN ST, CAMBRIDGE, MA, 02139",
+  "A0068": {
+    "lat": 42.345343961417,
+    "lng": -71.085817934257,
+    "match": "census-clean: 40 CLEARWAY ST, BOSTON, MA, 02115",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
+  },
+  "A0075": {
+    "lat": 42.379922700614,
+    "lng": -71.117508170008,
+    "match": "27 EVERETT ST, CAMBRIDGE, MA, 02138",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
+  },
+  "A0071": {
+    "lat": null,
+    "lng": null,
+    "match": "inferred from postal city \"Cambridge\" (no street-level match)",
     "legal_city": "Cambridge",
     "county": "Middlesex County"
   },
@@ -503,31 +517,24 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0070": {
-    "lat": 42.372611705618,
-    "lng": -71.103267573782,
-    "match": "43 FAYETTE ST, CAMBRIDGE, MA, 02139",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
-  },
-  "A0071": {
-    "lat": 42.368814396347,
-    "lng": -71.0905953379,
-    "match": "16 VANDINE ST, CAMBRIDGE, MA, 02141",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
-  },
-  "A0075": {
-    "lat": 42.379922700614,
-    "lng": -71.117508170008,
-    "match": "27 EVERETT ST, CAMBRIDGE, MA, 02138",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
+  "A0076": {
+    "lat": 40.724076460199,
+    "lng": -74.162836470045,
+    "match": "304 E KINNEY ST, NEWARK, NJ, 07105",
+    "legal_city": "Newark",
+    "county": "Essex County"
   },
   "A0077": {
     "lat": 42.361566486333,
     "lng": -71.103733351887,
     "match": "91 BROOKLINE ST, CAMBRIDGE, MA, 02139",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
+  },
+  "A0073": {
+    "lat": 42.368591564991,
+    "lng": -71.104039667653,
+    "match": "census-clean: 35 INMAN ST, CAMBRIDGE, MA, 02139",
     "legal_city": "Cambridge",
     "county": "Middlesex County"
   },
@@ -537,13 +544,6 @@
     "match": "2361 PORTLAND ST, LOS ANGELES, CA, 90007",
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
-  },
-  "A0076": {
-    "lat": 40.724076460199,
-    "lng": -74.162836470045,
-    "match": "304 E KINNEY ST, NEWARK, NJ, 07105",
-    "legal_city": "Newark",
-    "county": "Essex County"
   },
   "A0078": {
     "lat": 40.705324743987,
@@ -566,13 +566,6 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0084": {
-    "lat": 37.801332618559,
-    "lng": -122.431739349227,
-    "match": "1725 CHESTNUT ST, SAN FRANCISCO, CA, 94123",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
   "A0082": {
     "lat": 42.370344257321,
     "lng": -71.102833387558,
@@ -580,19 +573,26 @@
     "legal_city": "Cambridge",
     "county": "Middlesex County"
   },
-  "A0085": {
-    "lat": 37.753239144697,
-    "lng": -122.427505338235,
-    "match": "1101 CHURCH ST, SAN FRANCISCO, CA, 94114",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
   "A0083": {
     "lat": 42.328651609512,
     "lng": -71.087424612529,
     "match": "38 KENILWORTH ST, ROXBURY, MA, 02119",
     "legal_city": "Boston",
     "county": "Suffolk County"
+  },
+  "A0084": {
+    "lat": 37.801332618559,
+    "lng": -122.431739349227,
+    "match": "1725 CHESTNUT ST, SAN FRANCISCO, CA, 94123",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
+  "A0085": {
+    "lat": 37.753239144697,
+    "lng": -122.427505338235,
+    "match": "1101 CHURCH ST, SAN FRANCISCO, CA, 94114",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
   },
   "A0086": {
     "lat": 42.369083221693,
@@ -615,19 +615,12 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0093": {
-    "lat": 42.324002818423,
-    "lng": -71.101924371068,
-    "match": "90 BICKFORD ST, JAMAICA PLAIN, MA, 02130",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
-  },
-  "A0092": {
-    "lat": 37.865583367618,
-    "lng": -122.251697248224,
-    "match": "2514 PIEDMONT AVE, BERKELEY, CA, 94704",
-    "legal_city": "Berkeley",
-    "county": "Alameda County"
+  "A0089": {
+    "lat": 40.748211954503,
+    "lng": -74.030368120288,
+    "match": "935 PARK AVE, HOBOKEN, NJ, 07030",
+    "legal_city": "Hoboken",
+    "county": "Hudson County"
   },
   "A0090": {
     "lat": 40.731204856376,
@@ -636,13 +629,6 @@
     "legal_city": "Newark",
     "county": "Essex County"
   },
-  "A0089": {
-    "lat": 40.748211954503,
-    "lng": -74.030368120288,
-    "match": "935 PARK AVE, HOBOKEN, NJ, 07030",
-    "legal_city": "Hoboken",
-    "county": "Hudson County"
-  },
   "A0091": {
     "lat": 37.864405329327,
     "lng": -122.264605312198,
@@ -650,10 +636,17 @@
     "legal_city": "Berkeley",
     "county": "Alameda County"
   },
-  "A0098": {
-    "lat": null,
-    "lng": null,
-    "match": "inferred from postal city \"Dorchester\" (no street-level match)",
+  "A0092": {
+    "lat": 37.865583367618,
+    "lng": -122.251697248224,
+    "match": "2514 PIEDMONT AVE, BERKELEY, CA, 94704",
+    "legal_city": "Berkeley",
+    "county": "Alameda County"
+  },
+  "A0093": {
+    "lat": 42.324002818423,
+    "lng": -71.101924371068,
+    "match": "90 BICKFORD ST, JAMAICA PLAIN, MA, 02130",
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
@@ -663,6 +656,13 @@
     "match": "1371 27TH ST, SAN DIEGO, CA, 92154",
     "legal_city": "San Diego",
     "county": "San Diego County"
+  },
+  "A0095": {
+    "lat": 42.367845841037,
+    "lng": -71.098495150944,
+    "match": "23 ELM ST, CAMBRIDGE, MA, 02139",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
   },
   "A0096": {
     "lat": 42.343854353427,
@@ -677,13 +677,6 @@
     "match": "1560 MASON ST, SAN FRANCISCO, CA, 94133",
     "legal_city": "San Francisco",
     "county": "San Francisco County"
-  },
-  "A0095": {
-    "lat": 42.367845841037,
-    "lng": -71.098495150944,
-    "match": "23 ELM ST, CAMBRIDGE, MA, 02139",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
   },
   "A0099": {
     "lat": 40.746308514721,
@@ -706,11 +699,11 @@
     "legal_city": "Berkeley",
     "county": "Alameda County"
   },
-  "A0101": {
-    "lat": 40.725229747686,
-    "lng": -74.070809872433,
-    "match": "319 FAIRMOUNT AVE, JERSEY CITY, NJ, 07306",
-    "legal_city": "Jersey City",
+  "A0102": {
+    "lat": 40.737933172158,
+    "lng": -74.031684861444,
+    "match": "124 BLOOMFIELD ST, HOBOKEN, NJ, 07030",
+    "legal_city": "Hoboken",
     "county": "Hudson County"
   },
   "A0104": {
@@ -720,19 +713,26 @@
     "legal_city": "Newark",
     "county": "Essex County"
   },
-  "A0102": {
-    "lat": 40.737933172158,
-    "lng": -74.031684861444,
-    "match": "124 BLOOMFIELD ST, HOBOKEN, NJ, 07030",
-    "legal_city": "Hoboken",
-    "county": "Hudson County"
-  },
   "A0105": {
     "lat": 37.748652213279,
     "lng": -122.444191229026,
     "match": "140 PORTOLA DR, SAN FRANCISCO, CA, 94131",
     "legal_city": "San Francisco",
     "county": "San Francisco County"
+  },
+  "A0101": {
+    "lat": 40.725165683984,
+    "lng": -74.070646241263,
+    "match": "census-clean: 315 FAIRMOUNT AVE, JERSEY CITY, NJ, 07306",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
+  },
+  "A0098": {
+    "lat": null,
+    "lng": null,
+    "match": "inferred from postal city \"Dorchester\" (no street-level match)",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
   },
   "A0106": {
     "lat": 37.788294915739,
@@ -741,19 +741,12 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0112": {
-    "lat": 37.77431322716,
-    "lng": -122.439298239317,
-    "match": "448 BRODERICK ST, SAN FRANCISCO, CA, 94117",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
-  "A0109": {
-    "lat": 37.8558347046,
-    "lng": -122.270269918923,
-    "match": "2922 OTIS ST, BERKELEY, CA, 94703",
-    "legal_city": "Berkeley",
-    "county": "Alameda County"
+  "A0107": {
+    "lat": 34.262255890509,
+    "lng": -118.32017657606,
+    "match": "10635 SHERMAN GROVE AVE, SUNLAND, CA, 91040",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
   },
   "A0108": {
     "lat": 40.736287315576,
@@ -762,12 +755,12 @@
     "legal_city": "Jersey City",
     "county": "Hudson County"
   },
-  "A0107": {
-    "lat": 34.262255890509,
-    "lng": -118.32017657606,
-    "match": "10635 SHERMAN GROVE AVE, SUNLAND, CA, 91040",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
+  "A0109": {
+    "lat": 37.8558347046,
+    "lng": -122.270269918923,
+    "match": "2922 OTIS ST, BERKELEY, CA, 94703",
+    "legal_city": "Berkeley",
+    "county": "Alameda County"
   },
   "A0111": {
     "lat": 34.249924250911,
@@ -776,26 +769,12 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0110": {
-    "lat": 40.763265479466,
-    "lng": -74.174745021871,
-    "match": "132 2ND AVE, NEWARK, NJ, 07104",
-    "legal_city": "Newark",
-    "county": "Essex County"
-  },
-  "A0115": {
-    "lat": 37.78123618708,
-    "lng": -122.46329611176,
-    "match": "census-clean: 397 5TH AVE, SAN FRANCISCO, CA, 94118",
+  "A0112": {
+    "lat": 37.77431322716,
+    "lng": -122.439298239317,
+    "match": "448 BRODERICK ST, SAN FRANCISCO, CA, 94117",
     "legal_city": "San Francisco",
     "county": "San Francisco County"
-  },
-  "A0113": {
-    "lat": 37.853156920269,
-    "lng": -122.250637537308,
-    "match": "3151 ETON AVE, BERKELEY, CA, 94705",
-    "legal_city": "Berkeley",
-    "county": "Alameda County"
   },
   "A0114": {
     "lat": 32.74279009558,
@@ -804,12 +783,12 @@
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
-  "A0116": {
-    "lat": 40.73782973401,
-    "lng": -74.049245065733,
-    "match": "36 PROSPECT ST, JERSEY CITY, NJ, 07307",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
+  "A0113": {
+    "lat": 37.853156920269,
+    "lng": -122.250637537308,
+    "match": "3151 ETON AVE, BERKELEY, CA, 94705",
+    "legal_city": "Berkeley",
+    "county": "Alameda County"
   },
   "A0117": {
     "lat": 34.102120911287,
@@ -818,19 +797,33 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0118": {
-    "lat": 42.292350464404,
-    "lng": -71.093533488467,
-    "match": "34 KINGBIRD RD, DORCHESTER, MA, 02124",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
-  },
   "A0119": {
     "lat": 40.744671445285,
     "lng": -74.035368051004,
     "match": "607 ADAMS ST, HOBOKEN, NJ, 07030",
     "legal_city": "Hoboken",
     "county": "Hudson County"
+  },
+  "A0110": {
+    "lat": 40.763233783015,
+    "lng": -74.174639118818,
+    "match": "census-clean: 130 2ND AVE, NEWARK, NJ, 07104",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
+  "A0116": {
+    "lat": 40.73782973401,
+    "lng": -74.049245065733,
+    "match": "36 PROSPECT ST, JERSEY CITY, NJ, 07307",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
+  },
+  "A0118": {
+    "lat": 42.292393727281,
+    "lng": -71.09361381307,
+    "match": "census-clean: 18 KINGBIRD RD, DORCHESTER, MA, 02124",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
   },
   "A0120": {
     "lat": 40.72835234588,
@@ -853,31 +846,17 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
+  "A0115": {
+    "lat": 37.78123618708,
+    "lng": -122.46329611176,
+    "match": "census-clean: 397 5TH AVE, SAN FRANCISCO, CA, 94118",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
   "A0123": {
     "lat": 42.382539410028,
     "lng": -71.035437146913,
     "match": "123 CONDOR ST, EAST BOSTON, MA, 02128",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
-  },
-  "A0124": {
-    "lat": 42.362941773312,
-    "lng": -71.102457805365,
-    "match": "35 BROOKLINE ST, CAMBRIDGE, MA, 02139",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
-  },
-  "A0125": {
-    "lat": 40.740020460669,
-    "lng": -74.035814894303,
-    "match": "227 GRAND ST, HOBOKEN, NJ, 07030",
-    "legal_city": "Hoboken",
-    "county": "Hudson County"
-  },
-  "A0128": {
-    "lat": null,
-    "lng": null,
-    "match": "inferred from postal city \"Dorchester\" (no street-level match)",
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
@@ -888,12 +867,12 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0129": {
-    "lat": 40.719764997574,
-    "lng": -74.176858130312,
-    "match": "532 MULBERRY ST, NEWARK, NJ, 07114",
-    "legal_city": "Newark",
-    "county": "Essex County"
+  "A0125": {
+    "lat": 40.740020460669,
+    "lng": -74.035814894303,
+    "match": "227 GRAND ST, HOBOKEN, NJ, 07030",
+    "legal_city": "Hoboken",
+    "county": "Hudson County"
   },
   "A0127": {
     "lat": 34.252367056179,
@@ -901,6 +880,13 @@
     "match": "10029 N SEPULVEDA BLVD, MISSION HILLS, CA, 91345",
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
+  },
+  "A0124": {
+    "lat": 42.363009949315,
+    "lng": -71.102397310535,
+    "match": "census-clean: 33 BROOKLINE ST, CAMBRIDGE, MA, 02139",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
   },
   "A0131": {
     "lat": 40.754136146986,
@@ -916,12 +902,26 @@
     "legal_city": "Newark",
     "county": "Essex County"
   },
+  "A0129": {
+    "lat": 40.719806603386,
+    "lng": -74.176833067335,
+    "match": "census-clean: 526 MULBERRY ST, NEWARK, NJ, 07114",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
   "A0132": {
     "lat": 40.76934816412,
     "lng": -74.181410596224,
     "match": "587 N 6TH ST, NEWARK, NJ, 07107",
     "legal_city": "Newark",
     "county": "Essex County"
+  },
+  "A0128": {
+    "lat": null,
+    "lng": null,
+    "match": "inferred from postal city \"Dorchester\" (no street-level match)",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
   },
   "A0133": {
     "lat": 34.229428423859,
@@ -937,26 +937,19 @@
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
-  "A0136": {
-    "lat": 40.747367988246,
-    "lng": -74.026733524669,
-    "match": "920 HUDSON ST, HOBOKEN, NJ, 07030",
-    "legal_city": "Hoboken",
-    "county": "Hudson County"
-  },
-  "A0137": {
-    "lat": 40.74650540714,
-    "lng": -74.182685493475,
-    "match": "71 NORFOLK ST, NEWARK, NJ, 07103",
-    "legal_city": "Newark",
-    "county": "Essex County"
-  },
   "A0135": {
     "lat": 37.794118952125,
     "lng": -122.40698604858,
     "match": "843 CLAY ST, SAN FRANCISCO, CA, 94108",
     "legal_city": "San Francisco",
     "county": "San Francisco County"
+  },
+  "A0136": {
+    "lat": 40.747367988246,
+    "lng": -74.026733524669,
+    "match": "920 HUDSON ST, HOBOKEN, NJ, 07030",
+    "legal_city": "Hoboken",
+    "county": "Hudson County"
   },
   "A0138": {
     "lat": 33.996685074769,
@@ -965,19 +958,19 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0140": {
-    "lat": 42.351156189935,
-    "lng": -71.088098655836,
-    "match": "459 BEACON ST, BOSTON, MA, 02115",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
-  },
   "A0139": {
     "lat": 40.729943720291,
     "lng": -74.071034378592,
     "match": "54 STUYVESANT AVE, JERSEY CITY, NJ, 07306",
     "legal_city": "Jersey City",
     "county": "Hudson County"
+  },
+  "A0140": {
+    "lat": 42.351156189935,
+    "lng": -71.088098655836,
+    "match": "459 BEACON ST, BOSTON, MA, 02115",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
   },
   "A0141": {
     "lat": 37.73813158911,
@@ -993,6 +986,13 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
+  "A0137": {
+    "lat": 40.746701068528,
+    "lng": -74.182557707489,
+    "match": "census-clean: 65 NORFOLK ST, NEWARK, NJ, 07103",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
   "A0143": {
     "lat": 42.310212727666,
     "lng": -71.087061380822,
@@ -1000,31 +1000,10 @@
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
-  "A0144": {
-    "lat": 42.319506233426,
-    "lng": -71.100197786289,
-    "match": "114 AMORY ST, ROXBURY, MA, 02119",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
-  },
   "A0145": {
     "lat": 32.759371284084,
     "lng": -117.121714561521,
     "match": "4515 FELTON ST, SAN DIEGO, CA, 92116",
-    "legal_city": "San Diego",
-    "county": "San Diego County"
-  },
-  "A0149": {
-    "lat": 42.368309769533,
-    "lng": -71.036711056222,
-    "match": "25 EVERETT ST, EAST BOSTON, MA, 02128",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
-  },
-  "A0150": {
-    "lat": 32.716024799043,
-    "lng": -117.11184048031,
-    "match": "3784 BROADWAY, SAN DIEGO, CA, 92102",
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
@@ -1042,24 +1021,24 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0148": {
-    "lat": 40.751386045226,
-    "lng": -74.190058099169,
-    "match": "166 5TH ST, NEWARK, NJ, 07107",
-    "legal_city": "Newark",
-    "county": "Essex County"
+  "A0149": {
+    "lat": 42.368309769533,
+    "lng": -71.036711056222,
+    "match": "25 EVERETT ST, EAST BOSTON, MA, 02128",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
   },
-  "A0156": {
-    "lat": 37.80031526334,
-    "lng": -122.402990211203,
-    "match": "census-clean: 290 GREEN ST, SAN FRANCISCO, CA, 94111",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
+  "A0144": {
+    "lat": 42.319531661123,
+    "lng": -71.100170587998,
+    "match": "census-clean: 112 AMORY ST, ROXBURY, MA, 02119",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
   },
-  "A0152": {
-    "lat": 32.74094590948,
-    "lng": -117.25076493005,
-    "match": "1669 SUNSET CLIFFS BLVD, SAN DIEGO, CA, 92107",
+  "A0150": {
+    "lat": 32.716024799043,
+    "lng": -117.11184048031,
+    "match": "3784 BROADWAY, SAN DIEGO, CA, 92102",
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
@@ -1070,19 +1049,26 @@
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
+  "A0152": {
+    "lat": 32.74094590948,
+    "lng": -117.25076493005,
+    "match": "1669 SUNSET CLIFFS BLVD, SAN DIEGO, CA, 92107",
+    "legal_city": "San Diego",
+    "county": "San Diego County"
+  },
+  "A0148": {
+    "lat": 40.751353301519,
+    "lng": -74.190080142452,
+    "match": "census-clean: 162 5TH ST, NEWARK, NJ, 07107",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
   "A0153": {
     "lat": 33.992394354537,
     "lng": -118.268297439622,
     "match": "366 E 55TH ST, LOS ANGELES, CA, 90011",
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
-  },
-  "A0155": {
-    "lat": 42.288741879366,
-    "lng": -71.09239312943,
-    "match": "473 HARVARD ST, DORCHESTER, MA, 02124",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
   },
   "A0154": {
     "lat": 32.760412374063,
@@ -1091,10 +1077,24 @@
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
+  "A0155": {
+    "lat": 42.288741879366,
+    "lng": -71.09239312943,
+    "match": "473 HARVARD ST, DORCHESTER, MA, 02124",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
+  },
   "A0157": {
     "lat": 37.876494513292,
     "lng": -122.257026606732,
     "match": "2701 RIDGE RD, BERKELEY, CA, 94709",
+    "legal_city": "Berkeley",
+    "county": "Alameda County"
+  },
+  "A0158": {
+    "lat": 37.878591221585,
+    "lng": -122.260493108118,
+    "match": "2522 HILGARD AVE, BERKELEY, CA, 94709",
     "legal_city": "Berkeley",
     "county": "Alameda County"
   },
@@ -1105,12 +1105,12 @@
     "legal_city": "Newark",
     "county": "Essex County"
   },
-  "A0158": {
-    "lat": 37.878591221585,
-    "lng": -122.260493108118,
-    "match": "2522 HILGARD AVE, BERKELEY, CA, 94709",
-    "legal_city": "Berkeley",
-    "county": "Alameda County"
+  "A0160": {
+    "lat": 40.749433761671,
+    "lng": -74.05173810144,
+    "match": "86 CHARLES ST, JERSEY CITY, NJ, 07307",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
   },
   "A0161": {
     "lat": 40.717916452711,
@@ -1119,6 +1119,13 @@
     "legal_city": "Jersey City",
     "county": "Hudson County"
   },
+  "A0156": {
+    "lat": 37.80031526334,
+    "lng": -122.402990211203,
+    "match": "census-clean: 290 GREEN ST, SAN FRANCISCO, CA, 94111",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
   "A0162": {
     "lat": 34.100552498586,
     "lng": -118.347788965715,
@@ -1126,40 +1133,12 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0160": {
-    "lat": 40.749433761671,
-    "lng": -74.05173810144,
-    "match": "86 CHARLES ST, JERSEY CITY, NJ, 07307",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
-  },
-  "A0163": {
-    "lat": 40.722395074274,
-    "lng": -74.043552476848,
-    "match": "235 2ND ST, JERSEY CITY, NJ, 07302",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
-  },
-  "A0168": {
-    "lat": 40.745283626731,
-    "lng": -74.039281685445,
-    "match": "census-clean: 600 JACKSON ST, HOBOKEN, NJ, 07030",
-    "legal_city": "Hoboken",
-    "county": "Hudson County"
-  },
   "A0164": {
     "lat": 37.76763837901,
     "lng": -122.42951948205,
     "match": "725 14TH ST, SAN FRANCISCO, CA, 94114",
     "legal_city": "San Francisco",
     "county": "San Francisco County"
-  },
-  "A0166": {
-    "lat": 42.384310248934,
-    "lng": -71.12020099261,
-    "match": "1 POTTER PARK, CAMBRIDGE, MA, 02138",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
   },
   "A0165": {
     "lat": 32.773642646317,
@@ -1175,12 +1154,26 @@
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
+  "A0166": {
+    "lat": 42.384310248934,
+    "lng": -71.12020099261,
+    "match": "1 POTTER PARK, CAMBRIDGE, MA, 02138",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
+  },
   "A0169": {
     "lat": 42.340367940381,
     "lng": -71.146633078674,
     "match": "115 KILSYTH RD, BRIGHTON, MA, 02135",
     "legal_city": "Boston",
     "county": "Suffolk County"
+  },
+  "A0163": {
+    "lat": 40.722390774695,
+    "lng": -74.043498156328,
+    "match": "census-clean: 233 2ND ST, JERSEY CITY, NJ, 07302",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
   },
   "A0170": {
     "lat": 34.232064015614,
@@ -1189,17 +1182,31 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0173": {
-    "lat": 34.299371281369,
-    "lng": -118.421538456805,
-    "match": "13180 FOOTHILL BLVD, SYLMAR, CA, 91342",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
+  "A0168": {
+    "lat": 40.745283626731,
+    "lng": -74.039281685445,
+    "match": "census-clean: 600 JACKSON ST, HOBOKEN, NJ, 07030",
+    "legal_city": "Hoboken",
+    "county": "Hudson County"
+  },
+  "A0171": {
+    "lat": 40.738902438048,
+    "lng": -74.04663280324,
+    "match": "127 OGDEN AVE, JERSEY CITY, NJ, 07307",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
   },
   "A0172": {
     "lat": 34.224850838975,
     "lng": -118.455218605953,
     "match": "8504 WILLIS AVE, PANORAMA CITY, CA, 91402",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
+  },
+  "A0173": {
+    "lat": 34.299371281369,
+    "lng": -118.421538456805,
+    "match": "13180 FOOTHILL BLVD, SYLMAR, CA, 91342",
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
@@ -1216,13 +1223,6 @@
     "match": "10 DOVER ST, CAMBRIDGE, MA, 02140",
     "legal_city": "Cambridge",
     "county": "Middlesex County"
-  },
-  "A0171": {
-    "lat": 40.738902438048,
-    "lng": -74.04663280324,
-    "match": "127 OGDEN AVE, JERSEY CITY, NJ, 07307",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
   },
   "A0176": {
     "lat": 42.393657148181,
@@ -1245,17 +1245,17 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0180": {
-    "lat": 34.056870603736,
-    "lng": -118.303137913263,
-    "match": "845 S KINGSLEY DR, LOS ANGELES, CA, 90005",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
-  },
   "A0179": {
     "lat": 34.09915207252,
     "lng": -118.341635208217,
     "match": "7006 LANEWOOD AVE, LOS ANGELES, CA, 90028",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
+  },
+  "A0180": {
+    "lat": 34.056870603736,
+    "lng": -118.303137913263,
+    "match": "845 S KINGSLEY DR, LOS ANGELES, CA, 90005",
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
@@ -1266,12 +1266,12 @@
     "legal_city": "Hoboken",
     "county": "Hudson County"
   },
-  "A0182": {
-    "lat": 40.748382853996,
-    "lng": -74.032259129478,
-    "match": "923 CLINTON ST, HOBOKEN, NJ, 07030",
-    "legal_city": "Hoboken",
-    "county": "Hudson County"
+  "A0183": {
+    "lat": 37.87845544308,
+    "lng": -122.262349376787,
+    "match": "2427 HILGARD AVE, BERKELEY, CA, 94709",
+    "legal_city": "Berkeley",
+    "county": "Alameda County"
   },
   "A0184": {
     "lat": 34.020782218595,
@@ -1287,24 +1287,17 @@
     "legal_city": "Jersey City",
     "county": "Hudson County"
   },
-  "A0187": {
-    "lat": 40.744920038222,
-    "lng": -74.060798217241,
-    "match": "146 CARLTON AVE, JERSEY CITY, NJ, 07306",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
-  },
-  "A0183": {
-    "lat": 37.87845544308,
-    "lng": -122.262349376787,
-    "match": "2427 HILGARD AVE, BERKELEY, CA, 94709",
-    "legal_city": "Berkeley",
-    "county": "Alameda County"
-  },
   "A0186": {
     "lat": 40.736920404507,
     "lng": -74.054827866989,
     "match": "107 BEACON AVE, JERSEY CITY, NJ, 07306",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
+  },
+  "A0187": {
+    "lat": 40.744920038222,
+    "lng": -74.060798217241,
+    "match": "146 CARLTON AVE, JERSEY CITY, NJ, 07306",
     "legal_city": "Jersey City",
     "county": "Hudson County"
   },
@@ -1315,12 +1308,12 @@
     "legal_city": "Berkeley",
     "county": "Alameda County"
   },
-  "A0193": {
-    "lat": 37.877436210953,
-    "lng": -122.272592199936,
-    "match": "1626 BONITA AVE, BERKELEY, CA, 94709",
-    "legal_city": "Berkeley",
-    "county": "Alameda County"
+  "A0182": {
+    "lat": 40.748236599023,
+    "lng": -74.032304373623,
+    "match": "census-clean: 911 CLINTON ST, HOBOKEN, NJ, 07030",
+    "legal_city": "Hoboken",
+    "county": "Hudson County"
   },
   "A0189": {
     "lat": 37.860487333983,
@@ -1329,19 +1322,19 @@
     "legal_city": "Berkeley",
     "county": "Alameda County"
   },
+  "A0190": {
+    "lat": 40.722831839974,
+    "lng": -74.16236498265,
+    "match": "283 ADAMS ST, NEWARK, NJ, 07105",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
   "A0191": {
     "lat": 42.377309547812,
     "lng": -71.110680713996,
     "match": "60 KIRKLAND ST, CAMBRIDGE, MA, 02138",
     "legal_city": "Cambridge",
     "county": "Middlesex County"
-  },
-  "A0194": {
-    "lat": 42.34449244891,
-    "lng": -71.08932121797,
-    "match": "72 BURBANK ST, BOSTON, MA, 02115",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
   },
   "A0192": {
     "lat": 37.787554937568,
@@ -1350,17 +1343,17 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0190": {
-    "lat": 40.722831839974,
-    "lng": -74.16236498265,
-    "match": "283 ADAMS ST, NEWARK, NJ, 07105",
-    "legal_city": "Newark",
-    "county": "Essex County"
+  "A0193": {
+    "lat": 37.877436210953,
+    "lng": -122.272592199936,
+    "match": "1626 BONITA AVE, BERKELEY, CA, 94709",
+    "legal_city": "Berkeley",
+    "county": "Alameda County"
   },
-  "A0195": {
-    "lat": 42.339062553814,
-    "lng": -71.152111420394,
-    "match": "1848 COMMONWEALTH AVE, BRIGHTON, MA, 02135",
+  "A0194": {
+    "lat": 42.34449244891,
+    "lng": -71.08932121797,
+    "match": "72 BURBANK ST, BOSTON, MA, 02115",
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
@@ -1378,12 +1371,12 @@
     "legal_city": "Berkeley",
     "county": "Alameda County"
   },
-  "A0200": {
-    "lat": 34.105004287023,
-    "lng": -118.337549044749,
-    "match": "1853 N HIGHLAND AVE, LOS ANGELES, CA, 90028",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
+  "A0198": {
+    "lat": 42.374496794147,
+    "lng": -71.036497835188,
+    "match": "194 HAVRE ST, EAST BOSTON, MA, 02128",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
   },
   "A0199": {
     "lat": 42.387191106272,
@@ -1392,17 +1385,38 @@
     "legal_city": "Cambridge",
     "county": "Middlesex County"
   },
-  "A0198": {
-    "lat": 42.374496794147,
-    "lng": -71.036497835188,
-    "match": "194 HAVRE ST, EAST BOSTON, MA, 02128",
+  "A0195": {
+    "lat": 42.338962456382,
+    "lng": -71.152168954882,
+    "match": "census-clean: 1850 COMMONWEALTH AVE, BRIGHTON, MA, 02135",
     "legal_city": "Boston",
     "county": "Suffolk County"
+  },
+  "A0200": {
+    "lat": 34.105004287023,
+    "lng": -118.337549044749,
+    "match": "1853 N HIGHLAND AVE, LOS ANGELES, CA, 90028",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
   },
   "A0201": {
     "lat": 37.861084663474,
     "lng": -122.25463879726,
     "match": "2737 BENVENUE AVE, BERKELEY, CA, 94705",
+    "legal_city": "Berkeley",
+    "county": "Alameda County"
+  },
+  "A0202": {
+    "lat": 37.794522791984,
+    "lng": -122.41889836579,
+    "match": "1446 JACKSON ST, SAN FRANCISCO, CA, 94109",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
+  "A0205": {
+    "lat": 37.864419418207,
+    "lng": -122.274486388915,
+    "match": "2425 GRANT ST, BERKELEY, CA, 94703",
     "legal_city": "Berkeley",
     "county": "Alameda County"
   },
@@ -1413,40 +1427,33 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0202": {
-    "lat": 37.794522791984,
-    "lng": -122.41889836579,
-    "match": "1446 JACKSON ST, SAN FRANCISCO, CA, 94109",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
-  "A0203": {
-    "lat": 42.31845754666,
-    "lng": -71.095569636405,
-    "match": "2930 WASHINGTON ST, ROXBURY, MA, 02119",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
-  },
-  "A0204": {
-    "lat": 40.756210023298,
-    "lng": -74.186173040995,
-    "match": "208 6TH AVE W, NEWARK, NJ, 07107",
-    "legal_city": "Newark",
-    "county": "Essex County"
-  },
-  "A0205": {
-    "lat": 37.864419418207,
-    "lng": -122.274486388915,
-    "match": "2425 GRANT ST, BERKELEY, CA, 94703",
-    "legal_city": "Berkeley",
-    "county": "Alameda County"
-  },
   "A0207": {
     "lat": 34.032030548439,
     "lng": -118.276733095547,
     "match": "705 W 23RD ST, LOS ANGELES, CA, 90007",
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
+  },
+  "A0208": {
+    "lat": 40.738937251272,
+    "lng": -74.037275318111,
+    "match": "126 ADAMS ST, HOBOKEN, NJ, 07030",
+    "legal_city": "Hoboken",
+    "county": "Hudson County"
+  },
+  "A0203": {
+    "lat": 42.317725876641,
+    "lng": -71.096287187104,
+    "match": "census-clean: 2986 WASHINGTON ST, ROXBURY, MA, 02119",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
+  },
+  "A0204": {
+    "lat": 40.756199520614,
+    "lng": -74.18613679935,
+    "match": "census-clean: 202 6TH AVE W, NEWARK, NJ, 07107",
+    "legal_city": "Newark",
+    "county": "Essex County"
   },
   "A0209": {
     "lat": 42.371041072612,
@@ -1462,12 +1469,12 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0208": {
-    "lat": 40.738937251272,
-    "lng": -74.037275318111,
-    "match": "126 ADAMS ST, HOBOKEN, NJ, 07030",
-    "legal_city": "Hoboken",
-    "county": "Hudson County"
+  "A0211": {
+    "lat": 42.350692439566,
+    "lng": -71.089845858115,
+    "match": "499 BEACON ST, BOSTON, MA, 02215",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
   },
   "A0212": {
     "lat": 37.752168513331,
@@ -1476,13 +1483,6 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0211": {
-    "lat": 42.350692439566,
-    "lng": -71.089845858115,
-    "match": "499 BEACON ST, BOSTON, MA, 02215",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
-  },
   "A0213": {
     "lat": 34.145584078078,
     "lng": -118.386856598286,
@@ -1490,26 +1490,12 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0217": {
-    "lat": 42.369519627611,
-    "lng": -71.037362951665,
-    "match": "172 MAVERICK ST, EAST BOSTON, MA, 02128",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
-  },
   "A0215": {
     "lat": 37.789075325053,
     "lng": -122.432052589153,
     "match": "2295 CALIFORNIA ST, SAN FRANCISCO, CA, 94115",
     "legal_city": "San Francisco",
     "county": "San Francisco County"
-  },
-  "A0218": {
-    "lat": 42.388324409245,
-    "lng": -71.121620396425,
-    "match": "15 RICHDALE AVE, CAMBRIDGE, MA, 02140",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
   },
   "A0216": {
     "lat": 37.865531910644,
@@ -1525,33 +1511,19 @@
     "legal_city": "Cambridge",
     "county": "Middlesex County"
   },
+  "A0218": {
+    "lat": 42.388324409245,
+    "lng": -71.121620396425,
+    "match": "15 RICHDALE AVE, CAMBRIDGE, MA, 02140",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
+  },
   "A0219": {
     "lat": 32.746245203063,
     "lng": -117.124937736826,
     "match": "3735 32ND ST, SAN DIEGO, CA, 92104",
     "legal_city": "San Diego",
     "county": "San Diego County"
-  },
-  "A0222": {
-    "lat": 37.795996387914,
-    "lng": -122.428597910742,
-    "match": "1901 VALLEJO ST, SAN FRANCISCO, CA, 94123",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
-  "A0224": {
-    "lat": 34.228507480493,
-    "lng": -118.451718756162,
-    "match": "8727 TOBIAS AVE, PANORAMA CITY, CA, 91402",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
-  },
-  "A0223": {
-    "lat": 40.742214718476,
-    "lng": -74.028940035026,
-    "match": "504 COURT ST, HOBOKEN, NJ, 07030",
-    "legal_city": "Hoboken",
-    "county": "Hudson County"
   },
   "A0221": {
     "lat": 42.341033010088,
@@ -1560,31 +1532,45 @@
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
-  "A0220": {
-    "lat": 42.29951865269,
-    "lng": -71.061535322591,
-    "match": "23 FAULKNER ST, DORCHESTER, MA, 02122",
+  "A0222": {
+    "lat": 37.795996387914,
+    "lng": -122.428597910742,
+    "match": "1901 VALLEJO ST, SAN FRANCISCO, CA, 94123",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
+  "A0217": {
+    "lat": 42.3695452992,
+    "lng": -71.037420846277,
+    "match": "census-clean: 170 MAVERICK ST, EAST BOSTON, MA, 02128",
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
-  "A0229": {
-    "lat": 37.731288264664,
-    "lng": -122.392090570269,
-    "match": "census-clean: 5164 3RD ST, SAN FRANCISCO, CA, 94124",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
+  "A0223": {
+    "lat": 40.742214718476,
+    "lng": -74.028940035026,
+    "match": "504 COURT ST, HOBOKEN, NJ, 07030",
+    "legal_city": "Hoboken",
+    "county": "Hudson County"
+  },
+  "A0224": {
+    "lat": 34.228507480493,
+    "lng": -118.451718756162,
+    "match": "8727 TOBIAS AVE, PANORAMA CITY, CA, 91402",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
+  },
+  "A0220": {
+    "lat": 42.29954645665,
+    "lng": -71.061434029601,
+    "match": "census-clean: 21 FAULKNER ST, DORCHESTER, MA, 02122",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
   },
   "A0225": {
     "lat": 37.794030087633,
     "lng": -122.421842293682,
     "match": "1627 JACKSON ST, SAN FRANCISCO, CA, 94109",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
-  "A0228": {
-    "lat": 37.758806229242,
-    "lng": -122.43584550357,
-    "match": "225 COLLINGWOOD ST, SAN FRANCISCO, CA, 94114",
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
@@ -1602,6 +1588,13 @@
     "legal_city": "Hoboken",
     "county": "Hudson County"
   },
+  "A0228": {
+    "lat": 37.758806229242,
+    "lng": -122.43584550357,
+    "match": "225 COLLINGWOOD ST, SAN FRANCISCO, CA, 94114",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
   "A0230": {
     "lat": 42.36894090845,
     "lng": -71.10823462185,
@@ -1616,26 +1609,19 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0233": {
-    "lat": 42.345263577025,
-    "lng": -71.105981333095,
-    "match": "30 MEDFIELD ST, BOSTON, MA, 02215",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
-  },
-  "A0235": {
-    "lat": 34.099644694718,
-    "lng": -118.337259232832,
-    "match": "6736 SELMA AVE, LOS ANGELES, CA, 90028",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
-  },
   "A0232": {
     "lat": 42.367926768436,
     "lng": -71.080956110328,
     "match": "189 3RD ST, CAMBRIDGE, MA, 02141",
     "legal_city": "Cambridge",
     "county": "Middlesex County"
+  },
+  "A0233": {
+    "lat": 42.345263577025,
+    "lng": -71.105981333095,
+    "match": "30 MEDFIELD ST, BOSTON, MA, 02215",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
   },
   "A0234": {
     "lat": 37.863354369764,
@@ -1644,10 +1630,17 @@
     "legal_city": "Berkeley",
     "county": "Alameda County"
   },
-  "A0237": {
-    "lat": 37.744772339215,
-    "lng": -122.423160521356,
-    "match": "36 VALLEY ST, SAN FRANCISCO, CA, 94110",
+  "A0235": {
+    "lat": 34.099644694718,
+    "lng": -118.337259232832,
+    "match": "6736 SELMA AVE, LOS ANGELES, CA, 90028",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
+  },
+  "A0229": {
+    "lat": 37.731288264664,
+    "lng": -122.392090570269,
+    "match": "census-clean: 5164 3RD ST, SAN FRANCISCO, CA, 94124",
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
@@ -1658,12 +1651,12 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0240": {
-    "lat": 32.752138713798,
-    "lng": -117.111779263182,
-    "match": "4135 38TH ST, SAN DIEGO, CA, 92105",
-    "legal_city": "San Diego",
-    "county": "San Diego County"
+  "A0237": {
+    "lat": 37.744772339215,
+    "lng": -122.423160521356,
+    "match": "36 VALLEY ST, SAN FRANCISCO, CA, 94110",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
   },
   "A0238": {
     "lat": 34.229903219394,
@@ -1672,12 +1665,19 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0242": {
-    "lat": 42.23648761117,
-    "lng": -71.126219924108,
-    "match": "87 SIERRA RD, HYDE PARK, MA, 02136",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
+  "A0239": {
+    "lat": 37.870240703252,
+    "lng": -122.282479272768,
+    "match": "1476 UNIVERSITY AVE, BERKELEY, CA, 94702",
+    "legal_city": "Berkeley",
+    "county": "Alameda County"
+  },
+  "A0240": {
+    "lat": 32.752138713798,
+    "lng": -117.111779263182,
+    "match": "4135 38TH ST, SAN DIEGO, CA, 92105",
+    "legal_city": "San Diego",
+    "county": "San Diego County"
   },
   "A0241": {
     "lat": 40.747790932129,
@@ -1686,18 +1686,18 @@
     "legal_city": "Hoboken",
     "county": "Hudson County"
   },
-  "A0239": {
-    "lat": 37.870240703252,
-    "lng": -122.282479272768,
-    "match": "1476 UNIVERSITY AVE, BERKELEY, CA, 94702",
-    "legal_city": "Berkeley",
-    "county": "Alameda County"
-  },
   "A0243": {
     "lat": 40.709014299361,
     "lng": -74.076659540243,
     "match": "664 OCEAN AVE, JERSEY CITY, NJ, 07305",
     "legal_city": "Jersey City",
+    "county": "Hudson County"
+  },
+  "A0244": {
+    "lat": 40.75007710711,
+    "lng": -74.025921583962,
+    "match": "1126 HUDSON ST, HOBOKEN, NJ, 07030",
+    "legal_city": "Hoboken",
     "county": "Hudson County"
   },
   "A0245": {
@@ -1707,17 +1707,17 @@
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
-  "A0247": {
-    "lat": 32.748875084016,
-    "lng": -117.248171449465,
-    "match": "4957 CAPE MAY AVE, SAN DIEGO, CA, 92107",
-    "legal_city": "San Diego",
-    "county": "San Diego County"
-  },
   "A0246": {
     "lat": 32.756800937083,
     "lng": -117.104047557974,
     "match": "4386 COPELAND AVE, SAN DIEGO, CA, 92105",
+    "legal_city": "San Diego",
+    "county": "San Diego County"
+  },
+  "A0247": {
+    "lat": 32.748875084016,
+    "lng": -117.248171449465,
+    "match": "4957 CAPE MAY AVE, SAN DIEGO, CA, 92107",
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
@@ -1728,19 +1728,19 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0244": {
-    "lat": 40.75007710711,
-    "lng": -74.025921583962,
-    "match": "1126 HUDSON ST, HOBOKEN, NJ, 07030",
-    "legal_city": "Hoboken",
+  "A0250": {
+    "lat": 40.729192320523,
+    "lng": -74.060120792112,
+    "match": "211 BALDWIN AVE, JERSEY CITY, NJ, 07306",
+    "legal_city": "Jersey City",
     "county": "Hudson County"
   },
-  "A0249": {
-    "lat": 40.719775769166,
-    "lng": -74.215280471054,
-    "match": "500 HAWTHORNE AVE, NEWARK, NJ, 07112",
-    "legal_city": "Newark",
-    "county": "Essex County"
+  "A0242": {
+    "lat": null,
+    "lng": null,
+    "match": null,
+    "legal_city": null,
+    "county": null
   },
   "A0251": {
     "lat": 32.762436259509,
@@ -1763,12 +1763,12 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0250": {
-    "lat": 40.729192320523,
-    "lng": -74.060120792112,
-    "match": "211 BALDWIN AVE, JERSEY CITY, NJ, 07306",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
+  "A0249": {
+    "lat": 40.719599722122,
+    "lng": -74.214898297483,
+    "match": "census-clean: 498 HAWTHORNE AVE, NEWARK, NJ, 07112",
+    "legal_city": "Newark",
+    "county": "Essex County"
   },
   "A0254": {
     "lat": 40.746063788663,
@@ -1784,20 +1784,6 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0257": {
-    "lat": 37.732351895037,
-    "lng": -122.384674255589,
-    "match": "5 COMMER CT, SAN FRANCISCO, CA, 94124",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
-  "A0259": {
-    "lat": 37.805617181224,
-    "lng": -122.421551166436,
-    "match": "872 N POINT ST, SAN FRANCISCO, CA, 94109",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
   "A0256": {
     "lat": 40.742101329412,
     "lng": -74.0400671093,
@@ -1805,12 +1791,26 @@
     "legal_city": "Hoboken",
     "county": "Hudson County"
   },
+  "A0257": {
+    "lat": 37.732351895037,
+    "lng": -122.384674255589,
+    "match": "5 COMMER CT, SAN FRANCISCO, CA, 94124",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
   "A0258": {
     "lat": 42.314021035494,
     "lng": -71.067499784037,
     "match": "471 COLUMBIA RD, DORCHESTER, MA, 02125",
     "legal_city": "Boston",
     "county": "Suffolk County"
+  },
+  "A0259": {
+    "lat": 37.805617181224,
+    "lng": -122.421551166436,
+    "match": "872 N POINT ST, SAN FRANCISCO, CA, 94109",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
   },
   "A0260": {
     "lat": 37.87682628993,
@@ -1833,19 +1833,12 @@
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
-  "A0264": {
-    "lat": 40.706702590971,
-    "lng": -74.203997082351,
-    "match": "589 ELIZABETH AVE, NEWARK, NJ, 07112",
-    "legal_city": "Newark",
-    "county": "Essex County"
-  },
-  "A0266": {
-    "lat": 40.716964287987,
-    "lng": -74.04716146876,
-    "match": "52 BRIGHT ST, JERSEY CITY, NJ, 07302",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
+  "A0263": {
+    "lat": 37.877104430999,
+    "lng": -122.273753258644,
+    "match": "1636 MARTIN LUTHER KING JR WAY, BERKELEY, CA, 94709",
+    "legal_city": "Berkeley",
+    "county": "Alameda County"
   },
   "A0265": {
     "lat": 40.725395005355,
@@ -1854,12 +1847,12 @@
     "legal_city": "Jersey City",
     "county": "Hudson County"
   },
-  "A0263": {
-    "lat": 37.877104430999,
-    "lng": -122.273753258644,
-    "match": "1636 MARTIN LUTHER KING JR WAY, BERKELEY, CA, 94709",
-    "legal_city": "Berkeley",
-    "county": "Alameda County"
+  "A0266": {
+    "lat": 40.716964287987,
+    "lng": -74.04716146876,
+    "match": "52 BRIGHT ST, JERSEY CITY, NJ, 07302",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
   },
   "A0267": {
     "lat": 34.095065338349,
@@ -1875,19 +1868,12 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0271": {
-    "lat": 37.764244000512,
-    "lng": -122.502100180635,
-    "match": "4115 LINCOLN WAY, SAN FRANCISCO, CA, 94122",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
-  "A0272": {
-    "lat": 42.380002159495,
-    "lng": -71.11923068717,
-    "match": "5 EVERETT ST, CAMBRIDGE, MA, 02138",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
+  "A0264": {
+    "lat": 40.706796982365,
+    "lng": -74.203805296449,
+    "match": "census-clean: 583 ELIZABETH AVE, NEWARK, NJ, 07112",
+    "legal_city": "Newark",
+    "county": "Essex County"
   },
   "A0270": {
     "lat": 40.733442605846,
@@ -1903,6 +1889,20 @@
     "legal_city": "Hoboken",
     "county": "Hudson County"
   },
+  "A0271": {
+    "lat": 37.764244000512,
+    "lng": -122.502100180635,
+    "match": "4115 LINCOLN WAY, SAN FRANCISCO, CA, 94122",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
+  "A0272": {
+    "lat": 42.380002159495,
+    "lng": -71.11923068717,
+    "match": "5 EVERETT ST, CAMBRIDGE, MA, 02138",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
+  },
   "A0273": {
     "lat": 32.749136257741,
     "lng": -117.147965593551,
@@ -1910,17 +1910,24 @@
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
-  "A0279": {
-    "lat": 40.723144945194,
-    "lng": -74.075287274906,
-    "match": "census-clean: 90 KENSINGTON AVE, JERSEY CITY, NJ, 07304",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
-  },
   "A0274": {
     "lat": 32.789776238445,
     "lng": -117.168439360297,
     "match": "7072 EASTMAN ST, SAN DIEGO, CA, 92111",
+    "legal_city": "San Diego",
+    "county": "San Diego County"
+  },
+  "A0275": {
+    "lat": 32.795607414483,
+    "lng": -117.231646719173,
+    "match": "4091 MORRELL ST, SAN DIEGO, CA, 92109",
+    "legal_city": "San Diego",
+    "county": "San Diego County"
+  },
+  "A0276": {
+    "lat": 32.756358147896,
+    "lng": -117.127636770855,
+    "match": "4361 ILLINOIS ST, SAN DIEGO, CA, 92104",
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
@@ -1931,26 +1938,12 @@
     "legal_city": "Berkeley",
     "county": "Alameda County"
   },
-  "A0276": {
-    "lat": 32.756358147896,
-    "lng": -117.127636770855,
-    "match": "4361 ILLINOIS ST, SAN DIEGO, CA, 92104",
-    "legal_city": "San Diego",
-    "county": "San Diego County"
-  },
   "A0278": {
     "lat": 37.791146664293,
     "lng": -122.424100965563,
     "match": "1800 FRANKLIN ST, SAN FRANCISCO, CA, 94109",
     "legal_city": "San Francisco",
     "county": "San Francisco County"
-  },
-  "A0275": {
-    "lat": 32.795607414483,
-    "lng": -117.231646719173,
-    "match": "4091 MORRELL ST, SAN DIEGO, CA, 92109",
-    "legal_city": "San Diego",
-    "county": "San Diego County"
   },
   "A0280": {
     "lat": 37.76547270684,
@@ -1966,12 +1959,12 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0285": {
-    "lat": 34.165894818542,
-    "lng": -118.366517318934,
-    "match": "5255 HARMONY AVE, NORTH HOLLYWOOD, CA, 91601",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
+  "A0282": {
+    "lat": 37.865429346313,
+    "lng": -122.292299289201,
+    "match": "2240 10TH ST, BERKELEY, CA, 94710",
+    "legal_city": "Berkeley",
+    "county": "Alameda County"
   },
   "A0283": {
     "lat": 37.755542885749,
@@ -1984,20 +1977,6 @@
     "lat": 42.371521199602,
     "lng": -71.095359909702,
     "match": "345 COLUMBIA ST, CAMBRIDGE, MA, 02141",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
-  },
-  "A0282": {
-    "lat": 37.865429346313,
-    "lng": -122.292299289201,
-    "match": "2240 10TH ST, BERKELEY, CA, 94710",
-    "legal_city": "Berkeley",
-    "county": "Alameda County"
-  },
-  "A0291": {
-    "lat": 42.395099011822,
-    "lng": -71.146981411789,
-    "match": "census-clean: 165 CAMBRIDGEPARK DR, CAMBRIDGE, MA, 02140",
     "legal_city": "Cambridge",
     "county": "Middlesex County"
   },
@@ -2029,6 +2008,20 @@
     "legal_city": "Berkeley",
     "county": "Alameda County"
   },
+  "A0279": {
+    "lat": 40.723144945194,
+    "lng": -74.075287274906,
+    "match": "census-clean: 90 KENSINGTON AVE, JERSEY CITY, NJ, 07304",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
+  },
+  "A0285": {
+    "lat": 34.165894818542,
+    "lng": -118.366517318934,
+    "match": "5255 HARMONY AVE, NORTH HOLLYWOOD, CA, 91601",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
+  },
   "A0290": {
     "lat": 42.385243189976,
     "lng": -71.116197964756,
@@ -2050,17 +2043,24 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0295": {
-    "lat": null,
-    "lng": null,
-    "match": "inferred from postal city \"Dorchester\" (no street-level match)",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
-  },
   "A0294": {
     "lat": 42.389122123461,
     "lng": -71.126525304753,
     "match": "178 RICHDALE AVE, CAMBRIDGE, MA, 02140",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
+  },
+  "A0298": {
+    "lat": 42.365668497367,
+    "lng": -71.099392946846,
+    "match": "361 WASHINGTON ST, CAMBRIDGE, MA, 02139",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
+  },
+  "A0291": {
+    "lat": 42.395099011822,
+    "lng": -71.146981411789,
+    "match": "census-clean: 165 CAMBRIDGEPARK DR, CAMBRIDGE, MA, 02140",
     "legal_city": "Cambridge",
     "county": "Middlesex County"
   },
@@ -2071,26 +2071,26 @@
     "legal_city": "Hoboken",
     "county": "Hudson County"
   },
+  "A0295": {
+    "lat": null,
+    "lng": null,
+    "match": "inferred from postal city \"Dorchester\" (no street-level match)",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
+  },
   "A0297": {
-    "lat": 40.758931675998,
-    "lng": -74.171685521994,
-    "match": "213 SUMMER AVE, NEWARK, NJ, 07104",
+    "lat": 40.758859454382,
+    "lng": -74.171723193198,
+    "match": "census-clean: 211 SUMMER AVE, NEWARK, NJ, 07104",
     "legal_city": "Newark",
     "county": "Essex County"
   },
   "A0296": {
-    "lat": 40.730142326692,
-    "lng": -74.16622635068,
-    "match": "85 MCWHORTER ST, NEWARK, NJ, 07105",
+    "lat": 40.730201050389,
+    "lng": -74.16616452533,
+    "match": "census-clean: 83 MCWHORTER ST, NEWARK, NJ, 07105",
     "legal_city": "Newark",
     "county": "Essex County"
-  },
-  "A0298": {
-    "lat": 42.365668497367,
-    "lng": -71.099392946846,
-    "match": "361 WASHINGTON ST, CAMBRIDGE, MA, 02139",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
   },
   "A0300": {
     "lat": 42.371850975157,
@@ -2113,20 +2113,6 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0305": {
-    "lat": 37.776456954836,
-    "lng": -122.505895195699,
-    "match": "638 45TH AVE, SAN FRANCISCO, CA, 94121",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
-  "A0302": {
-    "lat": 42.367516001139,
-    "lng": -71.106823748323,
-    "match": "6 CLINTON ST, CAMBRIDGE, MA, 02139",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
-  },
   "A0304": {
     "lat": 32.759898286948,
     "lng": -117.136296909949,
@@ -2141,19 +2127,26 @@
     "legal_city": "Cambridge",
     "county": "Middlesex County"
   },
+  "A0302": {
+    "lat": 42.367476629021,
+    "lng": -71.106864979314,
+    "match": "census-clean: 4 CLINTON ST, CAMBRIDGE, MA, 02139",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
+  },
+  "A0305": {
+    "lat": 37.776456954836,
+    "lng": -122.505895195699,
+    "match": "638 45TH AVE, SAN FRANCISCO, CA, 94121",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
   "A0308": {
     "lat": 40.748749351079,
     "lng": -74.026323440877,
     "match": "1032 HUDSON ST, HOBOKEN, NJ, 07030",
     "legal_city": "Hoboken",
     "county": "Hudson County"
-  },
-  "A0307": {
-    "lat": 40.721814664163,
-    "lng": -74.16080945112,
-    "match": "296 VAN BUREN ST, NEWARK, NJ, 07105",
-    "legal_city": "Newark",
-    "county": "Essex County"
   },
   "A0309": {
     "lat": 34.101835421105,
@@ -2162,12 +2155,12 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0310": {
-    "lat": 42.354497619427,
-    "lng": -71.126531334249,
-    "match": "55 ASHFORD ST, ALLSTON, MA, 02134",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
+  "A0307": {
+    "lat": 40.721886586056,
+    "lng": -74.160772689624,
+    "match": "census-clean: 294 VAN BUREN ST, NEWARK, NJ, 07105",
+    "legal_city": "Newark",
+    "county": "Essex County"
   },
   "A0311": {
     "lat": 40.731405439225,
@@ -2183,34 +2176,6 @@
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
-  "A0317": {
-    "lat": 37.866269484742,
-    "lng": -122.264363578265,
-    "match": "2233 CHANNING WAY, BERKELEY, CA, 94704",
-    "legal_city": "Berkeley",
-    "county": "Alameda County"
-  },
-  "A0316": {
-    "lat": 32.749889290623,
-    "lng": -117.143805824838,
-    "match": "3978 FLORIDA ST, SAN DIEGO, CA, 92104",
-    "legal_city": "San Diego",
-    "county": "San Diego County"
-  },
-  "A0313": {
-    "lat": 40.719489638436,
-    "lng": -74.209161967359,
-    "match": "319 W RUNYON ST, NEWARK, NJ, 07108",
-    "legal_city": "Newark",
-    "county": "Essex County"
-  },
-  "A0318": {
-    "lat": 37.875520264007,
-    "lng": -122.270236431385,
-    "match": "2041 FRANCISCO ST, BERKELEY, CA, 94709",
-    "legal_city": "Berkeley",
-    "county": "Alameda County"
-  },
   "A0314": {
     "lat": 34.096954047102,
     "lng": -118.334062631211,
@@ -2225,26 +2190,40 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0324": {
-    "lat": 37.792904441436,
-    "lng": -122.424604033397,
-    "match": "2003 FRANKLIN ST, SAN FRANCISCO, CA, 94109",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
-  "A0322": {
-    "lat": 32.555470956839,
-    "lng": -117.045151967648,
-    "match": "227 CYPRESS DR, SAN YSIDRO, CA, 92173",
+  "A0316": {
+    "lat": 32.749889290623,
+    "lng": -117.143805824838,
+    "match": "3978 FLORIDA ST, SAN DIEGO, CA, 92104",
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
-  "A0320": {
-    "lat": 40.742822649905,
-    "lng": -74.038062021201,
-    "match": "408 MADISON ST, HOBOKEN, NJ, 07030",
-    "legal_city": "Hoboken",
-    "county": "Hudson County"
+  "A0310": {
+    "lat": 42.354511450817,
+    "lng": -71.12661393612,
+    "match": "census-clean: 53 ASHFORD ST, ALLSTON, MA, 02134",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
+  },
+  "A0317": {
+    "lat": 37.866269484742,
+    "lng": -122.264363578265,
+    "match": "2233 CHANNING WAY, BERKELEY, CA, 94704",
+    "legal_city": "Berkeley",
+    "county": "Alameda County"
+  },
+  "A0313": {
+    "lat": 40.719479811457,
+    "lng": -74.209122198994,
+    "match": "census-clean: 317 W RUNYON ST, NEWARK, NJ, 07108",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
+  "A0318": {
+    "lat": 37.875520264007,
+    "lng": -122.270236431385,
+    "match": "2041 FRANCISCO ST, BERKELEY, CA, 94709",
+    "legal_city": "Berkeley",
+    "county": "Alameda County"
   },
   "A0319": {
     "lat": 37.866407956138,
@@ -2253,12 +2232,12 @@
     "legal_city": "Berkeley",
     "county": "Alameda County"
   },
-  "A0323": {
-    "lat": 34.001632563866,
-    "lng": -118.247839866285,
-    "match": "4627 COMPTON AVE, LOS ANGELES, CA, 90011",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
+  "A0320": {
+    "lat": 40.742822649905,
+    "lng": -74.038062021201,
+    "match": "408 MADISON ST, HOBOKEN, NJ, 07030",
+    "legal_city": "Hoboken",
+    "county": "Hudson County"
   },
   "A0321": {
     "lat": 40.729025280221,
@@ -2267,19 +2246,26 @@
     "legal_city": "Jersey City",
     "county": "Hudson County"
   },
-  "A0328": {
-    "lat": 37.753910517548,
-    "lng": -122.464604457855,
-    "match": "census-clean: 1845 8TH AVE, SAN FRANCISCO, CA, 94122",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
+  "A0322": {
+    "lat": 32.555470956839,
+    "lng": -117.045151967648,
+    "match": "227 CYPRESS DR, SAN YSIDRO, CA, 92173",
+    "legal_city": "San Diego",
+    "county": "San Diego County"
   },
-  "A0327": {
-    "lat": 34.099942749927,
-    "lng": -118.350240944927,
-    "match": "1605 N MARTEL AVE, LOS ANGELES, CA, 90046",
+  "A0323": {
+    "lat": 34.001632563866,
+    "lng": -118.247839866285,
+    "match": "4627 COMPTON AVE, LOS ANGELES, CA, 90011",
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
+  },
+  "A0324": {
+    "lat": 37.792904441436,
+    "lng": -122.424604033397,
+    "match": "2003 FRANKLIN ST, SAN FRANCISCO, CA, 94109",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
   },
   "A0325": {
     "lat": 40.72613987341,
@@ -2288,10 +2274,24 @@
     "legal_city": "Jersey City",
     "county": "Hudson County"
   },
+  "A0327": {
+    "lat": 34.099942749927,
+    "lng": -118.350240944927,
+    "match": "1605 N MARTEL AVE, LOS ANGELES, CA, 90046",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
+  },
   "A0326": {
     "lat": 40.731191686503,
     "lng": -74.16011411828,
     "match": "46 JEFFERSON ST, NEWARK, NJ, 07105",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
+  "A0329": {
+    "lat": 40.730936900745,
+    "lng": -74.159407511479,
+    "match": "51 MADISON ST, NEWARK, NJ, 07105",
     "legal_city": "Newark",
     "county": "Essex County"
   },
@@ -2301,34 +2301,6 @@
     "match": "5229 WILLOWCREST AVE, NORTH HOLLYWOOD, CA, 91601",
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
-  },
-  "A0329": {
-    "lat": 40.730936900745,
-    "lng": -74.159407511479,
-    "match": "51 MADISON ST, NEWARK, NJ, 07105",
-    "legal_city": "Newark",
-    "county": "Essex County"
-  },
-  "A0331": {
-    "lat": 40.722514194915,
-    "lng": -74.193318622525,
-    "match": "344 IRVINE TURNER BLVD, NEWARK, NJ, 07108",
-    "legal_city": "Newark",
-    "county": "Essex County"
-  },
-  "A0335": {
-    "lat": 37.737182683157,
-    "lng": -122.430367276697,
-    "match": "125 BEMIS ST, SAN FRANCISCO, CA, 94131",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
-  "A0336": {
-    "lat": 42.372482137906,
-    "lng": -71.075526736217,
-    "match": "151 N FIRST ST, CAMBRIDGE, MA, 02141",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
   },
   "A0332": {
     "lat": 42.308190903587,
@@ -2344,12 +2316,40 @@
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
+  "A0328": {
+    "lat": 37.753910517548,
+    "lng": -122.464604457855,
+    "match": "census-clean: 1845 8TH AVE, SAN FRANCISCO, CA, 94122",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
   "A0334": {
     "lat": 37.875475369217,
     "lng": -122.270586610925,
     "match": "2025 FRANCISCO ST, BERKELEY, CA, 94709",
     "legal_city": "Berkeley",
     "county": "Alameda County"
+  },
+  "A0335": {
+    "lat": 37.737182683157,
+    "lng": -122.430367276697,
+    "match": "125 BEMIS ST, SAN FRANCISCO, CA, 94131",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
+  "A0331": {
+    "lat": 40.722575256637,
+    "lng": -74.193293266905,
+    "match": "census-clean: 342 IRVINE TURNER BLVD, NEWARK, NJ, 07108",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
+  "A0336": {
+    "lat": 42.372482137906,
+    "lng": -71.075526736217,
+    "match": "151 N FIRST ST, CAMBRIDGE, MA, 02141",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
   },
   "A0337": {
     "lat": 40.730254220709,
@@ -2358,19 +2358,12 @@
     "legal_city": "Newark",
     "county": "Essex County"
   },
-  "A0338": {
-    "lat": 40.738187740265,
-    "lng": -74.20839765431,
-    "match": "census-clean: 521 S 17TH ST, NEWARK, NJ, 07103",
-    "legal_city": "Newark",
-    "county": "Essex County"
-  },
-  "A0343": {
-    "lat": 40.762113405795,
-    "lng": -74.184334826891,
-    "match": "census-clean: 408 N 5TH ST, NEWARK, NJ, 07107",
-    "legal_city": "Newark",
-    "county": "Essex County"
+  "A0339": {
+    "lat": 42.371616346646,
+    "lng": -71.090029432444,
+    "match": "124 BERKSHIRE ST, CAMBRIDGE, MA, 02141",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
   },
   "A0340": {
     "lat": 34.22154746833,
@@ -2386,13 +2379,6 @@
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
-  "A0339": {
-    "lat": 42.371616346646,
-    "lng": -71.090029432444,
-    "match": "124 BERKSHIRE ST, CAMBRIDGE, MA, 02141",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
-  },
   "A0342": {
     "lat": 42.386748328179,
     "lng": -71.116972926785,
@@ -2400,19 +2386,12 @@
     "legal_city": "Cambridge",
     "county": "Middlesex County"
   },
-  "A0346": {
-    "lat": null,
-    "lng": null,
-    "match": null,
-    "legal_city": null,
-    "county": null
-  },
-  "A0344": {
-    "lat": 40.692246111645,
-    "lng": -74.091122112815,
-    "match": "242 GARFIELD AVE, JERSEY CITY, NJ, 07305",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
+  "A0338": {
+    "lat": 40.738187740265,
+    "lng": -74.20839765431,
+    "match": "census-clean: 521 S 17TH ST, NEWARK, NJ, 07103",
+    "legal_city": "Newark",
+    "county": "Essex County"
   },
   "A0345": {
     "lat": 34.003875826453,
@@ -2421,12 +2400,12 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0352": {
-    "lat": 40.753102426289,
-    "lng": -74.177853113095,
-    "match": "census-clean: 40 MT PROSPECT AVE, NEWARK, NJ, 07104",
-    "legal_city": "Newark",
-    "county": "Essex County"
+  "A0347": {
+    "lat": 32.727653319366,
+    "lng": -117.163065698172,
+    "match": "2142 2ND AVE, SAN DIEGO, CA, 92101",
+    "legal_city": "San Diego",
+    "county": "San Diego County"
   },
   "A0348": {
     "lat": 40.739876679452,
@@ -2435,19 +2414,19 @@
     "legal_city": "Hoboken",
     "county": "Hudson County"
   },
-  "A0347": {
-    "lat": 32.727653319366,
-    "lng": -117.163065698172,
-    "match": "2142 2ND AVE, SAN DIEGO, CA, 92101",
-    "legal_city": "San Diego",
-    "county": "San Diego County"
-  },
   "A0349": {
     "lat": 37.866568691092,
     "lng": -122.261163802946,
     "match": "2400 DANA ST, BERKELEY, CA, 94704",
     "legal_city": "Berkeley",
     "county": "Alameda County"
+  },
+  "A0344": {
+    "lat": null,
+    "lng": null,
+    "match": null,
+    "legal_city": null,
+    "county": null
   },
   "A0350": {
     "lat": 40.735168801416,
@@ -2456,6 +2435,20 @@
     "legal_city": "Jersey City",
     "county": "Hudson County"
   },
+  "A0343": {
+    "lat": 40.762113405795,
+    "lng": -74.184334826891,
+    "match": "census-clean: 408 N 5TH ST, NEWARK, NJ, 07107",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
+  "A0346": {
+    "lat": null,
+    "lng": null,
+    "match": null,
+    "legal_city": null,
+    "county": null
+  },
   "A0351": {
     "lat": 37.786610489702,
     "lng": -122.41643664948,
@@ -2463,24 +2456,10 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0357": {
-    "lat": 37.778180361844,
-    "lng": -122.409540179118,
-    "match": "census-clean: 173 7TH ST, SAN FRANCISCO, CA, 94103",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
   "A0353": {
     "lat": 34.012089330967,
     "lng": -118.257806027731,
     "match": "1044 E JEFFERSON BLVD, LOS ANGELES, CA, 90011",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
-  },
-  "A0355": {
-    "lat": 34.264856666784,
-    "lng": -118.506705841287,
-    "match": "10701 AMESTOY AVE, GRANADA HILLS, CA, 91344",
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
@@ -2498,6 +2477,20 @@
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
+  "A0355": {
+    "lat": 34.264856666784,
+    "lng": -118.506705841287,
+    "match": "10701 AMESTOY AVE, GRANADA HILLS, CA, 91344",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
+  },
+  "A0352": {
+    "lat": 40.753102426289,
+    "lng": -74.177853113095,
+    "match": "census-clean: 40 MT PROSPECT AVE, NEWARK, NJ, 07104",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
   "A0358": {
     "lat": 40.773922773441,
     "lng": -74.179007529056,
@@ -2512,19 +2505,12 @@
     "legal_city": "Hoboken",
     "county": "Hudson County"
   },
-  "A0364": {
-    "lat": 37.786437508473,
-    "lng": -122.461516266857,
-    "match": "census-clean: 125 3RD AVE, SAN FRANCISCO, CA, 94118",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
-  "A0363": {
-    "lat": 37.864690284096,
-    "lng": -122.267324831145,
-    "match": "2451 SHATTUCK AVE, BERKELEY, CA, 94704",
-    "legal_city": "Berkeley",
-    "county": "Alameda County"
+  "A0361": {
+    "lat": 42.368426537915,
+    "lng": -71.092040596292,
+    "match": "15 BERKSHIRE ST, CAMBRIDGE, MA, 02141",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
   },
   "A0360": {
     "lat": 40.741104245751,
@@ -2533,19 +2519,19 @@
     "legal_city": "Jersey City",
     "county": "Hudson County"
   },
-  "A0361": {
-    "lat": 42.368426537915,
-    "lng": -71.092040596292,
-    "match": "15 BERKSHIRE ST, CAMBRIDGE, MA, 02141",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
-  },
   "A0362": {
     "lat": 42.334291810524,
     "lng": -71.110791246894,
     "match": "368 RIVERWAY, BOSTON, MA, 02115",
     "legal_city": "Boston",
     "county": "Suffolk County"
+  },
+  "A0363": {
+    "lat": 37.864690284096,
+    "lng": -122.267324831145,
+    "match": "2451 SHATTUCK AVE, BERKELEY, CA, 94704",
+    "legal_city": "Berkeley",
+    "county": "Alameda County"
   },
   "A0365": {
     "lat": 32.749235987165,
@@ -2575,12 +2561,26 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
+  "A0357": {
+    "lat": 37.778180361844,
+    "lng": -122.409540179118,
+    "match": "census-clean: 173 7TH ST, SAN FRANCISCO, CA, 94103",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
   "A0369": {
     "lat": 37.848609498456,
     "lng": -122.276013172823,
     "match": "3260 CALIFORNIA ST, BERKELEY, CA, 94703",
     "legal_city": "Berkeley",
     "county": "Alameda County"
+  },
+  "A0364": {
+    "lat": 37.786437508473,
+    "lng": -122.461516266857,
+    "match": "census-clean: 125 3RD AVE, SAN FRANCISCO, CA, 94118",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
   },
   "A0370": {
     "lat": 34.034721924415,
@@ -2589,33 +2589,12 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0371": {
-    "lat": 40.730337311596,
-    "lng": -74.166930355672,
-    "match": "80 BRUEN ST, NEWARK, NJ, 07105",
-    "legal_city": "Newark",
-    "county": "Essex County"
-  },
   "A0372": {
     "lat": 40.726486238182,
     "lng": -74.047955557321,
     "match": "314 7TH ST, JERSEY CITY, NJ, 07302",
     "legal_city": "Jersey City",
     "county": "Hudson County"
-  },
-  "A0376": {
-    "lat": null,
-    "lng": null,
-    "match": "inferred from postal city \"Roxbury\" (no street-level match)",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
-  },
-  "A0375": {
-    "lat": 37.775695071124,
-    "lng": -122.447766948778,
-    "match": "1880 FULTON ST, SAN FRANCISCO, CA, 94117",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
   },
   "A0373": {
     "lat": 37.883557224033,
@@ -2630,6 +2609,20 @@
     "match": "686 S ARDMORE AVE, LOS ANGELES, CA, 90005",
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
+  },
+  "A0375": {
+    "lat": 37.775695071124,
+    "lng": -122.447766948778,
+    "match": "1880 FULTON ST, SAN FRANCISCO, CA, 94117",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
+  "A0371": {
+    "lat": 40.730460077472,
+    "lng": -74.166804174279,
+    "match": "census-clean: 76 BRUEN ST, NEWARK, NJ, 07105",
+    "legal_city": "Newark",
+    "county": "Essex County"
   },
   "A0377": {
     "lat": 40.738998730944,
@@ -2652,27 +2645,6 @@
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
-  "A0380": {
-    "lat": null,
-    "lng": null,
-    "match": "inferred from postal city \"Roxbury\" (no street-level match)",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
-  },
-  "A0384": {
-    "lat": null,
-    "lng": null,
-    "match": "inferred from postal city \"San Francisco\" (no street-level match)",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
-  "A0385": {
-    "lat": 37.79947735291,
-    "lng": -122.416408067433,
-    "match": "1059 UNION ST, SAN FRANCISCO, CA, 94133",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
   "A0382": {
     "lat": 37.742927740317,
     "lng": -122.425132126354,
@@ -2680,12 +2652,12 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0381": {
-    "lat": 40.732015014036,
-    "lng": -74.155856508272,
-    "match": "523 MARKET ST, NEWARK, NJ, 07105",
-    "legal_city": "Newark",
-    "county": "Essex County"
+  "A0376": {
+    "lat": null,
+    "lng": null,
+    "match": "inferred from postal city \"Roxbury\" (no street-level match)",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
   },
   "A0383": {
     "lat": 37.872036512971,
@@ -2693,6 +2665,27 @@
     "match": "1908 CALIFORNIA ST, BERKELEY, CA, 94703",
     "legal_city": "Berkeley",
     "county": "Alameda County"
+  },
+  "A0381": {
+    "lat": 40.732033823888,
+    "lng": -74.15594387805,
+    "match": "census-clean: 521 MARKET ST, NEWARK, NJ, 07105",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
+  "A0380": {
+    "lat": null,
+    "lng": null,
+    "match": "inferred from postal city \"Roxbury\" (no street-level match)",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
+  },
+  "A0385": {
+    "lat": 37.79947735291,
+    "lng": -122.416408067433,
+    "match": "1059 UNION ST, SAN FRANCISCO, CA, 94133",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
   },
   "A0386": {
     "lat": 32.744723856404,
@@ -2707,13 +2700,6 @@
     "match": "10303 CMT ALVAREZ, SAN DIEGO, CA, 92126",
     "legal_city": "San Diego",
     "county": "San Diego County"
-  },
-  "A0388": {
-    "lat": 40.708921674003,
-    "lng": -74.075725799324,
-    "match": "155 CLERK ST, JERSEY CITY, NJ, 07305",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
   },
   "A0389": {
     "lat": 40.747908908406,
@@ -2736,6 +2722,13 @@
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
+  "A0384": {
+    "lat": null,
+    "lng": null,
+    "match": "inferred from postal city \"San Francisco\" (no street-level match)",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
   "A0392": {
     "lat": 32.759875365223,
     "lng": -117.110733157421,
@@ -2743,26 +2736,12 @@
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
-  "A0393": {
-    "lat": 40.72674257266,
-    "lng": -74.064895908212,
-    "match": "91 JORDAN AVE, JERSEY CITY, NJ, 07306",
+  "A0388": {
+    "lat": 40.708973882371,
+    "lng": -74.075697770314,
+    "match": "census-clean: 157 CLERK ST, JERSEY CITY, NJ, 07305",
     "legal_city": "Jersey City",
     "county": "Hudson County"
-  },
-  "A0395": {
-    "lat": 37.85541480374,
-    "lng": -122.275797862561,
-    "match": "1632 RUSSELL ST, BERKELEY, CA, 94703",
-    "legal_city": "Berkeley",
-    "county": "Alameda County"
-  },
-  "A0396": {
-    "lat": 32.800141615463,
-    "lng": -117.195770657922,
-    "match": "3244 CLAIREMONT DR, SAN DIEGO, CA, 92117",
-    "legal_city": "San Diego",
-    "county": "San Diego County"
   },
   "A0394": {
     "lat": 40.74028302667,
@@ -2771,17 +2750,38 @@
     "legal_city": "Jersey City",
     "county": "Hudson County"
   },
-  "A0398": {
-    "lat": 37.798969157635,
-    "lng": -122.413748040152,
-    "match": "890 GREEN ST, SAN FRANCISCO, CA, 94133",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
+  "A0393": {
+    "lat": 40.72674257266,
+    "lng": -74.064895908212,
+    "match": "91 JORDAN AVE, JERSEY CITY, NJ, 07306",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
+  },
+  "A0396": {
+    "lat": 32.800141615463,
+    "lng": -117.195770657922,
+    "match": "3244 CLAIREMONT DR, SAN DIEGO, CA, 92117",
+    "legal_city": "San Diego",
+    "county": "San Diego County"
+  },
+  "A0395": {
+    "lat": 37.85541480374,
+    "lng": -122.275797862561,
+    "match": "1632 RUSSELL ST, BERKELEY, CA, 94703",
+    "legal_city": "Berkeley",
+    "county": "Alameda County"
   },
   "A0397": {
     "lat": 37.788065631555,
     "lng": -122.424817163952,
     "match": "1677 BUSH ST, SAN FRANCISCO, CA, 94109",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
+  "A0398": {
+    "lat": 37.798969157635,
+    "lng": -122.413748040152,
+    "match": "890 GREEN ST, SAN FRANCISCO, CA, 94133",
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
@@ -2792,20 +2792,6 @@
     "legal_city": "Hoboken",
     "county": "Hudson County"
   },
-  "A0400": {
-    "lat": 40.757731471944,
-    "lng": -74.17546726324,
-    "match": "census-clean: 174 MT PROSPECT AVE, NEWARK, NJ, 07104",
-    "legal_city": "Newark",
-    "county": "Essex County"
-  },
-  "A0401": {
-    "lat": 37.768275245554,
-    "lng": -122.419001453676,
-    "match": "257 14TH ST, SAN FRANCISCO, CA, 94103",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
   "A0402": {
     "lat": 37.804747750317,
     "lng": -122.421779262494,
@@ -2813,12 +2799,12 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0405": {
-    "lat": 34.254405539147,
-    "lng": -118.294269681844,
-    "match": "10214 FERNGLEN AVE, TUJUNGA, CA, 91042",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
+  "A0401": {
+    "lat": 37.768275245554,
+    "lng": -122.419001453676,
+    "match": "257 14TH ST, SAN FRANCISCO, CA, 94103",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
   },
   "A0403": {
     "lat": 42.359416672345,
@@ -2833,6 +2819,13 @@
     "match": "240 BOWERS ST, JERSEY CITY, NJ, 07307",
     "legal_city": "Jersey City",
     "county": "Hudson County"
+  },
+  "A0405": {
+    "lat": 34.254405539147,
+    "lng": -118.294269681844,
+    "match": "10214 FERNGLEN AVE, TUJUNGA, CA, 91042",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
   },
   "A0406": {
     "lat": 42.339468331482,
@@ -2855,13 +2848,6 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0410": {
-    "lat": 40.726387646101,
-    "lng": -74.064026798734,
-    "match": "319 SUMMIT AVE, JERSEY CITY, NJ, 07306",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
-  },
   "A0409": {
     "lat": 32.79763108496,
     "lng": -117.244179056101,
@@ -2876,31 +2862,10 @@
     "legal_city": "Berkeley",
     "county": "Alameda County"
   },
-  "A0412": {
-    "lat": 40.778250739849,
-    "lng": -74.167287967397,
-    "match": "231 GRAFTON AVE, NEWARK, NJ, 07104",
-    "legal_city": "Newark",
-    "county": "Essex County"
-  },
-  "A0414": {
-    "lat": 37.789718887946,
-    "lng": -122.426993113372,
-    "match": "1987 CALIFORNIA ST, SAN FRANCISCO, CA, 94109",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
-  "A0415": {
-    "lat": 40.719860194431,
-    "lng": -74.046863038788,
-    "match": "95 WAYNE ST, JERSEY CITY, NJ, 07302",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
-  },
-  "A0416": {
-    "lat": 40.734106488592,
-    "lng": -74.069855824873,
-    "match": "882 PAVONIA AVE, JERSEY CITY, NJ, 07306",
+  "A0410": {
+    "lat": 40.726387646101,
+    "lng": -74.064026798734,
+    "match": "319 SUMMIT AVE, JERSEY CITY, NJ, 07306",
     "legal_city": "Jersey City",
     "county": "Hudson County"
   },
@@ -2911,12 +2876,54 @@
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
-  "A0421": {
-    "lat": 34.264737200693,
-    "lng": -118.505814381942,
-    "match": "17106 CHATSWORTH ST, GRANADA HILLS, CA, 91344",
+  "A0400": {
+    "lat": 40.757731471944,
+    "lng": -74.17546726324,
+    "match": "census-clean: 174 MT PROSPECT AVE, NEWARK, NJ, 07104",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
+  "A0414": {
+    "lat": 37.789718887946,
+    "lng": -122.426993113372,
+    "match": "1987 CALIFORNIA ST, SAN FRANCISCO, CA, 94109",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
+  },
+  "A0412": {
+    "lat": 40.77821909329,
+    "lng": -74.167180273306,
+    "match": "census-clean: 229 GRAFTON AVE, NEWARK, NJ, 07104",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
+  "A0416": {
+    "lat": 40.734106488592,
+    "lng": -74.069855824873,
+    "match": "882 PAVONIA AVE, JERSEY CITY, NJ, 07306",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
+  },
+  "A0417": {
+    "lat": 34.160498077424,
+    "lng": -118.361590637042,
+    "match": "4957 CAHUENGA BLVD, NORTH HOLLYWOOD, CA, 91601",
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
+  },
+  "A0415": {
+    "lat": 40.719860194431,
+    "lng": -74.046863038788,
+    "match": "95 WAYNE ST, JERSEY CITY, NJ, 07302",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
+  },
+  "A0418": {
+    "lat": 40.731794725913,
+    "lng": -74.070139397713,
+    "match": "221 SIP AVE, JERSEY CITY, NJ, 07306",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
   },
   "A0419": {
     "lat": 37.879313015271,
@@ -2932,24 +2939,10 @@
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
-  "A0422": {
-    "lat": 42.372408944103,
-    "lng": -71.088992232886,
-    "match": "23 MARION ST, CAMBRIDGE, MA, 02141",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
-  },
-  "A0418": {
-    "lat": 40.731794725913,
-    "lng": -74.070139397713,
-    "match": "221 SIP AVE, JERSEY CITY, NJ, 07306",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
-  },
-  "A0417": {
-    "lat": 34.160498077424,
-    "lng": -118.361590637042,
-    "match": "4957 CAHUENGA BLVD, NORTH HOLLYWOOD, CA, 91601",
+  "A0421": {
+    "lat": 34.264737200693,
+    "lng": -118.505814381942,
+    "match": "17106 CHATSWORTH ST, GRANADA HILLS, CA, 91344",
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
@@ -2960,12 +2953,12 @@
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
-  "A0428": {
-    "lat": 40.762248311177,
-    "lng": -74.172434078437,
-    "match": "census-clean: 312 MT PROSPECT AVE, NEWARK, NJ, 07104",
-    "legal_city": "Newark",
-    "county": "Essex County"
+  "A0425": {
+    "lat": 37.787814500247,
+    "lng": -122.412614041685,
+    "match": "650 POST ST, SAN FRANCISCO, CA, 94109",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
   },
   "A0424": {
     "lat": 40.740157173654,
@@ -2974,6 +2967,13 @@
     "legal_city": "Hoboken",
     "county": "Hudson County"
   },
+  "A0426": {
+    "lat": 32.768532440161,
+    "lng": -117.190773729749,
+    "match": "1307 COLUSA ST, SAN DIEGO, CA, 92110",
+    "legal_city": "San Diego",
+    "county": "San Diego County"
+  },
   "A0427": {
     "lat": 34.094477803207,
     "lng": -118.356732566622,
@@ -2981,12 +2981,12 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0425": {
-    "lat": 37.787814500247,
-    "lng": -122.412614041685,
-    "match": "650 POST ST, SAN FRANCISCO, CA, 94109",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
+  "A0422": {
+    "lat": 42.372394786904,
+    "lng": -71.088995126672,
+    "match": "census-clean: 21 MARION ST, CAMBRIDGE, MA, 02141",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
   },
   "A0429": {
     "lat": 42.34315888883,
@@ -2995,13 +2995,6 @@
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
-  "A0426": {
-    "lat": 32.768532440161,
-    "lng": -117.190773729749,
-    "match": "1307 COLUSA ST, SAN DIEGO, CA, 92110",
-    "legal_city": "San Diego",
-    "county": "San Diego County"
-  },
   "A0430": {
     "lat": 37.870562012406,
     "lng": -122.272637519825,
@@ -3009,19 +3002,12 @@
     "legal_city": "Berkeley",
     "county": "Alameda County"
   },
-  "A0433": {
-    "lat": 34.028044141305,
-    "lng": -118.278944633921,
-    "match": "720 W 27TH ST, LOS ANGELES, CA, 90007",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
-  },
-  "A0434": {
-    "lat": 37.792202707791,
-    "lng": -122.417712027591,
-    "match": "1225 HYDE ST, SAN FRANCISCO, CA, 94109",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
+  "A0431": {
+    "lat": 32.706728960145,
+    "lng": -117.084936538347,
+    "match": "245 EUCLID AVE, SAN DIEGO, CA, 92114",
+    "legal_city": "San Diego",
+    "county": "San Diego County"
   },
   "A0432": {
     "lat": 34.231842925425,
@@ -3030,12 +3016,26 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0431": {
-    "lat": 32.706728960145,
-    "lng": -117.084936538347,
-    "match": "245 EUCLID AVE, SAN DIEGO, CA, 92114",
-    "legal_city": "San Diego",
-    "county": "San Diego County"
+  "A0433": {
+    "lat": 34.028044141305,
+    "lng": -118.278944633921,
+    "match": "720 W 27TH ST, LOS ANGELES, CA, 90007",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
+  },
+  "A0428": {
+    "lat": 40.762248311177,
+    "lng": -74.172434078437,
+    "match": "census-clean: 312 MT PROSPECT AVE, NEWARK, NJ, 07104",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
+  "A0434": {
+    "lat": 37.792202707791,
+    "lng": -122.417712027591,
+    "match": "1225 HYDE ST, SAN FRANCISCO, CA, 94109",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
   },
   "A0435": {
     "lat": 40.741775604922,
@@ -3050,6 +3050,13 @@
     "match": "832 WILLOW AVE, HOBOKEN, NJ, 07030",
     "legal_city": "Hoboken",
     "county": "Hudson County"
+  },
+  "A0437": {
+    "lat": 34.05457350989,
+    "lng": -118.293871486247,
+    "match": "2969 SAN MARINO ST, LOS ANGELES, CA, 90006",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
   },
   "A0439": {
     "lat": 37.78525700396,
@@ -3079,26 +3086,26 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0437": {
-    "lat": 34.05457350989,
-    "lng": -118.293871486247,
-    "match": "2969 SAN MARINO ST, LOS ANGELES, CA, 90006",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
-  },
-  "A0438": {
-    "lat": 40.744904276955,
-    "lng": -74.048682819823,
-    "match": "62 CAMBRIDGE AVE, JERSEY CITY, NJ, 07307",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
-  },
   "A0443": {
     "lat": 32.742658851729,
     "lng": -117.101032546312,
     "match": "3526 FAIRMOUNT AVE, SAN DIEGO, CA, 92105",
     "legal_city": "San Diego",
     "county": "San Diego County"
+  },
+  "A0438": {
+    "lat": 40.744834267004,
+    "lng": -74.048728066645,
+    "match": "census-clean: 60 CAMBRIDGE AVE, JERSEY CITY, NJ, 07307",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
+  },
+  "A0444": {
+    "lat": 42.351030509952,
+    "lng": -71.082259034359,
+    "match": "231 COMMONWEALTH AVE, BOSTON, MA, 02116",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
   },
   "A0445": {
     "lat": 34.229751001698,
@@ -3121,26 +3128,19 @@
     "legal_city": "Hoboken",
     "county": "Hudson County"
   },
-  "A0444": {
-    "lat": 42.351030509952,
-    "lng": -71.082259034359,
-    "match": "231 COMMONWEALTH AVE, BOSTON, MA, 02116",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
+  "A0450": {
+    "lat": 40.691942000511,
+    "lng": -74.094734510649,
+    "match": "94 NEPTUNE AVE, JERSEY CITY, NJ, 07305",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
   },
-  "A0448": {
-    "lat": 40.730765527611,
-    "lng": -74.16637215896,
-    "match": "153 LAFAYETTE ST, NEWARK, NJ, 07105",
+  "A0449": {
+    "lat": 40.712312782686,
+    "lng": -74.215190276398,
+    "match": "338 CLINTON PL, NEWARK, NJ, 07112",
     "legal_city": "Newark",
     "county": "Essex County"
-  },
-  "A0453": {
-    "lat": 42.372350092405,
-    "lng": -71.097785158487,
-    "match": "11 CARLISLE ST, CAMBRIDGE, MA, 02139",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
   },
   "A0451": {
     "lat": 34.252257110602,
@@ -3156,24 +3156,31 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0450": {
-    "lat": 40.691942000511,
-    "lng": -74.094734510649,
-    "match": "94 NEPTUNE AVE, JERSEY CITY, NJ, 07305",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
-  },
-  "A0449": {
-    "lat": 40.712312782686,
-    "lng": -74.215190276398,
-    "match": "338 CLINTON PL, NEWARK, NJ, 07112",
+  "A0448": {
+    "lat": 40.730805854988,
+    "lng": -74.166461328187,
+    "match": "census-clean: 151 LAFAYETTE ST, NEWARK, NJ, 07105",
     "legal_city": "Newark",
     "county": "Essex County"
   },
-  "A0458": {
-    "lat": 33.999307703621,
-    "lng": -118.243996855675,
-    "match": "1670 E 48TH PL, LOS ANGELES, CA, 90011",
+  "A0453": {
+    "lat": 42.372350092405,
+    "lng": -71.097785158487,
+    "match": "11 CARLISLE ST, CAMBRIDGE, MA, 02139",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
+  },
+  "A0455": {
+    "lat": 40.701284285212,
+    "lng": -74.087633111396,
+    "match": "78 STEVENS AVE, JERSEY CITY, NJ, 07305",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
+  },
+  "A0454": {
+    "lat": 34.232706363083,
+    "lng": -118.465331558771,
+    "match": "8944 COLUMBUS AVE, NORTH HILLS, CA, 91343",
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
@@ -3184,13 +3191,6 @@
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
-  "A0459": {
-    "lat": 40.750737802252,
-    "lng": -74.051069939161,
-    "match": "202 SOUTH ST, JERSEY CITY, NJ, 07307",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
-  },
   "A0457": {
     "lat": 37.796928164046,
     "lng": -122.429684738163,
@@ -3198,19 +3198,26 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0454": {
-    "lat": 34.232706363083,
-    "lng": -118.465331558771,
-    "match": "8944 COLUMBUS AVE, NORTH HILLS, CA, 91343",
+  "A0459": {
+    "lat": 40.750737802252,
+    "lng": -74.051069939161,
+    "match": "202 SOUTH ST, JERSEY CITY, NJ, 07307",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
+  },
+  "A0458": {
+    "lat": 33.999307703621,
+    "lng": -118.243996855675,
+    "match": "1670 E 48TH PL, LOS ANGELES, CA, 90011",
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0455": {
-    "lat": 40.701284285212,
-    "lng": -74.087633111396,
-    "match": "78 STEVENS AVE, JERSEY CITY, NJ, 07305",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
+  "A0461": {
+    "lat": 37.774456141897,
+    "lng": -122.469251256406,
+    "match": "735 11TH AVE, SAN FRANCISCO, CA, 94118",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
   },
   "A0462": {
     "lat": 40.736518619808,
@@ -3233,40 +3240,19 @@
     "legal_city": "Cambridge",
     "county": "Middlesex County"
   },
-  "A0464": {
-    "lat": 42.324057161703,
-    "lng": -71.084731974369,
-    "match": "98 DABNEY ST, ROXBURY, MA, 02119",
+  "A0466": {
+    "lat": 42.345351761852,
+    "lng": -71.088829313111,
+    "match": "115 NORWAY ST, BOSTON, MA, 02115",
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
-  "A0461": {
-    "lat": 37.774456141897,
-    "lng": -122.469251256406,
-    "match": "735 11TH AVE, SAN FRANCISCO, CA, 94118",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
   "A0460": {
-    "lat": 40.712390393489,
-    "lng": -74.211611863532,
-    "match": "229 SHEPHARD AVE, NEWARK, NJ, 07112",
+    "lat": 40.71231825405,
+    "lng": -74.211485813318,
+    "match": "census-clean: 223 SHEPHARD AVE, NEWARK, NJ, 07112",
     "legal_city": "Newark",
     "county": "Essex County"
-  },
-  "A0468": {
-    "lat": 42.381661514871,
-    "lng": -71.121015754447,
-    "match": "13 SHEPARD ST, CAMBRIDGE, MA, 02138",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
-  },
-  "A0469": {
-    "lat": 37.860021095027,
-    "lng": -122.266948509568,
-    "match": "2701 SHATTUCK AVE, BERKELEY, CA, 94705",
-    "legal_city": "Berkeley",
-    "county": "Alameda County"
   },
   "A0467": {
     "lat": 42.333878417918,
@@ -3275,12 +3261,12 @@
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
-  "A0471": {
-    "lat": 40.74074767044,
-    "lng": -74.031817207369,
-    "match": "334 GARDEN ST, HOBOKEN, NJ, 07030",
-    "legal_city": "Hoboken",
-    "county": "Hudson County"
+  "A0468": {
+    "lat": 42.381661514871,
+    "lng": -71.121015754447,
+    "match": "13 SHEPARD ST, CAMBRIDGE, MA, 02138",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
   },
   "A0470": {
     "lat": 37.870650504933,
@@ -3289,24 +3275,17 @@
     "legal_city": "Berkeley",
     "county": "Alameda County"
   },
-  "A0466": {
-    "lat": 42.345351761852,
-    "lng": -71.088829313111,
-    "match": "115 NORWAY ST, BOSTON, MA, 02115",
-    "legal_city": "Boston",
-    "county": "Suffolk County"
+  "A0469": {
+    "lat": 37.860021095027,
+    "lng": -122.266948509568,
+    "match": "2701 SHATTUCK AVE, BERKELEY, CA, 94705",
+    "legal_city": "Berkeley",
+    "county": "Alameda County"
   },
-  "A0474": {
-    "lat": 34.012650923784,
-    "lng": -118.260382953065,
-    "match": "3438 MCKINLEY AVE, LOS ANGELES, CA, 90011",
-    "legal_city": "Los Angeles",
-    "county": "Los Angeles County"
-  },
-  "A0473": {
-    "lat": 42.360298905905,
-    "lng": -71.067296757754,
-    "match": "20 PHILLIPS ST, BOSTON, MA, 02114",
+  "A0464": {
+    "lat": 42.325243458888,
+    "lng": -71.084506386968,
+    "match": "census-clean: 2 DABNEY ST, ROXBURY, MA, 02119",
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
@@ -3317,6 +3296,20 @@
     "legal_city": "Hoboken",
     "county": "Hudson County"
   },
+  "A0473": {
+    "lat": 42.360298905905,
+    "lng": -71.067296757754,
+    "match": "20 PHILLIPS ST, BOSTON, MA, 02114",
+    "legal_city": "Boston",
+    "county": "Suffolk County"
+  },
+  "A0474": {
+    "lat": 34.012650923784,
+    "lng": -118.260382953065,
+    "match": "3438 MCKINLEY AVE, LOS ANGELES, CA, 90011",
+    "legal_city": "Los Angeles",
+    "county": "Los Angeles County"
+  },
   "A0475": {
     "lat": 40.73824152843,
     "lng": -74.035828506414,
@@ -3324,12 +3317,12 @@
     "legal_city": "Hoboken",
     "county": "Hudson County"
   },
-  "A0476": {
-    "lat": 40.728822422354,
-    "lng": -74.171964638319,
-    "match": "28 COTTAGE ST, NEWARK, NJ, 07102",
-    "legal_city": "Newark",
-    "county": "Essex County"
+  "A0471": {
+    "lat": 40.740724228779,
+    "lng": -74.031824704958,
+    "match": "census-clean: 332 GARDEN ST, HOBOKEN, NJ, 07030",
+    "legal_city": "Hoboken",
+    "county": "Hudson County"
   },
   "A0477": {
     "lat": 37.761016013708,
@@ -3338,19 +3331,12 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0481": {
-    "lat": 37.786028326648,
-    "lng": -122.414634028725,
-    "match": "536 LEAVENWORTH ST, SAN FRANCISCO, CA, 94109",
-    "legal_city": "San Francisco",
-    "county": "San Francisco County"
-  },
-  "A0482": {
-    "lat": 40.721027897402,
-    "lng": -74.06487503221,
-    "match": "101 CLIFTON PL, JERSEY CITY, NJ, 07304",
-    "legal_city": "Jersey City",
-    "county": "Hudson County"
+  "A0478": {
+    "lat": 32.748446614415,
+    "lng": -117.114420057856,
+    "match": "3860 CHEROKEE AVE, SAN DIEGO, CA, 92104",
+    "legal_city": "San Diego",
+    "county": "San Diego County"
   },
   "A0479": {
     "lat": 34.150301392175,
@@ -3359,12 +3345,19 @@
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
   },
-  "A0478": {
-    "lat": 32.748446614415,
-    "lng": -117.114420057856,
-    "match": "3860 CHEROKEE AVE, SAN DIEGO, CA, 92104",
-    "legal_city": "San Diego",
-    "county": "San Diego County"
+  "A0476": {
+    "lat": 40.728832303948,
+    "lng": -74.171995425732,
+    "match": "census-clean: 26 COTTAGE ST, NEWARK, NJ, 07102",
+    "legal_city": "Newark",
+    "county": "Essex County"
+  },
+  "A0481": {
+    "lat": 37.786028326648,
+    "lng": -122.414634028725,
+    "match": "536 LEAVENWORTH ST, SAN FRANCISCO, CA, 94109",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County"
   },
   "A0480": {
     "lat": 32.750481775488,
@@ -3373,10 +3366,17 @@
     "legal_city": "San Diego",
     "county": "San Diego County"
   },
-  "A0483": {
-    "lat": 37.774588554781,
-    "lng": -122.420119239496,
-    "match": "1580 MARKET ST, SAN FRANCISCO, CA, 94102",
+  "A0482": {
+    "lat": 40.721027897402,
+    "lng": -74.06487503221,
+    "match": "101 CLIFTON PL, JERSEY CITY, NJ, 07304",
+    "legal_city": "Jersey City",
+    "county": "Hudson County"
+  },
+  "A0487": {
+    "lat": 37.789124926129,
+    "lng": -122.433810595937,
+    "match": "2118 FILLMORE ST, SAN FRANCISCO, CA, 94115",
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
@@ -3387,17 +3387,10 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0485": {
-    "lat": 42.364518126675,
-    "lng": -71.112809787533,
-    "match": "302 WESTERN AVE, CAMBRIDGE, MA, 02139",
-    "legal_city": "Cambridge",
-    "county": "Middlesex County"
-  },
-  "A0487": {
-    "lat": 37.789124926129,
-    "lng": -122.433810595937,
-    "match": "2118 FILLMORE ST, SAN FRANCISCO, CA, 94115",
+  "A0483": {
+    "lat": 37.774588554781,
+    "lng": -122.420119239496,
+    "match": "1580 MARKET ST, SAN FRANCISCO, CA, 94102",
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
@@ -3415,6 +3408,13 @@
     "legal_city": "Boston",
     "county": "Suffolk County"
   },
+  "A0485": {
+    "lat": 42.364528330341,
+    "lng": -71.112705698148,
+    "match": "census-clean: 296 WESTERN AVE, CAMBRIDGE, MA, 02139",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County"
+  },
   "A0489": {
     "lat": 40.739786868515,
     "lng": -74.036041272823,
@@ -3428,6 +3428,13 @@
     "match": "526 ADAMS ST, HOBOKEN, NJ, 07030",
     "legal_city": "Hoboken",
     "county": "Hudson County"
+  },
+  "A0491": {
+    "lat": 40.778727063623,
+    "lng": -74.158667478138,
+    "match": "37 IRVING ST, NEWARK, NJ, 07104",
+    "legal_city": "Newark",
+    "county": "Essex County"
   },
   "A0493": {
     "lat": 37.781029854011,
@@ -3450,13 +3457,6 @@
     "legal_city": "San Francisco",
     "county": "San Francisco County"
   },
-  "A0496": {
-    "lat": 32.710782090084,
-    "lng": -117.125336741291,
-    "match": "512 32ND ST, SAN DIEGO, CA, 92102",
-    "legal_city": "San Diego",
-    "county": "San Diego County"
-  },
   "A0495": {
     "lat": 40.713022199008,
     "lng": -74.063078920845,
@@ -3464,12 +3464,12 @@
     "legal_city": "Jersey City",
     "county": "Hudson County"
   },
-  "A0491": {
-    "lat": 40.778727063623,
-    "lng": -74.158667478138,
-    "match": "37 IRVING ST, NEWARK, NJ, 07104",
-    "legal_city": "Newark",
-    "county": "Essex County"
+  "A0496": {
+    "lat": 32.710782090084,
+    "lng": -117.125336741291,
+    "match": "512 32ND ST, SAN DIEGO, CA, 92102",
+    "legal_city": "San Diego",
+    "county": "San Diego County"
   },
   "A0497": {
     "lat": 32.74637529596,
@@ -3477,13 +3477,6 @@
     "match": "3750 29TH ST, SAN DIEGO, CA, 92104",
     "legal_city": "San Diego",
     "county": "San Diego County"
-  },
-  "A0498": {
-    "lat": 40.775387981092,
-    "lng": -74.163386701052,
-    "match": "686 SUMMER AVE, NEWARK, NJ, 07104",
-    "legal_city": "Newark",
-    "county": "Essex County"
   },
   "A0499": {
     "lat": 34.225076986186,
@@ -3498,5 +3491,12 @@
     "match": "8811 BURNET AVE, NORTH HILLS, CA, 91343",
     "legal_city": "Los Angeles",
     "county": "Los Angeles County"
+  },
+  "A0498": {
+    "lat": 40.775329535647,
+    "lng": -74.163418012627,
+    "match": "census-clean: 684 SUMMER AVE, NEWARK, NJ, 07104",
+    "legal_city": "Newark",
+    "county": "Essex County"
   }
 }

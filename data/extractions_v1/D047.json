@@ -1,0 +1,40 @@
+{
+  "doc_id": "D047",
+  "url": "https://malegislature.gov/Bills/194/S2983/BillHistory",
+  "retrieved_at": "2026-10-01T22:36Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "MA-S2983-194-algorithmic-rent-setting-ban",
+      "jurisdiction": "MA",
+      "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "pending",
+      "title": "An Act prohibiting algorithmic rent setting (S.2983)",
+      "requirement": "A pending Massachusetts Senate bill would prohibit algorithmic rent setting in the rental housing market. The page does not include the bill's substantive terms.",
+      "key_value": null,
+      "coverage_conditions": "Statewide residential rental housing (proposed). Specific coverage terms are not stated on the bill history page.",
+      "exemptions": null,
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Bill text not shown; coverage and exemptions unknown"
+      },
+      "yields_to_local": false,
+      "effective_date": null,
+      "enacted_date": null,
+      "penalty": null,
+      "citation": "Mass. Senate Bill S.2983 (194th General Court), new draft of S.994 and S.1016",
+      "quoted_span": "An Act prohibiting algorithmic rent setting",
+      "confidence": 0.85,
+      "conflict_note": "Reported favorably by the Joint Committee on Housing on 3/12/2026 and referred to Senate Ways and Means; no further action shown as of retrieval on 2026-10-01. It is not law. The substantive provisions are not in this document."
+    }
+  ],
+  "no_rule_findings": []
+}

@@ -3,6 +3,38 @@
   "url": "https://www.cambridgema.gov/tenantrights",
   "retrieved_at": "2026-10-01T22:36Z",
   "model": "claude-opus-5-5",
-  "rules": [],
+  "rules": [
+    {
+      "canonical_key": "CAMBRIDGE-8.71-tenant-rights-notification",
+      "jurisdiction": "Cambridge, MA",
+      "level": "city",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "Cambridge Tenants Rights and Resources Notification Ordinance",
+      "requirement": "Owners, landlords, and management companies must give tenants the City's Tenants Rights and Resources Guide when a tenancy begins (at lease signing or first rent payment) and when legal steps to terminate a tenancy are taken, such as a notice to quit or summary process. The Guide does not have to be given at each lease renewal.",
+      "key_value": "Guide required at start and termination of tenancy; $300/day fine",
+      "coverage_conditions": "All residential rental agreements in Cambridge, including tenants at will and single rental units in owner-occupied buildings; all tenants and lawful occupants must receive the materials.",
+      "exemptions": "Rental units in hospitals, skilled nursing facilities or health facilities; non-profit facilities whose primary purpose is short-term substance abuse treatment; Short Term Rental Units under Article 4, Section 4.60 of the Cambridge Zoning Ordinance.",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Excludes hospital/health/skilled nursing facility units, non-profit short-term substance abuse treatment facilities, and short-term rental units."
+      },
+      "yields_to_local": false,
+      "effective_date": null,
+      "enacted_date": null,
+      "penalty": "Fine of $300 for each day's violation (Sec. 8.71.070).",
+      "citation": "Cambridge Municipal Code Chapter 8.71",
+      "quoted_span": "The Ordinance requires owners, landlords, and management companies to provide you with information at the start of your lease or tenancy as well as when your tenancy is being terminated.",
+      "confidence": 0.88,
+      "conflict_note": "The page does not state an effective date; it was first posted 10/14/2020. The ordinance does not restrict grounds for eviction; it is a notice requirement categorized under just_cause_eviction."
+    }
+  ],
   "no_rule_findings": []
 }

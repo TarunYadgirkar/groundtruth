@@ -2,7 +2,7 @@
   {
     "jurisdiction": "Los Angeles, CA",
     "category": "rent_increase_limits",
-    "finding": "The JCO itself does not regulate rent increases; JCO-only units may be subject to state AB 1482 rent cap instead.",
+    "finding": "The Los Angeles Just Cause Ordinance does not regulate rent increases; non-RSO units may instead be subject to state AB 1482.",
     "quoted_span": "The JCO does not regulate rent increases, however, state law",
     "source_doc_id": "D040",
     "source_url": "https://housing.lacity.gov/residents/just-cause-for-eviction-ordinance-jco",
@@ -11,8 +11,26 @@
   {
     "jurisdiction": "MA",
     "category": "rent_increase_limits",
-    "finding": "Massachusetts state law (M.G.L. c. 40P, § 4) bars cities and towns from enacting, maintaining or enforcing rent control of any kind. The only exception is narrow: it allows voluntary rent control with compensation to owners, cannot apply to owners of fewer than 10 units or to units with fair market rent over $400, and cannot regulate evictions. The document states no statewide rent cap.",
-    "quoted_span": "Section 4. No city or town may enact, maintain or enforce rent control of any kind, except that any city or town that accepts this chapter may adopt rent control regulation that provides:",
+    "finding": "M.G.L. c. 40P § 4 bars any Massachusetts city or town from enacting, maintaining or enforcing rent control of any kind. The only exception is a narrow voluntary, compensated scheme limited to owners of 10 or more units with fair market rent of $400 or less, and it cannot regulate evictions. There is therefore no state or local rent increase cap.",
+    "quoted_span": "No city or town may enact, maintain or enforce rent control of any kind, except that any city or town that accepts this chapter may adopt rent control regulation that provides:",
+    "source_doc_id": "D048",
+    "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter40P/Section4",
+    "retrieved_at": "2026-10-01T22:36Z"
+  },
+  {
+    "jurisdiction": "Boston, MA",
+    "category": "rent_increase_limits",
+    "finding": "Statewide preemption under M.G.L. c. 40P § 4 bars Boston from enacting or enforcing rent control, apart from the narrow voluntary, compensated exception. No enforceable city rent cap exists.",
+    "quoted_span": "No city or town may enact, maintain or enforce rent control of any kind, except that any city or town that accepts this chapter may adopt rent control regulation that provides:",
+    "source_doc_id": "D048",
+    "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter40P/Section4",
+    "retrieved_at": "2026-10-01T22:36Z"
+  },
+  {
+    "jurisdiction": "Cambridge, MA",
+    "category": "rent_increase_limits",
+    "finding": "Statewide preemption under M.G.L. c. 40P § 4 bars Cambridge from enacting or enforcing rent control, apart from the narrow voluntary, compensated exception. No enforceable city rent cap exists.",
+    "quoted_span": "No city or town may enact, maintain or enforce rent control of any kind, except that any city or town that accepts this chapter may adopt rent control regulation that provides:",
     "source_doc_id": "D048",
     "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter40P/Section4",
     "retrieved_at": "2026-10-01T22:36Z"
@@ -20,16 +38,7 @@
   {
     "jurisdiction": "MA",
     "category": "rent_increase_limits",
-    "finding": "Massachusetts has an existing statutory ban on rent control (G.L. c. 40P); no statewide or local rent cap in force.",
-    "quoted_span": "The petition would have repealed the Commonwealth’s existing statutory ban on rent control, G.L. c. 40P, and replaced it with a statewide cap on annual rent increases for most residential rental units.",
-    "source_doc_id": "D055",
-    "source_url": "https://massrealestatelawblog.com/tag/cella-v-attorney-general/",
-    "retrieved_at": "2026-10-03T21:22Z"
-  },
-  {
-    "jurisdiction": "MA",
-    "category": "rent_increase_limits",
-    "finding": "SJC blocked the statewide rent control ballot initiative (IP 25-21) from the November 2026 ballot in Cella v. Attorney General.",
+    "finding": "The SJC blocked the statewide rent control ballot initiative from the November 2026 ballot, so no statewide rent cap exists from that measure.",
     "quoted_span": "In a major decision affecting the future of Massachusetts housing policy, the Supreme Judicial Court today has ruled that the proposed statewide rent control ballot initiative may not appear on the November 2026 ballot.",
     "source_doc_id": "D055",
     "source_url": "https://massrealestatelawblog.com/tag/cella-v-attorney-general/",
@@ -38,7 +47,16 @@
   {
     "jurisdiction": "MA",
     "category": "rent_increase_limits",
-    "finding": "The 2026 statewide rent control ballot question was struck by the Supreme Judicial Court and will not go before voters. No state rent cap was enacted, and the legislature did not pass the compromise bill.",
+    "finding": "Massachusetts has an existing statutory ban on rent control (G.L. c. 40P). There is no state or local rent cap in Massachusetts.",
+    "quoted_span": "The petition would have repealed the Commonwealth’s existing statutory ban on rent control, G.L. c. 40P, and replaced it with a statewide cap on annual rent increases for most residential rental units.",
+    "source_doc_id": "D055",
+    "source_url": "https://massrealestatelawblog.com/tag/cella-v-attorney-general/",
+    "retrieved_at": "2026-10-03T21:22Z"
+  },
+  {
+    "jurisdiction": "MA",
+    "category": "rent_increase_limits",
+    "finding": "The SJC struck the 2026 rent control ballot question from the November ballot, so no statewide rent cap was adopted via the 2026 ballot and rent control is not currently in effect in Massachusetts.",
     "quoted_span": "The state’s Supreme Judicial Court ruled a ballot question seeking to bring rent control back to Massachusetts cannot go forward this November, because it includes a religious exemption.",
     "source_doc_id": "D059",
     "source_url": "https://www.wbur.org/news/2026/06/23/massachusetts-high-court-rent-control-ballot-question-struck",
@@ -47,17 +65,8 @@
   {
     "jurisdiction": "NJ",
     "category": "rent_increase_limits",
-    "finding": "New Jersey has no state law establishing or controlling rents. Rent control exists only through municipal ordinances.",
+    "finding": "New Jersey has no state law establishing or controlling rents; rent control exists only through municipal ordinances.",
     "quoted_span": "The State of New Jersey has no laws that establish, govern or control rents.",
-    "source_doc_id": "D067",
-    "source_url": "https://www.nj.gov/dca/codes/publications/pdf_lti/t_i_r.pdf",
-    "retrieved_at": "2026-10-01T22:37Z"
-  },
-  {
-    "jurisdiction": "NJ",
-    "category": "application_screening_fees",
-    "finding": "The guide states landlords may charge applicants the cost of the credit report and may request reasonable rental application fees. No specific state fee cap is stated.",
-    "quoted_span": "to charge the tenant for the cost of the report.",
     "source_doc_id": "D067",
     "source_url": "https://www.nj.gov/dca/codes/publications/pdf_lti/t_i_r.pdf",
     "retrieved_at": "2026-10-01T22:37Z"

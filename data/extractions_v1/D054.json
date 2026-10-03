@@ -1,0 +1,71 @@
+{
+  "doc_id": "D054",
+  "url": "https://masslandlords.net/can-massachusetts-landlords-charge-an-application-fee/",
+  "retrieved_at": "2026-10-03T21:22Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "MA-MGL-186-15B-upfront-fee-ban",
+      "jurisdiction": "MA",
+      "level": "state",
+      "category": "application_screening_fees",
+      "status": "in_force",
+      "title": "Ban on landlord application fees and other up-front charges",
+      "requirement": "Before a tenancy begins, a Massachusetts landlord (lessor) may require payment only of first month's rent, last month's rent, a security deposit, and a lock-change fee. Application, pet, cleaning, amenity, and other fees are prohibited.",
+      "key_value": "Only first, last, security deposit, and lock fee may be collected; application fees prohibited",
+      "coverage_conditions": "All lessors of residential rental housing in Massachusetts, before the start of a tenancy.",
+      "exemptions": "Licensed real estate brokers may charge fees under 254 CMR 7.00. A landlord who is also a broker may likely charge only through a separate bona fide brokerage business, based on a non-binding Housing Court case.",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Whether the fee is charged by a licensed broker rather than by the lessor."
+      },
+      "yields_to_local": false,
+      "effective_date": null,
+      "enacted_date": null,
+      "penalty": "In Perry v. Equity Residential Management (D. Mass. 2014), the tenants were awarded treble damages and attorney's fees for unlawful application fees.",
+      "citation": "M.G.L. c. 186, § 15B",
+      "quoted_span": "It states that prior to the beginning of a tenancy, no lessor may require payment for anything except first, last, security, and locks ( MGL Ch 186 Section 15B ).",
+      "confidence": 0.85,
+      "conflict_note": "The source says the law has been in effect since the 1970s but gives no exact effective date. Per the source, it is unsettled whether requiring an applicant to pay a third-party screening service violates the statute; attorneys' opinion is that requiring it is risky. Source is a secondary trade-association blog."
+    },
+    {
+      "canonical_key": "MA-254-CMR-7-broker-fee-disclosure",
+      "jurisdiction": "MA",
+      "level": "state",
+      "category": "application_screening_fees",
+      "status": "in_force",
+      "title": "Licensed brokers may charge prospective tenants fees with written disclosure",
+      "requirement": "Only licensed brokers or salespeople may charge prospective tenants a fee for finding housing. At the first personal meeting, the broker must give a signed written notice stating the fee amount, the time and manner of payment, and whether the fee depends on a lease being signed.",
+      "key_value": null,
+      "coverage_conditions": "Licensed real estate brokers and salespersons who find rental housing for prospective tenants for a fee.",
+      "exemptions": null,
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Broker licensure status and whether the required written notice was given."
+      },
+      "yields_to_local": false,
+      "effective_date": null,
+      "enacted_date": null,
+      "penalty": null,
+      "citation": "254 CMR 7.00",
+      "quoted_span": "Licensed brokers can charge fees to prospective tenants so long as the brokers comply with the board of registration’s regulations.",
+      "confidence": 0.65,
+      "conflict_note": "Source is a secondary blog and gives no effective date. It is unsettled whether a landlord who is also a broker may charge a fee; Samia v. McElaney (Housing Court, 1983) is non-binding."
+    }
+  ],
+  "no_rule_findings": []
+}

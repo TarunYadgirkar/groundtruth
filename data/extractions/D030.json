@@ -5,15 +5,15 @@
   "model": "claude-opus-5-5",
   "rules": [
     {
-      "canonical_key": "CAMBRIDGE-policy-order-algorithmic-rent-ban",
+      "canonical_key": "CAMBRIDGE-algorithmic-rent-setting-ban-policy-order",
       "jurisdiction": "Cambridge, MA",
       "level": "city",
       "category": "algorithmic_rent_setting",
       "status": "pending",
-      "title": "Cambridge City Council policy order to ban algorithmic rent-pricing software",
-      "requirement": "The City Council passed a policy order directing the city manager to draft policy options or ordinance language that would bar residential property management companies from contracting with companies that use algorithmic or AI-driven models to recommend rents. No ordinance has been enacted yet.",
+      "title": "Cambridge policy order initiating a ban on algorithmic rent-pricing software",
+      "requirement": "The City Council passed a policy order directing the city manager to draft policy options or ordinance language that would ban residential property management companies from contracting with companies that use algorithmic or AI-driven models to recommend rents. No ordinance has been adopted yet.",
       "key_value": null,
-      "coverage_conditions": "Would apply to residential property management companies in Cambridge that use third-party algorithmic or AI rent-recommendation services. Final scope is undetermined.",
+      "coverage_conditions": "Residential property management companies in Cambridge that contract with algorithmic or AI rent-recommendation services. Final scope not yet drafted.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -24,27 +24,27 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Scope not yet drafted; targets residential property management companies using algorithmic pricing services"
+        "unverifiable_conditions": "Ordinance not yet drafted; scope (e.g., large property managers only) undetermined"
       },
       "yields_to_local": false,
       "effective_date": null,
       "enacted_date": null,
       "penalty": null,
-      "citation": "Cambridge City Council policy order (no ordinance number given)",
+      "citation": "Cambridge City Council policy order (sponsor Councillor Sobrinho-Wheeler); no ordinance number given",
       "quoted_span": "City council also unanimously passed a policy order initiating steps to ban residential property management companies from contracting companies that use algorithmic and AI-driven models to recommend what they should charge for rent.",
-      "confidence": 0.6,
-      "conflict_note": "This is only a policy order directing staff to draft options; no ordinance has been adopted. The policy order date is not stated (article is circa 2026)."
+      "confidence": 0.75,
+      "conflict_note": "Policy order only, not an enacted ordinance; the city manager is to return with policy options or ordinance language later in the term. The article date is not stated, and no ordinance citation is provided."
     },
     {
-      "canonical_key": "MA-pending-algorithmic-rent-ban-bills",
+      "canonical_key": "MA-algorithmic-rent-setting-ban-bills",
       "jurisdiction": "MA",
       "level": "state",
       "category": "algorithmic_rent_setting",
       "status": "pending",
-      "title": "Massachusetts bills banning algorithmic rent-setting",
-      "requirement": "Bills that would ban algorithmic rent-pricing practices in the rental market are pending in the Massachusetts House and Senate.",
+      "title": "Massachusetts bills to ban algorithmic rent-setting",
+      "requirement": "Bills that would ban the use of algorithmic rent-pricing software in the rental market are pending in the Massachusetts House and Senate.",
       "key_value": null,
-      "coverage_conditions": "Rental market statewide (details not stated).",
+      "coverage_conditions": "Residential rental market in Massachusetts; specific scope not described.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -61,10 +61,10 @@
       "effective_date": null,
       "enacted_date": null,
       "penalty": null,
-      "citation": "Massachusetts pending legislation (bill numbers not given)",
+      "citation": "Pending Massachusetts House and Senate bills (numbers not given)",
       "quoted_span": "Bills banning the practice in the rental market are also working their way through the Massachusetts state House and Senate .",
-      "confidence": 0.4,
-      "conflict_note": "Secondary news source; no bill numbers or text provided."
+      "confidence": 0.6,
+      "conflict_note": "News mention only; bill numbers and status details are not given."
     }
   ],
   "no_rule_findings": []

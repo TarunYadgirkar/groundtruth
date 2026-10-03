@@ -5,14 +5,14 @@
   "model": "claude-opus-5-5",
   "rules": [
     {
-      "canonical_key": "CA-CRC-REGS-criminal-history-screening",
+      "canonical_key": "CA-CRC-criminal-history-housing-regs",
       "jurisdiction": "CA",
       "level": "state",
       "category": "screening_restrictions",
       "status": "in_force",
-      "title": "California Civil Rights Council regulations limiting use of criminal history in housing decisions",
-      "requirement": "Landlords may check criminal history only within strict limits on what history may be sought, how it is considered, and what actions may be taken. Blanket bans on applicants with criminal records and policies that consider arrests without convictions are prohibited.",
-      "key_value": "No blanket criminal-record bans; no consideration of arrests without conviction",
+      "title": "Civil Rights Council regulations limiting use of criminal history in housing decisions",
+      "requirement": "Landlords face limits on what criminal history they may seek, how they may consider it, and what actions they may take based on it. Blanket bans on applicants with criminal records and policies that consider arrests without convictions are prohibited.",
+      "key_value": "No blanket criminal-record bans; arrests without conviction may not be considered",
       "coverage_conditions": "Housing providers in California screening rental applicants",
       "exemptions": null,
       "coverage": {
@@ -30,10 +30,10 @@
       "effective_date": "2020-01-01",
       "enacted_date": "2019",
       "penalty": null,
-      "citation": "California Civil Rights Council (formerly Fair Employment and Housing Council) regulations on criminal history in housing (FEHA implementing regulations)",
+      "citation": "California Civil Rights Council (formerly Fair Employment and Housing Council) criminal history housing regulations (specific CCR section not given in source)",
       "quoted_span": "Blanket bans on applicants with a criminal record are prohibited, as are policies that consider arrests without convictions.",
       "confidence": 0.8,
-      "conflict_note": "Document does not give the specific regulation section number; citation is descriptive. Secondary source (trade association)."
+      "conflict_note": "Secondary source; regulation section numbers not cited in the document."
     },
     {
       "canonical_key": "CA-SB329-source-of-income-housing-subsidy",
@@ -41,9 +41,9 @@
       "level": "state",
       "category": "screening_restrictions",
       "status": "in_force",
-      "title": "SB 329: Source of income includes government housing subsidies (No 'No Section 8' policies)",
-      "requirement": "FEHA's definition of 'source of income' includes government housing subsidy programs such as Section 8, so landlords may not refuse to participate in such programs or maintain 'No Section 8' policies.",
-      "key_value": "Ban on refusing Section 8 / housing vouchers",
+      "title": "SB 329: Source-of-income protection includes housing subsidies (Section 8)",
+      "requirement": "FEHA's definition of source of income includes government housing subsidy programs such as Section 8, so landlords may not refuse to participate in such programs or maintain 'No Section 8' policies.",
+      "key_value": null,
       "coverage_conditions": "Landlords subject to the California Fair Employment and Housing Act",
       "exemptions": null,
       "coverage": {
@@ -67,15 +67,15 @@
       "conflict_note": null
     },
     {
-      "canonical_key": "CA-SB267-credit-history-subsidy-alternative-evidence",
+      "canonical_key": "CA-SB267-credit-history-subsidy-applicants",
       "jurisdiction": "CA",
       "level": "state",
       "category": "screening_restrictions",
       "status": "in_force",
       "title": "SB 267: Credit history limits for applicants with government rental subsidies",
-      "requirement": "Rental property owners may not use the credit history of an applicant who has a government rental subsidy (e.g., Section 8) in the application process without offering the applicant the option to provide alternative evidence of a verifiable lawful means to pay their portion of the rent.",
-      "key_value": "Must offer alternative evidence option before using credit history for subsidized applicants",
-      "coverage_conditions": "Applicants with a government rental subsidy such as Section 8; landlords subject to FEHA",
+      "requirement": "Landlords may not use the credit history of an applicant who has a government rental subsidy (e.g., Section 8) without offering the option to provide alternative evidence of a verifiable lawful means to pay their portion of the rent.",
+      "key_value": null,
+      "coverage_conditions": "Rental property owners screening applicants who receive a government rental subsidy",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -86,16 +86,16 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only to applicants receiving a government rental subsidy"
+        "unverifiable_conditions": "Applies only to applicants who have a government rental subsidy such as Section 8"
       },
       "yields_to_local": false,
-      "effective_date": "2024-01-01",
-      "enacted_date": "2023",
+      "effective_date": null,
+      "enacted_date": null,
       "penalty": null,
-      "citation": "SB 267 (amending Fair Employment and Housing Act)",
+      "citation": "SB 267, amending Fair Employment and Housing Act (Cal. Gov. Code)",
       "quoted_span": "In addition, last year’s SB 267 amended FEHA to prohibit rental property owners from using a person’s credit history as part of the application process – if they have a government rental subsidy, such as Section 8 — without offering the applicant the option to provide alternative evidence of a verifiable legal means to pay their portion of the rent.",
-      "confidence": 0.7,
-      "conflict_note": "Document says only 'last year's SB 267' without a date; enactment year (2023) and effective date (Jan 1, 2024) inferred from California's default regular-session rule, not stated in the document."
+      "confidence": 0.75,
+      "conflict_note": "Document says 'last year's SB 267' without an article date; enactment year and effective date not stated. Under California default rule it would take effect January 1 following enactment."
     }
   ],
   "no_rule_findings": []

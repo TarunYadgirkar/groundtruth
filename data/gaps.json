@@ -1,58 +1,58 @@
 [
   {
+    "jurisdiction": "Los Angeles, CA",
+    "category": "application_screening_fees",
+    "note": "No local rule in corpus; state Civ. Code § 1950.6 applies."
+  },
+  {
+    "jurisdiction": "Los Angeles, CA",
+    "category": "screening_restrictions",
+    "note": "No local rule in corpus; state FEHA applies."
+  },
+  {
+    "jurisdiction": "Los Angeles, CA",
+    "category": "algorithmic_rent_setting",
+    "note": "No enacted LA ordinance in corpus (only a council motion referencing SF); state AB 325 applies."
+  },
+  {
     "jurisdiction": "San Francisco, CA",
     "category": "application_screening_fees",
-    "note": "No local screening-fee rule in corpus; state Civ. Code § 1950.6 applies."
+    "note": "No local rule in corpus; state Civ. Code § 1950.6 applies."
   },
   {
     "jurisdiction": "San Diego, CA",
     "category": "rent_increase_limits",
-    "note": "No local rent control in corpus; state § 1947.12 applies."
+    "note": "No local rent control in corpus; state Civ. Code § 1947.12 applies."
   },
   {
     "jurisdiction": "San Diego, CA",
     "category": "security_deposits",
-    "note": "No local rule in corpus; state § 1950.5 applies."
+    "note": "No local rule in corpus; state Civ. Code § 1950.5 applies."
   },
   {
     "jurisdiction": "San Diego, CA",
     "category": "application_screening_fees",
-    "note": "No local rule in corpus; state § 1950.6 applies."
+    "note": "No local rule in corpus."
   },
   {
     "jurisdiction": "San Diego, CA",
     "category": "screening_restrictions",
-    "note": "No local rule in corpus; state FEHA applies."
+    "note": "No local rule in corpus."
   },
   {
     "jurisdiction": "Santa Ana, CA",
     "category": "security_deposits",
-    "note": "No local rule in corpus; state § 1950.5 applies."
+    "note": "No local rule in corpus."
   },
   {
     "jurisdiction": "Santa Ana, CA",
     "category": "application_screening_fees",
-    "note": "No local rule in corpus; state § 1950.6 applies."
+    "note": "No local rule in corpus."
   },
   {
     "jurisdiction": "Santa Ana, CA",
     "category": "screening_restrictions",
-    "note": "No local rule in corpus; state FEHA applies."
-  },
-  {
-    "jurisdiction": "Los Angeles, CA",
-    "category": "algorithmic_rent_setting",
-    "note": "Only a 2024 study motion in corpus; no enacted LA ban. State AB 325 applies."
-  },
-  {
-    "jurisdiction": "Los Angeles, CA",
-    "category": "application_screening_fees",
-    "note": "No local rule in corpus; state § 1950.6 applies."
-  },
-  {
-    "jurisdiction": "Los Angeles, CA",
-    "category": "screening_restrictions",
-    "note": "No local rule in corpus; state FEHA applies."
+    "note": "No local rule in corpus."
   },
   {
     "jurisdiction": "Jersey City, NJ",
@@ -62,22 +62,22 @@
   {
     "jurisdiction": "Jersey City, NJ",
     "category": "security_deposits",
-    "note": "No local rule in corpus; NJ Security Deposit Act applies."
+    "note": "No local rule in corpus."
   },
   {
     "jurisdiction": "Jersey City, NJ",
     "category": "application_screening_fees",
-    "note": "No local rule in corpus; N.J.S.A. 46:8-18.1 applies."
+    "note": "No local rule in corpus."
   },
   {
     "jurisdiction": "Jersey City, NJ",
     "category": "screening_restrictions",
-    "note": "No local rule in corpus; NJ Fair Chance in Housing Act and LAD apply."
+    "note": "No local rule in corpus."
   },
   {
     "jurisdiction": "Hoboken, NJ",
     "category": "rent_increase_limits",
-    "note": "No Hoboken rent control record in corpus."
+    "note": "No Hoboken rent control source in corpus."
   },
   {
     "jurisdiction": "Hoboken, NJ",
@@ -87,86 +87,81 @@
   {
     "jurisdiction": "Hoboken, NJ",
     "category": "security_deposits",
-    "note": "No local rule in corpus; NJ Security Deposit Act applies."
+    "note": "No local rule in corpus."
   },
   {
     "jurisdiction": "Hoboken, NJ",
     "category": "application_screening_fees",
-    "note": "No local rule in corpus; state cap applies."
+    "note": "No local rule in corpus."
   },
   {
     "jurisdiction": "Hoboken, NJ",
     "category": "screening_restrictions",
-    "note": "No local rule in corpus; state law applies."
+    "note": "No local rule in corpus."
   },
   {
     "jurisdiction": "Newark, NJ",
     "category": "rent_increase_limits",
-    "note": "No Newark candidates in corpus."
+    "note": "No Newark sources in corpus."
   },
   {
     "jurisdiction": "Newark, NJ",
     "category": "just_cause_eviction",
-    "note": "No Newark candidates; NJ Anti-Eviction Act applies."
+    "note": "No Newark sources in corpus."
   },
   {
     "jurisdiction": "Newark, NJ",
     "category": "security_deposits",
-    "note": "No Newark candidates; NJ Security Deposit Act applies."
+    "note": "No Newark sources in corpus."
   },
   {
     "jurisdiction": "Newark, NJ",
     "category": "application_screening_fees",
-    "note": "No Newark candidates; state cap applies."
+    "note": "No Newark sources in corpus."
   },
   {
     "jurisdiction": "Newark, NJ",
     "category": "screening_restrictions",
-    "note": "No Newark candidates; state law applies."
+    "note": "No Newark sources in corpus."
   },
   {
     "jurisdiction": "Newark, NJ",
     "category": "algorithmic_rent_setting",
-    "note": "No Newark candidates; NJ FAIR Act not effective until 2027-07-01."
+    "note": "No Newark sources in corpus; NJ FAIR Act effective 2027-07-01."
   },
   {
     "jurisdiction": "Boston, MA",
     "category": "security_deposits",
-    "note": "No local rule in corpus; M.G.L. c. 186 § 15B applies."
+    "note": "No local rule; G.L. c. 186 § 15B applies."
   },
   {
     "jurisdiction": "Boston, MA",
     "category": "application_screening_fees",
-    "note": "No local rule in corpus; c. 186 § 15B upfront fee limit applies."
+    "note": "No local rule; G.L. c. 186 § 15B upfront-charge limit applies."
   },
   {
     "jurisdiction": "Boston, MA",
     "category": "algorithmic_rent_setting",
-    "note": "No local rule in corpus; state bills pending."
+    "note": "No Boston rule in corpus; state bills pending."
   },
   {
     "jurisdiction": "Cambridge, MA",
     "category": "rent_increase_limits",
-    "note": "No local rent control; M.G.L. c. 40P bars it."
-  },
-  {
-    "jurisdiction": "Cambridge, MA",
-    "category": "just_cause_eviction",
-    "note": "No local just cause rule in corpus."
+    "note": "G.L. c. 40P § 4 bars local rent control; no enforceable cap."
   },
   {
     "jurisdiction": "Cambridge, MA",
     "category": "security_deposits",
-    "note": "No local rule in corpus; c. 186 § 15B applies."
+    "note": "No local rule; G.L. c. 186 § 15B applies."
   },
   {
     "jurisdiction": "Cambridge, MA",
     "category": "application_screening_fees",
-    "note": "No local rule in corpus; c. 186 § 15B applies."
+    "note": "No local rule; G.L. c. 186 § 15B applies."
   },
   {
     "jurisdiction": "Cambridge, MA",
     "category": "algorithmic_rent_setting",
-    "note": "Only a policy order directing drafting; no ordinance enacted."
+    "note": "Only a policy order directing study or drafting (dropped); no enacted rule."
   }
 ]

@@ -10,9 +10,9 @@
       "level": "city",
       "category": "security_deposits",
       "status": "in_force",
-      "title": "LA RSO security deposit interest requirement",
-      "requirement": "Landlords of RSO-covered units in the City of Los Angeles must pay tenants interest on security deposits at the city's annually set rate, monthly or yearly, by direct payment or rent credit, and must notify tenants in writing of the chosen method.",
-      "key_value": "Annual city-set rate (e.g., 4.320% for calendar year 2025); paid monthly or yearly",
+      "title": "Los Angeles RSO security deposit interest requirement",
+      "requirement": "Landlords of units subject to the Los Angeles Rent Stabilization Ordinance must pay tenants interest on security deposits at a rate set annually by the City, paid monthly or yearly as a direct payment or rent credit. Landlords must notify tenants in writing of the chosen payment method.",
+      "key_value": "Annual City-set rate (e.g., 4.320% for calendar year 2025); paid monthly or annually",
       "coverage_conditions": "Rental units in the City of Los Angeles subject to the Los Angeles Rent Stabilization Ordinance (LARSO).",
       "exemptions": null,
       "coverage": {
@@ -24,16 +24,16 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only to units subject to the LA Rent Stabilization Ordinance; RSO coverage criteria not stated in this document."
+        "unverifiable_conditions": "Applies only to units subject to LARSO; document does not state LARSO coverage criteria."
       },
       "yields_to_local": false,
       "effective_date": "1990-11-01",
       "enacted_date": null,
-      "penalty": "Non-compliance may be used as a defense in eviction proceedings (per source commentary).",
+      "penalty": "Non-compliance can be raised as a defense in eviction proceedings and may result in loss of eviction cases.",
       "citation": "Los Angeles Municipal Code § 151.06.02",
-      "quoted_span": "Interest shall begin accruing on November 1, 1990, on a monthly basis. A tenant shall be given the unpaid accrued interest in the form of either a direct payment or a credit against the tenant s rent.",
+      "quoted_span": "Interest shall begin accruing on November 1, 1990, on a monthly basis. A tenant shall be given the unpaid accrued interest in the form of either a direct payment or a credit against the tenant s rent. The landlord shall choose between these two methods of payment and notify the tenant in writing of his or her choice.",
       "confidence": 0.85,
-      "conflict_note": "Secondary source (landlord association, posted May 2025); rate table updated 5/21/25 and does not show 2026 rate. Effective date reflects interest accrual start date stated in quoted code text."
+      "conflict_note": "Secondary source (landlord association article posted May 2025); rate table updated 5/21/25 and does not show 2026 rate. Effective date reflects interest accrual start date stated in the quoted code text."
     }
   ],
   "no_rule_findings": []

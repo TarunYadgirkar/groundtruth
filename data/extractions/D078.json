@@ -10,10 +10,10 @@
       "level": "city",
       "category": "screening_restrictions",
       "status": "in_force",
-      "title": "San Francisco Fair Chance Ordinance – criminal history in affordable housing decisions",
-      "requirement": "Protects applicants and residents with arrest or conviction history in affordable housing decisions. This page does not describe the specific limits on how housing providers may use that history.",
+      "title": "San Francisco Fair Chance Ordinance: criminal history in affordable housing decisions",
+      "requirement": "Housing providers making affordable housing decisions may not unfairly use an applicant's or resident's arrest or conviction history. The page gives only a one-line summary and does not describe the specific procedures or limits.",
       "key_value": null,
-      "coverage_conditions": "Affordable housing decisions in San Francisco that involve people with arrest or conviction history.",
+      "coverage_conditions": "Residents and applicants with arrest or conviction history, in affordable housing decisions in San Francisco.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -24,7 +24,7 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies to affordable housing; the page does not define which properties qualify."
+        "unverifiable_conditions": "RESTRICTED: applies to affordable housing decisions only, per the page summary"
       },
       "yields_to_local": false,
       "effective_date": null,
@@ -33,7 +33,7 @@
       "citation": "San Francisco Fair Chance Ordinance",
       "quoted_span": "San Francisco's Fair Chance Ordinance protects residents with arrest or conviction history in affordable housing decisions.",
       "confidence": 0.6,
-      "conflict_note": "The source is a summary link on the HRC landing page. It gives no official code citation, effective date, or detailed requirements, and the scope is described only as affordable housing."
+      "conflict_note": "Source is an agency landing page with a one-line summary only. It gives no official code citation, effective date, or detailed requirements; verify against the ordinance text."
     }
   ],
   "no_rule_findings": []

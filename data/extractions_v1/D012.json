@@ -1,0 +1,40 @@
+{
+  "doc_id": "D012",
+  "url": "https://www.boston.gov/departments/fair-housing-and-equity/boston-fair-housing-regulations",
+  "retrieved_at": "2026-10-01T22:35Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "BOSTON-fair-housing-protected-classes-rental-assistance",
+      "jurisdiction": "Boston, MA",
+      "level": "city",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "Boston fair housing ban on discrimination in renting, including against rental assistance recipients",
+      "requirement": "Landlords in Boston may not discriminate against applicants or tenants based on protected characteristics, including rental assistance (e.g., Section 8 vouchers), family status, and military status. Refusing to accept rental assistance is an example of prohibited discrimination.",
+      "key_value": null,
+      "coverage_conditions": "Any housing rented, bought, sold, or financed in the City of Boston. Protected classes listed: race, color, religion, disability, national origin, ancestry, sex, gender identity, gender expression, age, sexual orientation, marital status, rental assistance, family status, military status.",
+      "exemptions": null,
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": null
+      },
+      "yields_to_local": false,
+      "effective_date": null,
+      "enacted_date": null,
+      "penalty": null,
+      "citation": "City of Boston fair housing law, enforced by the Boston Fair Housing Commission (specific code section not stated in source)",
+      "quoted_span": "In the City of Boston, it’s illegal to discriminate when renting, buying, selling, or securing financing for any housing.",
+      "confidence": 0.6,
+      "conflict_note": "Summary page does not give an ordinance citation, effective date, or any exemptions; it also states the commission enforces state and federal fair housing laws, so the specific source of each protection is not identified."
+    }
+  ],
+  "no_rule_findings": []
+}

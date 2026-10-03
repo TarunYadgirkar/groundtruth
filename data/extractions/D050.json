@@ -10,10 +10,10 @@
       "level": "state",
       "category": "just_cause_eviction",
       "status": "in_force",
-      "title": "14-day notice to quit for nonpayment of rent under a written lease; tenant right to cure",
-      "requirement": "To end a written lease for nonpayment of rent, the landlord must give the tenant 14 days' written notice to quit. The tenancy continues if the tenant pays all rent due, with interest and costs, by the day the answer is due in the eviction action. Courts must continue the hearing at least seven days when nonpayment was caused by government delay in rental or subsistence payments.",
+      "title": "14-day notice to quit for nonpayment of rent under a written lease, with right to cure",
+      "requirement": "If a tenant under a written lease fails to pay rent, the landlord must give a written 14-day notice to quit to end the lease. The tenant can keep the tenancy by paying or tendering all rent due, with interest and court costs, by the day the answer is due in the eviction case. If nonpayment was caused by a government delay in a subsistence or rental payment, the court must continue the hearing at least 7 days and treat the tenancy as not terminated if all rent, interest and costs are tendered within that time.",
       "key_value": "14 days' written notice; cure by answer date",
-      "coverage_conditions": "Residential and other tenancies under a written lease in Massachusetts where the tenant has neglected or refused to pay rent due.",
+      "coverage_conditions": "Residential tenancies under a written lease where the tenant has failed to pay rent due.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -24,16 +24,16 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only to tenancies under a written lease where rent is unpaid. The hearing continuance applies only when nonpayment was caused by government delay in subsistence or rental payments."
+        "unverifiable_conditions": "Applies only to tenancies under a written lease where rent is unpaid; the 7-day continuance applies only when nonpayment was caused by a government payment delay."
       },
       "yields_to_local": false,
       "effective_date": null,
       "enacted_date": null,
       "penalty": null,
       "citation": "Mass. Gen. Laws ch. 186, § 11",
-      "quoted_span": "Upon the neglect or refusal to pay the rent due under a written lease, fourteen days' notice to quit, given in writing by the landlord to the tenant, shall be sufficient to determine the lease, unless the tenant, on or before the day the answer is due, in an action by the landlord to recover possession of the premises, pays or tenders to the landlord or to his attorney all rent then due, with interest and costs of suit.",
-      "confidence": 0.6,
-      "conflict_note": "This is an eviction notice and cure procedure for nonpayment, not a just-cause requirement. Massachusetts has no statewide just-cause eviction law in this document. It is categorized under just_cause_eviction only as the closest eviction-protection category. The document gives no effective date."
+      "quoted_span": "Section 11. Upon the neglect or refusal to pay the rent due under a written lease, fourteen days' notice to quit, given in writing by the landlord to the tenant, shall be sufficient to determine the lease, unless the tenant, on or before the day the answer is due, in an action by the landlord to recover possession of the premises, pays or tenders to the landlord or to his attorney all rent then due, with interest and costs of suit.",
+      "confidence": 0.85,
+      "conflict_note": "This is an eviction procedure (notice and cure) rule, not a general just-cause requirement. The document does not state an effective date."
     }
   ],
   "no_rule_findings": []

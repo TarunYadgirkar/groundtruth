@@ -1,0 +1,40 @@
+{
+  "doc_id": "D080",
+  "url": "https://www.sf.gov/news--annual-rent-increase-3126-22827-announced",
+  "retrieved_at": "2026-10-01T22:37Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "SF-RENT-ORD-annual-allowable-increase-2026-27",
+      "jurisdiction": "San Francisco, CA",
+      "level": "city",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "San Francisco annual allowable rent increase, March 1, 2026 to February 28, 2027",
+      "requirement": "For rent-controlled units in San Francisco, the annual allowable rent increase from March 1, 2026 through February 28, 2027 is 1.6% of the tenant's base rent. For example, $2,000.00 x .016 = $32.00, for a new base rent of $2,032.00.",
+      "key_value": "1.6% of base rent (3/1/2026-2/28/2027)",
+      "coverage_conditions": "Rent-controlled units in San Francisco under the Rent Board's jurisdiction.",
+      "exemptions": null,
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Applies only to units that are rent-controlled under the San Francisco Rent Ordinance. This document does not state the coverage criteria, such as construction date or unit type."
+      },
+      "yields_to_local": false,
+      "effective_date": "2026-03-01",
+      "enacted_date": "2026-01-14",
+      "penalty": null,
+      "citation": "San Francisco Rent Ordinance; Rent Board annual allowable increase announcement (no section cite given in document)",
+      "quoted_span": "For rent-controlled units, the annual allowable increase amount effective March 1, 2026 through February 28, 2027 is 1.6%.",
+      "confidence": 0.9,
+      "conflict_note": "The prior period (March 1, 2025 to February 28, 2026) was 1.4%; that amount no longer applies as of 2026-10-01. The amount is recalculated each year, and this rate expires February 28, 2027. The document gives no ordinance section citation."
+    }
+  ],
+  "no_rule_findings": []
+}

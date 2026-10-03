@@ -11,10 +11,10 @@
       "category": "screening_restrictions",
       "status": "in_force",
       "title": "Boston Fair Chance Tenant Selection Policy – criminal history screening limits",
-      "requirement": "Covered housing providers may not use blanket bans on applicants with arrests or convictions and must assess applicants case by case. They may not consider arrests without conviction, sealed or expunged convictions, juvenile records, or convictions more than 5 years old when deciding eligibility or eviction.",
+      "requirement": "Covered housing providers may not use blanket bans on applicants with arrests or convictions and must evaluate applicants case by case. They may not consider non-conviction arrests, sealed or expunged convictions, juvenile records, or convictions more than 5 years old when deciding eligibility or eviction.",
       "key_value": "Convictions older than 5 years may not be considered",
-      "coverage_conditions": "Housing providers receiving Boston Department of Neighborhood Development (DND) funding and/or land, or with income-restricted units created under the BPDA Inclusionary Development Policy. Also applied to the Office of Fair Housing and Equity Affirmative Marketing Program.",
-      "exemptions": "Does not apply where there is a direct relationship between a conviction and the housing sought, or an unreasonable risk of substantial harm to others' safety. Does not apply to current criminal behavior. Federal or state criminal history requirements that conflict with the policy preempt it.",
+      "coverage_conditions": "Housing providers receiving Boston Department of Neighborhood Development (DND) funding and/or land, or with income-restricted units created under the BPDA Inclusionary Development Policy; also applied to the Office of Fair Housing and Equity Affirmative Marketing Program.",
+      "exemptions": "Does not apply where there is a direct relationship between a conviction and the housing sought or an unreasonable risk of substantial harm to others, or to current criminal behavior; federal or state criminal history requirements preempt conflicting provisions.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -24,16 +24,16 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only to housing receiving DND funding and/or land, or to income-restricted units created under the BPDA Inclusionary Development Policy"
+        "unverifiable_conditions": "RESTRICTED: applies only to DND-funded or DND-land housing providers and BPDA Inclusionary Development Policy income-restricted units (and the OFHE Affirmative Marketing Program)."
       },
       "yields_to_local": false,
       "effective_date": "2017-02",
-      "enacted_date": null,
+      "enacted_date": "2017-02",
       "penalty": null,
-      "citation": "Boston Department of Neighborhood Development, Boston Fair Chance Tenant Selection Policy (Feb. 2017)",
-      "quoted_span": "a) Arrests that did not result in conviction.",
-      "confidence": 0.6,
-      "conflict_note": "This is an administrative policy that applies through DND funding and BPDA Inclusionary Development Policy agreements, not a general ordinance. It is dated February 2017 and the document gives no exact effective date. Its current status as of 2026-10-01 is not confirmed by the document."
+      "citation": "Boston Department of Neighborhood Development, Boston Fair Chance Tenant Selection Policy (February 2017)",
+      "quoted_span": "a) Arrests that did not result in conviction. This includes dismissed charges, diversion",
+      "confidence": 0.8,
+      "conflict_note": "This is an agency funding/program policy that providers agree to, not a codified ordinance. The document is dated February 2017 and states no separate effective date."
     },
     {
       "canonical_key": "BOSTON-DND-fair-chance-tenant-selection-credit",
@@ -42,10 +42,10 @@
       "category": "screening_restrictions",
       "status": "in_force",
       "title": "Boston Fair Chance Tenant Selection Policy – credit score and credit history limits",
-      "requirement": "Covered housing providers may not use credit scores to approve or deny applications. Credit history may be used only in place of rental history when rental history is unavailable, and lack of credit history (as opposed to poor credit) is not grounds for rejection.",
+      "requirement": "Covered housing providers may not use an applicant's credit score to approve or deny housing applications. Credit history may be used only in place of rental history when none is available, and a lack of credit history alone is not a sufficient reason to reject an applicant.",
       "key_value": "No use of credit score; credit history only in lieu of rental history",
-      "coverage_conditions": "Housing providers receiving Boston DND funding and/or land, or with income-restricted units created under the BPDA Inclusionary Development Policy.",
-      "exemptions": "Federal or state law criminal history requirements that conflict with the policy preempt it.",
+      "coverage_conditions": "Housing providers receiving Boston DND funding and/or land, or with income-restricted units under the BPDA Inclusionary Development Policy; also applied to the OFHE Affirmative Marketing Program.",
+      "exemptions": null,
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -55,16 +55,16 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only to housing receiving DND funding and/or land, or to income-restricted units created under the BPDA Inclusionary Development Policy"
+        "unverifiable_conditions": "RESTRICTED: applies only to DND-funded or DND-land housing providers and BPDA Inclusionary Development Policy income-restricted units (and the OFHE Affirmative Marketing Program)."
       },
       "yields_to_local": false,
       "effective_date": "2017-02",
-      "enacted_date": null,
+      "enacted_date": "2017-02",
       "penalty": null,
-      "citation": "Boston Department of Neighborhood Development, Boston Fair Chance Tenant Selection Policy (Feb. 2017)",
-      "quoted_span": "a) The agent agrees not to use the applicant credit score to approve or deny housing",
-      "confidence": 0.6,
-      "conflict_note": "This is an administrative policy for publicly funded and inclusionary units, not a general ordinance. It is dated February 2017 and its current status is not confirmed by the document."
+      "citation": "Boston Department of Neighborhood Development, Boston Fair Chance Tenant Selection Policy (February 2017)",
+      "quoted_span": "The agent agrees not to use the applicant credit score to approve or deny housing",
+      "confidence": 0.8,
+      "conflict_note": "This is an agency funding/program policy, not a codified ordinance. The document is dated February 2017 and states no separate effective date."
     }
   ],
   "no_rule_findings": []

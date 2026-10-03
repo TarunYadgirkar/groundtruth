@@ -1,0 +1,40 @@
+{
+  "doc_id": "D058",
+  "url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section31",
+  "retrieved_at": "2026-10-01T22:54Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "MA-GL-186-31-nonpayment-notice-to-quit-form",
+      "jurisdiction": "MA",
+      "level": "state",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "Required tenant-rights form with notice to quit for nonpayment of rent",
+      "requirement": "A landlord's written notice to quit a residential tenant for nonpayment of rent must include a state form with any repayment agreements, information on rental assistance, court rules, and legal restrictions on eviction, plus a statement that the notice is not an eviction. Courts may not accept a nonpayment eviction filing without proof that the form was delivered.",
+      "key_value": null,
+      "coverage_conditions": "Residential tenants receiving a written notice to quit for nonpayment of rent from a landlord in Massachusetts. Applies to summary process actions for nonpayment of rent for residential dwelling units, including in the Boston municipal court department.",
+      "exemptions": null,
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Applies only to notices to quit for nonpayment of rent"
+      },
+      "yields_to_local": false,
+      "effective_date": null,
+      "enacted_date": null,
+      "penalty": "Court may not accept for filing a writ, summons or complaint in a nonpayment eviction without proof of delivery of the form.",
+      "citation": "Mass. Gen. Laws ch. 186, § 31",
+      "quoted_span": "No court having jurisdiction over an action for summary process pursuant to chapter 239, including the Boston municipal court department, shall, in an eviction for nonpayment of rent for a residential dwelling unit, accept for filing a writ, summons or complaint without proof of delivery of the form required under this section.",
+      "confidence": 0.6,
+      "conflict_note": "This is a procedural notice requirement for nonpayment evictions, not a substantive just-cause requirement; it was classified under just_cause_eviction as the closest category. The document does not state an effective date."
+    }
+  ],
+  "no_rule_findings": []
+}

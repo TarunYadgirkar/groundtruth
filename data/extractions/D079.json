@@ -11,10 +11,10 @@
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "San Francisco Rent Ordinance just cause eviction requirement",
-      "requirement": "To evict a tenant from a unit covered by the Rent Ordinance, a landlord must have one of 17 enumerated just cause reasons, and that reason must be the dominant motive for the eviction. Expiration of a lease or a change in ownership is not just cause. A just cause reason is also needed to remove housing services such as parking, storage, or laundry, except for temporary removal for mandatory soft-story seismic retrofit work under Section 37.2(r).",
-      "key_value": "17 enumerated just causes; dominant-motive test",
-      "coverage_conditions": "Rental units covered by the San Francisco Rent Ordinance. This includes some tenancies exempt from the Ordinance's rent increase limits, such as newly constructed units that first obtained a Certificate of Occupancy after June 13, 1979, tenancies eligible for rent increases under Costa-Hawkins, and some tenancies whose rent is regulated by another government agency.",
-      "exemptions": "Units not covered by the Rent Ordinance. The document does not list the specific exemptions.",
+      "requirement": "To evict a tenant from a unit covered by the Rent Ordinance, a landlord must have one of 17 listed just cause reasons, and that reason must be the dominant motive for the eviction. Lease expiration or a change in ownership is not just cause, and removing housing services such as parking, storage or laundry also requires just cause.",
+      "key_value": "17 enumerated just causes; must be dominant motive",
+      "coverage_conditions": "Rental units covered by the San Francisco Rent Ordinance. This includes some tenancies exempt from the rent increase limits: units that first got a certificate of occupancy after June 13, 1979, tenancies eligible for rent increases under Costa-Hawkins, and some units whose rent is regulated by another government agency.",
+      "exemptions": "Units not covered by the Rent Ordinance; this page does not list those exemptions.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -24,16 +24,16 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Unit must be covered by the Rent Ordinance's eviction provisions. Coverage of some government-regulated tenancies varies."
+        "unverifiable_conditions": "Unit must be covered by the Rent Ordinance's eviction provisions; the specific exemptions from coverage are not stated on this page."
       },
       "yields_to_local": false,
       "effective_date": null,
       "enacted_date": null,
-      "penalty": "Landlords who evict or try to evict unlawfully may face substantial civil and/or criminal liability.",
-      "citation": "San Francisco Rent Ordinance § 37.9(a)",
+      "penalty": "A landlord who evicts or tries to evict a tenant unlawfully may face substantial civil and/or criminal liability.",
+      "citation": "S.F. Admin. Code § 37.9(a) (Rent Ordinance)",
       "quoted_span": "In order to evict a tenant from a rental unit covered by the Rent Ordinance, a landlord must have a \"just cause\" reason that is the dominant motive for pursuing the eviction. Note that the mere expiration of a rental agreement or a change in ownership does not constitute \"just cause\" for eviction.",
       "confidence": 0.9,
-      "conflict_note": null
+      "conflict_note": "The page does not state an effective date. It cites 'Ordinance Section 37.9(a)'; the Rent Ordinance is Chapter 37 of the SF Administrative Code."
     }
   ],
   "no_rule_findings": []

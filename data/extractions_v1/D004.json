@@ -1,0 +1,71 @@
+{
+  "doc_id": "D004",
+  "url": "https://rentboard.berkeleyca.gov/elected-rent-board/news/2026-adjustments-relocation-assistance-payments",
+  "retrieved_at": "2026-10-01T22:35Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "BERKELEY-RENT-ORD-omi-relocation-assistance",
+      "jurisdiction": "Berkeley, CA",
+      "level": "city",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "Owner move-in eviction relocation assistance payment (2026 inflation-adjusted amounts)",
+      "requirement": "Owners who evict a tenant for owner move-in must pay relocation assistance. For 2026 the standard payment is $19,413, with an additional $6,471 for qualifying households, indexed annually to Bay Area CPI.",
+      "key_value": "$19,413 standard; additional $6,471 for qualifying households (effective 2026-01-01; 1.5% CPI adjustment)",
+      "coverage_conditions": "Tenants in Berkeley rental units covered by the Rent Stabilization and Good Cause for Eviction Ordinance who are evicted for owner move-in.",
+      "exemptions": null,
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Applies only when an owner move-in eviction occurs; additional payment depends on the household meeting qualifying criteria not stated in the document."
+      },
+      "yields_to_local": false,
+      "effective_date": "2026-01-01",
+      "enacted_date": "2025-10-16",
+      "penalty": null,
+      "citation": "Berkeley Rent Stabilization and Good Cause for Eviction Ordinance (relocation assistance provisions)",
+      "quoted_span": "The Rent Stabilization and Good Cause for Eviction Ordinance requires owners to pay tenants relocation assistance in the event of an owner move-in eviction.",
+      "confidence": 0.85,
+      "conflict_note": "Effective date and enacted date refer to the 2026 inflationary adjustment approved by the Rent Board on 2025-10-16, not the original ordinance enactment. Document does not give the municipal code section number or define qualifying households."
+    },
+    {
+      "canonical_key": "BERKELEY-ELLIS-ORD-relocation-assistance",
+      "jurisdiction": "Berkeley, CA",
+      "level": "city",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "Ellis Act withdrawal eviction relocation assistance payment (2026 inflation-adjusted amounts)",
+      "requirement": "Owners who evict tenants to remove a property from the rental market under the Ellis Act must pay the same relocation assistance as for owner move-in evictions. For 2026 this is $19,413 standard plus $6,471 for qualifying households.",
+      "key_value": "$19,413 standard; additional $6,471 for qualifying households (effective 2026-01-01)",
+      "coverage_conditions": "Tenants in Berkeley evicted because the owner is withdrawing the property from the rental housing market (Ellis Act).",
+      "exemptions": null,
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Applies only when an Ellis Act withdrawal eviction occurs; additional payment depends on the household meeting qualifying criteria not stated in the document."
+      },
+      "yields_to_local": false,
+      "effective_date": "2026-01-01",
+      "enacted_date": "2025-10-16",
+      "penalty": null,
+      "citation": "Berkeley Ellis Implementation Ordinance",
+      "quoted_span": "The Ellis Implementation Ordinance requires the same relocation assistance payments for tenants evicted so the owner can remove a property from the rental housing market.",
+      "confidence": 0.85,
+      "conflict_note": "Dates refer to the 2026 inflationary adjustment approved 2025-10-16, not the ordinance's original enactment. Document does not give the municipal code section number."
+    }
+  ],
+  "no_rule_findings": []
+}

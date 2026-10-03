@@ -1,0 +1,71 @@
+{
+  "doc_id": "D068",
+  "url": "https://www.nj.gov/oag/dcr/downloads/kyrhousing02.pdf",
+  "retrieved_at": "2026-10-01T22:37Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "NJ-LAD-housing-protected-classes",
+      "jurisdiction": "NJ",
+      "level": "state",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "NJ Law Against Discrimination – protected classes in rental housing",
+      "requirement": "Landlords may not discriminate in renting housing on the basis of race, creed, color, national origin, sex, gender identity or expression, marital or civil union status, ancestry, disability, nationality, sexual orientation, familial status, or domestic partner status. Applicants are entitled to equal treatment in the terms, conditions, and privileges of rental, and discriminatory advertising is prohibited.",
+      "key_value": null,
+      "coverage_conditions": "Applies to the sale or rental of all real property, residential or business, including open land.",
+      "exemptions": "Rental of one unit in a two-family dwelling where the owner occupies the other unit; rental of rooms by the owner or occupant of a one-family dwelling they live in; religious organizations giving preference to persons of the same religion; familial-status protection does not apply to housing for older persons (N.J.S.A. 10:5-5mm).",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": true,
+        "unverifiable_conditions": "Exemptions depend on owner occupancy of a two-family or one-family dwelling, religious-organization ownership, and qualified older-persons housing status."
+      },
+      "yields_to_local": false,
+      "effective_date": null,
+      "enacted_date": null,
+      "penalty": "Complaint may be filed with the Division on Civil Rights within 180 days, or in NJ Superior Court within two years of the violation.",
+      "citation": "New Jersey Law Against Discrimination (LAD)",
+      "quoted_span": "The NJ Law Against Discrimination (LAD) prohibits\ndiscrimination on the bases of race, creed (religion),\ncolor, national origin, sex, gender identity or expression,\nmarital status, civil union status, ancestry, actual or\nperceived physical or mental disability, nationality,\naffectional or sexual orientation, familial status, and\ndomestic partner status.",
+      "confidence": 0.85,
+      "conflict_note": "Source is a 2015-revision brochure. The protected-class list may have been amended since then. The document does not give the LAD's base statutory citation (N.J.S.A. 10:5-1 et seq.)."
+    },
+    {
+      "canonical_key": "NJ-LAD-source-of-income",
+      "jurisdiction": "NJ",
+      "level": "state",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "NJ LAD – source of lawful income / rent payment discrimination ban",
+      "requirement": "Landlords may not discriminate based on the source of lawful income or lawful rent payment a tenant uses. For example, a landlord cannot refuse to rent to someone solely because they hold a Section 8 HUD voucher.",
+      "key_value": null,
+      "coverage_conditions": "Applies to the rental of all real property, subject to the LAD exemptions.",
+      "exemptions": "Rental of one unit in a two-family dwelling where the owner occupies the other unit; rental of rooms by the owner or occupant of a one-family dwelling they live in.",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": true,
+        "unverifiable_conditions": "Exemptions depend on owner occupancy of a two-family or one-family dwelling."
+      },
+      "yields_to_local": false,
+      "effective_date": null,
+      "enacted_date": null,
+      "penalty": "Complaint may be filed with the Division on Civil Rights within 180 days, or in NJ Superior Court within two years of the violation.",
+      "citation": "New Jersey Law Against Discrimination (LAD)",
+      "quoted_span": "This\nmeans, for example, that a landlord cannot deny the\nlawful recipient of a Section 8 HUD voucher the right to\nrent an apartment based solely on that source of lawful\nincome.",
+      "confidence": 0.85,
+      "conflict_note": "Source is a 2015-revision brochure. Later amendments to source-of-income provisions (e.g., limits on income-ratio screening for voucher holders) are not reflected. The document does not give the specific statutory citation."
+    }
+  ],
+  "no_rule_findings": []
+}

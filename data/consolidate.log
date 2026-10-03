@@ -1,0 +1,17 @@
+npm notice run groundtruth@0.1.0 npx
+npm notice run 'tsx' pipeline/consolidate.ts
+candidates 200, quotes verified 200
+final rules 56, dropped 2, gaps 33
+CA                 1 2 1 1 2 1
+NJ                 2 2 1 1 2 1
+MA                 1 2 1 2 1 2
+Los Angeles, CA    1 2 1 0 0 0
+San Francisco, CA  1 1 1 0 1 1
+San Diego, CA      0 1 0 0 0 1
+Berkeley, CA       1 1 1 1 1 1
+Santa Ana, CA      1 1 0 0 0 1
+Jersey City, NJ    1 0 0 0 0 1
+Hoboken, NJ        0 0 0 0 0 1
+Newark, NJ         0 0 0 0 0 0
+Boston, MA         1 2 0 0 2 0
+Cambridge, MA      0 1 0 0 1 0

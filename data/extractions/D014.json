@@ -11,10 +11,10 @@
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Housing Stability Notification Act – Notice of Tenants' Rights and Resources",
-      "requirement": "A Boston landlord or foreclosing owner who ends a tenancy must give the tenant a Notice of Tenants' Rights and Resources with the Notice to Quit or notice of lease non-renewal. The landlord must also send a copy of the notice, with a Certificate of Compliance/Service, to the City's Office of Housing Stability.",
-      "key_value": null,
-      "coverage_conditions": "All landlords and foreclosing owners intending to end a tenancy or post-foreclosure occupancy of a unit in the City of Boston, including eviction starts, lease non-renewals, and post-foreclosure purchasers asking occupants to leave.",
-      "exemptions": "Residences in any hospital, skilled nursing facility or health facility; residences in a non-profit facility whose primary purpose is providing short-term treatment, assistance or therapy for alcohol, drug, or other substance abuse. Requirements cannot be waived by lease.",
+      "requirement": "Any landlord or foreclosing owner ending a tenancy or post-foreclosure occupancy must give the tenant a Notice of Tenants' Rights and Resources at the same time as the Notice to Quit or notice of lease non-renewal. The landlord must also send a copy of the Notice to Quit or Non-renewal, with a Certificate of Compliance/Service, to the City's Office of Housing Stability.",
+      "key_value": "Notice delivered with Notice to Quit / non-renewal; copy filed with Office of Housing Stability",
+      "coverage_conditions": "All landlords and foreclosing owners intending to end a tenancy or post-foreclosure occupancy of a unit in the City of Boston, including on eviction, lease non-renewal, or post-foreclosure purchase. The requirements cannot be waived by lease or other agreement.",
+      "exemptions": "Residences in any hospital, skilled nursing facility or health facility; residences in a non-profit facility whose primary purpose is short-term treatment, assistance or therapy for alcohol, drug or other substance abuse.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -24,16 +24,16 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Exempt if the residence is in a hospital, skilled nursing or health facility, or a non-profit short-term substance abuse treatment facility; applies only when a tenancy or occupancy is being terminated or not renewed."
+        "unverifiable_conditions": "Exempt if the residence is in a hospital, skilled nursing or health facility, or in a non-profit short-term substance abuse treatment facility."
       },
       "yields_to_local": false,
       "effective_date": "2020-11-06",
       "enacted_date": "2020-10",
       "penalty": "Enforced by Inspectional Services Department: 1st offense warning; 2nd and subsequent offenses $300 per day. A violation does not halt the eviction process.",
-      "citation": "City of Boston Housing Stability Notification Act (Ordinance, Oct. 2020); penalty schedule Sec. 10-11.7",
-      "quoted_span": "The HSNA requires that landlords give this Notice of Tenants’ Rights and Resources\nto tenants when the landlord starts the eviction process, or when the landlord\ndecides to not offer the tenant a renewal of their lease agreement.",
-      "confidence": 0.65,
-      "conflict_note": "This is a notice/disclosure requirement on termination. It does not require just cause to evict and does not stop an eviction, so it is categorized under just_cause_eviction only as the closest category. The document cites Sec. 10-11.7 only for the penalty schedule, not as the ordinance's codified section."
+      "citation": "City of Boston Housing Stability Notification Act (Ordinances Sec. 10-11.7)",
+      "quoted_span": "The Housing Stability Notification Act (HSNA) is an Ordinance passed by the City of Boston in October 2020 that requires any landlord planning to end a tenancy agreement to provide the tenant with a Notice of Tenants’ Rights and Resources.",
+      "confidence": 0.88,
+      "conflict_note": "Citation is taken from the FAQ's penalty table, 'Sec. 10-11.7', and may refer to the penalty schedule rather than the codified ordinance section."
     }
   ],
   "no_rule_findings": []

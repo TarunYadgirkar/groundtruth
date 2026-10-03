@@ -1,0 +1,769 @@
+{
+  "rules": [
+    {
+      "team_rule_id": "new-01",
+      "jurisdiction": "Cambridge, MA",
+      "level": "city",
+      "category": "algorithmic_rent_setting",
+      "status": "not_yet_effective",
+      "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+      "requirement": "Owners and managers of residential rental properties with five or more units in Cambridge may not use an algorithmic device that uses nonpublic competitor data to set or recommend rent for any unit.",
+      "key_value": "Ban on algorithmic rent-setting devices; civil penalty up to $1,000 per unit per month",
+      "coverage_conditions": "Owners or managers of residential rental properties with five or more dwelling units in Cambridge, in buildings whose certificate of occupancy was first issued before January 1, 2016.",
+      "exemptions": "Dwelling units in buildings for which a certificate of occupancy was first issued on or after January 1, 2016.",
+      "coverage": {
+        "min_units": 5,
+        "max_units": null,
+        "built_before": "2016-01-01",
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "certificate_of_occupancy",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": null,
+        "owner_exemption_max_units": null
+      },
+      "yields_to_local": false,
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2027-03-01",
+      "citation": "Cambridge Municipal Code ch. 8.80 (Ordinance No. 2026-T1)",
+      "source_doc_id": null,
+      "source_url": "test-cambridge-ordinance.txt",
+      "retrieved_at": "2026-10-03T21:55:49.876Z",
+      "quoted_span": "No owner or manager of a residential rental property containing five or more dwelling units in the City of Cambridge shall use an algorithmic device to set or recommend the rent for any dwelling unit.",
+      "confidence": 0.5,
+      "conflict_flag": false,
+      "conflict_note": "The source document self-identifies as a 'FICTIONAL TEST DOCUMENT - NOT REAL LAW' created to test automated ingestion; this record should not be treated as actual law. The ordinance was enacted 2026-09-29 and takes effect 2027-03-01, so it is not yet effective as of the 2026-10-01 query date.",
+      "conflicts_with": [],
+      "quote_verified": true
+    }
+  ],
+  "dropped": [],
+  "as_of": "2026-10-01",
+  "after_date": "2027-03-02",
+  "affected": [
+    {
+      "address_id": "A0009",
+      "street_address": "322-322.5 Western Ave",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0010",
+      "street_address": "134 Oxford St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0015",
+      "street_address": "15 Everett St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0024",
+      "street_address": "227 Charles St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0034",
+      "street_address": "25 Gore St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0039",
+      "street_address": "1 Craigie St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0043",
+      "street_address": "4 Orchard St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0046",
+      "street_address": "8-12 Soden St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0064",
+      "street_address": "24-26 Concord Ave",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0070",
+      "street_address": "43 Fayette St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0071",
+      "street_address": "14.5-16 Vandine St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0073",
+      "street_address": "35-37 Inman St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0075",
+      "street_address": "27 Everett St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0077",
+      "street_address": "91 Brookline St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0082",
+      "street_address": "63 Inman St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0086",
+      "street_address": "67 Plymouth St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0095",
+      "street_address": "23 Elm St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0124",
+      "street_address": "33-35 Brookline St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0166",
+      "street_address": "1 Potter Pk",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0174",
+      "street_address": "84 Hampshire St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0175",
+      "street_address": "10 Dover St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0176",
+      "street_address": "15 Chester St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0191",
+      "street_address": "60 Kirkland St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0199",
+      "street_address": "42 Bay State Rd",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0209",
+      "street_address": "19 Trowbridge St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0214",
+      "street_address": "358 Harvard St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0218",
+      "street_address": "15 Richdale Ave",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0230",
+      "street_address": "85 Hancock St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0232",
+      "street_address": "189 Third St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0272",
+      "street_address": "5 Everett St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0284",
+      "street_address": "345 Columbia St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0286",
+      "street_address": "27 Irving Ter",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0290",
+      "street_address": "21 Forest St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0291",
+      "street_address": "165 Cambridgepark Dr",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0294",
+      "street_address": "178 Richdale Ave",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0298",
+      "street_address": "361 Washington St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0300",
+      "street_address": "36 Trowbridge St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0301",
+      "street_address": "165 Hampshire St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0302",
+      "street_address": "4-6 Clinton St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0306",
+      "street_address": "335A Harvard St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0339",
+      "street_address": "124 Berkshire St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0342",
+      "street_address": "49 Roseland St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0361",
+      "street_address": "15 Berkshire St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0422",
+      "street_address": "21-23 Marion St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0453",
+      "street_address": "11 Carlisle St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0465",
+      "street_address": "141 Oxford St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0468",
+      "street_address": "13 Shepard St",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    },
+    {
+      "address_id": "A0485",
+      "street_address": "296-302 Western Ave",
+      "legal_city": "Cambridge",
+      "state": "MA",
+      "changes": [
+        {
+          "team_rule_id": "new-01",
+          "title": "Prohibition on Algorithmic Rent-Setting (Cambridge Municipal Code Chapter 8.80)",
+          "now": "not_yet_effective",
+          "after": "applies"
+        }
+      ],
+      "superseded_existing": []
+    }
+  ],
+  "affected_count": 48,
+  "total_addresses": 500
+}

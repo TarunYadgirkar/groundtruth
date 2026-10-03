@@ -1,0 +1,40 @@
+{
+  "doc_id": "D008",
+  "url": "https://rentboard.berkeleyca.gov/sites/default/files/documents/AGA%20Public%20Notice.pdf",
+  "retrieved_at": "2026-10-01T22:35Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "BERKELEY-BMC-13.76.110A-AGA-2026",
+      "jurisdiction": "Berkeley, CA",
+      "level": "city",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Berkeley 2026 Annual General Adjustment (AGA) of rent ceilings",
+      "requirement": "Eligible landlords may raise 2025 permanent rent ceilings by no more than 1.0% for 2026, effective no earlier than January 1, 2026, after giving required notice. The AGA equals 65% of the Bay Area CPI increase, a formula approved by voters in 2004.",
+      "key_value": "1.0% for 2026 (65% of Bay Area CPI change, July 2024-June 2025 CPI 1.5%)",
+      "coverage_conditions": "Units under Berkeley rent ceilings whose landlords meet the eligibility conditions in Rent Board Regulation 1148 and give the required notice to tenants.",
+      "exemptions": "The 2026 AGA does not apply to tenants whose tenancy began on or after January 1, 2025 and whose rents were set under the Costa-Hawkins Rental Housing Act.",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Landlord must meet Regulation 1148 eligibility conditions and give required notice; excludes tenancies beginning on or after 2025-01-01 with Costa-Hawkins-set rents. Building-age and unit-type coverage of Berkeley rent ceilings not stated in this document."
+      },
+      "yields_to_local": false,
+      "effective_date": "2026-01-01",
+      "enacted_date": "2025-10-16",
+      "penalty": null,
+      "citation": "Berkeley Municipal Code § 13.76.110A; Berkeley Rent Stabilization Board Regulation 1148",
+      "quoted_span": "At its regular meeting on October 16, 2025, the Berkeley Rent Stabilization Board \nadopted the Annual General Adjustment (AGA) Order for Year 2026 which will allow \neligible landlords to increase the 2025 permanent rent ceilings by 1.0% no earlier than \nJanuary 1, 2026.",
+      "confidence": 0.9,
+      "conflict_note": null
+    }
+  ],
+  "no_rule_findings": []
+}

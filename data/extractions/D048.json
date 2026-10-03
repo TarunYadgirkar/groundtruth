@@ -8,8 +8,20 @@
     {
       "jurisdiction": "MA",
       "category": "rent_increase_limits",
-      "finding": "Massachusetts state law (M.G.L. c. 40P, § 4) bars cities and towns from enacting, maintaining or enforcing rent control of any kind. The only exception is narrow: it allows voluntary rent control with compensation to owners, cannot apply to owners of fewer than 10 units or to units with fair market rent over $400, and cannot regulate evictions. The document states no statewide rent cap.",
-      "quoted_span": "Section 4. No city or town may enact, maintain or enforce rent control of any kind, except that any city or town that accepts this chapter may adopt rent control regulation that provides:"
+      "finding": "M.G.L. c. 40P § 4 bars any Massachusetts city or town from enacting, maintaining or enforcing rent control of any kind. The only exception is a narrow voluntary, compensated scheme limited to owners of 10 or more units with fair market rent of $400 or less, and it cannot regulate evictions. There is therefore no state or local rent increase cap.",
+      "quoted_span": "No city or town may enact, maintain or enforce rent control of any kind, except that any city or town that accepts this chapter may adopt rent control regulation that provides:"
+    },
+    {
+      "jurisdiction": "Boston, MA",
+      "category": "rent_increase_limits",
+      "finding": "Statewide preemption under M.G.L. c. 40P § 4 bars Boston from enacting or enforcing rent control, apart from the narrow voluntary, compensated exception. No enforceable city rent cap exists.",
+      "quoted_span": "No city or town may enact, maintain or enforce rent control of any kind, except that any city or town that accepts this chapter may adopt rent control regulation that provides:"
+    },
+    {
+      "jurisdiction": "Cambridge, MA",
+      "category": "rent_increase_limits",
+      "finding": "Statewide preemption under M.G.L. c. 40P § 4 bars Cambridge from enacting or enforcing rent control, apart from the narrow voluntary, compensated exception. No enforceable city rent cap exists.",
+      "quoted_span": "No city or town may enact, maintain or enforce rent control of any kind, except that any city or town that accepts this chapter may adopt rent control regulation that provides:"
     }
   ]
 }

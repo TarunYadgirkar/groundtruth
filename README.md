@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Groundtruth
 
-## Getting Started
+**Which rental housing laws apply at this address, on any date.**
 
-First, run the development server:
+Groundtruth reads state and city housing law, turns it into structured rules with verbatim citations, resolves an apartment address to its legal jurisdiction, and decides which rules apply to that building on any date: applies, unknown, superseded, not yet effective, or pending. You type an address, the camera flies from orbit down to the building in Google's photorealistic 3D, and every applicable rule appears with the exact source text it rests on. Drag the date slider and the answers change as laws take effect.
+
+Built for the RealPage "Rental Housing Law Navigator" challenge at Hack-Nation's 7th Global AI Hackathon (Oct 3–4, 2026).
+
+> Not legal advice. Every answer links to the source text and retrieval date it rests on. Rules have not been reviewed by counsel.
+
+## What it does
+
+| Module | How |
+|---|---|
+| **A · Extract** | Claude (`claude-opus-5-5`, structured outputs) reads each corpus document and emits rule records in the challenge schema plus a machine-checkable coverage block. Every `quoted_span` is checked verbatim against the source text; rules whose quote can't be found are dropped. A consolidation pass merges duplicates across documents, settles effective dates and precedence, and records conflicts. |
+| **B · Resolve and apply** | Addresses are geocoded with the Census Geocoder (batch, then cleaned one-line retries, then Google) and placed in their legal city with Census incorporated-place boundaries, so "Dorchester" resolves to Boston. A deterministic engine (`src/lib/engine.ts`, no AI) tests each rule's coverage against year built, unit count (record or assessor use code), certificate-of-occupancy cutoffs, owner-type dependence, and restricted programs, then applies state-versus-local precedence. Missing facts produce `unknown`, never a guess. |
+| **C · Track change** | The same engine runs at any as-of date. `submission/changes.json` holds T1–T5 with affected addresses, conflict flags and before/after results. `/new-law` (and `pipeline/ingest.ts`) runs a never-seen document through extraction, verification and the engine and lists the buildings it affects. |
+
+## Deliverables
+
+- `submission/rules.json`: 56 rule records (schema in `starter/schema/rule_record.schema.json`)
+- `submission/lookups.json`: results for all 500 sample addresses as of 2026-10-01
+- `submission/changes.json`: T1–T5
+- `METHOD.md`: one-page method note, accuracy audit and limitations
+
+## Run it
+
+Requirements: Node 20+, pnpm, an Anthropic API key, and a Google Maps Platform key with the Maps JavaScript API (3D Maps), Geocoding and Places enabled.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+cp .env.example .env.local   # then fill in both keys
+pnpm dev                     # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Rebuild the data from the starter pack:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npx tsx pipeline/extract.ts       # Module A: per-document extraction (data/extractions/)
+npx tsx pipeline/consolidate.ts   # verify quotes, merge, precedence -> data/rules.json
+npx tsx pipeline/geocode.ts       # Module B: legal jurisdiction for 500 addresses
+npx tsx pipeline/submit.ts        # rules.json, lookups.json, changes.json -> submission/
+npx tsx pipeline/ingest.ts path/to/new-law.txt   # run a new document end to end
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`pipeline/capture.ts` fetches the starter pack's link-only sources one page at a time, with retrieval dates recorded. The RealPage organizer confirmed in the event Discord that teams may capture link-only pages. Sites that refused automated access were not captured.
 
-## Learn More
+## Layout
 
-To learn more about Next.js, take a look at the following resources:
+```
+pipeline/          extraction, capture, consolidation, geocoding, submission, ingest
+src/lib/engine.ts  deterministic coverage + precedence engine (shared by pipeline and UI)
+src/lib/extraction.ts  extraction schema, prompt, verbatim quote locator
+src/app/           Next.js app: landing, 3D fly-in, answer panel, /changes, /new-law, /method, /api/ask, /api/ingest
+data/              intermediate outputs (extractions, candidates, consolidation, audit)
+submission/        challenge deliverables
+starter/           organizer starter pack (unchanged)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Next.js 16, TypeScript, Tailwind v4, Motion, Google Maps JavaScript 3D Maps (photorealistic tiles), Census Geocoder, Anthropic Claude Opus 5.5 (server-side only), Zod.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT

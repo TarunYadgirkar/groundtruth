@@ -11,10 +11,10 @@
       "category": "rent_increase_limits",
       "status": "in_force",
       "title": "Jersey City Rent Control Ordinance (Chapter 260)",
-      "requirement": "Jersey City regulates rent increases on covered rental properties under its Rent Control Ordinance, administered by the Office of Landlord/Tenant Relations. Increases above the allowed amount require a landlord application, such as a capital improvement, vacancy capital improvement, or hardship application, and tenants may file Illegal Rent Petitions.",
+      "requirement": "Rent increases on covered Jersey City rental units are regulated under the city's Rent Control Ordinance, administered by the Office of Landlord/Tenant Relations. Landlords seeking increases beyond the standard limits must apply, for example for capital improvements or hardship. Tenants may file Illegal Rent Petitions.",
       "key_value": null,
-      "coverage_conditions": "Residential rental properties with 5 or more units in Jersey City, unless an exemption under the ordinance applies.",
-      "exemptions": "All 1-4 unit properties are exempt. Other exemptions under the ordinance are available by Rent Control Exemption Request; the specific criteria are not stated on this page.",
+      "coverage_conditions": "Rental properties in Jersey City with 5 or more units; properties with 1-4 units are exempt from rent control.",
+      "exemptions": "All 1-4 unit properties are exempt. Other exemptions are available through a Rent Control Exemption Request if the owner meets the ordinance's criteria.",
       "coverage": {
         "min_units": 5,
         "max_units": null,
@@ -24,16 +24,16 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Other ordinance exemptions (criteria not stated on this page) may apply via an approved Rent Control Exemption Request."
+        "unverifiable_conditions": "Other exemptions under Chapter 260 can be granted through a Rent Control Exemption Request; the page does not list the criteria."
       },
       "yields_to_local": false,
       "effective_date": null,
       "enacted_date": null,
       "penalty": null,
-      "citation": "Jersey City Municipal Code Chapter 260 (Rent Control Ordinance)",
+      "citation": "Jersey City Municipal Code Chapter 260",
       "quoted_span": "(Please Note: All 1-4 Unit Properties are exempt from rent control)",
       "confidence": 0.7,
-      "conflict_note": "This summary page does not state the allowable increase formula. It references a CPI chart, which suggests a CPI-based cap, but the cap is not given here."
+      "conflict_note": "The page does not state the allowable increase formula. It references a Consumer Price Index chart, suggesting a CPI-based cap, but no figure is given."
     }
   ],
   "no_rule_findings": []

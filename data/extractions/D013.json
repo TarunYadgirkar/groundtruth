@@ -5,15 +5,15 @@
   "model": "claude-opus-5-5",
   "rules": [
     {
-      "canonical_key": "BOSTON-HSNA-10-11.7-notice-of-tenant-rights",
+      "canonical_key": "BOSTON-10-11.7-hsna-tenant-rights-notice",
       "jurisdiction": "Boston, MA",
       "level": "city",
       "category": "just_cause_eviction",
       "status": "in_force",
-      "title": "Housing Stability Notification Act – Notice of Tenants' Rights and Resources with notice to quit",
-      "requirement": "Any landlord ending a tenancy must give the tenant a Notice of Tenants' Rights and Resources at the same time as the notice to quit or notice of non-renewal. Landlords and foreclosing owners must also file the notice to quit or non-renewal, with tenant contact information, through the City's online portal.",
-      "key_value": "Notice required with every notice to quit/non-renewal; fine up to $300/day",
-      "coverage_conditions": "All landlords in Boston planning to end a tenancy agreement, and foreclosing owners for the city filing requirement.",
+      "title": "Housing Stability Notification Act – Notice of Tenants' Rights and Resources",
+      "requirement": "Any landlord who plans to end a tenancy must give the tenant the City's Notice of Tenants' Rights and Resources at the same time as the notice to quit or notice of lease non-renewal. A violation does not stop the eviction process.",
+      "key_value": "Notice delivered with notice to quit / non-renewal; fine: warning, then $300 per day",
+      "coverage_conditions": "All landlords in Boston who plan to end a tenancy agreement, via notice to quit or notice of non-renewal of lease.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -24,16 +24,47 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only when a landlord is ending a tenancy, through a notice to quit or a notice of non-renewal."
+        "unverifiable_conditions": "Triggered only when the landlord serves a notice to quit or notice of non-renewal of lease."
       },
       "yields_to_local": false,
       "effective_date": null,
       "enacted_date": null,
-      "penalty": "Enforced by Inspectional Services: warning for the 1st offense, $300 per day for the 2nd and later offenses. A violation does not halt the eviction process.",
-      "citation": "City of Boston Ordinances Sec. 10-11.7 (Housing Stability Notification Act)",
+      "penalty": "Enforced by Inspectional Services Department: 1st offense warning; 2nd and subsequent offenses $300 per day. Violation does not halt the eviction process.",
+      "citation": "Boston City Code § 10-11.7 (Housing Stability Notification Act)",
       "quoted_span": "The Housing Stability Notification Act requires any landlord to provide renters with a Notice of Tenant’s Rights and Resources when planning to end a tenancy agreement.",
-      "confidence": 0.6,
-      "conflict_note": "This is a notice and filing requirement, not a just-cause standard. It does not limit the grounds for eviction, and violations do not halt the eviction. It is classified under just_cause_eviction as the closest category. The page gives no effective date. Sec. 10-11.7 appears in the page's penalty listing and may be the enforcement section rather than the ordinance's own codification."
+      "confidence": 0.85,
+      "conflict_note": "The page does not give an effective or enactment date. The citation 'Sec. 10-11.7' is taken from the page's penalty table and may refer to the penalty provision rather than the full ordinance."
+    },
+    {
+      "canonical_key": "BOSTON-10-11.7-hsna-city-notice-submission",
+      "jurisdiction": "Boston, MA",
+      "level": "city",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "Housing Stability Notification Act – Notice to Quit / Non-renewal submission to City",
+      "requirement": "Landlords and foreclosing owners must submit the Notice to Quit / Non-renewal of Lease Submission Verification Form through the City's online portal. The submission includes tenant contact information and a copy of the notice to quit or non-renewal.",
+      "key_value": "Fine up to $300 per day for failure to submit",
+      "coverage_conditions": "All landlords and foreclosing owners in Boston serving a notice to quit or notice of non-renewal of lease.",
+      "exemptions": null,
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Triggered only when a notice to quit or notice of non-renewal of lease is served."
+      },
+      "yields_to_local": false,
+      "effective_date": null,
+      "enacted_date": null,
+      "penalty": "Failure to submit may result in a fine of up to $300 per day.",
+      "citation": "Boston City Code § 10-11.7 (Housing Stability Notification Act)",
+      "quoted_span": "Landlords must use this online form to provide tenant contact information and upload a copy of the Notice to Quit or Notice of Non-renewal of Lease.",
+      "confidence": 0.8,
+      "conflict_note": "The page does not give an effective or enactment date. The citation is taken from the page's penalty table."
     }
   ],
   "no_rule_findings": []

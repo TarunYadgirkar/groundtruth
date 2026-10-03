@@ -5,15 +5,15 @@
   "model": "claude-opus-5-5",
   "rules": [
     {
-      "canonical_key": "SF-RENT-ORD-37.10C-algorithmic-ban",
+      "canonical_key": "SF-RENT-ORD-37.10C-algorithmic-device-ban",
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "algorithmic_rent_setting",
       "status": "in_force",
-      "title": "Ban on algorithmic devices to set rents or manage occupancy",
-      "requirement": "Selling or using an algorithmic device to set rents or manage occupancy levels for residential units in San Francisco is prohibited. This covers software that analyzes nonpublic competitor rental data to recommend rents for vacant units.",
+      "title": "Ban on sale or use of algorithmic rent-setting devices",
+      "requirement": "Prohibits the sale or use of algorithmic devices (e.g., software analyzing nonpublic competitor rental data to recommend rents for vacant units) to set rents or manage occupancy levels for residential units in San Francisco. Tenants or the City Attorney may bring a civil action for violations.",
       "key_value": null,
-      "coverage_conditions": "Residential units in San Francisco; applies to sellers and users (landlords) of algorithmic devices that use nonpublic competitor rental data.",
+      "coverage_conditions": "Residential units in San Francisco; applies to entities selling or using algorithmic devices that analyze nonpublic competitor rental data.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -24,14 +24,14 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Whether the landlord or vendor uses an algorithmic device analyzing nonpublic competitor rental data"
+        "unverifiable_conditions": null
       },
       "yields_to_local": false,
       "effective_date": "2024-10-14",
       "enacted_date": null,
-      "penalty": "A tenant or the City Attorney may bring a civil action against an entity violating the law.",
+      "penalty": "Civil action by a tenant or the City Attorney",
       "citation": "S.F. Admin. Code ch. 37 (Rent Ordinance) § 37.10C",
-      "quoted_span": "The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco.",
+      "quoted_span": "adding Section 37.10C to the Rent Ordinance went into effect on October 14, 2024. The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco.",
       "confidence": 0.92,
       "conflict_note": null
     }

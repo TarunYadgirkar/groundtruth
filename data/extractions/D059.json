@@ -5,16 +5,16 @@
   "model": "claude-opus-5-5",
   "rules": [
     {
-      "canonical_key": "MA-2026-rent-control-ballot-question",
+      "canonical_key": "MA-2026-ballot-rent-control-initiative",
       "jurisdiction": "MA",
       "level": "state",
       "category": "rent_increase_limits",
       "status": "failed",
-      "title": "2026 Massachusetts rent control ballot question (struck by Supreme Judicial Court)",
-      "requirement": "A proposed statewide initiative would have limited annual rent increases for residences. The Supreme Judicial Court ruled on June 23, 2026 that it cannot appear on the November 2026 ballot because it contained a religious exemption.",
+      "title": "2026 Massachusetts rent control ballot initiative (struck by SJC)",
+      "requirement": "A proposed statewide ballot initiative would have limited annual rent increases for residences. The Supreme Judicial Court struck it from the November 2026 ballot because it included a religious exemption, so it never took effect.",
       "key_value": null,
-      "coverage_conditions": "Residential units statewide in Massachusetts, as proposed.",
-      "exemptions": "The proposal exempted several types of units, including units operated solely for religious purposes, plus other secular exemptions not detailed in the article.",
+      "coverage_conditions": "Residential units statewide, as proposed. The article does not state the cap amount or coverage details.",
+      "exemptions": "Several types of units were to be exempt, including units operated solely for religious purposes and certain secular categories (not detailed in the article).",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -24,23 +24,23 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": null
+        "unverifiable_conditions": "Measure never took effect. It was struck by the SJC in June 2026 and the article gives no exemption details beyond the religious carve-out."
       },
       "yields_to_local": false,
       "effective_date": null,
       "enacted_date": null,
       "penalty": null,
-      "citation": "Massachusetts 2026 rent control initiative petition (struck by the Supreme Judicial Court, June 2026)",
-      "quoted_span": "The state’s Supreme Judicial Court ruled a ballot question seeking to bring rent control back to Massachusetts cannot go forward this November, because it includes a religious exemption.",
+      "citation": "Proposed 2026 Massachusetts initiative petition (rent control); struck by Mass. Supreme Judicial Court, June 2026",
+      "quoted_span": "The proposal limits annual rent increases for residences, but it carved out exemptions for several types of units, including ones “operated solely for … religious … purposes.\"",
       "confidence": 0.85,
-      "conflict_note": "The article gives no official petition number or cap formula. Supporters had pushed a compromise bill to be passed before July 1, but top lawmakers balked. Proponents may pursue a 2028 ballot petition. No rent cap is in force at the state level."
+      "conflict_note": "Proponents hinted at a possible 2028 petition. A compromise bill pushed before July 1 was not passed according to the article. The source is a secondary news article."
     }
   ],
   "no_rule_findings": [
     {
       "jurisdiction": "MA",
       "category": "rent_increase_limits",
-      "finding": "The 2026 statewide rent control ballot question was struck by the Supreme Judicial Court and will not go before voters. No state rent cap was enacted, and the legislature did not pass the compromise bill.",
+      "finding": "The SJC struck the 2026 rent control ballot question from the November ballot, so no statewide rent cap was adopted via the 2026 ballot and rent control is not currently in effect in Massachusetts.",
       "quoted_span": "The state’s Supreme Judicial Court ruled a ballot question seeking to bring rent control back to Massachusetts cannot go forward this November, because it includes a religious exemption."
     }
   ]

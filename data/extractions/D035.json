@@ -5,16 +5,16 @@
   "model": "claude-opus-5-5",
   "rules": [
     {
-      "canonical_key": "JERSEY-CITY-algorithmic-rent-setting-ban",
+      "canonical_key": "JERSEYCITY-algorithmic-rent-setting-ban",
       "jurisdiction": "Jersey City, NJ",
       "level": "city",
       "category": "algorithmic_rent_setting",
       "status": "in_force",
       "title": "Jersey City ban on algorithmic rent-setting software (e.g., RealPage)",
-      "requirement": "Landlords may not use rent-setting algorithms such as RealPage, including revenue management software that relies on nonpublic competitor data, to set rents.",
-      "key_value": "$2,000 daily fine (as described in public comment)",
-      "coverage_conditions": "Residential landlords in Jersey City using rent-setting algorithms or revenue management software; per the article, the measure targets use of nonpublic data and coordination among landlords.",
-      "exemptions": "According to the article, real estate agents were excluded at the request of the NJ Association of Realtors. A further exclusion for Multiple Listing Services was requested, but the article does not say it was adopted. A speaker referred to owners of multiple buildings using algorithms without colluding as excluded.",
+      "requirement": "Landlords may not use rent-setting algorithms that rely on nonpublic competitor data, such as RealPage, to set rents. The source names no ordinance number and gives no effective date.",
+      "key_value": "Ban; reported fine of $2,000 per day",
+      "coverage_conditions": "Residential landlords in Jersey City using rent-setting algorithm or revenue-management software that uses nonpublic data.",
+      "exemptions": "Reportedly excludes real estate agents. Owners of multiple buildings who use algorithms without colluding are reportedly not covered. Whether Multiple Listing Services are excluded was debated and is unresolved in the source.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -24,16 +24,16 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Whether the landlord uses software relying on nonpublic competitor data; the exact scope of the exclusions is not stated."
+        "unverifiable_conditions": "Applies only where the landlord uses algorithmic rent-setting software relying on nonpublic data."
       },
       "yields_to_local": false,
       "effective_date": null,
       "enacted_date": null,
-      "penalty": "A $2,000 daily fine, as referenced by a public commenter.",
-      "citation": "Jersey City ordinance sponsored by Councilman James Solomon (ordinance number not given in source)",
+      "penalty": "$2,000 daily fine (as characterized by a public commenter); private right of action suggested by an opponent's comments",
+      "citation": "Jersey City ordinance (number not stated in source)",
       "quoted_span": "The Jersey City Council unanimously approved (9-0) a measure banning rent-setting algorithms such as RealPage, as well as increasing benefits for laborers, at last night’s meeting.",
-      "confidence": 0.55,
-      "conflict_note": "This is a news article and gives no ordinance number, publication date, passage date, or effective date. Status is inferred as in force on the assumption that the council's passage was final adoption. Council members raised enforceability concerns and said amendments may still happen. The House of Representatives was reported to be considering federal preemption of such municipal bans. The $2,000 daily fine comes only from a public commenter's remarks."
+      "confidence": 0.6,
+      "conflict_note": "News article; no ordinance number, adoption date, or effective date given. Council members noted that amendments may still follow and raised enforceability concerns. The article also notes possible federal preemption: the House was considering barring municipalities from such actions. The in_force status is inferred from final passage."
     }
   ],
   "no_rule_findings": []

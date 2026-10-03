@@ -1,0 +1,40 @@
+{
+  "doc_id": "D069",
+  "url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+  "retrieved_at": "2026-10-01T22:56Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "NJ-PL2026-c43-FAIR-Act-algorithmic-rent-ban",
+      "jurisdiction": "NJ",
+      "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "not_yet_effective",
+      "title": "Forbidding the Algorithmic Inflation of Rent (FAIR) Act – ban on algorithmic rent coordination",
+      "requirement": "Rental property owners and their agents may not pay for or use the services of a coordinator (algorithmic revenue management software or device performing a coordinating function). No person may perform a coordinating function or engage in parallel pricing coordination; violations are violations of the New Jersey Antitrust Act.",
+      "key_value": null,
+      "coverage_conditions": "All rental property owners of residential dwelling units in New Jersey and their agents, and coordinators (operators of algorithmic revenue management software or algorithmic devices) that set or recommend rents, material lease terms, or occupancy levels using competitively sensitive information.",
+      "exemptions": "Excludes inpatient medical care, licensed long-term care, and detention or correctional facilities. A coordinating function excludes research or statistical use not used to set or recommend prices, free public rent estimates, equal-terms brokerage listing databases that do not set or recommend prices, and government affordability controls. An algorithmic device excludes non-AI spreadsheets requiring human analysis and databases that only query unprocessed data.",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": "Applies only where algorithmic software or devices performing a coordinating function are used; government affordability-controlled pricing is excluded."
+      },
+      "yields_to_local": false,
+      "effective_date": "2027-07-01",
+      "enacted_date": "2026-07-20",
+      "penalty": "Violation of the New Jersey Antitrust Act, P.L.1970, c.73 (C.56:9-1 et seq.). Remedies and penalties under C.56:9-6 through 9-17 apply. Complaints may be filed with the Attorney General.",
+      "citation": "P.L.2026, c.43, §4 (C.56:9-20 to 56:9-26)",
+      "quoted_span": "a.     a rental property owner, or any agent,\nrepresentative, or subcontractor thereof, to receive, subscribe to, contract\nfor, or otherwise exchange any form of consideration in return for the use of,\nthe services of a coordinator;",
+      "confidence": 0.8,
+      "conflict_note": "The act takes effect 'on the first day of the twelfth month next following the date of enactment.' Approval was July 20, 2026, so the effective date is computed as 2027-07-01, which makes the act not yet effective as of 2026-10-01. Section 6(b) bars municipalities from enacting ordinances that conflict with the act, which may affect local algorithmic-pricing ordinances such as those in Hoboken and Jersey City."
+    }
+  ],
+  "no_rule_findings": []
+}

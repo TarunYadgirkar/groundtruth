@@ -5,15 +5,15 @@
   "model": "claude-opus-5-5",
   "rules": [
     {
-      "canonical_key": "MA-MGL-112-87DDD.5-broker-fee-payer",
+      "canonical_key": "MA-GL-112-87DDD.5-broker-fee-payer",
       "jurisdiction": "MA",
       "level": "state",
       "category": "application_screening_fees",
       "status": "in_force",
-      "title": "Rental broker fee paid only by the party that hired the broker",
-      "requirement": "A licensed broker may contract solely with a prospective tenant or solely with a landlord. Any broker fee may only be paid by the party (landlord or tenant) who originally engaged and contracted with the broker, so tenants cannot be charged fees for a broker the landlord hired.",
+      "title": "Broker fee paid only by the party that hired the broker",
+      "requirement": "A licensed broker or salesperson may contract with either the prospective tenant or the landlord (or landlord's agent), but not both. Any broker fee may be paid only by the party that originally hired the broker, so tenants cannot be charged a landlord-hired broker's fee.",
       "key_value": "Fee paid only by the party who engaged the broker",
-      "coverage_conditions": "Residential rental transactions in Massachusetts in which a licensed real estate broker or salesperson is engaged to find dwelling accommodations or tenants.",
+      "coverage_conditions": "Rental residential real property in Massachusetts where a licensed real estate broker or salesperson is engaged to find a tenant or a rental.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -24,16 +24,16 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only where a licensed broker/salesperson is used; depends on which party engaged the broker."
+        "unverifiable_conditions": "Applies only where a licensed broker or salesperson is involved in the rental transaction."
       },
       "yields_to_local": false,
       "effective_date": "2025-08-01",
-      "enacted_date": null,
+      "enacted_date": "2025",
       "penalty": null,
-      "citation": "M.G.L. c. 112, § 87DDD1/2 (as amended by St. 2025, c. 9, § 43)",
+      "citation": "M.G.L. c. 112, § 87DDD½, as amended by St. 2025, c. 9, § 43",
       "quoted_span": "Any fee shall only be paid by the party, lessor or tenant who originally engaged and entered into a contract with the licensed broker or salesperson.",
-      "confidence": 0.75,
-      "conflict_note": "Broker-fee rule classified under application_screening_fees as the closest category; it governs who pays broker fees, not application or screening fees as such. The prior text of the section (effective until Aug 1, 2025) only required broker licensing."
+      "confidence": 0.9,
+      "conflict_note": "The page shows the prior text (effective until August 1, 2025) and the amended text (effective August 1, 2025, per St. 2025, c. 9, § 136). As of 2026-10-01 the amended text governs."
     }
   ],
   "no_rule_findings": []

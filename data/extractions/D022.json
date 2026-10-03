@@ -10,11 +10,11 @@
       "level": "state",
       "category": "algorithmic_rent_setting",
       "status": "in_force",
-      "title": "Ban on using or distributing a common pricing algorithm as part of a conspiracy in restraint of trade (AB 325)",
-      "requirement": "A person may not use or distribute a common pricing algorithm (software or other method used by two or more persons that uses competitor data to recommend, set, or influence a price or commercial term) as part of a contract, combination, or conspiracy to restrain trade under the Cartwright Act. This applies generally, including to landlords setting rents.",
-      "key_value": "Prohibition on use or distribution of a common pricing algorithm in a conspiracy to restrain trade",
-      "coverage_conditions": "Any person, other than the end consumer, who uses or distributes a common pricing algorithm that uses competitor data. It is not limited to housing, so it covers rental pricing.",
-      "exemptions": "End consumers are excluded from the definition of 'person'.",
+      "title": "AB 325: Ban on using or distributing a common pricing algorithm as part of a conspiracy to restrain trade",
+      "requirement": "No person may use or distribute a common pricing algorithm as part of a contract, trust, or conspiracy to restrain trade or commerce under the Cartwright Act. A common pricing algorithm is any methodology or technology used by two or more persons that uses competitor data to recommend, align, stabilize, set, or influence a price or commercial term, which can include rents.",
+      "key_value": null,
+      "coverage_conditions": "Any person, as defined in Bus. & Prof. Code § 16702, who uses or distributes a common pricing algorithm. This includes selling, licensing, or providing access to one. End consumers are excluded. The law is general antitrust law, not limited to rental housing.",
+      "exemptions": "End consumers of a product or service are not 'persons' under the section.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -24,16 +24,16 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Requires use of a common pricing algorithm (used by two or more persons and using competitor data) as part of a contract, combination, or conspiracy to restrain trade."
+        "unverifiable_conditions": "Requires use of a common pricing algorithm used by two or more persons that uses competitor data, as part of a contract, combination, or conspiracy to restrain trade."
       },
       "yields_to_local": false,
       "effective_date": "2026-01-01",
       "enacted_date": "2025-10-06",
-      "penalty": "Cartwright Act enforcement; violations are punishable as a crime.",
+      "penalty": "Cartwright Act enforcement, under which violations are punishable as a crime. A complaint need only plausibly allege a contract, combination, or conspiracy and need not allege facts excluding independent action (Bus. & Prof. Code § 16756.1).",
       "citation": "Cal. Bus. & Prof. Code § 16729(a) (AB 325, Stats. 2025, ch. 338)",
       "quoted_span": "(a) It shall be unlawful for a person to use or distribute a common pricing algorithm as part of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce in violation of this chapter.",
-      "confidence": 0.8,
-      "conflict_note": "The document shows only enactment (approved and chaptered October 6, 2025) with no effective date stated. The effective date of January 1, 2026 is inferred from California's default rule for regular-session statutes. The law is a general antitrust statute rather than housing-specific."
+      "confidence": 0.75,
+      "conflict_note": "The document shows only the chaptered date (approved Oct 6, 2025) and no urgency clause. The effective date of Jan 1, 2026 is inferred from California's default rule for regular-session statutes. This is a general antitrust provision that applies to rental pricing algorithms but is not specific to housing."
     },
     {
       "canonical_key": "CA-BPC-16729b-common-pricing-algorithm-coercion",
@@ -41,11 +41,11 @@
       "level": "state",
       "category": "algorithmic_rent_setting",
       "status": "in_force",
-      "title": "Ban on using or distributing a common pricing algorithm while coercing adoption of recommended prices (AB 325)",
-      "requirement": "A person may not use or distribute a common pricing algorithm if they coerce another person to set or adopt a price or commercial term recommended by the algorithm for the same or similar products or services in California. This applies generally, including to rental housing pricing.",
-      "key_value": "Prohibition on coercing adoption of algorithm-recommended prices or terms",
-      "coverage_conditions": "Any person, other than the end consumer, using or distributing a common pricing algorithm who coerces another to adopt its recommended price or commercial term (for example, level of service, availability, or output) for the same or similar products or services in California.",
-      "exemptions": "End consumers are excluded from the definition of 'person'.",
+      "title": "AB 325: Ban on coercing adoption of prices or terms recommended by a common pricing algorithm",
+      "requirement": "No person may use or distribute a common pricing algorithm while coercing another person to set or adopt a price or commercial term recommended by the algorithm for the same or similar products or services in California. Commercial terms include level of service, availability, and output.",
+      "key_value": null,
+      "coverage_conditions": "Any person, as defined in Bus. & Prof. Code § 16702, who uses or distributes a common pricing algorithm and coerces another person to adopt its recommended price or term. End consumers are excluded. The law is general antitrust law, not limited to rental housing.",
+      "exemptions": "End consumers of a product or service are not 'persons' under the section.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -60,11 +60,11 @@
       "yields_to_local": false,
       "effective_date": "2026-01-01",
       "enacted_date": "2025-10-06",
-      "penalty": "Cartwright Act enforcement; violations are punishable as a crime.",
+      "penalty": "Cartwright Act enforcement, under which violations are punishable as a crime.",
       "citation": "Cal. Bus. & Prof. Code § 16729(b) (AB 325, Stats. 2025, ch. 338)",
       "quoted_span": "(b) It shall be unlawful for a person to use or distribute a common pricing algorithm if the person coerces another person to set or adopt a recommended price or commercial term recommended by the common pricing algorithm for the same or similar products or services in the jurisdiction of this state.",
-      "confidence": 0.8,
-      "conflict_note": "The document shows only enactment (approved and chaptered October 6, 2025) with no effective date stated. The effective date of January 1, 2026 is inferred from California's default rule for regular-session statutes. The law is a general antitrust statute rather than housing-specific."
+      "confidence": 0.75,
+      "conflict_note": "The document shows only the chaptered date (approved Oct 6, 2025) and no urgency clause. The effective date of Jan 1, 2026 is inferred from California's default rule for regular-session statutes. This is a general antitrust provision that applies to rental pricing algorithms but is not specific to housing."
     }
   ],
   "no_rule_findings": []

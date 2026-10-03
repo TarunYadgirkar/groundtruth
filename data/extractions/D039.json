@@ -10,10 +10,10 @@
       "level": "city",
       "category": "algorithmic_rent_setting",
       "status": "in_force",
-      "title": "San Francisco ban on algorithm-based rent-setting tools",
+      "title": "San Francisco ban on algorithmic rent-setting tools",
       "requirement": "Property owners and managers may not use algorithm-based tools that recommend or set rental prices.",
       "key_value": null,
-      "coverage_conditions": "Residential property owners and managers in San Francisco (details not stated in this document).",
+      "coverage_conditions": "Property owners and managers of rental housing in San Francisco.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -30,41 +30,10 @@
       "effective_date": null,
       "enacted_date": "2024-07",
       "penalty": null,
-      "citation": "San Francisco ordinance (citation not given in this document)",
+      "citation": "San Francisco Board of Supervisors ordinance (July 2024); official citation not given in this document",
       "quoted_span": "In July 2024, the San Francisco Board of Supervisors approved \nlegislation to ban property owners and managers from using algorithm-based tools that recommend \nor set rental prices.",
       "confidence": 0.55,
-      "conflict_note": "Secondary mention in a Los Angeles council motion; no citation, effective date, or coverage details given. Board approval in July 2024 implies likely in force by 2026-10-01, but final adoption/effective date not confirmed by this document."
-    },
-    {
-      "canonical_key": "LA-CF-24-1031-algorithmic-rent-ban-feasibility",
-      "jurisdiction": "Los Angeles, CA",
-      "level": "city",
-      "category": "algorithmic_rent_setting",
-      "status": "pending",
-      "title": "Los Angeles motion to study ban on algorithm-based rent-setting software",
-      "requirement": "Motion instructs the Los Angeles Housing Department to report on landlords' use of algorithm-based rent-setting software and the feasibility of banning such software in the City; it does not itself impose a ban.",
-      "key_value": null,
-      "coverage_conditions": "Ownership and management entities in the City of Los Angeles using algorithm-based software to set rents (proposed study scope).",
-      "exemptions": null,
-      "coverage": {
-        "min_units": null,
-        "max_units": null,
-        "built_before": null,
-        "built_on_or_before": null,
-        "built_after": null,
-        "age_years_exempt": null,
-        "cutoff_basis": "none",
-        "owner_type_dependent": false,
-        "unverifiable_conditions": null
-      },
-      "yields_to_local": false,
-      "effective_date": null,
-      "enacted_date": null,
-      "penalty": null,
-      "citation": "Los Angeles City Council File 24-1031 (Motion, Sept. 3, 2024)",
-      "quoted_span": "I THEREFORE MOVE that the City Council instruct the Los Angeles Housing Department to \nreport on the number of ownership and management entities that are using algorithm-based \nsoftware to establish rents and the feasibility of instituting a ban on the use of this software to set \nrents in the City.",
-      "confidence": 0.4,
-      "conflict_note": "This is only a motion requesting a feasibility report, not an ordinance; no binding rule created. Subsequent action, if any, is not reflected in this document."
+      "conflict_note": "Secondary mention in a Los Angeles council motion; the document states only Board approval in July 2024 and gives no effective date, signing date, or code citation. Status as in force on 2026-10-01 is inferred, not confirmed by this document."
     }
   ],
   "no_rule_findings": []

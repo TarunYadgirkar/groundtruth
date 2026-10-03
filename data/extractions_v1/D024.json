@@ -1,0 +1,40 @@
+{
+  "doc_id": "D024",
+  "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+  "retrieved_at": "2026-10-01T22:35Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "CA-CIV-1947.12-rent-cap",
+      "jurisdiction": "CA",
+      "level": "state",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "California statewide rent cap (Tenant Protection Act, Civ. Code 1947.12)",
+      "requirement": "Over any 12-month period, owners may not raise gross rent by more than 5% plus the regional CPI change, or 10%, whichever is lower, measured from the lowest rent charged in the prior 12 months. Increases are limited to two per 12-month period for the same tenant, and initial rent for a new tenancy may be set freely (vacancy decontrol).",
+      "key_value": "5% + CPI, max 10% per 12 months; max 2 increments",
+      "coverage_conditions": "Residential real property (dwellings or units intended for human habitation, including mobilehome park units) in California, excluding housing with a certificate of occupancy issued within the previous 15 years and other listed exemptions. Applies to rent increases on or after March 15, 2019 (mobilehome tenancies: on or after February 18, 2021).",
+      "exemptions": "Deed- or agreement-restricted or subsidized affordable housing; school/college-owned dormitories; housing under stricter local rent control; housing with a certificate of occupancy issued within the previous 15 years (unless a mobilehome); separately alienable units (e.g., single-family homes, condos) not owned by a REIT, corporation, or LLC with a corporate member, if tenants received the required written exemption notice; owner-occupied duplexes where the owner lived in one unit at the start of tenancy and neither unit is an ADU/JADU; homeowners of mobilehomes.",
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": 15,
+        "cutoff_basis": "certificate_of_occupancy",
+        "owner_type_dependent": true,
+        "unverifiable_conditions": "Exemption for separately alienable units depends on owner not being a REIT/corporation/corporate-member LLC and on tenants having received the statutory written exemption notice; owner-occupied duplex exemption depends on owner occupancy; affordable-housing deed restrictions or subsidy agreements; dormitory status."
+      },
+      "yields_to_local": true,
+      "effective_date": "2024-04-01",
+      "enacted_date": "2023",
+      "penalty": "Civil action by tenant for injunctive relief, damages equal to excess rent, discretionary attorney's fees and costs, and up to treble damages for willful, oppressive, fraudulent, or malicious conduct; enforcement and injunctive relief by Attorney General and local city attorney/county counsel; 3-year limitations period; waivers void.",
+      "citation": "Cal. Civ. Code § 1947.12",
+      "quoted_span": "Subject to subdivision (b), an owner of residential real property shall not, over the course of any 12-month period, increase the gross rental rate for a dwelling or a unit more than 5 percent plus the percentage change in the cost of living, or 10 percent, whichever is lower, of the lowest gross rental rate charged for that dwelling or unit at any time during the 12 months prior to the effective date of the increase.",
+      "confidence": 0.9,
+      "conflict_note": "Current text was repealed and re-added by Stats. 2023, Ch. 290 (SB 567), effective January 1, 2024 and operative April 1, 2024; the underlying cap applies to rent increases on or after March 15, 2019 (mobilehome tenancies on or after February 18, 2021). Section sunsets and is repealed as of January 1, 2030."
+    }
+  ],
+  "no_rule_findings": []
+}

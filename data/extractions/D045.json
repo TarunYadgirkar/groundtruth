@@ -11,9 +11,9 @@
       "category": "algorithmic_rent_setting",
       "status": "pending",
       "title": "An Act relative to preventing algorithmic rent fixing in the rental housing market (H.5222)",
-      "requirement": "A pending Massachusetts bill would restrict algorithmic rent fixing in the rental housing market. The page does not include the bill text, so its specific prohibitions are not stated.",
+      "requirement": "A pending Massachusetts bill would address algorithmic rent fixing in the rental housing market. The page does not include the bill text, so its specific prohibitions are not stated.",
       "key_value": null,
-      "coverage_conditions": "Rental housing market in Massachusetts. The scope of coverage is not stated in the source page.",
+      "coverage_conditions": "Rental housing market in Massachusetts (specific coverage not stated on the bill history page).",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -24,16 +24,16 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": null
+        "unverifiable_conditions": "Bill text not provided; substantive provisions and coverage unknown."
       },
       "yields_to_local": false,
       "effective_date": null,
       "enacted_date": null,
       "penalty": null,
-      "citation": "Mass. H.5222 (194th General Court)",
+      "citation": "Mass. H.5222, 194th General Court (new draft of H.1564)",
       "quoted_span": "An Act relative to preventing algorithmic rent fixing in the rental housing market",
-      "confidence": 0.6,
-      "conflict_note": "Pending bill: on 3/12/2026 the Joint Committee on Housing reported it favorably as a new draft of H1564 and referred it to House Ways and Means. Not enacted as of the retrieval date. The bill text was not included in the source, so the substantive requirements are unknown."
+      "confidence": 0.7,
+      "conflict_note": "As of 2026-10-01 the bill was reported favorably by the Joint Committee on Housing on 3/12/2026 and referred to House Committee on Ways and Means; not enacted. Substantive terms not shown on this page."
     }
   ],
   "no_rule_findings": []

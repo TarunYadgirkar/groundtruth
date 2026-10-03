@@ -5,15 +5,15 @@
   "model": "claude-opus-5-5",
   "rules": [
     {
-      "canonical_key": "NJ-PL2026-c43-FAIR-Act-landlord-algorithmic-ban",
+      "canonical_key": "NJ-PL-2026-c43-FAIR-Act-algorithmic-rent-ban",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "algorithmic_rent_setting",
       "status": "not_yet_effective",
-      "title": "FAIR Act (Forbidding the Algorithmic Inflation of Rent): ban on owners using algorithmic rent-setting software",
-      "requirement": "Residential rental property owners may not use algorithmic revenue management software that collects or processes competitors' nonpublic leasing information to set or recommend rental prices.",
-      "key_value": "Prohibited: rent-setting software using competitors' nonpublic leasing data",
-      "coverage_conditions": "Residential rental property owners in New Jersey that use algorithmic revenue management software drawing on competitors' nonpublic leasing information.",
+      "title": "Forbidding the Algorithmic Inflation of Rent (FAIR) Act",
+      "requirement": "Residential rental property owners may not use algorithmic revenue management software that collects or processes competitors' nonpublic leasing information to set or recommend rents. Software providers and other coordinators may not use such software to facilitate agreements or coordinate pricing among competing residential landlords.",
+      "key_value": "Ban on algorithmic rent-setting using competitors' nonpublic data",
+      "coverage_conditions": "All residential rental property owners in New Jersey, plus software providers and coordinators that operate algorithmic revenue management software or devices using nonpublic, competitively sensitive information from multiple owners to recommend rents, lease terms, or occupancy levels.",
       "exemptions": "Does not prohibit spreadsheets requiring human analysis, publicly available rent estimation tools, traditional real estate listing databases, or government-administered affordable housing programs.",
       "coverage": {
         "min_units": null,
@@ -24,47 +24,16 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only where the owner uses algorithmic software that collects or processes competitors' nonpublic leasing information."
+        "unverifiable_conditions": null
       },
       "yields_to_local": false,
       "effective_date": "2027-07-01",
       "enacted_date": "2026-07-20",
-      "penalty": "Not specified in source; attorney general complaint portal required and existing remedies under the New Jersey Antitrust Act preserved.",
-      "citation": "N.J. P.L. 2026, c. 43 (FAIR Act)",
+      "penalty": "The attorney general must set up a complaint portal for alleged violations. Existing remedies under the New Jersey Antitrust Act are preserved.",
+      "citation": "P.L. 2026, c. 43 (N.J.)",
       "quoted_span": "The FAIR Act prohibits residential rental property owners from using algorithmic revenue management software that collects or processes competitors' nonpublic leasing information to set or recommend rental prices.",
       "confidence": 0.85,
-      "conflict_note": "Secondary source (law firm alert); effective date July 1, 2027 per source, so not yet effective as of 2026-10-01."
-    },
-    {
-      "canonical_key": "NJ-PL2026-c43-FAIR-Act-coordinator-ban",
-      "jurisdiction": "NJ",
-      "level": "state",
-      "category": "algorithmic_rent_setting",
-      "status": "not_yet_effective",
-      "title": "FAIR Act: ban on software providers/coordinators facilitating pricing coordination among landlords",
-      "requirement": "Software providers and other coordinators may not use algorithmic revenue management software to facilitate agreements or coordinate pricing among competing residential landlords.",
-      "key_value": null,
-      "coverage_conditions": "Any coordinator, broadly defined as any person operating algorithmic revenue management software or an algorithmic device that uses nonpublic, competitively sensitive information from multiple residential rental property owners to generate recommendations on rental prices, lease terms, or occupancy levels.",
-      "exemptions": "Does not prohibit spreadsheets requiring human analysis, publicly available rent estimation tools, traditional real estate listing databases, or government-administered affordable housing programs.",
-      "coverage": {
-        "min_units": null,
-        "max_units": null,
-        "built_before": null,
-        "built_on_or_before": null,
-        "built_after": null,
-        "age_years_exempt": null,
-        "cutoff_basis": "none",
-        "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies to software providers/coordinators using nonpublic data from multiple owners; not determinable from property characteristics."
-      },
-      "yields_to_local": false,
-      "effective_date": "2027-07-01",
-      "enacted_date": "2026-07-20",
-      "penalty": "Not specified in source; attorney general complaint portal required and existing remedies under the New Jersey Antitrust Act preserved.",
-      "citation": "N.J. P.L. 2026, c. 43 (FAIR Act)",
-      "quoted_span": "It also prohibits software providers and other coordinators from using such software to facilitate agreements or coordinate pricing among competing residential landlords.",
-      "confidence": 0.85,
-      "conflict_note": "Secondary source (law firm alert); effective date July 1, 2027 per source, so not yet effective as of 2026-10-01."
+      "conflict_note": "Taken from a secondary law-firm alert, not the statute text. The alert states an effective date of July 1, 2027, so the act is not yet effective as of 2026-10-01."
     }
   ],
   "no_rule_findings": []

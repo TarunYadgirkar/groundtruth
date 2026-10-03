@@ -5,15 +5,15 @@
   "model": "claude-opus-5-5",
   "rules": [
     {
-      "canonical_key": "BOSTON-H3744-2023-rent-stabilization-home-rule",
+      "canonical_key": "BOSTON-H3744-193-rent-stabilization",
       "jurisdiction": "Boston, MA",
       "level": "city",
       "category": "rent_increase_limits",
       "status": "failed",
-      "title": "Boston rent stabilization home rule petition (H.3744, 193rd session)",
-      "requirement": "Would have authorized the City of Boston to implement rent stabilization. The bill was sent to a study order (H5035) in September 2024 and was not enacted.",
+      "title": "Boston home rule petition for rent stabilization (H.3744, 193rd General Court)",
+      "requirement": "A home rule petition that would have authorized the City of Boston to implement rent stabilization. It was sent to a study order and was not enacted, so it imposes no rent cap.",
       "key_value": null,
-      "coverage_conditions": "Residential rental housing in the City of Boston; the bill page gives no specific coverage terms.",
+      "coverage_conditions": "Would have applied to residential rental housing in the City of Boston; this document does not give the specific cap or covered units.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -30,21 +30,21 @@
       "effective_date": null,
       "enacted_date": null,
       "penalty": null,
-      "citation": "Mass. H.3744 (193rd Gen. Ct., 2023-2024)",
-      "quoted_span": "that the city of Boston be authorized to implement rent stabilization and tenant eviction protections.",
-      "confidence": 0.8,
-      "conflict_note": "The bill page shows only the petition title and history, not the substantive cap terms. On 9/9/2024 the bill 'Accompanied a study order' (H5035), and the 193rd session ended, so the bill is treated as failed. A home rule petition requires state enactment because Massachusetts law otherwise bars local rent control."
+      "citation": "Mass. H.3744, 193rd General Court (2023-2024)",
+      "quoted_span": "By Representative Montaño of Boston, a petition (accompanied by bill, House, No. 3744) of Samantha Montaño (with the approval of the mayor and city council) that the city of Boston be authorized to implement rent stabilization and tenant eviction protections.",
+      "confidence": 0.75,
+      "conflict_note": "The bill history shows the bill 'Accompanied a study order, see H5035' on 9/9/2024. The 193rd session ended without enactment, so the measure is treated as failed. Massachusetts state law (G.L. c. 40P) generally bars local rent control unless the Legislature authorizes it. The bill text and cap details are not in this document."
     },
     {
-      "canonical_key": "BOSTON-H3744-2023-eviction-protections-home-rule",
+      "canonical_key": "BOSTON-H3744-193-tenant-eviction-protections",
       "jurisdiction": "Boston, MA",
       "level": "city",
       "category": "just_cause_eviction",
       "status": "failed",
-      "title": "Boston tenant eviction protections home rule petition (H.3744, 193rd session)",
-      "requirement": "Would have authorized the City of Boston to implement tenant eviction protections. The bill was sent to a study order (H5035) in September 2024 and was not enacted.",
+      "title": "Boston home rule petition for tenant eviction protections (H.3744, 193rd General Court)",
+      "requirement": "A home rule petition that would have authorized the City of Boston to implement tenant eviction protections. It was sent to a study order and was not enacted, so it imposes no just-cause requirement.",
       "key_value": null,
-      "coverage_conditions": "Residential tenants in the City of Boston; the bill page gives no specific coverage terms.",
+      "coverage_conditions": "Would have applied to residential tenancies in the City of Boston; this document does not give specific coverage details.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -61,10 +61,10 @@
       "effective_date": null,
       "enacted_date": null,
       "penalty": null,
-      "citation": "Mass. H.3744 (193rd Gen. Ct., 2023-2024)",
-      "quoted_span": "that the city of Boston be authorized to implement rent stabilization and tenant eviction protections.",
+      "citation": "Mass. H.3744, 193rd General Court (2023-2024)",
+      "quoted_span": "By Representative Montaño of Boston, a petition (accompanied by bill, House, No. 3744) of Samantha Montaño (with the approval of the mayor and city council) that the city of Boston be authorized to implement rent stabilization and tenant eviction protections.",
       "confidence": 0.75,
-      "conflict_note": "The bill page gives no substantive eviction-protection terms. The bill went to a study order on 9/9/2024 and the 193rd session ended, so it is treated as failed."
+      "conflict_note": "The bill history shows the bill 'Accompanied a study order, see H5035' on 9/9/2024. The 193rd session ended without enactment, so the measure is treated as failed. The substantive eviction-protection terms are not in this document."
     }
   ],
   "no_rule_findings": []

@@ -5,16 +5,16 @@
   "model": "claude-opus-5-5",
   "rules": [
     {
-      "canonical_key": "SF-RENT-ORD-37.9C-relocation-payments",
+      "canonical_key": "SF-ADMIN-37.9C-relocation-no-fault",
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Relocation payments for owner/relative move-in, demolition/removal, temporary capital improvement, and substantial rehabilitation evictions",
-      "requirement": "Landlords evicting for owner/relative move-in, demolition or permanent removal from housing use, temporary capital improvement work, or substantial rehabilitation must pay tenants relocation payments. The amount depends on the date the eviction notice is served. For notices served 3/01/26 to 2/28/27 the payment is $8,245 per tenant, capped at $24,733 per unit, plus $5,497 for each elderly (60+) or disabled tenant or household with minor children.",
-      "key_value": "$8,245 per tenant; max $24,733 per unit; +$5,497 per elderly (60+)/disabled tenant or household with minor child(ren) (notices served 3/01/26–2/28/27)",
-      "coverage_conditions": "Tenancies in San Francisco subject to the Rent Ordinance where the landlord terminates the tenancy for owner/relative move-in, demolition or permanent removal of the unit from housing use, temporary capital improvement work, or substantial rehabilitation.",
-      "exemptions": "Relocation for temporary capital improvement evictions lasting less than 20 days is governed by Cal. Civ. Code § 1947.9, not Rent Ordinance § 37.9C.",
+      "requirement": "Landlords evicting tenants for owner/relative move-in, demolition or permanent removal of a unit from housing use, temporary capital improvement work, or substantial rehabilitation must pay relocation amounts per tenant, capped per unit, plus an additional amount for each elderly (60+) or disabled tenant or household with minor children. Amounts are set by the date the eviction notice is served.",
+      "key_value": "For notices served 3/01/26–2/28/27: $8,245.00 per tenant; max $24,733.00 per unit; plus $5,497.00 for each elderly (60+) or disabled tenant or household with minor child(ren)",
+      "coverage_conditions": "Tenants in San Francisco Rent Ordinance-covered units served with a termination notice based on owner/relative move-in, demolition/permanent removal from housing use, temporary capital improvement work, or substantial rehabilitation.",
+      "exemptions": "Temporary capital improvement evictions of less than 20 days are governed by Cal. Civ. Code § 1947.9, not Rent Ordinance § 37.9C.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -24,27 +24,27 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only to evictions on the listed no-fault grounds. The amount depends on the eviction notice service date and on whether tenants are elderly or disabled or the household has minor children."
+        "unverifiable_conditions": "Applies only to evictions on specified no-fault grounds; amount depends on date of service of the eviction notice and household composition (elderly/disabled/minor children)."
       },
       "yields_to_local": false,
-      "effective_date": null,
+      "effective_date": "2006-08-10",
       "enacted_date": null,
       "penalty": null,
-      "citation": "San Francisco Rent Ordinance § 37.9C",
+      "citation": "San Francisco Rent Ordinance (S.F. Admin. Code) § 37.9C",
       "quoted_span": "*The amount of relocation payments for temporary capital improvement evictions for less than 20 days is governed by California Civil Code Section 1947.9 and not by Rent Ordinance Section 37.9C.",
-      "confidence": 0.8,
-      "conflict_note": "The archive table begins with notices served 8/10/06. The document does not state the ordinance's effective date. The current rate period runs 3/01/26–2/28/27."
+      "confidence": 0.85,
+      "conflict_note": "Effective date inferred from the earliest rate period in the archive (8/10/06); current rate period 3/01/26–2/28/27 applies on the query date. Rates adjust annually each March 1."
     },
     {
-      "canonical_key": "SF-RENT-ORD-ellis-act-relocation-payments",
+      "canonical_key": "SF-RENT-ORD-ellis-act-relocation",
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Relocation payments for Ellis Act evictions",
-      "requirement": "Landlords evicting tenants under the Ellis Act (withdrawal of units from the rental market) must pay relocation payments. For notices served 3/01/26 to 2/28/27 the payment is $11,110.05 per tenant, capped at $33,330.13 per unit, plus $7,443.90 for each elderly (62+) or disabled tenant.",
-      "key_value": "$11,110.05 per tenant; max $33,330.13 per unit; +$7,443.90 per elderly (62+)/disabled tenant (notices served 3/01/26–2/28/27)",
-      "coverage_conditions": "Tenants in San Francisco evicted under the Ellis Act.",
+      "requirement": "Landlords withdrawing units from the rental market under the Ellis Act must pay relocation amounts per tenant, capped per unit, plus an additional amount for each elderly (62+) or disabled tenant. Amounts are set by the date the eviction notice is served.",
+      "key_value": "For notices served 3/01/26–2/28/27: $11,110.05 per tenant; max $33,330.13 per unit; plus $7,443.90 for each elderly (62+) or disabled tenant",
+      "coverage_conditions": "Tenants in San Francisco served with a termination notice under the Ellis Act (withdrawal of units from rental use).",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -55,27 +55,27 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only to Ellis Act withdrawals. The amount depends on the eviction notice service date and on whether tenants are elderly (62+) or disabled."
+        "unverifiable_conditions": "Applies only to Ellis Act evictions; amount depends on date of service of the eviction notice and whether tenant is elderly (62+) or disabled."
       },
       "yields_to_local": false,
       "effective_date": null,
       "enacted_date": null,
       "penalty": null,
-      "citation": "San Francisco Rent Ordinance (Ellis Act relocation payments; section not stated in document)",
+      "citation": "San Francisco Rent Ordinance (S.F. Admin. Code ch. 37), Ellis Act relocation provision (section not stated in document)",
       "quoted_span": "Relocation payments for tenants evicted under the Ellis Act",
-      "confidence": 0.7,
-      "conflict_note": "The document does not cite the specific Rent Ordinance section for Ellis Act relocation. The current rate period runs 3/01/26–2/28/27."
+      "confidence": 0.75,
+      "conflict_note": "Document does not give the specific ordinance section or effective date; archive rates begin 3/01/06. Current rate period 3/01/26–2/28/27 applies on the query date."
     },
     {
-      "canonical_key": "CA-CIV-1947.9-sf-temporary-relocation",
+      "canonical_key": "CA-CIV-1947.9-temp-capital-improvement-relocation",
       "jurisdiction": "CA",
       "level": "state",
       "category": "just_cause_eviction",
       "status": "in_force",
-      "title": "Temporary relocation payments for capital improvement displacement under 20 days (San Francisco)",
-      "requirement": "Relocation payments for temporary capital improvement evictions lasting less than 20 days are governed by Cal. Civ. Code § 1947.9 rather than the SF Rent Ordinance.",
+      "title": "Relocation for temporary capital improvement displacement under 20 days",
+      "requirement": "Relocation payments for temporary capital improvement evictions lasting less than 20 days in San Francisco are governed by California Civil Code § 1947.9 rather than the local Rent Ordinance § 37.9C.",
       "key_value": null,
-      "coverage_conditions": "Temporary capital improvement evictions in San Francisco lasting less than 20 days.",
+      "coverage_conditions": "Tenants temporarily displaced for capital improvement work for less than 20 days (as applied in San Francisco).",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -86,7 +86,7 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Displacement must be temporary, for capital improvement work, and less than 20 days."
+        "unverifiable_conditions": "Applies only to temporary capital improvement displacement of less than 20 days."
       },
       "yields_to_local": false,
       "effective_date": null,
@@ -95,7 +95,7 @@
       "citation": "Cal. Civ. Code § 1947.9",
       "quoted_span": "*The amount of relocation payments for temporary capital improvement evictions for less than 20 days is governed by California Civil Code Section 1947.9 and not by Rent Ordinance Section 37.9C.",
       "confidence": 0.6,
-      "conflict_note": "The document gives no amounts or dates for § 1947.9 and mentions it only as governing displacements under 20 days."
+      "conflict_note": "Document only references the statute; amounts and effective date are not stated."
     }
   ],
   "no_rule_findings": []
