@@ -6,18 +6,27 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { WarningIcon } from "@phosphor-icons/react";
 import { ADDRESSES, SOURCES_RETRIEVED } from "@/lib/data";
 import type { Address } from "@/lib/types";
+import { COVERED_CITIES } from "@/lib/place";
+import { STATE_NAME } from "@/lib/labels";
+import type { LandingError } from "../Navigator";
 import SearchBar from "./SearchBar";
 
 const EXAMPLE_IDS = ["A0001", "A0065", "A0002"];
 const EXAMPLE_MS = 3200;
 const EASE = [0.2, 0, 0, 1] as const;
 
+const SCOPE_EXAMPLE_IDS = ["A0001", "A0008", "A0010"];
+const SCOPE_EXAMPLES = SCOPE_EXAMPLE_IDS.map((id) => ADDRESSES.find((a) => a.address_id === id)).filter((a): a is Address => !!a);
+const CITY_LIST = (["CA", "NJ", "MA"] as const)
+  .map((st) => `${STATE_NAME[st]}: ${COVERED_CITIES.filter((c) => c.state === st).map((c) => c.city).join(", ")}`)
+  .join(". ");
+
 const EXAMPLES = EXAMPLE_IDS.map((id) => ADDRESSES.find((a) => a.address_id === id)).filter((a): a is Address => !!a);
 
 interface LandingProps {
   onSelect: (a: Address) => void;
   onLookupFree: (q: string) => void;
-  error: string | null;
+  error: LandingError | null;
   autoFocus: boolean;
 }
 
@@ -99,16 +108,31 @@ export default function Landing({ onSelect, onLookupFree, error, autoFocus }: La
 
         <AnimatePresence>
           {error && (
-            <motion.p
+            <motion.div
               role="alert"
               initial={{ opacity: 0, y: 4 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              className="mt-6 flex max-w-[60ch] items-start gap-2 rounded-[var(--radius-chip)] bg-surface px-3 py-2 text-ui text-ink shadow-[0_0_0_1px_var(--hairline)]"
+              className="mt-6 flex max-w-[64ch] items-start gap-2 rounded-[var(--radius-chip)] bg-surface px-3 py-2 text-ui text-ink shadow-[0_0_0_1px_var(--hairline)]"
             >
               <WarningIcon size={18} className="mt-0.5 shrink-0 text-accent" aria-hidden />
-              {error}
-            </motion.p>
+              <div className="flex flex-col gap-1.5">
+                <p>{error.message}</p>
+                {error.outOfScope && (
+                  <p className="text-caption text-ink-muted">
+                    Statewide rules for any address in those three states, plus city ordinances for {CITY_LIST}.
+                  </p>
+                )}
+                <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-caption text-ink-muted">
+                  Try
+                  {SCOPE_EXAMPLES.map((a) => (
+                    <button key={a.address_id} type="button" onClick={() => onSelect(a)} className="link text-ink">
+                      {a.street_address}, {a.legal_city}
+                    </button>
+                  ))}
+                </p>
+              </div>
+            </motion.div>
           )}
         </AnimatePresence>
       </main>

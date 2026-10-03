@@ -6,12 +6,13 @@ import addressesJson from "@/data/addresses.json";
 import rulesJson from "@/data/rules.json";
 import { evaluateAddress } from "./engine";
 import { formatDate } from "./labels";
+import { displayStreet, zipFromMatch } from "./display";
 
-function titleCase(s: string): string {
-  return s.toLowerCase().replace(/\b([a-z])/g, (m) => m.toUpperCase());
-}
-
-export const ADDRESSES: Address[] = (addressesJson as Address[]).map((a) => ({ ...a, street_address: titleCase(a.street_address) }));
+export const ADDRESSES: Address[] = (addressesJson as Address[]).map((a) => ({
+  ...a,
+  street_address: displayStreet(a.street_address),
+  zip: a.zip || zipFromMatch(a.geocode_match),
+}));
 export const RULES = rulesJson as unknown as Rule[];
 
 const RULES_BY_ID = new Map(RULES.map((r) => [r.team_rule_id, r]));

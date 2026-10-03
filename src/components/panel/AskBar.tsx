@@ -13,15 +13,18 @@ interface AskBarProps {
   address: Address;
   asOf: string;
   onActions: (actions: UiAction[]) => void;
+  hasUserFacts?: boolean;
 }
 
 type State = { kind: "idle" } | { kind: "loading"; q: string } | { kind: "answer"; q: string; data: AskAnswer } | { kind: "error"; q: string; message: string };
 
-export default function AskBar({ address, asOf, onActions }: AskBarProps) {
+export default function AskBar({ address, asOf, onActions, hasUserFacts = false }: AskBarProps) {
   const id = useId();
   const [q, setQ] = useState("");
   const [state, setState] = useState<State>({ kind: "idle" });
   const isLive = address.address_id.startsWith("live-");
+  const sendFacts = isLive || hasUserFacts;
+  const liveAddress = { ...address, geocode_match: isLive ? address.geocode_match : null };
 
   const ask = async (question: string) => {
     const text = question.trim();
@@ -31,7 +34,7 @@ export default function AskBar({ address, asOf, onActions }: AskBarProps) {
       const res = await fetch("/api/ask", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify(isLive ? { question: text, asOf, live_address: address } : { question: text, asOf, address_id: address.address_id }),
+        body: JSON.stringify(sendFacts ? { question: text, asOf, live_address: liveAddress } : { question: text, asOf, address_id: address.address_id }),
       });
       const json = (await res.json()) as AskAnswer | { error: string };
       if (!res.ok || "error" in json) {

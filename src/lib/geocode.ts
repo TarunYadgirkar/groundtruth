@@ -7,9 +7,13 @@ function withTimeout<T>(p: Promise<T>): Promise<T> {
   return Promise.race([p, new Promise<T>((_, reject) => window.setTimeout(() => reject(new Error("timeout")), TIMEOUT_MS))]);
 }
 
+export type Precision = "address" | "street" | "city" | "region";
+
 export type GeocodeOutcome =
-  | { ok: true; address: Address }
-  | { ok: false; reason: string };
+  | { ok: true; address: Address; precision: Precision; partial: boolean }
+  | { ok: false; kind: "not_found" | "region" | "out_of_scope"; reason: string; state?: string };
+
+const NOT_FOUND = "We couldn't find that address. Check the spelling, or include the city and state.";
 
 function component(result: google.maps.GeocoderResult, type: string, short = false): string | null {
   const c = result.address_components.find((x) => x.types.includes(type));
@@ -17,27 +21,58 @@ function component(result: google.maps.GeocoderResult, type: string, short = fal
   return short ? c.short_name : c.long_name;
 }
 
+function precisionOf(r: google.maps.GeocoderResult): Precision {
+  const has = (...types: string[]) => types.some((t) => r.types.includes(t));
+  if (has("street_address", "premise", "subpremise")) return "address";
+  if (has("route", "intersection")) return "street";
+  if (has("locality", "sublocality", "neighborhood", "postal_code", "administrative_area_level_3")) return "city";
+  return "region";
+}
+
+const RANK: Record<Precision, number> = { address: 3, street: 2, city: 1, region: 0 };
+
+export function isBetter(next: GeocodeOutcome, current: GeocodeOutcome): boolean {
+  if (!next.ok) return false;
+  if (!current.ok) return true;
+  const a = RANK[next.precision] * 2 + (next.partial ? 0 : 1);
+  const b = RANK[current.precision] * 2 + (current.partial ? 0 : 1);
+  return a > b;
+}
+
+function headline(r: google.maps.GeocoderResult, precision: Precision, city: string | null): string {
+  const street = [component(r, "street_number"), component(r, "route", true)].filter(Boolean).join(" ");
+  if (precision === "address" && street) return street;
+  if (precision === "city") return city ?? r.formatted_address.split(",")[0];
+  return r.formatted_address.split(",")[0];
+}
+
 export async function geocodeFreeText(geocoder: google.maps.Geocoder, query: string): Promise<GeocodeOutcome> {
   let results: google.maps.GeocoderResult[];
   try {
     ({ results } = await withTimeout(geocoder.geocode({ address: query, componentRestrictions: { country: "US" } })));
   } catch {
-    return { ok: false, reason: "We couldn't find that address. Check the spelling, or include the city and state." };
+    return { ok: false, kind: "not_found", reason: NOT_FOUND };
   }
   const top = results[0];
-  if (!top) return { ok: false, reason: "We couldn't find that address. Check the spelling, or include the city and state." };
+  if (!top) return { ok: false, kind: "not_found", reason: NOT_FOUND };
   const state = component(top, "administrative_area_level_1", true);
   if (!state || !SUPPORTED.has(state)) {
-    return { ok: false, reason: "Groundtruth covers California, New Jersey and Massachusetts. That address is outside them." };
+    const name = component(top, "administrative_area_level_1") ?? "another state";
+    return { ok: false, kind: "out_of_scope", state: name, reason: `That address is in ${name}. Groundtruth covers California, New Jersey and Massachusetts.` };
+  }
+  const precision = precisionOf(top);
+  if (precision === "region") {
+    return { ok: false, kind: "region", reason: `That matches a whole area of ${component(top, "administrative_area_level_1")}, not a building. Add a street address or a city.` };
   }
   const loc = top.geometry.location;
-  const street = [component(top, "street_number"), component(top, "route", true)].filter(Boolean).join(" ");
-  const city = component(top, "locality") ?? component(top, "sublocality") ?? component(top, "postal_town");
+  const city = component(top, "locality") ?? component(top, "administrative_area_level_3") ?? component(top, "sublocality") ?? component(top, "postal_town");
   return {
     ok: true,
+    precision,
+    partial: !!top.partial_match,
     address: {
       address_id: `live-${loc.lat().toFixed(5)},${loc.lng().toFixed(5)}`,
-      street_address: street || top.formatted_address.split(",")[0],
+      street_address: headline(top, precision, city),
       postal_city: city ?? "",
       state: state as Address["state"],
       zip: component(top, "postal_code") ?? "",
