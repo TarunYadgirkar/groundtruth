@@ -150,6 +150,7 @@ export default function MapScene({ target, reducedMotion, interactive, showMarke
     <div
       className="absolute inset-0"
       style={{ pointerEvents: interactive ? "auto" : "none" }}
+      inert={!interactive}
       onPointerDown={stopOrbit}
       onWheel={stopOrbit}
       onKeyDown={stopOrbit}
@@ -163,13 +164,14 @@ export default function MapScene({ target, reducedMotion, interactive, showMarke
         defaultTilt={0}
         defaultHeading={0}
         defaultLabelsDisabled
+        defaultUIHidden={!interactive}
         onError={reportMapFailure}
         style={{ width: "100%", height: "100%" }}
       >
         {showMarker && target && roofAlt !== null && (
           <>
             <Polyline3D
-              coordinates={ringPath(target.lat, target.lng, RING_METERS, roofAlt)}
+              path={ringPath(target.lat, target.lng, RING_METERS, roofAlt)}
               altitudeMode={AltitudeMode.ABSOLUTE}
               strokeColor="#C8452C"
               strokeWidth={5}

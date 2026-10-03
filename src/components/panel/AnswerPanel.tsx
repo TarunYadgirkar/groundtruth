@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { InfoIcon } from "@phosphor-icons/react";
-import { ruleById, rulesForPlace } from "@/lib/data";
+import { SOURCES_RETRIEVED, ruleById, rulesForPlace } from "@/lib/data";
 import { CATEGORIES, STATUS_ORDER, formatDate } from "@/lib/labels";
 import type { Address, Evaluation, Rule } from "@/lib/types";
 import type { UiAction } from "@/lib/ask-schema";
@@ -66,13 +66,14 @@ export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, eva
         .filter((r): r is Row => r.rule !== undefined),
     [evaluations],
   );
+  const placeIds = useMemo(() => new Set(evaluations.map((e) => e.team_rule_id)), [evaluations]);
   const enacted = rows.filter((r) => r.evaluation.result !== "pending");
   const pending = rows.filter((r) => r.evaluation.result === "pending");
 
   const steps = useMemo(
     () => [
       address.geocode_match === "google" ? "Address geocoded (live lookup)" : "Address geocoded",
-      `Jurisdiction resolved · ${city}, ${address.state}`,
+      address.legal_city ? `Jurisdiction resolved · ${city}, ${address.state}` : `Legal city not confirmed · ${address.state} rules apply`,
       `${ruleCount} rules in scope`,
       "Testing coverage against building facts",
       "Checking pending law",
@@ -177,7 +178,7 @@ export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, eva
                       ) : (
                         <ul className="flex flex-col divide-y divide-hairline">
                           {list.map((r) => (
-                            <RuleRow key={r.rule.team_rule_id} rule={r.rule} evaluation={r.evaluation} highlight={highlight?.id === r.rule.team_rule_id ? highlight.nonce : null} />
+                            <RuleRow key={r.rule.team_rule_id} rule={r.rule} evaluation={r.evaluation} highlight={highlight?.id === r.rule.team_rule_id ? highlight.nonce : null} placeIds={placeIds} />
                           ))}
                         </ul>
                       )}
@@ -199,7 +200,7 @@ export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, eva
                     </div>
                     <ul className="mt-1 flex flex-col divide-y divide-hairline">
                       {sortRows(pending).map((r) => (
-                        <RuleRow key={r.rule.team_rule_id} rule={r.rule} evaluation={r.evaluation} highlight={highlight?.id === r.rule.team_rule_id ? highlight.nonce : null} />
+                        <RuleRow key={r.rule.team_rule_id} rule={r.rule} evaluation={r.evaluation} highlight={highlight?.id === r.rule.team_rule_id ? highlight.nonce : null} placeIds={placeIds} />
                       ))}
                     </ul>
                   </motion.section>
@@ -213,7 +214,7 @@ export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, eva
                 <p className="flex gap-2 text-caption text-ink-muted">
                   <InfoIcon size={16} aria-hidden className="mt-0.5 shrink-0" />
                   <span>
-                    <strong className="font-bold text-ink">Not legal advice.</strong> Results come from public law text as retrieved 2026-10-01 and public building
+                    <strong className="font-bold text-ink">Not legal advice.</strong> Results come from public law text as retrieved {SOURCES_RETRIEVED} and public building
                     records. “Unknown” means the records lack a fact the rule depends on. Check with a lawyer or the local housing agency before acting.
                   </span>
                 </p>

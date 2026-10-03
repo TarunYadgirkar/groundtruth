@@ -4,9 +4,10 @@ import { useId, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { ArrowUpIcon, CircleNotchIcon, XIcon } from "@phosphor-icons/react";
 import type { AskAnswer, UiAction } from "@/lib/ask-schema";
+import { ruleById } from "@/lib/data";
 import type { Address } from "@/lib/types";
 
-const EXAMPLES = ["Can my rent go up 10% this year?", "What changes in July 2027?", "Why is the deposit rule unknown?"];
+const EXAMPLES = ["Can my rent go up 10% this year?", "What changes in July 2027?", "Which rules depend on missing facts?"];
 
 interface AskBarProps {
   address: Address;
@@ -74,7 +75,7 @@ export default function AskBar({ address, asOf, onActions }: AskBarProps) {
             {state.kind === "error" && <p className="mt-1 text-ui text-ink">{state.message}</p>}
             {state.kind === "answer" && (
               <>
-                <p className="mt-1 text-ui text-ink">{state.data.answer}</p>
+                <p className="mt-1 text-ui text-ink">{state.data.answer.replace(/\s*\(r-\d{4}(, r-\d{4})*\)/g, "")}</p>
                 {state.data.cited_rule_ids.length > 0 && (
                   <p className="mt-1.5 flex flex-wrap gap-1 font-mono text-[0.6875rem] text-ink-muted">
                     Cites
@@ -83,10 +84,10 @@ export default function AskBar({ address, asOf, onActions }: AskBarProps) {
                         key={r}
                         type="button"
                         onClick={() => onActions([{ type: "HIGHLIGHT_RULE", rule_id: r }])}
-                        aria-label={`Show rule ${r}`}
-                        className="link rounded-[3px] bg-paper px-1 text-ink"
+                        title={ruleById(r)?.title}
+                        className="link max-w-[28ch] truncate rounded-[3px] bg-paper px-1 text-ink"
                       >
-                        {r}
+                        {ruleById(r)?.title ?? r}
                       </button>
                     ))}
                   </p>

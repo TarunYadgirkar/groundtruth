@@ -1,4 +1,5 @@
 import { evaluate, rulesForPlace } from "./data";
+import { normalizeDate } from "./engine";
 import { isIsoDay } from "./labels";
 import type { Address, LookupResult, Rule } from "./types";
 
@@ -17,7 +18,7 @@ export function changesBetween(address: Address, from: string, to: string): Chan
   const [start, end] = from <= to ? [from, to] : [to, from];
   const rules = rulesForPlace(address);
   const byId = new Map(rules.map((r) => [r.team_rule_id, r]));
-  const boundaries = [...new Set(rules.map((r) => r.effective_date).filter(isIsoDay))].filter((d) => d > start && d <= end).sort();
+  const boundaries = [...new Set(rules.map((r) => normalizeDate(r.effective_date)).filter(isIsoDay))].filter((d) => d > start && d <= end).sort();
   const events: ChangeEvent[] = [];
   let prev = resultsAt(address, start);
   for (const date of [...boundaries, end]) {

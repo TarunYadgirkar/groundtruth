@@ -149,8 +149,9 @@ export default function SearchBar({ onSelect, onLookupFree, value, onChange, inp
                             <span className="text-ink-faint"> · mailed as {opt.address.postal_city}</span>
                           )}
                         </div>
+                        <div className="tnum truncate font-mono text-[0.75rem] text-ink-muted sm:hidden">{facts(opt.address)}</div>
                       </div>
-                      <span className="tnum shrink-0 font-mono text-[0.75rem] text-ink-muted">{facts(opt.address)}</span>
+                      <span className="tnum hidden shrink-0 font-mono text-[0.75rem] text-ink-muted sm:inline">{facts(opt.address)}</span>
                     </>
                   ) : (
                     <>
