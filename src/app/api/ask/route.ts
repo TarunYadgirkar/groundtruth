@@ -3,43 +3,11 @@ import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
 import { ADDRESSES, evaluate, ruleById } from "@/lib/data";
 import { AskAnswer, AskRequest, isIsoDayInRange } from "@/lib/ask-schema";
 import type { Address } from "@/lib/types";
+import { clientIp, rateLimiter, sameOrigin } from "@/lib/api-guard";
 
 const MODEL = "claude-opus-5-5";
-const WINDOW_MS = 60_000;
-const MAX_PER_WINDOW = 12;
-const MAX_GLOBAL_PER_WINDOW = 120;
 const MAX_BODY_BYTES = 8_000;
-const hits = new Map<string, number[]>();
-let globalHits: number[] = [];
-
-function rateLimited(ip: string): boolean {
-  const now = Date.now();
-  globalHits = globalHits.filter((t) => now - t < WINDOW_MS);
-  for (const [key, times] of hits) {
-    if (times.every((t) => now - t >= WINDOW_MS)) hits.delete(key);
-  }
-  const recent = (hits.get(ip) ?? []).filter((t) => now - t < WINDOW_MS);
-  hits.set(ip, [...recent, now]);
-  globalHits = [...globalHits, now];
-  return recent.length >= MAX_PER_WINDOW || globalHits.length > MAX_GLOBAL_PER_WINDOW;
-}
-
-function clientIp(request: Request): string {
-  const real = request.headers.get("x-real-ip");
-  if (real) return real.trim();
-  const hops = request.headers.get("x-forwarded-for")?.split(",") ?? [];
-  return hops.at(-1)?.trim() || "local";
-}
-
-function sameOrigin(request: Request): boolean {
-  const origin = request.headers.get("origin");
-  if (!origin) return true;
-  try {
-    return new URL(origin).host === request.headers.get("host");
-  } catch {
-    return false;
-  }
-}
+const rateLimited = rateLimiter({ windowMs: 60_000, perIp: 12, global: 120 });
 
 const SYSTEM = `You answer questions about which rental-housing laws apply at one specific building, for a public prototype called Groundtruth.
 
@@ -57,7 +25,7 @@ Rules you must follow:
 function resolveAddress(req: AskRequest): Address | null {
   if (req.address_id) return ADDRESSES.find((a) => a.address_id === req.address_id) ?? null;
   if (!req.live_address) return null;
-  return { ...req.live_address, year_built: null, units: null, use_code: "", use_description: "" };
+  return req.live_address;
 }
 
 function buildContext(address: Address, asOf: string): string {

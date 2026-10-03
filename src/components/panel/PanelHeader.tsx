@@ -6,10 +6,18 @@ import { AnimatePresence, motion } from "motion/react";
 import { ArrowSquareOutIcon, CheckIcon, DotsThreeIcon, LinkSimpleIcon } from "@phosphor-icons/react";
 import { STATE_NAME } from "@/lib/labels";
 import type { Address } from "@/lib/types";
+import type { LiveInfo } from "@/lib/lookup";
 import BuildingFacts from "./BuildingFacts";
+import CoverageNote from "./CoverageNote";
+import FactsForm, { type UserFacts } from "./FactsForm";
 
 interface PanelHeaderProps {
   address: Address;
+  record: Address;
+  live: LiveInfo | null;
+  hasUserFacts: boolean;
+  unknownCount: number;
+  onFactsChange: (facts: UserFacts | null) => void;
   lat: number;
   lng: number;
   asOf: string;
@@ -119,7 +127,7 @@ function ShareButton({ address, asOf }: { address: Address; asOf: string }) {
   );
 }
 
-export default function PanelHeader({ address, lat, lng, asOf }: PanelHeaderProps) {
+export default function PanelHeader({ address, record, live, hasUserFacts, unknownCount, onFactsChange, lat, lng, asOf }: PanelHeaderProps) {
   const headingRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
     headingRef.current?.focus({ preventScroll: true });
@@ -143,7 +151,7 @@ export default function PanelHeader({ address, lat, lng, asOf }: PanelHeaderProp
       <div>
         <h2 ref={headingRef} tabIndex={-1} className="font-wide text-headline text-ink focus-visible:outline-none">{address.street_address}</h2>
         <p className="mt-1.5 text-ui text-ink-muted">
-          {city}, {address.state} {address.zip}
+          {[city, `${address.state} ${address.zip}`.trim()].join(", ")}
           {address.county && <span> · {address.county}</span>}
         </p>
         {mailedDifferently && (
@@ -157,7 +165,17 @@ export default function PanelHeader({ address, lat, lng, asOf }: PanelHeaderProp
           </p>
         )}
       </div>
-      <BuildingFacts address={address} />
+      <CoverageNote address={address} live={live} />
+      <BuildingFacts address={address} record={record} />
+      <FactsForm
+        key={address.address_id}
+        address={address}
+        recordYear={record.year_built}
+        recordUnits={record.units}
+        hasUserFacts={hasUserFacts}
+        unknownCount={unknownCount}
+        onChange={onFactsChange}
+      />
     </header>
   );
 }

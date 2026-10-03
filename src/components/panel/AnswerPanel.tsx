@@ -14,9 +14,16 @@ import RuleRow from "./RuleRow";
 import SummaryBar from "./SummaryBar";
 import TimeSlider from "./TimeSlider";
 import AskBar from "./AskBar";
+import type { UserFacts } from "./FactsForm";
+import type { LiveInfo } from "@/lib/lookup";
+import { isCoveredCity } from "@/lib/place";
 
 interface AnswerPanelProps {
   address: Address;
+  record: Address;
+  live: LiveInfo | null;
+  hasUserFacts: boolean;
+  onFactsChange: (facts: UserFacts | null) => void;
   lat: number;
   lng: number;
   asOf: string;
@@ -52,12 +59,15 @@ function SectionTitle({ children, count }: { children: React.ReactNode; count?: 
   );
 }
 
-export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, evaluations, ruleCount, isDesktop }: AnswerPanelProps) {
+export default function AnswerPanel({ address, record, live, hasUserFacts, onFactsChange, lat, lng, asOf, onAsOfChange, evaluations, ruleCount, isDesktop }: AnswerPanelProps) {
   const [ready, setReady] = useState(false);
   const [view, setView] = useState<"rules" | "changes">("rules");
   const [highlight, setHighlight] = useState<{ id: string; nonce: number } | null>(null);
   const city = address.legal_city ?? address.postal_city;
   const placeRules = useMemo(() => rulesForPlace(address), [address]);
+  const emptyCategory = isCoveredCity(address.legal_city, address.state) || !address.legal_city
+    ? "No rule found at any level for this address."
+    : "No statewide rule in this category. This city's local rules aren't in our corpus.";
 
   const rows = useMemo<Row[]>(
     () =>
@@ -72,13 +82,15 @@ export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, eva
 
   const steps = useMemo(
     () => [
-      address.geocode_match === "google" ? "Address geocoded (live lookup)" : "Address geocoded",
-      address.legal_city ? `Jurisdiction resolved · ${city}, ${address.state}` : `Legal city not confirmed · ${address.state} rules apply`,
+      live ? "Address geocoded (live lookup)" : "Address geocoded",
+      address.legal_city
+        ? `Jurisdiction resolved · ${city}, ${address.state}${live?.jurisdictionSource === "census" ? " (Census boundaries)" : ""}`
+        : `Legal city not confirmed · ${address.state} rules apply`,
       `${ruleCount} rules in scope`,
       "Testing coverage against building facts",
       "Checking pending law",
     ],
-    [address, city, ruleCount],
+    [address, city, ruleCount, live],
   );
 
   useEffect(() => {
@@ -126,7 +138,17 @@ export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, eva
 
       <div className="flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain">
         <div className={`flex flex-col gap-6 px-5 pb-6 sm:px-6 ${isDesktop ? "pt-6" : "pt-3"}`}>
-          <PanelHeader address={address} lat={lat} lng={lng} asOf={asOf} />
+          <PanelHeader
+            address={address}
+            record={record}
+            live={live}
+            hasUserFacts={hasUserFacts}
+            unknownCount={evaluations.filter((e) => e.result === "unknown").length}
+            onFactsChange={onFactsChange}
+            lat={lat}
+            lng={lng}
+            asOf={asOf}
+          />
 
           <AnimatePresence mode="wait" initial={false}>
             {!ready ? (
@@ -174,7 +196,7 @@ export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, eva
                         <SectionTitle count={list.length || undefined}>{cat.label}</SectionTitle>
                       </div>
                       {list.length === 0 ? (
-                        <p className="py-2 text-caption text-ink-faint">No rule found at any level for this address.</p>
+                        <p className="py-2 text-caption text-ink-faint">{emptyCategory}</p>
                       ) : (
                         <ul className="flex flex-col divide-y divide-hairline">
                           {list.map((r) => (
@@ -221,14 +243,14 @@ export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, eva
               </motion.div>
             )}
           </AnimatePresence>
-          {!isDesktop && <AskBar address={address} asOf={asOf} onActions={onActions} />}
+          {!isDesktop && <AskBar address={address} asOf={asOf} onActions={onActions} hasUserFacts={hasUserFacts} />}
         </div>
       </div>
 
       <div className="shrink-0 bg-surface px-5 pb-4 pt-3 shadow-[0_-1px_0_0_var(--hairline)] sm:px-6">
         <div className="flex flex-col gap-3">
           <TimeSlider asOf={asOf} onChange={onAsOfChange} rules={placeRules} />
-          {isDesktop && <AskBar address={address} asOf={asOf} onActions={onActions} />}
+          {isDesktop && <AskBar address={address} asOf={asOf} onActions={onActions} hasUserFacts={hasUserFacts} />}
         </div>
       </div>
     </motion.aside>

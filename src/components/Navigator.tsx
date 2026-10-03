@@ -5,7 +5,8 @@ import dynamic from "next/dynamic";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useMapsLibrary } from "@vis.gl/react-google-maps";
 import { ADDRESSES, evaluate, rulesForPlace } from "@/lib/data";
-import { geocodeFreeText, locate } from "@/lib/geocode";
+import { locate } from "@/lib/geocode";
+import { resolveFreeText, type LiveInfo } from "@/lib/lookup";
 import { DEFAULT_AS_OF } from "@/lib/labels";
 import type { Address } from "@/lib/types";
 import { useMediaQuery } from "@/lib/use-media";
@@ -14,6 +15,7 @@ import SurveyBackdrop from "./landing/SurveyBackdrop";
 import FlightHud from "./flight/FlightHud";
 import TopBar from "./flight/TopBar";
 import AnswerPanel from "./panel/AnswerPanel";
+import type { UserFacts } from "./panel/FactsForm";
 import { useMapFailed } from "./map/MapProvider";
 import SurveyPlate from "./map/SurveyPlate";
 import { buildingHeight } from "./map/camera";
@@ -26,7 +28,15 @@ interface Selection {
   address: Address;
   lat: number;
   lng: number;
+  live?: LiveInfo | null;
 }
+
+export interface LandingError {
+  message: string;
+  outOfScope: boolean;
+}
+
+const failure = (message: string, outOfScope = false): LandingError => ({ message, outOfScope });
 
 const EXIT_MS = 350;
 const DARK_MS = 450;
@@ -86,7 +96,8 @@ export default function Navigator() {
   const [selection, setSelection] = useState<Selection | null>(null);
   const [asOf, setAsOf] = useState(DEFAULT_AS_OF);
   const [progress, setProgress] = useState(0);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<LandingError | null>(null);
+  const [userFacts, setUserFacts] = useState<{ id: string; facts: UserFacts } | null>(null);
   const runId = useRef(0);
   const geocoderRef = useRef(geocoder);
 
@@ -130,7 +141,7 @@ export default function Navigator() {
   }, []);
 
   const fly = useCallback(
-    async (resolve: () => Promise<Selection | string>) => {
+    async (resolve: () => Promise<Selection | LandingError>) => {
       const id = ++runId.current;
       const hopping = hasFlownRef.current && !reduce;
       const fromLanding = phaseRef.current === "landing";
@@ -138,13 +149,13 @@ export default function Navigator() {
       setSkip(false);
       setError(null);
       if (fromLanding || !hopping) setPhase("exiting");
-      const pending = resolve().catch(() => "Something went wrong placing that address. Try again.");
+      const pending = resolve().catch(() => failure("Something went wrong placing that address. Try again."));
       if (fromLanding) await skippableWait(reduce ? 0 : EXIT_MS);
       if (id !== runId.current) return;
       if (!hopping) setPhase("locating");
       const [outcome] = await Promise.all([pending, hopping ? Promise.resolve() : skippableWait(reduce ? 0 : DARK_MS)]);
       if (id !== runId.current) return;
-      if (typeof outcome === "string") {
+      if ("message" in outcome) {
         setPhase("landing");
         setError(outcome);
         return;
@@ -165,7 +176,7 @@ export default function Navigator() {
         if (address.lat !== null && address.lng !== null) return { address, lat: address.lat, lng: address.lng };
         const g = await waitForGeocoder();
         const coords = g ? await locate(g, address) : null;
-        if (!coords) return "We couldn't place this address on the map. Try another address, or check your connection.";
+        if (!coords) return failure("We couldn't place this address on the map. Try another address, or check your connection.");
         return { address, ...coords };
       }),
     [fly, waitForGeocoder],
@@ -175,10 +186,10 @@ export default function Navigator() {
     (query: string) =>
       fly(async () => {
         const g = await waitForGeocoder();
-        if (!g) return "Address lookup isn't available right now. Pick one of the sample buildings instead.";
-        const out = await geocodeFreeText(g, query);
-        if (!out.ok) return out.reason;
-        return { address: out.address, lat: out.address.lat as number, lng: out.address.lng as number };
+        if (!g) return failure("Address lookup isn't available right now. Pick one of the sample buildings instead.");
+        const out = await resolveFreeText(g, query);
+        if (!out.ok) return failure(out.reason, out.outOfScope);
+        return { address: out.address, lat: out.address.lat as number, lng: out.address.lng as number, live: out.live };
       }),
     [fly, waitForGeocoder],
   );
@@ -238,7 +249,21 @@ export default function Navigator() {
     return () => window.removeEventListener("keydown", onKey);
   }, [canSkip, requestSkip]);
 
-  const evaluations = useMemo(() => (selection ? evaluate(selection.address, asOf) : []), [selection, asOf]);
+  const address = useMemo(() => {
+    if (!selection) return null;
+    const own = userFacts?.id === selection.address.address_id ? userFacts.facts : null;
+    if (!own) return selection.address;
+    return { ...selection.address, year_built: selection.address.year_built ?? own.year_built, units: selection.address.units ?? own.units };
+  }, [selection, userFacts]);
+  const hasUserFacts = !!selection && userFacts?.id === selection.address.address_id;
+  const onFactsChange = useCallback((facts: UserFacts | null) => {
+    setUserFacts((prev) => {
+      const id = selection?.address.address_id;
+      if (!id) return prev;
+      return facts ? { id, facts } : null;
+    });
+  }, [selection]);
+  const evaluations = useMemo(() => (address ? evaluate(address, asOf) : []), [address, asOf]);
   const ruleCount = useMemo(() => (selection ? rulesForPlace(selection.address).length : 0), [selection]);
 
   const inFlight = phase === "flying" || phase === "revealed";
@@ -353,7 +378,11 @@ export default function Navigator() {
         {phase === "revealed" && selection && (
           <AnswerPanel
             key={selection.address.address_id}
-            address={selection.address}
+            address={address ?? selection.address}
+            record={selection.address}
+            live={selection.live ?? null}
+            hasUserFacts={hasUserFacts}
+            onFactsChange={onFactsChange}
             lat={selection.lat}
             lng={selection.lng}
             asOf={asOf}
