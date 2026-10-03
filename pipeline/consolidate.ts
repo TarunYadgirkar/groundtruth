@@ -5,7 +5,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
 import { z } from "zod";
 import { DATA, ROOT, loadCorpus, writeJson } from "./lib/corpus";
-import { CATEGORIES, CoverageSchema, JURISDICTIONS, STATUSES, type Extraction, type ExtractedRule } from "./lib/schema";
+import { CATEGORIES, CoverageSchema, JURISDICTIONS, STATUSES, locateSpan, type Extraction, type ExtractedRule } from "../src/lib/extraction";
 import type { Rule } from "../src/lib/types";
 
 const MODEL = "claude-opus-5-5";
@@ -17,34 +17,6 @@ interface Candidate extends ExtractedRule {
   source_url: string;
   retrieved_at: string;
   quote_verified: boolean;
-}
-
-const QUOTES = /[‘’‚‛′]/g;
-const DQUOTES = /[“”„‟″]/g;
-const DASHES = /[‐-―]/g;
-
-function normChar(ch: string): string {
-  return ch.replace(QUOTES, "'").replace(DQUOTES, '"').replace(DASHES, "-").replace(/ /g, " ");
-}
-
-// Locate the span in the source ignoring whitespace runs and quote/dash style, then return the
-// exact original substring so quoted_span is always verbatim source text.
-export function locateSpan(doc: string, span: string): string | null {
-  const keep: number[] = [];
-  let norm = "";
-  for (let i = 0; i < doc.length; i++) {
-    const ch = normChar(doc[i]);
-    if (/\s/.test(ch)) {
-      if (norm.endsWith(" ")) continue;
-      norm += " ";
-    } else norm += ch;
-    keep.push(i);
-  }
-  const target = normChar(span).replace(/\s+/g, " ").trim();
-  if (target.length < 20) return null;
-  const at = norm.indexOf(target);
-  if (at < 0) return null;
-  return doc.slice(keep[at], keep[at + target.length - 1] + 1);
 }
 
 const ConsolidatedSchema = z.object({
@@ -87,6 +59,15 @@ Granularity (important, this is scored against an answer key of roughly 58 rules
 - Fold procedural or subsidiary provisions (receipts, photos, walk-throughs, notices, interest, return deadlines, relocation amounts, eviction notice filing) into the requirement text of the headline rule they belong to. Do not output them as separate rules.
 - Keep separate records only when they are different laws (e.g. local rent control vs the state cap; a local algorithmic ban vs a state law; an enacted law vs a pending bill on the same topic).
 - Drop items that are not rules: motions or directives to study, informational guidance, enforcement-program descriptions.
+
+Coverage and precedence (the engine applies these mechanically, so encode them precisely):
+- Exemptions are never standalone rules. Fold them into the coverage of the rule they exempt from (e.g. a 30-year new-construction exemption from local rent control becomes age_years_exempt: 30 on that rent-control rule; when the exemption keys on construction or CO dates, set cutoff_basis accordingly).
+- When a local rule covers only units NOT covered by another local rule (e.g. a just-cause ordinance for units outside rent stabilization), encode the complementary cutoff (e.g. built_after the stabilization cutoff, same cutoff_basis).
+- Use certificate_of_occupancy as cutoff_basis whenever the law keys on a certificate of occupancy or first-occupancy date.
+- If a rule only covers a restricted population (subsidized/affordable units, city-funded units, program participants), set unverifiable_conditions to start with "RESTRICTED:" followed by the population.
+- conflicts_with_keys is only for genuine preemption or legal conflict that supersession does not already resolve (e.g. a future state law that may preempt local ordinances). A state rule that simply yields to stricter local rules (yields_to_local) must NOT list those local rules as conflicts.
+- Never take a rule's source, quote, or date from a draft, unadopted, or proposed text when an adopted source exists; take the effective date from the source you cite.
+- Every distinct law among the candidates must appear in the output or in dropped with a reason.
 
 Tasks:
 1. Merge candidates describing the same legal rule (same jurisdiction, same provision) into one final rule. Pick as primary_candidate the candidate with quote_verified=true from the most official source (statute/ordinance text > government page > secondary).

@@ -42,6 +42,8 @@ async function batchGeocode(rows: Record<string, string>[]): Promise<Map<string,
     const cells = parseCsv(`a,b,c,d,e,f,g,h\n${line}\n`)[0];
     if (!cells || cells.c !== "Match") continue;
     const [lng, lat] = cells.f.split(",").map(Number);
+    const input = rows.find((r) => r.address_id === cells.a);
+    if (input && !sameHouseNumber(input.street_address, cells.e)) continue;
     out.set(cells.a, { lat, lng, match: cells.e });
   }
   return out;
@@ -64,6 +66,8 @@ const POSTAL_INSIDE_CITY: Record<string, { city: string; county: string }> = {
   "San Francisco": { city: "San Francisco", county: "San Francisco County" },
   Dorchester: { city: "Boston", county: "Suffolk County" },
   Roxbury: { city: "Boston", county: "Suffolk County" },
+  Cambridge: { city: "Cambridge", county: "Middlesex County" },
+  Hoboken: { city: "Hoboken", county: "Hudson County" },
 };
 
 // Only used when no point geocode exists: SF is a consolidated city-county and these are Boston neighborhoods,
@@ -73,6 +77,13 @@ function inferFromPostal(postal: string): { match: string | null; legal_city: st
   return hit
     ? { match: `inferred from postal city "${postal}" (no street-level match)`, legal_city: hit.city, county: hit.county }
     : { match: null, legal_city: null, county: null };
+}
+
+// Reject fuzzy matches that land on a different building number (e.g. "322 Western Ave" -> "5 WESTERN AVE").
+function sameHouseNumber(input: string, matched: string): boolean {
+  const want = input.match(/^\s*(\d+)/)?.[1];
+  if (!want) return true;
+  return matched.match(/^\s*(\d+)/)?.[1] === want;
 }
 
 function cleanStreet(street: string): string {
@@ -91,7 +102,7 @@ async function censusOneLine(r: Record<string, string>): Promise<{ lat: number; 
     const res = await fetch(`${CENSUS}/locations/onelineaddress?address=${q}&benchmark=Public_AR_Current&format=json`);
     if (!res.ok) continue;
     const hit = (await res.json()).result?.addressMatches?.[0];
-    if (hit) return { lat: hit.coordinates.y, lng: hit.coordinates.x, match: `census-clean: ${hit.matchedAddress}` };
+    if (hit && sameHouseNumber(r.street_address, hit.matchedAddress)) return { lat: hit.coordinates.y, lng: hit.coordinates.x, match: `census-clean: ${hit.matchedAddress}` };
   }
   return null;
 }

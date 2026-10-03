@@ -13,7 +13,15 @@ export interface UnitRange {
 const WORD_NUMBERS: Record<string, number> = { two: 2, three: 3, four: 4, five: 5, six: 6 };
 
 export function unitRange(a: Pick<Address, "units" | "use_code" | "use_description" | "state">): UnitRange {
-  if (a.units != null) return { min: a.units, max: a.units, source: "record" };
+  const fromDescription = describedUnits(a);
+  if (a.units == null) return fromDescription;
+  const disagrees =
+    (fromDescription.min != null && a.units < fromDescription.min) || (fromDescription.max != null && a.units > fromDescription.max);
+  if (disagrees) return { min: Math.min(a.units, fromDescription.min ?? a.units), max: Math.max(a.units, fromDescription.max ?? a.units), source: "use_description" };
+  return { min: a.units, max: a.units, source: "record" };
+}
+
+function describedUnits(a: Pick<Address, "use_code" | "use_description" | "state">): UnitRange {
   const d = a.use_description.toUpperCase();
   const counts = [...d.matchAll(/(\d+)U\b/g)].map((m) => Number(m[1]));
   if (counts.length) {
@@ -130,6 +138,17 @@ function ownerCheck(rule: Rule, units: UnitRange): Check {
   return { covered: "unknown", reasons: ["Coverage depends on the owner type or owner occupancy, which the records deliberately omit."], rows: [{ fact: "Owner type", building: "Not in records", requirement: "Depends on owner", outcome: "unknown" }] };
 }
 
+function populationCheck(rule: Rule): Check {
+  const note = rule.coverage.unverifiable_conditions ?? "";
+  if (!/^RESTRICTED:/i.test(note)) return { covered: "yes", reasons: [], rows: [] };
+  const population = note.replace(/^RESTRICTED:\s*/i, "");
+  return {
+    covered: "unknown",
+    reasons: [`Covers only ${population}; program participation is not in the records.`],
+    rows: [{ fact: "Program / subsidy", building: "Not in records", requirement: population, outcome: "unknown" }],
+  };
+}
+
 function evaluateOne(rule: Rule, a: Address, asOf: string): { result: LookupResult; reasons: string[]; rows: CheckRow[] } | null {
   const scope = inScope(rule, a);
   if (scope === "no" || rule.status === "failed") return null;
@@ -137,7 +156,7 @@ function evaluateOne(rule: Rule, a: Address, asOf: string): { result: LookupResu
   const reasons: string[] = [];
   if (scope === "unknown") reasons.push(`Legal city could not be confirmed; mailing city is ${a.postal_city}.`);
 
-  const checks = [unitsCheck(rule, units), cutoffCheck(rule, a.year_built, asOf), ownerCheck(rule, units)];
+  const checks = [unitsCheck(rule, units), cutoffCheck(rule, a.year_built, asOf), ownerCheck(rule, units), populationCheck(rule)];
   const covered = checks.reduce<Tri>((acc, c) => and(acc, c.covered), scope === "unknown" ? "unknown" : "yes");
   for (const c of checks) reasons.push(...c.reasons);
   if (covered === "no") return null;

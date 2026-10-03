@@ -1,0 +1,23 @@
+FICTIONAL TEST DOCUMENT - NOT REAL LAW - created by the Groundtruth team to test automated ingestion.
+
+CITY OF CAMBRIDGE, MASSACHUSETTS
+ORDINANCE NO. 2026-T1 (FICTIONAL)
+
+AN ORDINANCE ADDING CHAPTER 8.80 TO THE CAMBRIDGE MUNICIPAL CODE, "PROHIBITION ON ALGORITHMIC RENT-SETTING"
+
+Ordained by the City Council of the City of Cambridge, Massachusetts, on September 29, 2026.
+
+Section 8.80.010 Definitions.
+"Algorithmic device" means any software, system, or process that uses nonpublic competitor data to recommend or set rent amounts, lease terms, or occupancy levels for residential dwelling units.
+
+Section 8.80.020 Prohibition.
+No owner or manager of a residential rental property containing five or more dwelling units in the City of Cambridge shall use an algorithmic device to set or recommend the rent for any dwelling unit.
+
+Section 8.80.030 Exemptions.
+This chapter shall not apply to dwelling units in buildings for which a certificate of occupancy was first issued on or after January 1, 2016.
+
+Section 8.80.040 Enforcement.
+A tenant or the City Solicitor may bring a civil action for violation of this chapter. Each violation is subject to a civil penalty of up to $1,000 per unit per month.
+
+Section 8.80.050 Effective date.
+This chapter shall take effect on March 1, 2027.

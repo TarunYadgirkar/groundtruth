@@ -105,3 +105,53 @@ export const ExtractionSchema = z.object({
 
 export type ExtractedRule = z.infer<typeof ExtractedRuleSchema>;
 export type Extraction = z.infer<typeof ExtractionSchema>;
+
+export const EXTRACTION_SYSTEM = `You extract U.S. rental housing rules from one source document into structured records for an address-level law lookup tool.
+
+Scope: 3 states (CA, NJ, MA) and these jurisdictions only: ${JURISDICTIONS.join("; ")}.
+Six categories only: ${CATEGORIES.join(", ")}.
+Query date: 2026-10-01.
+
+How to extract:
+- One record per distinct legal rule the document states or describes (a cap, a ban, a required cause, a fee limit, a screening restriction). Split a statute into separate records when it creates rules in different categories.
+- Include rules that are enacted but not yet effective (status not_yet_effective), pending bills (pending), and failed/struck measures (failed) when the document describes them.
+- Secondary or summary pages count: if a city web page describes a city ordinance, extract the ordinance with its official citation when the page gives one.
+- quoted_span must be copied EXACTLY from the document text, character for character, contiguous, 1-3 sentences. Never paraphrase, never stitch fragments together, never fix typos. If the supporting text spans a table or list, copy one contiguous line that supports the rule.
+- Coverage: fill the structured coverage block precisely. Use certificate_of_occupancy when the law keys on a certificate of occupancy or "first occupied" date, year_built only when it keys on construction date. Leave fields null when the document does not state them. Do not invent cutoffs.
+- yields_to_local: true for state rules that by their own terms do not apply where stricter local rent control / just-cause rules apply (e.g. Cal. Civ. Code 1947.12 and 1946.2 carve-outs).
+- effective_date: use the date the document states. If it only shows enactment (e.g. a chaptered California bill), apply the state's default effective-date rule (California regular-session statutes: January 1 of the following year; urgency statutes: on signing) and say so in conflict_note with confidence <= 0.8.
+- Record conflicting effective dates or possible preemption in conflict_note and lower confidence.
+- Category mapping: tenant-protection notice/disclosure ordinances tied to the start or termination of a tenancy (e.g. tenant rights notices, housing stability notification acts), relocation assistance and eviction procedure belong to just_cause_eviction; source-of-income, criminal-history and credit screening limits belong to screening_restrictions; fee caps and allowed upfront charges belong to application_screening_fees.
+- Exemptions are not rules: express a new-construction or owner-occupancy exemption as coverage on the rule it exempts from, not as its own record.
+- If a rule covers only a restricted population (subsidized/affordable units, city-funded units, specific programs), say so in unverifiable_conditions and start that text with "RESTRICTED:".
+- If the document is irrelevant to the six categories, return empty arrays.
+- no_rule_findings: explicit statements that no rule exists at a level (e.g. Massachusetts bars local rent control; a ballot question was struck).
+Never invent rules, citations, or dates that the document does not support.`;
+
+const QUOTES = /[\u2018\u2019\u201A\u201B\u2032]/g;
+const DQUOTES = /[\u201C\u201D\u201E\u201F\u2033]/g;
+const DASHES = /[\u2010-\u2015]/g;
+
+function normChar(ch: string): string {
+  return ch.replace(QUOTES, "'").replace(DQUOTES, '"').replace(DASHES, "-").replace(/\u00A0/g, " ");
+}
+
+// Locate the span in the source ignoring whitespace runs and quote/dash style, then return the
+// exact original substring so quoted_span is always verbatim source text.
+export function locateSpan(doc: string, span: string): string | null {
+  const keep: number[] = [];
+  let norm = "";
+  for (let i = 0; i < doc.length; i++) {
+    const ch = normChar(doc[i]);
+    if (/\s/.test(ch)) {
+      if (norm.endsWith(" ")) continue;
+      norm += " ";
+    } else norm += ch;
+    keep.push(i);
+  }
+  const target = normChar(span).replace(/\s+/g, " ").trim();
+  if (target.length < 20) return null;
+  const at = norm.indexOf(target);
+  if (at < 0) return null;
+  return doc.slice(keep[at], keep[at + target.length - 1] + 1);
+}
