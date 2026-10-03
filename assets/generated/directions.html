@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Groundtruth directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Archivo:wdth,wght@125,500;125,700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;500&family=Chakra+Petch:wght@500;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--switch-bg:#111;--switch-fg:#eee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui;background:#1b1b1b;color:#eee}
+.bar{position:sticky;top:0;z-index:20;display:flex;gap:8px;align-items:center;padding:12px 16px;background:#0e0e0e;border-bottom:1px solid #2a2a2a;flex-wrap:wrap}
+.bar b{font-weight:600;margin-right:8px}
+.bar button{font:inherit;padding:8px 14px;border-radius:999px;border:0;background:#262626;color:#ddd;cursor:pointer}
+.bar button[aria-pressed=true]{background:#eee;color:#111}
+.bar span{color:#888;font-size:13px;margin-left:auto}
+.dir{display:none;padding:24px 16px 48px;gap:24px;flex-direction:column;align-items:center;background:var(--bg)}
+.dir.on{display:flex}
+.label{width:min(1200px,100%);font:500 13px/1.4 var(--mono);color:var(--muted);letter-spacing:.04em}
+.frame{width:min(1200px,100%);aspect-ratio:16/9;position:relative;overflow:hidden;border-radius:14px;background:var(--bg);box-shadow:0 0 0 1px var(--hair),0 30px 80px rgba(0,0,0,.35);color:var(--text);font-family:var(--body)}
+.notes{width:min(1200px,100%);display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.note{background:var(--panel);color:var(--text);border-radius:10px;padding:14px 16px;font:400 14px/1.5 var(--body)}
+.note h4{font:600 12px/1 var(--mono);color:var(--muted);margin-bottom:8px;letter-spacing:.06em}
+.sw{display:flex;gap:6px;margin-top:6px}.sw i{width:28px;height:28px;border-radius:6px;display:block;box-shadow:0 0 0 1px rgba(127,127,127,.3)}
+
+/* shared landing */
+.land{position:absolute;inset:0;display:grid;place-items:center}
+.stack{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;width:min(640px,86%)}
+.brand{font-family:var(--display);color:var(--text);line-height:.9}
+.tag{color:var(--muted);font-size:16px;max-width:46ch;text-wrap:balance}
+.search{width:100%;display:flex;align-items:center;gap:12px;padding:16px 20px;background:var(--panel);border-radius:var(--r);box-shadow:var(--searchShadow)}
+.search .caret{width:2px;height:22px;background:var(--accent);animation:blink 1s steps(1) infinite}
+.search .typed{font:500 18px/1 var(--body);color:var(--text);white-space:nowrap;overflow:hidden}
+.search .kbd{margin-left:auto;font:500 12px/1 var(--mono);color:var(--muted);padding:6px 8px;border-radius:6px;background:var(--hair)}
+.hint{font:400 13px/1.4 var(--mono);color:var(--muted)}
+@keyframes blink{50%{opacity:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes drift{to{background-position:-400px 0}}
+
+/* shared result */
+.res{position:absolute;inset:0;display:grid;grid-template-columns:1.25fr 1fr}
+.view{position:relative;overflow:hidden}
+.panel{background:var(--panel);display:flex;flex-direction:column;gap:14px;padding:22px 24px;overflow:hidden}
+.crumb{font:500 12px/1.3 var(--mono);color:var(--muted);letter-spacing:.04em}
+.addr{font-family:var(--display);color:var(--text);font-size:30px;line-height:1}
+.facts{display:flex;gap:8px;flex-wrap:wrap}
+.fact{font:500 12px/1 var(--mono);padding:7px 9px;border-radius:6px;background:var(--hair);color:var(--text)}
+.fact.miss{color:var(--muted);background:transparent;box-shadow:inset 0 0 0 1px var(--hair)}
+.rules{display:flex;flex-direction:column;gap:0}
+.rule{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:11px 0;border-top:1px solid var(--hair)}
+.rule .cat{font:500 11px/1 var(--mono);color:var(--muted);letter-spacing:.06em;grid-column:1/-1}
+.rule .t{font:500 15px/1.3 var(--body);color:var(--text)}
+.rule .cite{font:400 12px/1.3 var(--mono);color:var(--muted);grid-column:1/2}
+.pill{font:600 11px/1 var(--mono);padding:6px 8px;border-radius:999px;align-self:start;white-space:nowrap}
+.p-ap{background:var(--ap-bg);color:var(--ap)}.p-un{background:var(--un-bg);color:var(--un)}.p-su{background:var(--su-bg);color:var(--su)}.p-ny{background:var(--ny-bg);color:var(--ny)}
+.quote{grid-column:1/-1;margin-top:6px;padding:10px 12px;border-radius:8px;background:var(--hair);font:400 13px/1.5 var(--body);color:var(--text)}
+.quote small{display:block;margin-top:6px;font:400 11px/1.3 var(--mono);color:var(--muted)}
+.slider{margin-top:auto;display:flex;flex-direction:column;gap:8px}
+.track{position:relative;height:4px;border-radius:2px;background:var(--hair)}
+.track .fill{position:absolute;left:0;top:0;bottom:0;width:62%;background:var(--accent);border-radius:2px}
+.track .knob{position:absolute;left:62%;top:50%;width:16px;height:16px;border-radius:50%;background:var(--accent);transform:translate(-50%,-50%);box-shadow:0 0 0 4px var(--panel)}
+.track .tick{position:absolute;top:-5px;width:2px;height:14px;background:var(--muted)}
+.slabels{display:flex;justify-content:space-between;font:400 11px/1 var(--mono);color:var(--muted)}
+.legal{font:400 11px/1.3 var(--mono);color:var(--muted)}
+
+/* ===== A: Dusk flyover ===== */
+#A{--bg:#0D1320;--panel:#141C2C;--text:#ECE6DA;--muted:#8C93A3;--hair:rgba(236,230,218,.09);--accent:#F2A541;--display:'Big Shoulders Display';--body:'Public Sans';--mono:'IBM Plex Mono';--r:14px;--searchShadow:0 0 0 1px rgba(242,165,65,.35),0 20px 60px rgba(0,0,0,.5);
+--ap:#7FD8B0;--ap-bg:rgba(127,216,176,.12);--un:#B7BCC8;--un-bg:rgba(183,188,200,.12);--su:#C9A6E8;--su-bg:rgba(201,166,232,.12);--ny:#8EC3F0;--ny-bg:rgba(142,195,240,.12)}
+#A .brand{font-size:96px;font-weight:800;letter-spacing:.02em;text-transform:uppercase}
+#A .globe{position:absolute;width:62%;aspect-ratio:1;left:19%;top:44%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#22324d,#0f1726 60%,#0b111c);box-shadow:0 0 0 1px rgba(242,165,65,.15),0 -20px 120px rgba(242,165,65,.12) inset}
+#A .globe svg{position:absolute;inset:0;animation:spin 120s linear infinite}
+#A .stars{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 10% 20%,#fff8,transparent),radial-gradient(1px 1px at 70% 15%,#fff6,transparent),radial-gradient(1px 1px at 40% 8%,#fff5,transparent),radial-gradient(1px 1px at 85% 40%,#fff4,transparent),radial-gradient(1px 1px at 20% 60%,#fff3,transparent),radial-gradient(1px 1px at 92% 70%,#fff5,transparent)}
+#A .view{background:linear-gradient(180deg,#2a2440 0%,#4a3550 30%,#c9805a 60%,#1a1f2c 61%,#11161f 100%)}
+#A .bldg{position:absolute;bottom:0;background:#1b2130;box-shadow:inset 0 0 0 1px rgba(255,255,255,.04)}
+#A .win{position:absolute;inset:10% 12%;background-image:radial-gradient(circle,#F2A54199 1.2px,transparent 1.6px);background-size:14px 16px}
+#A .ring{position:absolute;left:50%;bottom:20%;width:220px;height:60px;border-radius:50%;transform:translateX(-50%);box-shadow:0 0 0 1px #F2A541aa}
+
+/* ===== B: Daylight cartographic ===== */
+#B{--bg:#F2EFE6;--panel:#FBFAF5;--text:#1E2B26;--muted:#6B746C;--hair:rgba(30,43,38,.1);--accent:#C8452C;--display:'Archivo';--body:'Atkinson Hyperlegible';--mono:'JetBrains Mono';--r:6px;--searchShadow:0 0 0 1.5px #1E2B26,6px 6px 0 #1E2B26;
+--ap:#1F6B4A;--ap-bg:#DCEBDF;--un:#5E6660;--un-bg:#E6E6DE;--su:#7A4E1F;--su-bg:#F1E3CF;--ny:#22557A;--ny-bg:#DCE8F1}
+#B .brand{font-size:84px;font-weight:700;font-stretch:125%;letter-spacing:-.02em}
+#B .contours{position:absolute;inset:0;opacity:.55;background:repeating-radial-gradient(circle at 30% 70%,transparent 0 22px,rgba(31,107,74,.18) 22px 23px),repeating-radial-gradient(circle at 80% 25%,transparent 0 18px,rgba(31,107,74,.14) 18px 19px)}
+#B .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(30,43,38,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(30,43,38,.06) 1px,transparent 1px);background-size:60px 60px}
+#B .coords{position:absolute;left:24px;bottom:20px;font:400 12px/1.6 var(--mono);color:var(--muted)}
+#B .view{background:#E7E2D3}
+#B .view .grid{background-size:40px 40px}
+#B .lot{position:absolute;left:30%;top:28%;width:38%;height:40%;background:#D6CFBC;box-shadow:inset 0 0 0 2px #C8452C;transform:skewX(-8deg)}
+#B .lot::after{content:'A0001 · 32 units · 1927';position:absolute;left:8px;top:8px;font:500 11px/1 var(--mono);color:#C8452C}
+#B .road{position:absolute;background:#FBFAF5}
+
+/* ===== C: Mission control ===== */
+#C{--bg:#121417;--panel:#181B1F;--text:#DDE3E8;--muted:#7D8790;--hair:rgba(221,227,232,.08);--accent:#5FD4E0;--display:'Chakra Petch';--body:'IBM Plex Sans';--mono:'JetBrains Mono';--r:4px;--searchShadow:0 0 0 1px rgba(95,212,224,.5);
+--ap:#7BE0A6;--ap-bg:rgba(123,224,166,.1);--un:#AEB6BE;--un-bg:rgba(174,182,190,.1);--su:#E7B36A;--su-bg:rgba(231,179,106,.1);--ny:#5FD4E0;--ny-bg:rgba(95,212,224,.1)}
+#C .brand{font-size:64px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+#C .hud{position:absolute;inset:18px;pointer-events:none}
+#C .hud i{position:absolute;width:22px;height:22px;border-color:#5FD4E0;border-style:solid}
+#C .hud .tl{left:0;top:0;border-width:1px 0 0 1px}#C .hud .tr{right:0;top:0;border-width:1px 1px 0 0}#C .hud .bl{left:0;bottom:0;border-width:0 0 1px 1px}#C .hud .br{right:0;bottom:0;border-width:0 1px 1px 0}
+#C .readout{position:absolute;font:400 11px/1.6 var(--mono);color:var(--muted)}
+#C .scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(95,212,224,.03) 0 1px,transparent 1px 3px)}
+#C .wire{position:absolute;left:50%;top:52%;width:46%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;box-shadow:0 0 0 1px rgba(95,212,224,.35)}
+#C .wire svg{position:absolute;inset:0;animation:spin 90s linear infinite}
+#C .view{background:#0E1013}
+#C .box3d{position:absolute;left:32%;top:24%;width:30%;height:52%;box-shadow:0 0 0 1px #5FD4E0;background:repeating-linear-gradient(90deg,transparent 0 22px,rgba(95,212,224,.12) 22px 23px),repeating-linear-gradient(0deg,transparent 0 18px,rgba(95,212,224,.12) 18px 19px)}
+#C .res{grid-template-columns:1.1fr 1fr}
+#C .panel{border-left:1px solid var(--hair)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="bar" role="toolbar" aria-label="Choose a direction">
+  <b>Groundtruth</b>
+  <button data-go="A" aria-pressed="true">A · Dusk flyover</button>
+  <button data-go="B" aria-pressed="false">B · Daylight cartographic</button>
+  <button data-go="C" aria-pressed="false">C · Mission control</button>
+  <span>Mockups. The 3D view is a stand-in for Google photoreal tiles.</span>
+</div>
+
+<!-- A -->
+<section class="dir on" id="A">
+  <p class="label">LANDING</p>
+  <div class="frame">
+    <div class="stars"></div>
+    <div class="globe"><svg viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#F2A541" stroke-opacity=".18" stroke-width=".3"><ellipse cx="50" cy="50" rx="49" ry="49"/><ellipse cx="50" cy="50" rx="35" ry="49"/><ellipse cx="50" cy="50" rx="18" ry="49"/><ellipse cx="50" cy="50" rx="49" ry="35"/><ellipse cx="50" cy="50" rx="49" ry="18"/><line x1="1" y1="50" x2="99" y2="50"/></g><g fill="#F2A541"><circle cx="30" cy="38" r=".7"/><circle cx="33" cy="41" r=".5"/><circle cx="72" cy="34" r=".6"/><circle cx="70" cy="36" r=".5"/></g></svg></div>
+    <div class="land"><div class="stack" style="margin-top:-12%">
+      <h1 class="brand">Groundtruth</h1>
+      <p class="tag">Which housing laws apply at this address today, and what is about to change.</p>
+      <div class="search"><span class="typed">6238 De Longpre Ave, Los Angeles</span><span class="caret"></span><span class="kbd">ENTER</span></div>
+      <p class="hint">500 sample buildings · CA · NJ · MA · as of Oct 1, 2026</p>
+    </div></div>
+  </div>
+  <p class="label">RESULT · after the fly-in</p>
+  <div class="frame"><div class="res">
+    <div class="view">
+      <div class="bldg" style="left:6%;width:16%;height:38%"></div>
+      <div class="bldg" style="left:62%;width:22%;height:44%"></div>
+      <div class="bldg" style="left:30%;width:26%;height:58%;background:#232b3d"><div class="win"></div></div>
+      <div class="ring"></div>
+    </div>
+    <div class="panel">
+      <p class="crumb">CALIFORNIA › LOS ANGELES · CENSUS PLACE 0644000</p>
+      <h2 class="addr">6238 DE LONGPRE AVE</h2>
+      <div class="facts"><span class="fact">BUILT 1927</span><span class="fact">32 UNITS</span><span class="fact miss">OWNER TYPE · NOT IN RECORDS</span></div>
+      <div class="rules">
+        <div class="rule"><span class="cat">RENT INCREASE LIMITS</span><span class="t">LA Rent Stabilization Ordinance</span><span class="pill p-ap">APPLIES</span><span class="cite">LAMC § 151.06 · built before 1978-10-01</span></div>
+        <div class="rule"><span class="cat">RENT INCREASE LIMITS</span><span class="t">Tenant Protection Act cap</span><span class="pill p-su">SUPERSEDED</span><span class="cite">Cal. Civ. Code § 1947.12 · yields to local RSO</span></div>
+        <div class="rule"><span class="cat">SECURITY DEPOSITS</span><span class="t">One month's rent</span><span class="pill p-un">UNKNOWN</span><span class="cite">Cal. Civ. Code § 1950.5</span>
+          <div class="quote">"…shall not demand or receive security… in an amount or value in excess of an amount equal to one month's rent…"<small>D025 · retrieved 2026-10-01 · small-landlord exception depends on owner type</small></div></div>
+        <div class="rule"><span class="cat">ALGORITHMIC RENT-SETTING</span><span class="t">Common pricing algorithms</span><span class="pill p-ap">APPLIES</span><span class="cite">AB 325 / SB 763 · eff. 2026-01-01</span></div>
+      </div>
+      <div class="slider"><div class="slabels"><span>AS OF</span><span style="color:var(--accent)">OCT 1, 2026</span></div><div class="track"><div class="fill"></div><span class="tick" style="left:40%"></span><span class="tick" style="left:85%"></span><div class="knob"></div></div><div class="slabels"><span>2024</span><span>2027</span></div></div>
+      <p class="legal">Not legal advice. Every answer links to its source text.</p>
+    </div>
+  </div></div>
+  <div class="notes">
+    <div class="note"><h4>COLOR</h4>Navy-slate night, bone text, sodium-streetlight amber. City lights glow on the globe.<div class="sw"><i style="background:#0D1320"></i><i style="background:#141C2C"></i><i style="background:#ECE6DA"></i><i style="background:#F2A541"></i><i style="background:#7FD8B0"></i></div></div>
+    <div class="note"><h4>TYPE</h4>Big Shoulders Display (Chicago civic signage) · Public Sans (US government typeface) · IBM Plex Mono for citations.</div>
+    <div class="note"><h4>BOLD MOVE</h4>The cinematic dusk fly-in. The panel stays calm and readable over it.</div>
+  </div>
+</section>
+
+<!-- B -->
+<section class="dir" id="B">
+  <p class="label">LANDING</p>
+  <div class="frame">
+    <div class="grid"></div><div class="contours"></div>
+    <div class="land"><div class="stack">
+      <h1 class="brand">Groundtruth</h1>
+      <p class="tag">Which housing laws apply at this address today, and what is about to change.</p>
+      <div class="search"><span class="typed">1031 Clinton St, Hoboken</span><span class="caret"></span><span class="kbd">↵</span></div>
+      <p class="hint">500 parcels · 10 cities · 6 rule categories</p>
+    </div></div>
+    <p class="coords">40.7440° N · 74.0324° W<br>SHEET 07 · HUDSON CO., NJ</p>
+  </div>
+  <p class="label">RESULT · after the fly-in</p>
+  <div class="frame"><div class="res">
+    <div class="view"><div class="grid"></div>
+      <div class="road" style="left:0;right:0;top:72%;height:7%"></div><div class="road" style="top:0;bottom:0;left:16%;width:6%"></div>
+      <div class="lot"></div>
+    </div>
+    <div class="panel">
+      <p class="crumb">NEW JERSEY › HOBOKEN · HUDSON COUNTY</p>
+      <h2 class="addr" style="font-size:28px;font-stretch:125%;font-weight:700">1031 Clinton St</h2>
+      <div class="facts"><span class="fact">BUILT 2001</span><span class="fact miss">UNITS · NOT IN RECORDS</span></div>
+      <div class="rules">
+        <div class="rule"><span class="cat">ALGORITHMIC RENT-SETTING</span><span class="t">Hoboken ban on rent algorithms</span><span class="pill p-ap">APPLIES</span><span class="cite">Hoboken Code ch. 158, Art. II · Jul 2025</span></div>
+        <div class="rule"><span class="cat">ALGORITHMIC RENT-SETTING</span><span class="t">NJ FAIR Act</span><span class="pill p-ny">NOT YET EFFECTIVE</span><span class="cite">P.L.2026, c.43 · eff. 2027-07-01 · may preempt local ban</span></div>
+        <div class="rule"><span class="cat">SECURITY DEPOSITS</span><span class="t">1.5 months' rent cap</span><span class="pill p-ap">APPLIES</span><span class="cite">N.J.S.A. 46:8-21.2</span></div>
+        <div class="rule"><span class="cat">APPLICATION FEES</span><span class="t">$50 fee cap</span><span class="pill p-ap">APPLIES</span><span class="cite">P.L.2025, c.405 · eff. 2026-05-01</span></div>
+      </div>
+      <div class="slider"><div class="slabels"><span>AS OF</span><span style="color:var(--accent)">OCT 1, 2026</span></div><div class="track"><div class="fill"></div><span class="tick" style="left:85%"></span><div class="knob"></div></div><div class="slabels"><span>2024</span><span>2027</span></div></div>
+      <p class="legal">Not legal advice.</p>
+    </div>
+  </div></div>
+  <div class="notes">
+    <div class="note"><h4>COLOR</h4>Survey paper, contour green, map-marker red. Reads like a USGS sheet.<div class="sw"><i style="background:#F2EFE6"></i><i style="background:#FBFAF5"></i><i style="background:#1E2B26"></i><i style="background:#C8452C"></i><i style="background:#1F6B4A"></i></div></div>
+    <div class="note"><h4>TYPE</h4>Archivo Expanded (map-label width) · Atkinson Hyperlegible (built for low vision) · JetBrains Mono.</div>
+    <div class="note"><h4>BOLD MOVE</h4>Hard-shadow search bar and the parcel outline drawn in survey red. Feels like a public record.</div>
+  </div>
+</section>
+
+<!-- C -->
+<section class="dir" id="C">
+  <p class="label">LANDING</p>
+  <div class="frame">
+    <div class="scan"></div>
+    <div class="wire"><svg viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#5FD4E0" stroke-opacity=".3" stroke-width=".25"><ellipse cx="50" cy="50" rx="49" ry="49"/><ellipse cx="50" cy="50" rx="30" ry="49"/><ellipse cx="50" cy="50" rx="12" ry="49"/><ellipse cx="50" cy="50" rx="49" ry="30"/><ellipse cx="50" cy="50" rx="49" ry="12"/></g></svg></div>
+    <div class="hud"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+    <p class="readout" style="left:36px;top:34px">SYS · CORPUS 54 DOCS · 87 SOURCES<br>RULES INDEXED 61 · QUOTES VERIFIED 61/61</p>
+    <p class="readout" style="right:36px;top:34px;text-align:right">AS OF 2026-10-01<br>JURISDICTIONS 3 ST · 10 CITY</p>
+    <div class="land"><div class="stack">
+      <h1 class="brand">Groundtruth</h1>
+      <div class="search"><span style="font:500 13px/1 var(--mono);color:var(--accent)">QUERY ›</span><span class="typed">310 Columbus Ave, Boston</span><span class="caret"></span><span class="kbd">RUN</span></div>
+      <p class="hint">TARGET LOCK ON ENTER · 500 SAMPLE PARCELS</p>
+    </div></div>
+  </div>
+  <p class="label">RESULT · after the fly-in</p>
+  <div class="frame"><div class="res">
+    <div class="view"><div class="scan"></div><div class="box3d"></div>
+      <div class="hud"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+      <p class="readout" style="left:36px;bottom:34px">42.3467 N · 71.0794 W · ALT 212 M<br>POSTAL “ROXBURY” → LEGAL BOSTON</p>
+    </div>
+    <div class="panel">
+      <p class="crumb">MA › BOSTON · STACK RESOLVED</p>
+      <h2 class="addr" style="font-size:24px;letter-spacing:.06em">310 COLUMBUS AVE</h2>
+      <div class="facts"><span class="fact">BUILT 1899</span><span class="fact miss">UNITS · NULL</span></div>
+      <div class="rules">
+        <div class="rule"><span class="cat">RENT INCREASE LIMITS</span><span class="t">No rent cap · local control barred</span><span class="pill p-ap">STATE BAR</span><span class="cite">M.G.L. c.40P · ballot Q struck 2026-06-23</span></div>
+        <div class="rule"><span class="cat">ALGORITHMIC RENT-SETTING</span><span class="t">S.2983 / H.5222</span><span class="pill p-su">PENDING</span><span class="cite">not law · would affect all MA addresses</span></div>
+        <div class="rule"><span class="cat">SECURITY DEPOSITS</span><span class="t">First month's rent cap</span><span class="pill p-ap">APPLIES</span><span class="cite">M.G.L. c.186 § 15B</span></div>
+      </div>
+      <div class="slider"><div class="slabels"><span>T-AXIS</span><span style="color:var(--accent)">2026-10-01</span></div><div class="track"><div class="fill"></div><span class="tick" style="left:55%"></span><div class="knob"></div></div><div class="slabels"><span>2024-01</span><span>2027-12</span></div></div>
+      <p class="legal">NOT LEGAL ADVICE · AUDIT LOG 0x3f2a</p>
+    </div>
+  </div></div>
+  <div class="notes">
+    <div class="note"><h4>COLOR</h4>Graphite and instrument cyan, with amber for pending law. Dense and technical.<div class="sw"><i style="background:#121417"></i><i style="background:#181B1F"></i><i style="background:#DDE3E8"></i><i style="background:#5FD4E0"></i><i style="background:#E7B36A"></i></div></div>
+    <div class="note"><h4>TYPE</h4>Chakra Petch (instrument labels) · IBM Plex Sans · JetBrains Mono everywhere data lives.</div>
+    <div class="note"><h4>BOLD MOVE</h4>HUD readouts that show the system working: quotes verified, legal-city resolution, audit hash.</div>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.dir').forEach(s=>s.classList.toggle('on',s.id===b.dataset.go));
+  document.querySelectorAll('[data-go]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+}));
+</script>
+</body>
+</html>

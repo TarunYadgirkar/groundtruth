@@ -1,0 +1,6 @@
+npm notice run groundtruth@0.1.0 npx
+npm notice run 'tsx' pipeline/extract.ts
+D003 1 rules 14s
+D008 1 rules 14s
+D004 2 rules 18s
+D005 4 rules 23s
