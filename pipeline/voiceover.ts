@@ -20,29 +20,29 @@ interface Line {
 
 const SCRIPTS: Record<string, { duration: number; lines: Line[] }> = {
   demo: {
-    duration: 58.37,
+    duration: 58.43,
     lines: [
       { at: 0.3, until: 5.0, text: "Which housing laws apply at this address, on any date? Meet Groundtruth." },
-      { at: 5.4, until: 16.6, text: "Type an address and we fly in from orbit. Groundtruth resolves the legal jurisdiction, not just the mailing city." },
-      { at: 17.2, until: 23.2, text: "Every rule cites its exact source text. Missing facts mean unknown, never a guess." },
-      { at: 23.5, until: 29.6, text: "Jump to July 2027: New Jersey's FAIR Act kicks in, flagged against Hoboken's ban." },
-      { at: 29.9, until: 37.4, text: "Ask in plain English. My landlord wants ten percent more next month. Is that allowed?" },
-      { at: 37.7, until: 46.6, text: "Claude answers only from this building's cited rules, and highlights the rule it relied on." },
-      { at: 46.9, until: 51.7, text: "Paste a new ordinance: extracted, verified, and tested on five hundred buildings." },
-      { at: 51.9, until: 58.1, text: "Forty-eight buildings affected, each with its source. Groundtruth. Not legal advice." },
+      { at: 5.4, until: 16.2, text: "Type an address and we fly in from orbit. Groundtruth resolves the legal jurisdiction, not just the mailing city." },
+      { at: 16.8, until: 22.6, text: "Every rule cites its exact source text. Missing facts mean unknown, never a guess." },
+      { at: 22.9, until: 28.9, text: "Jump to July 2027: New Jersey's FAIR Act kicks in, flagged against Hoboken." },
+      { at: 29.2, until: 40.3, text: "Now Los Angeles. Ask in plain English: my landlord wants ten percent more next month. Is that allowed?" },
+      { at: 40.6, until: 47.9, text: "Claude answers only from this building's cited rules, and highlights the rule it relied on." },
+      { at: 48.2, until: 52.2, text: "Paste a new ordinance and test it on every building." },
+      { at: 52.5, until: 58.3, text: "Forty-eight buildings affected, each with its source. Groundtruth. Not legal advice." },
     ],
   },
   tech: {
-    duration: 56.2,
+    duration: 55.6,
     lines: [
       { at: 0.3, until: 7.9, text: "Claude Opus 5.5 reads seventy law documents and returns two hundred candidate rules, validated with Zod." },
       { at: 8.2, until: 13.3, text: "Every quote is checked word for word against its source. All two hundred matched." },
       { at: 13.6, until: 19.3, text: "Duplicates merge into fifty-five rules, applied by a deterministic engine with no AI." },
-      { at: 19.5, until: 26.5, text: "The five change tests run on that same engine, down to zero hits for Massachusetts' struck ballot question." },
-      { at: 26.8, until: 34.3, text: "The hard part: public records often lack units or year built. We infer units from assessor codes, or say unknown." },
-      { at: 34.6, until: 38.6, text: "That logic lives right here in the engine." },
-      { at: 38.8, until: 44.5, text: "What didn't work: one code publisher blocked capture, so Hoboken and Newark are a known gap." },
-      { at: 44.8, until: 55.9, text: "An independent audit of twenty-seven addresses took precision and recall from point nine two to point nine eight. Built with Next.js, Google 3D Maps, and Claude." },
+      { at: 19.5, until: 26.4, text: "The five change tests run on that same engine, down to zero hits for Massachusetts' struck ballot question." },
+      { at: 26.6, until: 33.8, text: "Hard part: records often lack units or year built. We infer units from assessor codes, or say unknown." },
+      { at: 34.1, until: 38.0, text: "That logic lives right here in the engine." },
+      { at: 38.2, until: 44.0, text: "What didn't work: the code site for Hoboken and Newark blocked capture. A known gap." },
+      { at: 44.3, until: 55.4, text: "An independent audit of twenty-seven addresses took precision and recall from point nine two to point nine eight. Built with Next.js, Google 3D Maps, and Claude." },
     ],
   },
 };
