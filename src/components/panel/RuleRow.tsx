@@ -2,10 +2,11 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { ArrowSquareOutIcon, CaretDownIcon, FlagIcon } from "@phosphor-icons/react";
+import { ArrowSquareOutIcon, CaretDownIcon, FlagIcon, ScalesIcon } from "@phosphor-icons/react";
 import { ruleById } from "@/lib/data";
 import { formatDate } from "@/lib/labels";
 import type { Evaluation, Rule } from "@/lib/types";
+import ChecksTable from "./ChecksTable";
 import StatusPill from "./StatusPill";
 
 interface RuleRowProps {
@@ -117,17 +118,23 @@ export default function RuleRow({ rule, evaluation, highlight }: RuleRowProps) {
                 {rule.effective_date && <span className="tnum">Effective {formatDate(rule.effective_date)}</span>}
               </div>
 
-              <div className="rounded-[var(--radius-chip)] bg-paper px-3 py-2 text-caption text-ink">
-                <span className="eyebrow mr-2 text-ink-muted">Why</span>
-                {evaluation.explanation}
-              </div>
+              <ChecksTable evaluation={evaluation} />
 
               {evaluation.conflict_flag && (
                 <div className="flex gap-2 rounded-[var(--radius-chip)] bg-accent-wash px-3 py-2 text-caption text-ink">
                   <FlagIcon size={14} weight="fill" aria-hidden className="mt-0.5 shrink-0 text-accent" />
                   <span>
-                    <strong className="font-bold">Flagged for human review.</strong>{" "}
-                    {rule.conflict_note ?? `May conflict with ${conflictTargets(rule)}.`}
+                    <strong className="font-bold">Flagged for human review.</strong> This rule may conflict with {conflictTargets(rule) || "another rule"} at this
+                    address. Groundtruth shows both instead of picking one.
+                  </span>
+                </div>
+              )}
+
+              {rule.conflict_note && (
+                <div className="flex gap-2 px-1 text-caption text-ink-muted">
+                  <ScalesIcon size={14} aria-hidden className="mt-0.5 shrink-0" />
+                  <span>
+                    <span className="font-bold text-ink">Sources disagree.</span> {rule.conflict_note}
                   </span>
                 </div>
               )}

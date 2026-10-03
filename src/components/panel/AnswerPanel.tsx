@@ -7,6 +7,7 @@ import { ruleById, rulesForPlace } from "@/lib/data";
 import { CATEGORIES, STATUS_ORDER, formatDate } from "@/lib/labels";
 import type { Address, Evaluation, Rule } from "@/lib/types";
 import type { UiAction } from "@/lib/ask-schema";
+import ChangesView from "./ChangesView";
 import Checklist from "./Checklist";
 import PanelHeader from "./PanelHeader";
 import RuleRow from "./RuleRow";
@@ -31,6 +32,10 @@ interface Row {
 }
 
 const HIGHLIGHT_MS = 4500;
+const VIEWS = [
+  { id: "rules", label: "Rules" },
+  { id: "changes", label: "What changed" },
+] as const;
 
 function sortRows(rows: Row[]): Row[] {
   return [...rows].sort(
@@ -49,6 +54,7 @@ function SectionTitle({ children, count }: { children: React.ReactNode; count?: 
 
 export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, evaluations, ruleCount, isDesktop }: AnswerPanelProps) {
   const [ready, setReady] = useState(false);
+  const [view, setView] = useState<"rules" | "changes">("rules");
   const [highlight, setHighlight] = useState<{ id: string; nonce: number } | null>(null);
   const city = address.legal_city ?? address.postal_city;
   const placeRules = useMemo(() => rulesForPlace(address), [address]);
@@ -86,12 +92,19 @@ export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, eva
         if (a.type === "SET_AS_OF") onAsOfChange(a.date);
       }
       const h = actions.find((a) => a.type === "HIGHLIGHT_RULE");
-      if (h && h.type === "HIGHLIGHT_RULE") setHighlight({ id: h.rule_id, nonce: Date.now() });
+      if (h && h.type === "HIGHLIGHT_RULE") {
+        setView("rules");
+        setHighlight({ id: h.rule_id, nonce: Date.now() });
+      }
     },
     [onAsOfChange],
   );
 
   const onDone = useCallback(() => setReady(true), []);
+  const showRule = useCallback((id: string) => {
+    setView("rules");
+    setHighlight({ id, nonce: Date.now() });
+  }, []);
 
   const motionProps = isDesktop
     ? { initial: { x: 32, opacity: 0 }, animate: { x: 0, opacity: 1 }, exit: { x: 32, opacity: 0 } }
@@ -126,6 +139,25 @@ export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, eva
                   <SummaryBar evaluations={evaluations} />
                 </div>
 
+                <div role="group" aria-label="Panel view" className="flex w-fit gap-0.5 rounded-[var(--radius-control)] bg-surface-sunk p-0.5 shadow-[inset_0_0_0_1px_var(--hairline)]">
+                  {VIEWS.map((v) => (
+                    <button
+                      key={v.id}
+                      type="button"
+                      aria-pressed={view === v.id}
+                      onClick={() => setView(v.id)}
+                      className={`relative h-7 rounded-[4px] px-3 text-caption transition-colors duration-150 ${view === v.id ? "text-ink" : "text-ink-muted hover:text-ink"}`}
+                    >
+                      {view === v.id && (
+                        <motion.span layoutId="view-pill" className="absolute inset-0 rounded-[4px] bg-surface shadow-[0_0_0_1px_var(--hairline-strong)]" transition={{ type: "spring", duration: 0.3, bounce: 0 }} />
+                      )}
+                      <span className="relative">{v.label}</span>
+                    </button>
+                  ))}
+                </div>
+
+                {view === "rules" ? (
+                  <>
                 {CATEGORIES.map((cat, gi) => {
                   const list = sortRows(enacted.filter((r) => r.rule.category === cat.id));
                   return (
@@ -171,6 +203,11 @@ export default function AnswerPanel({ address, lat, lng, asOf, onAsOfChange, eva
                       ))}
                     </ul>
                   </motion.section>
+                )}
+
+                  </>
+                ) : (
+                  <ChangesView address={address} asOf={asOf} onJump={onAsOfChange} onShowRule={showRule} />
                 )}
 
                 <p className="flex gap-2 text-caption text-ink-muted">
