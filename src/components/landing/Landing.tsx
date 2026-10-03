@@ -21,10 +21,11 @@ interface LandingProps {
   autoFocus: boolean;
 }
 
+// `initial` must match the server render (where reduced motion is unknown), so only the transition varies.
 const enter = (i: number, reduce: boolean | null) => ({
-  initial: reduce ? { opacity: 0 } : { opacity: 0, y: 10, filter: "blur(4px)" },
+  initial: { opacity: 0, y: 10, filter: "blur(4px)" },
   animate: { opacity: 1, y: 0, filter: "blur(0px)" },
-  transition: { duration: 0.7, ease: EASE, delay: 0.25 + i * 0.1 },
+  transition: reduce ? { duration: 0 } : { duration: 0.7, ease: EASE, delay: 0.25 + i * 0.1 },
 });
 
 export default function Landing({ onSelect, onLookupFree, error, autoFocus }: LandingProps) {
