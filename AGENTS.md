@@ -23,7 +23,7 @@ Done:
 - Videos (`assets/generated/videos/`): `demo-vo.mp4` (58.5 s) and `tech-vo.mp4` (55.6 s), narrated with ElevenLabs "George" via `pipeline/voiceover.ts`. Captions are burned in, and waits shown sped up are labelled. Silent versions are `demo.mp4` and `tech.mp4`. Recording scripts were in the session scratchpad (not in the repo).
 - Deploy: Vercel project `groundtruth` (team taruns-projects-248def65), env vars `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` (all environments) and `ANTHROPIC_API_KEY` (production). The Maps key (GCP project "My Maps Project", free trial) is restricted by referrer to localhost:3000, localhost:3100 and groundtruth-rho.vercel.app.
 - HackOS: solo team "Groundtruth" created; draft saved with name, challenge 02 RealPage, GitHub and live URL. Not submitted.
-- Latest commit: 20ce973 (43 commits on main).
+- Live research (beta): `/api/research` (Claude web search + fetch, quotes verified against the fetched page text, per-city cache) and the "Research <city> law live" button for non-covered CA/NJ/MA cities and out-of-state addresses. Separate amber section, never in totals or `submission/`. Link-only sources now carry a note on their source line.
 
 In flight:
 - none

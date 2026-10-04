@@ -22,6 +22,9 @@ Built for the RealPage "Rental Housing Law Navigator" challenge at Hack-Nation's
 - Drag the date slider, or click 2026-01-02 or 2027-07-02, to watch T1 and T3 happen.
 - Ask: "My landlord wants to raise my rent 10% next month. Is that allowed?"
 - `/new-law` → "Try the sample" runs a fictional ordinance end to end.
+- Live research (beta): for a CA, NJ or MA city outside the corpus (e.g. Oakland, Somerville, Trenton), or an address in another state (e.g. Austin, TX), click "Research <city> law live". Claude searches and fetches official code sites (3 searches, 5 fetches), returns rule records, and the server keeps only rules whose quote appears verbatim in the page text the fetch tool actually returned. The engine then applies them to the building. Results take about 30 to 50 s, are cached per city for 24 h, and appear in a separate amber section that is never counted in the totals.
+
+> Live research caveat: those rules are found on the open web at click time. A verified quote proves the text is on that page, not that the page is current, complete or official, and nothing there has been audited like the corpus. They are never written to `submission/`. Scored outputs stay corpus-only.
 
 ## Deliverables
 
@@ -59,7 +62,7 @@ pipeline/          extraction, capture, consolidation, geocoding, submission, in
 src/lib/engine.ts  deterministic coverage + precedence engine (shared by pipeline and UI)
 src/lib/extraction.ts  extraction schema, prompt, verbatim quote locator
 src/app/           Next.js app: landing, 3D fly-in, answer panel, /changes, /new-law, /method
-                   API: /api/ask (grounded Q&A), /api/ingest (new law), /api/place (Census legal city), /api/normalize (messy-address cleanup)
+                   API: /api/ask (grounded Q&A), /api/ingest (new law), /api/place (Census legal city), /api/normalize (messy-address cleanup), /api/research (live research, beta)
 scripts/           verify-addresses.mjs (headless check of all 500 sample addresses)
 data/              intermediate outputs (extractions, candidates, consolidation, audit)
 submission/        challenge deliverables
