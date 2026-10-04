@@ -1,6 +1,7 @@
 import { InfoIcon } from "@phosphor-icons/react";
 import type { LiveInfo } from "@/lib/lookup";
 import { isCoveredCity } from "@/lib/place";
+import { localCoverageGaps } from "@/lib/coverage-gaps";
 import { STATE_NAME } from "@/lib/labels";
 import type { Address } from "@/lib/types";
 
@@ -13,6 +14,8 @@ function coverageGap(a: Address): string | null {
     const county = city.slice(UNINCORPORATED.length);
     return `This address is outside any city, in unincorporated ${county}. County ordinances aren't in our corpus yet, so only ${STATE_NAME[a.state]} statewide rules are shown.`;
   }
+  const missing = localCoverageGaps(city, a.state);
+  if (missing.length) return `Local laws for ${city} may be incomplete. Its ${missing.join(" and ")} is not included yet, so check the city's own rules too.`;
   if (isCoveredCity(city, a.state)) return null;
   return `Local ordinances for ${city} aren't in our corpus yet. Statewide rules only.`;
 }
