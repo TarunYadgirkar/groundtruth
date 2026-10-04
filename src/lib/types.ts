@@ -48,6 +48,7 @@ export interface Rule {
   conflict_flag: boolean;
   conflict_note: string | null;
   conflicts_with: string[];
+  source_in_supplied_corpus?: boolean;
 }
 
 export interface Address {

@@ -34,7 +34,8 @@
     "confidence": 0.8,
     "conflict_flag": false,
     "conflict_note": "The ordinance was passed to print 2025-11-18 and adopted 2025-12-02, with no stated effective date. A secondary source gives January 2026, consistent with the 30-day rule. It amends existing BMC ch. 13.63. RealPage's challenge was dismissed with prejudice 2026-01-14.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0002",
@@ -71,7 +72,8 @@
     "confidence": 0.88,
     "conflict_flag": false,
     "conflict_note": null,
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0003",
@@ -108,7 +110,8 @@
     "confidence": 0.85,
     "conflict_flag": false,
     "conflict_note": "Measure BB amendments date from Nov. 2024. The 2026 relocation amounts were approved 2025-10-16 and took effect 2026-01-01. Ellis relocation comes from the separate Ellis Implementation Ordinance at the same amounts.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0004",
@@ -145,7 +148,8 @@
     "confidence": 0.82,
     "conflict_flag": false,
     "conflict_note": "City sources describe the cutoff both as 'built before 1980' and as 'Certificate of Occupancy after June 1980'; the cutoff encoded here is a CO on or before 1980-06-30. Measure BB (Nov. 2024) amended the ordinance, and its effective date is not stated.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0005",
@@ -182,7 +186,8 @@
     "confidence": 0.85,
     "conflict_flag": false,
     "conflict_note": "Passed by the City Council 2020-04-14; the effective date is not stated.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0006",
@@ -219,7 +224,8 @@
     "confidence": 0.8,
     "conflict_flag": false,
     "conflict_note": "The interest rate and code section are not stated in the corpus.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0007",
@@ -256,7 +262,8 @@
     "confidence": 0.75,
     "conflict_flag": false,
     "conflict_note": "Accompanied study order H5035 on 2024-09-09; not enacted.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0008",
@@ -293,7 +300,8 @@
     "confidence": 0.85,
     "conflict_flag": false,
     "conflict_note": "Passed October 2020. The § 10-11.7 citation is taken from the penalty table.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0009",
@@ -330,7 +338,8 @@
     "confidence": 0.75,
     "conflict_flag": false,
     "conflict_note": "Accompanied study order H5035 on 2024-09-09; the session ended without enactment.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0010",
@@ -367,7 +376,8 @@
     "confidence": 0.72,
     "conflict_flag": false,
     "conflict_note": "An agency funding policy, not a codified ordinance.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0011",
@@ -404,7 +414,8 @@
     "confidence": 0.6,
     "conflict_flag": false,
     "conflict_note": "No ordinance citation is given; the protection may derive from M.G.L. c. 151B.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0012",
@@ -441,7 +452,8 @@
     "confidence": 0.8,
     "conflict_flag": false,
     "conflict_note": "The effective date is inferred from the default rule; the bill was chaptered 2025-10-06. This is a general antitrust statute, not housing-specific.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0013",
@@ -478,7 +490,8 @@
     "confidence": 0.88,
     "conflict_flag": false,
     "conflict_note": "The original effective date is not stated in the corpus. The latest amendment is AB 1170, effective 2026-01-01. The first-qualified/refund process appears to reflect 2024 amendments effective 2025-01-01.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0014",
@@ -515,7 +528,8 @@
     "confidence": 0.85,
     "conflict_flag": false,
     "conflict_note": "Original Tenant Protection Act just cause rules date from 2020. The current text is operative 2024-04-01 and was amended by AB 1529 effective 2026-01-01. The section is repealed 2030-01-01.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0015",
@@ -552,7 +566,8 @@
     "confidence": 0.65,
     "conflict_flag": false,
     "conflict_note": "In Los Angeles, the higher of the HCA or city amounts applies.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0016",
@@ -589,7 +604,8 @@
     "confidence": 0.9,
     "conflict_flag": false,
     "conflict_note": "Originally enacted by AB 1482, effective 2020-01-01, and applicable to increases on or after 2019-03-15 (mobilehomes 2021-02-18). The current text from SB 567 (Stats. 2023, ch. 290) is operative 2024-04-01. The section is repealed 2030-01-01. The 30-day notice rule (from c110) is summarized without a statutory citation.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0017",
@@ -626,7 +642,8 @@
     "confidence": 0.85,
     "conflict_flag": false,
     "conflict_note": "SB 329 extended source of income to housing subsidies effective 2020-01-01. The SB 267 credit-history and income-standard provisions are in the current text effective 2024-01-01.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0018",
@@ -663,7 +680,8 @@
     "confidence": 0.8,
     "conflict_flag": false,
     "conflict_note": "The specific CCR section is not cited in the corpus.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0019",
@@ -700,7 +718,8 @@
     "confidence": 0.9,
     "conflict_flag": false,
     "conflict_note": "The one-month cap (AB 12) took effect 2024-07-01. The prior limits were 2 months unfurnished and 3 months furnished. Subsidiary provisions took effect later: move-out photos and proof of repairs 2025-04-01/2025-01-01, move-in photos 2025-07-01, and electronic return (AB 414) 2026-01-01.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0020",
@@ -737,7 +756,8 @@
     "confidence": 0.85,
     "conflict_flag": false,
     "conflict_note": "A notice requirement only; it does not restrict eviction grounds.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0021",
@@ -774,7 +794,8 @@
     "confidence": 0.85,
     "conflict_flag": false,
     "conflict_note": null,
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0022",
@@ -813,7 +834,8 @@
     "conflict_note": "The NJ FAIR Act § 6(b) may preempt conflicting municipal ordinances from 2027-07-01. The citation format is unverified.",
     "conflicts_with": [
       "r-0039"
-    ]
+    ],
+    "source_in_supplied_corpus": false
   },
   {
     "team_rule_id": "r-0023",
@@ -852,7 +874,8 @@
     "conflict_note": "The NJ FAIR Act (P.L.2026, c.43, effective 2027-07-01) § 6(b) bars conflicting municipal ordinances and may preempt this ban. Sources are secondary.",
     "conflicts_with": [
       "r-0039"
-    ]
+    ],
+    "source_in_supplied_corpus": false
   },
   {
     "team_rule_id": "r-0024",
@@ -889,7 +912,8 @@
     "confidence": 0.7,
     "conflict_flag": false,
     "conflict_note": "The increase formula is not stated. The 30-year exemption comes from state law per the NJ DCA guide (c159).",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0025",
@@ -926,7 +950,8 @@
     "confidence": 0.82,
     "conflict_flag": false,
     "conflict_note": "Relocation amounts adjust each July 1. Bulletin A says notice copies are due within 3 days and Bulletin B says within 3 business days.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0026",
@@ -963,7 +988,8 @@
     "confidence": 0.8,
     "conflict_flag": false,
     "conflict_note": "The effective date is not stated in the corpus.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0027",
@@ -1000,7 +1026,8 @@
     "confidence": 0.7,
     "conflict_flag": false,
     "conflict_note": "The source gives 2025-02-11 as both the adoption and effective date; the actual effective date may be later.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0028",
@@ -1037,7 +1064,8 @@
     "confidence": 0.8,
     "conflict_flag": false,
     "conflict_note": "LAHD describes coverage as 'first built on or before October 1, 1978'; the cutoff is encoded on the certificate of occupancy. The 3% figure expired 2026-06-30, and the allowable increase from 2026-07-01 onward (under the amended formula) is not stated in the corpus. The utility and dependent add-ons were eliminated 2026-02-02.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0029",
@@ -1067,14 +1095,15 @@
     "interaction": null,
     "effective_date": "1990-11-01",
     "citation": "LAMC § 151.06.02",
-    "source_doc_id": "D044",
-    "source_url": "https://members.aagla.org/news/city-of-la-security-deposit-interest-requirement",
-    "retrieved_at": "2026-10-03T21:22Z",
-    "quoted_span": "Interest shall begin accruing on November 1, 1990, on a monthly basis. A tenant shall be given the unpaid accrued interest in the form of either a direct payment or a credit against the tenant s rent. The landlord shall choose between these two methods of payment and notify the tenant in writing of his or her choice.",
+    "source_doc_id": "D041",
+    "source_url": "https://housing.lacity.gov/residents/rso-overview",
+    "retrieved_at": "2026-10-01T22:36Z",
+    "quoted_span": "Interest Payments on Security Deposits",
     "confidence": 0.8,
     "conflict_flag": false,
     "conflict_note": "Secondary source; the 2026 rate is not shown.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0030",
@@ -1111,7 +1140,8 @@
     "confidence": 0.7,
     "conflict_flag": false,
     "conflict_note": "Reported favorably 2026-03-12 and referred to House Ways and Means.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0031",
@@ -1148,7 +1178,8 @@
     "confidence": 0.8,
     "conflict_flag": false,
     "conflict_note": "Reported favorably 2026-03-12 and referred to Senate Ways and Means.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0032",
@@ -1185,7 +1216,8 @@
     "confidence": 0.88,
     "conflict_flag": false,
     "conflict_note": "The limit has been in place since the 1970s per a secondary source. St. 2025, c. 9 extended it to lessors' agents effective 2025-08-01.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0033",
@@ -1222,7 +1254,8 @@
     "confidence": 0.88,
     "conflict_flag": false,
     "conflict_note": "The 254 CMR 7.00 disclosure detail comes from an archived secondary article.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0034",
@@ -1259,7 +1292,8 @@
     "confidence": 0.82,
     "conflict_flag": false,
     "conflict_note": "These are procedural notice rules; Massachusetts has no just-cause eviction statute.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0035",
@@ -1296,7 +1330,8 @@
     "confidence": 0.8,
     "conflict_flag": false,
     "conflict_note": null,
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0036",
@@ -1333,7 +1368,8 @@
     "confidence": 0.9,
     "conflict_flag": false,
     "conflict_note": "Decided 2026-06-23 because the religious exemption violated Article 48. A refiling is possible (proponents mention 2028).",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": false
   },
   {
     "team_rule_id": "r-0037",
@@ -1370,7 +1406,8 @@
     "confidence": 0.85,
     "conflict_flag": false,
     "conflict_note": null,
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0038",
@@ -1407,7 +1444,8 @@
     "confidence": 0.9,
     "conflict_flag": false,
     "conflict_note": "The fee-in-lieu option depends on EOHLC regulations, whose status is unknown.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0039",
@@ -1447,7 +1485,8 @@
     "conflicts_with": [
       "r-0023",
       "r-0022"
-    ]
+    ],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0040",
@@ -1484,7 +1523,8 @@
     "confidence": 0.88,
     "conflict_flag": false,
     "conflict_note": "The effective date is computed from enactment on 2026-01-20 (first day of the fourth month following).",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0041",
@@ -1521,7 +1561,8 @@
     "confidence": 0.88,
     "conflict_flag": false,
     "conflict_note": null,
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0042",
@@ -1558,7 +1599,8 @@
     "confidence": 0.8,
     "conflict_flag": false,
     "conflict_note": "New Jersey has no state rent control law; municipal ordinances may impose caps.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0043",
@@ -1595,7 +1637,8 @@
     "confidence": 0.82,
     "conflict_flag": false,
     "conflict_note": "The effective date is computed from approval on 2021-06-18 (first day of the seventh month following).",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0044",
@@ -1632,7 +1675,8 @@
     "confidence": 0.85,
     "conflict_flag": false,
     "conflict_note": null,
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0045",
@@ -1669,7 +1713,8 @@
     "confidence": 0.9,
     "conflict_flag": false,
     "conflict_note": null,
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0046",
@@ -1699,14 +1744,15 @@
     "interaction": null,
     "effective_date": "2025-06",
     "citation": "San Diego Mun. Code §§ 98.1101-98.1104",
-    "source_doc_id": "D037",
-    "source_url": "https://www.morganlewis.com/pubs/2026/08/algorithmic-rent-pricing-litigation-expands-under-new-state-and-local-laws",
-    "retrieved_at": "2026-10-03T21:22Z",
-    "quoted_span": "San Diego similarly authorizes tenant suits for damages, injunctive relief and penalties of up to $1,000 per violation, with each month and affected rental property potentially constituting a separate violation.",
+    "source_doc_id": "D076",
+    "source_url": "https://sandiego.gov/sites/default/files/2025-04/automated-rent-price-fixing-prohibition-ordinance-materials.pdf",
+    "retrieved_at": "2026-10-01T22:37Z",
+    "quoted_span": "(b) It is unlawful for a landlord to use an algorithmic device to set rental rates\nor occupancy levels for residential rental property.",
     "confidence": 0.72,
     "conflict_flag": false,
     "conflict_note": "The adopted ordinance text is not in the corpus. A secondary source reports it in force from June 2025. The Feb. 2025 draft (O-2025-107) was used only for exemptions.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0047",
@@ -1743,7 +1789,8 @@
     "confidence": 0.9,
     "conflict_flag": false,
     "conflict_note": "Amended by O-21769 N.S., effective 2024-03-28. The SDHC filing requirement (§ 98.0706(a)(2)) applies only 30 days after the portal launches, and the launch date is unverified.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0048",
@@ -1780,7 +1827,8 @@
     "confidence": 0.92,
     "conflict_flag": false,
     "conflict_note": "Approved by the Board of Supervisors in July 2024.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0049",
@@ -1817,7 +1865,8 @@
     "confidence": 0.88,
     "conflict_flag": false,
     "conflict_note": "Relocation rates adjust each March 1. The archive dates § 37.9C rates to 2006-08-10.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0050",
@@ -1854,7 +1903,8 @@
     "confidence": 0.82,
     "conflict_flag": false,
     "conflict_note": "The rate resets each March 1 (1.4% for 2025-26). The CO cutoff comes from the SF just cause overview (c178).",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0051",
@@ -1891,7 +1941,8 @@
     "confidence": 0.55,
     "conflict_flag": false,
     "conflict_note": "Agency landing page only; no code citation or effective date.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0052",
@@ -1928,7 +1979,8 @@
     "confidence": 0.72,
     "conflict_flag": false,
     "conflict_note": "The ch. 49 citation is not stated in the source. Prior rates were 5.0% (2025-26) and 5.2% (2024-25).",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0053",
@@ -1965,7 +2017,8 @@
     "confidence": 0.78,
     "conflict_flag": false,
     "conflict_note": "First reading was 2026-02-17 and final adoption about 2026-03-03. OCBJ implies effect in March 2026, while Morgan Lewis gives 2026-04-02, consistent with the 30-day rule.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": false
   },
   {
     "team_rule_id": "r-0054",
@@ -2002,7 +2055,8 @@
     "confidence": 0.82,
     "conflict_flag": false,
     "conflict_note": "'Housing produced in the last 15 years' does not specify construction versus CO date.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   },
   {
     "team_rule_id": "r-0055",
@@ -2039,6 +2093,7 @@
     "confidence": 0.85,
     "conflict_flag": false,
     "conflict_note": "No municipal code section is given.",
-    "conflicts_with": []
+    "conflicts_with": [],
+    "source_in_supplied_corpus": true
   }
 ]
