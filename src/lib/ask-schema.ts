@@ -4,7 +4,7 @@ const IsoDayInRange = z
   .string()
   .regex(/^\d{4}-\d{2}-\d{2}$/)
   .refine((d) => !Number.isNaN(Date.parse(`${d}T00:00:00Z`)) && d >= "2024-01-01" && d <= "2028-01-01");
-const SafeText = (max: number) => z.string().max(max).regex(/^[\p{L}\p{N} .,'#&/-]*$/u);
+export const SafeText = (max: number) => z.string().max(max).regex(/^[\p{L}\p{N} .,'#&/-]*$/u);
 
 export const UiAction = z.union([
   z.object({ type: z.literal("HIGHLIGHT_RULE"), rule_id: z.string() }),
@@ -25,7 +25,7 @@ const AddressInput = z.object({
   street_address: SafeText(200),
   postal_city: SafeText(80),
   state: z.enum(["CA", "NJ", "MA"]),
-  zip: z.string().max(12),
+  zip: SafeText(12),
   year_built: z.number().int().min(1600).max(2030).nullable(),
   units: z.number().int().min(1).max(5000).nullable(),
   use_code: z.string().max(40),
@@ -33,7 +33,7 @@ const AddressInput = z.object({
   lat: z.number().nullable(),
   lng: z.number().nullable(),
   legal_city: SafeText(80).nullable(),
-  county: z.string().max(80).nullable(),
+  county: SafeText(80).nullable(),
   geocode_match: z.string().max(40).nullable(),
 });
 

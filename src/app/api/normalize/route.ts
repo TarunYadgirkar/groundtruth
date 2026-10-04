@@ -2,6 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
 import { z } from "zod";
 import { clientIp, rateLimiter, sameOrigin } from "@/lib/api-guard";
+import { SafeText } from "@/lib/ask-schema";
 
 const MODEL = "claude-opus-5-5";
 const MAX_BODY_BYTES = 2_000;
@@ -53,8 +54,8 @@ export async function POST(request: Request): Promise<Response> {
       ],
       output_config: { effort: "low", format: zodOutputFormat(Normalized) },
     });
-    const address = message.parsed_output?.address?.trim().slice(0, 200) || null;
-    return Response.json({ address });
+    const address = message.parsed_output?.address?.trim() || null;
+    return Response.json({ address: address && SafeText(200).safeParse(address).success ? address : null });
   } catch (err) {
     console.error("normalize route failed", err);
     return Response.json({ error: "Address cleanup is unavailable right now." }, { status: 502 });
