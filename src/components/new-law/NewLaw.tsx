@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useId, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
-import { ArrowRightIcon, CheckIcon, FileTextIcon, SealCheckIcon, WarningIcon } from "@phosphor-icons/react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { ArrowRightIcon, FileTextIcon, SealCheckIcon, WarningIcon } from "@phosphor-icons/react";
 import type { IngestResult } from "@/lib/ingest";
 import { CATEGORIES, formatDate } from "@/lib/labels";
 import IngestedRuleCard from "./IngestedRuleCard";
@@ -10,54 +10,37 @@ import AffectedList from "./AffectedList";
 
 const MIN_CHARS = 200;
 const MAX_CHARS = 60_000;
-const STEPS = ["Document received", "Reading the law", "Verifying every quote against the text", "Testing 500 buildings"];
-const FAKE_STEP_MS = [0, 16_000, 26_000];
+const TICK_MS = 1000;
 
 type State = { kind: "idle" } | { kind: "loading"; started: number } | { kind: "done"; result: IngestResult } | { kind: "error"; message: string };
 
-function Progress({ done }: { done: number }) {
-  return (
-    <ol aria-label="Reading progress" className="flex flex-col gap-2">
-      {STEPS.map((s, i) => {
-        const isDone = i < done;
-        const isActive = i === done;
-        return (
-          <li key={s} className={`flex items-center gap-2.5 text-ui transition-colors duration-150 ${isDone ? "text-ink" : isActive ? "text-ink" : "text-ink-faint"}`}>
-            <span className="relative grid size-4 place-items-center">
-              <motion.span
-                className="absolute inset-0 grid place-items-center rounded-full bg-contour text-paper"
-                initial={false}
-                animate={{ scale: isDone ? 1 : 0.25, opacity: isDone ? 1 : 0, filter: isDone ? "blur(0px)" : "blur(4px)" }}
-                transition={{ type: "spring", duration: 0.3, bounce: 0 }}
-              >
-                <CheckIcon size={10} weight="bold" aria-hidden />
-              </motion.span>
-              <motion.span
-                aria-hidden
-                className={`absolute inset-[3px] rounded-full ${isActive ? "bg-accent" : "bg-transparent shadow-[inset_0_0_0_1px_var(--hairline-strong)]"}`}
-                animate={{ opacity: isDone ? 0 : 1, scale: isActive ? [1, 0.7, 1] : 1 }}
-                transition={isActive ? { scale: { repeat: Infinity, duration: 0.9 } } : { duration: 0.15 }}
-              />
-            </span>
-            {s}
-            <span className="sr-only">{isDone ? "done" : isActive ? "in progress" : "waiting"}</span>
-          </li>
-        );
-      })}
-    </ol>
-  );
+function useElapsedSeconds(started: number): number {
+  const [now, setNow] = useState(() => Date.now());
+  useEffect(() => {
+    const id = window.setInterval(() => setNow(Date.now()), TICK_MS);
+    return () => window.clearInterval(id);
+  }, [started]);
+  return Math.max(0, Math.floor((now - started) / 1000));
 }
 
-function useFakeProgress(state: State): number {
-  const [tick, setTick] = useState(0);
-  useEffect(() => {
-    if (state.kind !== "loading") return;
-    const id = window.setInterval(() => setTick(Date.now() - state.started), 500);
-    return () => window.clearInterval(id);
-  }, [state]);
-  if (state.kind === "done") return STEPS.length;
-  if (state.kind !== "loading") return 0;
-  return FAKE_STEP_MS.filter((ms) => tick >= ms).length;
+function Reading({ started }: { started: number }) {
+  const seconds = useElapsedSeconds(started);
+  const reduce = useReducedMotion();
+  return (
+    <p role="status" className="flex items-center gap-2.5 text-ui text-ink">
+      <span className="relative grid size-4 place-items-center" aria-hidden>
+        <motion.span
+          className="absolute inset-[3px] rounded-full bg-accent"
+          animate={reduce ? undefined : { scale: [1, 0.7, 1] }}
+          transition={{ scale: { repeat: Infinity, duration: 0.9 } }}
+        />
+      </span>
+      Reading the document…
+      <span aria-hidden className="tnum font-mono text-[0.75rem] text-ink-muted">
+        {seconds} s
+      </span>
+    </p>
+  );
 }
 
 function categoryLabel(id: string): string {
@@ -70,7 +53,6 @@ export default function NewLaw({ sample }: { sample: string }) {
   const [title, setTitle] = useState("");
   const [url, setUrl] = useState("");
   const [state, setState] = useState<State>({ kind: "idle" });
-  const progress = useFakeProgress(state);
   const loading = state.kind === "loading";
   const tooShort = text.trim().length < MIN_CHARS;
 
@@ -174,14 +156,14 @@ export default function NewLaw({ sample }: { sample: string }) {
           >
             {loading ? "Reading…" : "Read this law"} <ArrowRightIcon size={16} aria-hidden />
           </button>
-          <p className="max-w-[52ch] text-caption text-ink-muted">Takes 20 to 60 seconds. The text is sent to Claude for extraction and is not stored.</p>
+          <p className="max-w-[52ch] text-caption text-ink-muted">Takes 20 to 60 seconds. The text you paste is sent to an AI model (Claude) to extract the rules.</p>
         </div>
       </form>
 
       <AnimatePresence mode="wait">
-        {(loading || state.kind === "done") && (
-          <motion.div key="progress" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} aria-live="polite">
-            <Progress done={progress} />
+        {state.kind === "loading" && (
+          <motion.div key="progress" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
+            <Reading started={state.started} />
           </motion.div>
         )}
       </AnimatePresence>

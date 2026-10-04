@@ -40,7 +40,7 @@ export default function NewLawPage() {
       </main>
       <footer className="border-t border-hairline">
         <div className="mx-auto max-w-5xl px-4 py-6 font-mono text-[0.75rem] text-ink-muted sm:px-8">
-          Not legal advice · Pasted text is sent to Claude for extraction and is not stored
+          Not legal advice · Pasted text is sent to an AI model (Claude) for extraction
         </div>
       </footer>
     </div>
