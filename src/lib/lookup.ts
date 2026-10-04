@@ -1,5 +1,5 @@
 import { ADDRESSES } from "./data";
-import { geocodeFreeText, isBetter, type GeocodeOutcome, type Precision } from "./geocode";
+import { geocodeFreeText, isBetter, type GeocodeOutcome, type OutOfScopePlace, type Precision } from "./geocode";
 import { lookupPlace, normalizeQuery, type PlaceLookup } from "./place";
 import type { Address } from "./types";
 
@@ -12,7 +12,7 @@ export interface LiveInfo {
 
 export type LookupOutcome =
   | { ok: true; address: Address; live: LiveInfo | null }
-  | { ok: false; reason: string; outOfScope: boolean };
+  | { ok: false; reason: string; outOfScope: boolean; place?: OutOfScopePlace };
 
 const SAMPLE_SNAP_METERS = 40;
 const METERS_PER_DEGREE = 111_320;
@@ -64,7 +64,7 @@ function applyPlace(address: Address, place: PlaceLookup | null): { address: Add
 
 export async function resolveFreeText(geocoder: google.maps.Geocoder, query: string): Promise<LookupOutcome> {
   const { out, cleaned } = await geocodeWithCleanup(geocoder, query);
-  if (!out.ok) return { ok: false, reason: out.reason, outOfScope: out.kind !== "not_found" };
+  if (!out.ok) return { ok: false, reason: out.reason, outOfScope: out.kind !== "not_found", place: out.place };
 
   const sample = out.precision === "address" ? matchingSample(out.address) : null;
   if (sample) return { ok: true, address: sample, live: null };

@@ -27,6 +27,10 @@
   --st-pending-bg: #f0e1e8;
   --st-pending-fg: #7a2f55;
 
+  --live: #b7791f;
+  --live-ink: #6f4708;
+  --live-wash: #f7ecd6;
+
   --ease-out: cubic-bezier(0.2, 0, 0, 1);
 }
 
@@ -45,6 +49,9 @@
   --color-contour: var(--contour);
   --color-night: var(--night);
   --color-accent-on-dark: var(--accent-on-dark);
+  --color-live: var(--live);
+  --color-live-ink: var(--live-ink);
+  --color-live-wash: var(--live-wash);
 
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-atkinson), ui-sans-serif, system-ui, sans-serif;

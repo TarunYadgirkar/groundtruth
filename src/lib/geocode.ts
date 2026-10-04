@@ -11,7 +11,13 @@ export type Precision = "address" | "street" | "city" | "region";
 
 export type GeocodeOutcome =
   | { ok: true; address: Address; precision: Precision; partial: boolean }
-  | { ok: false; kind: "not_found" | "region" | "out_of_scope"; reason: string };
+  | { ok: false; kind: "not_found" | "region" | "out_of_scope"; reason: string; place?: OutOfScopePlace };
+
+export interface OutOfScopePlace {
+  city: string;
+  state: string;
+  county: string | null;
+}
 
 const NOT_FOUND = "We couldn't find that address. Check the spelling, or include the city and state.";
 
@@ -59,7 +65,13 @@ export async function geocodeFreeText(geocoder: google.maps.Geocoder, query: str
   if (!state) return { ok: false, kind: "not_found", reason: NOT_FOUND };
   if (!SUPPORTED.has(state)) {
     const name = component(top, "administrative_area_level_1") ?? "another state";
-    return { ok: false, kind: "out_of_scope", reason: `That address is in ${name}. Groundtruth covers California, New Jersey and Massachusetts.` };
+    const city = component(top, "locality") ?? component(top, "administrative_area_level_3");
+    return {
+      ok: false,
+      kind: "out_of_scope",
+      reason: `That address is in ${name}. Groundtruth covers California, New Jersey and Massachusetts.`,
+      place: city ? { city, state, county: component(top, "administrative_area_level_2") } : undefined,
+    };
   }
   const precision = precisionOf(top);
   if (precision === "region") {

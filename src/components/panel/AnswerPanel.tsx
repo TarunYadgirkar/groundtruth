@@ -17,6 +17,7 @@ import AskBar from "./AskBar";
 import type { UserFacts } from "./FactsForm";
 import type { LiveInfo } from "@/lib/lookup";
 import { isCoveredCity } from "@/lib/place";
+import LiveResearch from "../research/LiveResearch";
 
 interface AnswerPanelProps {
   address: Address;
@@ -65,6 +66,8 @@ export default function AnswerPanel({ address, record, live, hasUserFacts, onFac
   const [highlight, setHighlight] = useState<{ id: string; nonce: number } | null>(null);
   const city = address.legal_city ?? address.postal_city;
   const placeRules = useMemo(() => rulesForPlace(address), [address]);
+  const researchTarget = useMemo(() => ({ address }), [address]);
+  const canResearch = !!address.legal_city && !address.legal_city.startsWith("Unincorporated ") && !isCoveredCity(address.legal_city, address.state);
   const emptyCategory = isCoveredCity(address.legal_city, address.state) || !address.legal_city
     ? "No rule found at any level for this address."
     : "No statewide rule in this category. This city's local rules aren't in our corpus.";
@@ -228,6 +231,7 @@ export default function AnswerPanel({ address, record, live, hasUserFacts, onFac
                   </motion.section>
                 )}
 
+                {canResearch && <LiveResearch target={researchTarget} asOf={asOf} />}
                   </>
                 ) : (
                   <ChangesView address={address} asOf={asOf} onJump={onAsOfChange} onShowRule={showRule} />

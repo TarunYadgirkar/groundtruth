@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useMapsLibrary } from "@vis.gl/react-google-maps";
 import { ADDRESSES, evaluate, rulesForPlace } from "@/lib/data";
-import { locate } from "@/lib/geocode";
+import { locate, type OutOfScopePlace } from "@/lib/geocode";
 import { resolveFreeText, type LiveInfo } from "@/lib/lookup";
 import { DEFAULT_AS_OF } from "@/lib/labels";
 import type { Address } from "@/lib/types";
@@ -34,9 +34,10 @@ interface Selection {
 export interface LandingError {
   message: string;
   outOfScope: boolean;
+  place?: OutOfScopePlace;
 }
 
-const failure = (message: string, outOfScope = false): LandingError => ({ message, outOfScope });
+const failure = (message: string, outOfScope = false, place?: OutOfScopePlace): LandingError => ({ message, outOfScope, place });
 
 const EXIT_MS = 350;
 const DARK_MS = 450;
@@ -188,7 +189,7 @@ export default function Navigator() {
         const g = await waitForGeocoder();
         if (!g) return failure("Address lookup isn't available right now. Pick one of the sample buildings instead.");
         const out = await resolveFreeText(g, query);
-        if (!out.ok) return failure(out.reason, out.outOfScope);
+        if (!out.ok) return failure(out.reason, out.outOfScope, out.place);
         return { address: out.address, lat: out.address.lat as number, lng: out.address.lng as number, live: out.live };
       }),
     [fly, waitForGeocoder],

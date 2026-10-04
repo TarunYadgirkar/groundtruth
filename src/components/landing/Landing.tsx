@@ -10,6 +10,8 @@ import { COVERED_CITIES } from "@/lib/place";
 import { STATE_NAME } from "@/lib/labels";
 import type { LandingError } from "../Navigator";
 import SearchBar from "./SearchBar";
+import LiveResearch from "../research/LiveResearch";
+import { DEFAULT_AS_OF } from "@/lib/labels";
 
 const EXAMPLE_IDS = ["A0001", "A0065", "A0002"];
 const EXAMPLE_MS = 3200;
@@ -53,7 +55,7 @@ export default function Landing({ onSelect, onLookupFree, error, autoFocus }: La
 
   return (
     <motion.div
-      className="relative z-10 flex min-h-dvh flex-col px-4 sm:px-8"
+      className="relative z-10 flex h-dvh flex-col overflow-y-auto px-4 sm:px-8"
       exit={{ opacity: 0, y: -8, filter: "blur(4px)", transition: { duration: 0.35, ease: EASE } }}
     >
       <header className="flex h-16 items-center justify-between">
@@ -123,6 +125,7 @@ export default function Landing({ onSelect, onLookupFree, error, autoFocus }: La
                     Statewide rules for any address in those three states, plus city ordinances for {CITY_LIST}.
                   </p>
                 )}
+                {error.place && <LiveResearch key={`${error.place.city}-${error.place.state}`} target={error.place} asOf={DEFAULT_AS_OF} />}
                 <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-caption text-ink-muted">
                   Try
                   {SCOPE_EXAMPLES.map((a) => (
