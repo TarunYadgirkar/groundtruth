@@ -67,7 +67,7 @@ export function loadCorpus(): CorpusDoc[] {
       return {
         docId: r.doc_id,
         jurisdictions: r.jurisdictions,
-        url: r.url,
+        url: text.match(/^SOURCE: (\S+)/m)?.[1] ?? r.url,
         sourceType: `${r.source_type} (captured link-only)`,
         retrievedAt: stamp.replace(" ", "T") + "Z",
         text,

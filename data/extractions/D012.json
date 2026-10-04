@@ -10,10 +10,10 @@
       "level": "city",
       "category": "screening_restrictions",
       "status": "in_force",
-      "title": "Boston ban on rental assistance (source-of-income) discrimination in housing",
-      "requirement": "In Boston, landlords may not discriminate against applicants or tenants based on rental assistance, such as refusing Section 8, social security disability, or veterans vouchers. The Boston Fair Housing Commission enforces this.",
+      "title": "Boston fair housing ban on discrimination, including based on rental assistance (source of income)",
+      "requirement": "In Boston, landlords may not discriminate when renting housing based on protected classes. These include race, disability, family status, and receipt of rental assistance such as Section 8, social security disability, or veterans vouchers. Refusing to accept rental assistance is an example of discrimination.",
       "key_value": null,
-      "coverage_conditions": "Renting, buying, selling, or financing any housing in the City of Boston; protected classes include rental assistance, along with race, color, religion, disability, national origin, ancestry, sex, gender identity and expression, age, sexual orientation, marital status, family status, and military status.",
+      "coverage_conditions": "All housing rentals, sales and financing within the City of Boston.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -24,16 +24,17 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": null
+        "unverifiable_conditions": null,
+        "depends_on_unknown_fact": false
       },
       "yields_to_local": false,
       "effective_date": null,
       "enacted_date": null,
       "penalty": null,
-      "citation": "Boston fair housing law enforced by the Boston Fair Housing Commission (official citation not stated in document)",
-      "quoted_span": "The landlord tells you they don't accept rental assistance.",
+      "citation": "Boston fair housing law enforced by the Boston Fair Housing Commission (ordinance citation not stated on page)",
+      "quoted_span": "In the City of Boston, it’s illegal to discriminate when renting, buying, selling, or securing financing for any housing.",
       "confidence": 0.7,
-      "conflict_note": "The page does not give the ordinance citation or effective date. The page states that the commission enforces local, state, and federal fair housing laws. It does not specify whether the source-of-income protection derives from the city ordinance or from state law (M.G.L. c. 151B)."
+      "conflict_note": "The page is a summary and gives no ordinance citation or effective date. The commission also enforces state and federal fair housing laws."
     }
   ],
   "no_rule_findings": []

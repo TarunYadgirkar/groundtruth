@@ -5,15 +5,15 @@
   "model": "claude-opus-5-5",
   "rules": [
     {
-      "canonical_key": "SF-ADMIN-37-allowable-annual-increase",
+      "canonical_key": "SF-RENT-ORD-annual-allowable-increase",
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "rent_increase_limits",
       "status": "in_force",
-      "title": "San Francisco Rent Board allowable annual rent increase",
-      "requirement": "For rent-controlled units, the allowable annual rent increase is 1.6% for March 1, 2026 through February 28, 2027, as published by the Rent Board.",
+      "title": "San Francisco Rent Ordinance annual allowable rent increase",
+      "requirement": "For rent-controlled units in San Francisco, the annual allowable rent increase is 1.6% for the period March 1, 2026 through February 28, 2027.",
       "key_value": "1.6% (Mar 1, 2026 – Feb 28, 2027)",
-      "coverage_conditions": "Units covered by the San Francisco Rent Ordinance's annual allowable increase limits.",
+      "coverage_conditions": "Units covered by the San Francisco Rent Ordinance's rent increase limitations; this page does not state the coverage criteria.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -24,27 +24,28 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": null
+        "unverifiable_conditions": null,
+        "depends_on_unknown_fact": false
       },
       "yields_to_local": false,
       "effective_date": "2026-03-01",
       "enacted_date": null,
       "penalty": null,
-      "citation": "San Francisco Rent Ordinance (S.F. Admin. Code ch. 37)",
-      "quoted_span": "1.6% for March 1, 2026 – February 28, 2027",
+      "citation": "San Francisco Rent Ordinance (S.F. Admin. Code ch. 37); Rent Board Topic No. 571 Allowable Annual Increases",
+      "quoted_span": "Allowable Rent Increase:\n1.6% for March 1, 2026 – February 28, 2027",
       "confidence": 0.85,
-      "conflict_note": "Page gives rate only; coverage cutoffs and specific section not stated in this document. Prior rates: 1.4% (2025-26), 1.7% (2024-25)."
+      "conflict_note": "This rates page does not state the ordinance section or the building-coverage criteria (such as the certificate-of-occupancy cutoff), so those coverage fields are left null. Prior rates: 1.4% for 2025-26 and 1.7% for 2024-25."
     },
     {
-      "canonical_key": "SF-ADMIN-37-security-deposit-interest",
+      "canonical_key": "SF-security-deposit-interest-rate",
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "security_deposits",
       "status": "in_force",
       "title": "San Francisco security deposit interest rate",
-      "requirement": "Landlords must pay interest on security deposits at the Rent Board rate, which is 4.2% for March 1, 2026 through February 28, 2027.",
-      "key_value": "4.2% interest (Mar 1, 2026 – Feb 28, 2027)",
-      "coverage_conditions": "Security deposits held for San Francisco rental units subject to the deposit interest requirement.",
+      "requirement": "Landlords must pay interest on tenant security deposits at the Rent Board rate, which is 4.2% for March 1, 2026 through February 28, 2027.",
+      "key_value": "4.2% (Mar 1, 2026 – Feb 28, 2027)",
+      "coverage_conditions": "San Francisco residential tenancies with security deposits subject to the city's deposit-interest requirement; this page does not state the coverage criteria.",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -55,28 +56,29 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": null
+        "unverifiable_conditions": null,
+        "depends_on_unknown_fact": false
       },
       "yields_to_local": false,
       "effective_date": "2026-03-01",
       "enacted_date": null,
       "penalty": null,
-      "citation": "San Francisco Rent Board security deposit interest rate (S.F. Admin. Code ch. 49)",
-      "quoted_span": "4.2% for March 1, 2026 – February 28, 2027",
-      "confidence": 0.75,
-      "conflict_note": "Document does not give the governing ordinance citation; ch. 49 citation not stated in document. Prior rates: 5.0% (2025-26), 5.2% (2024-25)."
+      "citation": "San Francisco Rent Board Topic No. 572 Security Deposit Interest Rates",
+      "quoted_span": "Security Deposit Interest:\n4.2% for March 1, 2026 – February 28, 2027",
+      "confidence": 0.8,
+      "conflict_note": "This page gives only the rate, not the underlying ordinance citation. Prior rates: 5.0% for 2025-26 and 5.2% for 2024-25."
     },
     {
-      "canonical_key": "SF-ADMIN-37.9C-relocation-no-fault",
+      "canonical_key": "SF-RENT-ORD-37.9C-relocation-payments",
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "just_cause_eviction",
       "status": "in_force",
-      "title": "Relocation payments for owner move-in, demolition/removal, temporary capital improvement, and substantial rehabilitation evictions",
-      "requirement": "Landlords evicting for owner/relative move-in, demolition or permanent removal, temporary capital improvement work (20+ days), or substantial rehabilitation must pay relocation of $8,245 per tenant, up to $24,733 per unit, plus $5,497 for each elderly (60+) or disabled tenant or household with minor children, for notices served 3/1/26–2/28/27.",
+      "title": "Relocation payments for owner/relative move-in, demolition/removal, temporary capital improvement and substantial rehabilitation evictions",
+      "requirement": "For eviction notices served from 3/1/26 to 2/28/27 for owner/relative move-in, demolition or permanent removal, temporary capital improvement work, or substantial rehabilitation, the landlord owes $8,245 per tenant, up to $24,733 per unit. An additional $5,497 is owed for each elderly (60+) or disabled tenant or household with minor children.",
       "key_value": "$8,245/tenant; max $24,733/unit; +$5,497 per elderly/disabled tenant or household with minor children",
-      "coverage_conditions": "Tenancies terminated in San Francisco on the listed no-fault grounds, with notice served 3/1/26–2/28/27.",
-      "exemptions": "Temporary capital improvement evictions of less than 20 days are governed by Cal. Civ. Code § 1947.9 instead.",
+      "coverage_conditions": "San Francisco tenants evicted for owner/relative move-in, demolition or permanent removal of the unit, temporary capital improvement work (20 days or more), or substantial rehabilitation.",
+      "exemptions": "Temporary capital improvement evictions of less than 20 days are governed by Cal. Civ. Code § 1947.9, not § 37.9C.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -86,27 +88,28 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only to evictions on specified no-fault grounds; amounts depend on date of service of eviction notice and tenant age/disability/household status."
+        "unverifiable_conditions": "Applies only to evictions based on the listed no-fault grounds",
+        "depends_on_unknown_fact": false
       },
       "yields_to_local": false,
       "effective_date": "2026-03-01",
       "enacted_date": null,
       "penalty": null,
-      "citation": "S.F. Admin. Code § 37.9C (Rent Ordinance Section 37.9C)",
-      "quoted_span": "Relocation Payments for Evictions based on Owner/Relative Move-in OR Demolition/Permanent Removal of Unit from Housing Use OR Temporary Capital Improvement Work* OR Substantial Rehabilitation",
-      "confidence": 0.9,
+      "citation": "S.F. Rent Ordinance § 37.9C",
+      "quoted_span": "Relocation Amount Due Per Tenant\nMaximum Relocation Amount Due Per Unit\nPLUS Additional Amount Due for Each Elderly (60 years or older) or Disabled Tenant or Household with Minor Child(ren)\n3/01/26 – 2/28/27\n$8,245.00\n$24,733.00\n$5,497.00",
+      "confidence": 0.85,
       "conflict_note": null
     },
     {
-      "canonical_key": "SF-ADMIN-37.9A-ellis-relocation",
+      "canonical_key": "SF-RENT-ORD-37.9A-ellis-relocation",
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Relocation payments for Ellis Act evictions",
-      "requirement": "Landlords evicting under the Ellis Act must pay $11,110.05 per tenant, up to $33,330.13 per unit, plus $7,443.90 for each elderly (62+) or disabled tenant, for notices served 3/1/26–2/28/27.",
-      "key_value": "$11,110.05/tenant; max $33,330.13/unit; +$7,443.90 per elderly (62+) or disabled tenant",
-      "coverage_conditions": "Tenants evicted under the Ellis Act (withdrawal of units from rental market) in San Francisco.",
+      "requirement": "For Ellis Act eviction notices served from 3/1/26 to 2/28/27, the landlord owes $11,110.05 per tenant, up to $33,330.13 per unit. An additional $7,443.90 is owed for each elderly (62+) or disabled tenant.",
+      "key_value": "$11,110.05/tenant; max $33,330.13/unit; +$7,443.90 per elderly/disabled tenant",
+      "coverage_conditions": "San Francisco tenants evicted under the Ellis Act (withdrawal of units from the rental market).",
       "exemptions": null,
       "coverage": {
         "min_units": null,
@@ -117,26 +120,27 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only to Ellis Act evictions; amount depends on date of service of eviction notice and tenant age/disability."
+        "unverifiable_conditions": "Applies only to Ellis Act withdrawal evictions",
+        "depends_on_unknown_fact": false
       },
       "yields_to_local": false,
       "effective_date": "2026-03-01",
       "enacted_date": null,
       "penalty": null,
-      "citation": "S.F. Admin. Code § 37.9A",
-      "quoted_span": "Relocation payments for tenants evicted under the Ellis Act",
+      "citation": "S.F. Rent Ordinance § 37.9A",
+      "quoted_span": "Relocation Amount Due Per Tenant\nMaximum Relocation Amount Due Per Unit\nPLUS Additional Amount Due for Each Elderly (62 years or older) or Disabled Tenant\n3/01/26 – 2/28/27\n$11,110.05\n$33,330.13\n$7,443.90",
       "confidence": 0.85,
-      "conflict_note": "Section number inferred from form label '578 Multilingual Relocation Payments 37.9A'."
+      "conflict_note": null
     },
     {
-      "canonical_key": "CA-CIV-1947.9-sf-temporary-displacement-relocation",
+      "canonical_key": "CA-CIV-1947.9-SF-temporary-displacement-relocation",
       "jurisdiction": "San Francisco, CA",
-      "level": "state",
+      "level": "city",
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Relocation payments for temporary displacement of less than 20 days",
-      "requirement": "For temporary capital improvement displacement of less than 20 days, landlords must pay $446.00 per day per tenant household plus actual moving expenses, for notices served 3/1/26–2/28/27.",
-      "key_value": "$446.00/day per household plus actual moving expenses",
+      "requirement": "For temporary capital improvement displacements of less than 20 days, with notices served from 3/1/26 to 2/28/27, the landlord owes $446 per day per tenant household plus actual moving expenses.",
+      "key_value": "$446.00/day per tenant household plus actual moving expenses",
       "coverage_conditions": "San Francisco tenant households temporarily displaced for capital improvement work for less than 20 days.",
       "exemptions": null,
       "coverage": {
@@ -148,16 +152,17 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": false,
-        "unverifiable_conditions": "Applies only to temporary displacements of less than 20 days for capital improvement work."
+        "unverifiable_conditions": "Applies only to temporary displacements of less than 20 days for capital improvement work",
+        "depends_on_unknown_fact": false
       },
       "yields_to_local": false,
       "effective_date": "2026-03-01",
       "enacted_date": null,
       "penalty": null,
       "citation": "Cal. Civ. Code § 1947.9",
-      "quoted_span": "*The amount of relocation payments for temporary capital improvement evictions for less than 20 days is governed by California Civil Code Section 1947.9 and not by Rent Ordinance Section 37.9C.",
+      "quoted_span": "Relocation Amount Due Per Tenant Household\n3/01/26 – 2/28/27\n$446.00/day (plus actual moving expenses)",
       "confidence": 0.8,
-      "conflict_note": "State statute applied in San Francisco; daily rate published by SF Rent Board. Prior rate $436.00/day (2025-26)."
+      "conflict_note": "This is a state statute applying to San Francisco temporary displacements, recorded here at city level because it applies only in San Francisco."
     }
   ],
   "no_rule_findings": []

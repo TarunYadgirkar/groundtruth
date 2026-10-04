@@ -5,7 +5,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
 import { z } from "zod";
 import { DATA, ROOT, loadCorpus, writeJson } from "./lib/corpus";
-import { CATEGORIES, CoverageSchema, JURISDICTIONS, STATUSES, locateSpan, type Extraction, type ExtractedRule } from "../src/lib/extraction";
+import { CATEGORIES, CoverageSchema, JURISDICTIONS, STATUSES, locateSpan, quoteSupportsRule, type Extraction, type ExtractedRule } from "../src/lib/extraction";
 import type { Rule } from "../src/lib/types";
 
 const MODEL = "claude-opus-5-5";
@@ -23,7 +23,9 @@ const ConsolidatedSchema = z.object({
   rules: z.array(
     z.object({
       key: z.string().describe("Unique short key for this final rule, e.g. 'ca-1947.12-rent-cap'"),
-      primary_candidate: z.string().describe("Candidate id whose quote/source best supports the rule: prefer verified quotes from official primary sources"),
+      primary_candidate: z
+        .string()
+        .describe("Candidate id whose quote best supports the rule: verified and substantive (the operative sentence stating the obligation, number or date), from the most official source. Never a heading-only quote."),
       merged_candidates: z.array(z.string()),
       jurisdiction: z.enum(JURISDICTIONS),
       level: z.enum(["state", "city"]),
@@ -67,12 +69,13 @@ Coverage and precedence (the engine applies these mechanically, so encode them p
 - effective_date is when the rule first took effect, not the date of its latest amendment; put amendment dates in conflict_note.
 - Use certificate_of_occupancy as cutoff_basis whenever the law keys on a certificate of occupancy or first-occupancy date.
 - If a rule only covers a restricted population (subsidized/affordable units, city-funded units, program participants), set unverifiable_conditions to start with "RESTRICTED:" followed by the population.
+- depends_on_unknown_fact: true only when coverage of a building turns on a fact public records lack and most otherwise-covered buildings would not meet it (restricted populations, condo conversion, demolition of protected units, program registration). False for conditions that only describe the regulated conduct (using a pricing algorithm, serving a notice, charging a fee), tenant-specific facts like length of tenancy, or narrow exemptions from an otherwise general rule.
 - conflicts_with_keys is only for genuine preemption or legal conflict that supersession does not already resolve (e.g. a future state law that may preempt local ordinances). A state rule that simply yields to stricter local rules (yields_to_local) must NOT list those local rules as conflicts.
 - Never take a rule's source, quote, or date from a draft, unadopted, or proposed text when an adopted source exists; take the effective date from the source you cite.
 - Every distinct law among the candidates must appear in the output or in dropped with a reason.
 
 Tasks:
-1. Merge candidates describing the same legal rule (same jurisdiction, same provision) into one final rule. Pick as primary_candidate the candidate with quote_verified=true from the most official source (statute/ordinance text > government page > secondary).
+1. Merge candidates describing the same legal rule (same jurisdiction, same provision) into one final rule. Pick as primary_candidate a candidate with quote_verified=true and substantive=true from the most official source (statute/ordinance text > government page > secondary). substantive=false means the quote is a heading, title, label or fragment that does not itself state the obligation, number or date; never pick it as primary when any merged candidate is substantive.
 2. Never output a rule whose only support is unverified quotes; put those candidates in dropped with a reason. Drop candidates outside the six categories or outside the listed jurisdictions.
 3. Fix fields using everything across the corpus: effective dates (state the conflict in conflict_note when sources disagree, e.g. Berkeley 13.63 or LA RSO formula), status (in_force / not_yet_effective / pending / failed), coverage (structured cutoffs, unit thresholds, owner-type dependence and owner_exemption_max_units), yields_to_local (state rules that by their own terms yield where local rent control / just-cause applies).
 4. Model precedence and conflicts: set conflicts_with_keys on BOTH sides for possible preemption or conflicts (e.g. NJ FAIR Act P.L.2026 c.43 vs Jersey City and Hoboken algorithmic bans).
@@ -103,6 +106,23 @@ function loadCandidates(): Candidate[] {
   return out;
 }
 
+// The model's pick stands unless its quote is only a heading or fragment; then take the merged
+// candidate with a verified, substantive quote, preferring the same document, then the longest quote.
+function pickPrimary(pickedId: string, merged: string[], status: string, byId: Map<string, Candidate>): Candidate | null {
+  const picked = byId.get(pickedId);
+  if (picked?.quote_verified && quoteSupportsRule(picked.quoted_span, status)) return picked;
+  const options = [pickedId, ...merged]
+    .map((id) => byId.get(id))
+    .filter((c): c is Candidate => Boolean(c?.quote_verified && quoteSupportsRule(c.quoted_span, status)))
+    .sort((a, b) => Number(b.doc_id === picked?.doc_id) - Number(a.doc_id === picked?.doc_id) || b.quoted_span.length - a.quoted_span.length);
+  if (options[0]) {
+    console.warn(`primary ${pickedId} quote not substantive; using ${options[0].id}`);
+    return options[0];
+  }
+  if (picked?.quote_verified) console.warn(`primary ${pickedId} quote not substantive and no alternative: ${JSON.stringify(picked.quoted_span)}`);
+  return picked?.quote_verified ? picked : null;
+}
+
 function loadNoRuleFindings() {
   const dir = path.join(DATA, "extractions");
   return fs.readdirSync(dir).flatMap((file) => {
@@ -117,7 +137,12 @@ async function main(): Promise<void> {
   console.log(`candidates ${candidates.length}, quotes verified ${verified}`);
   writeJson(path.join(DATA, "candidates.json"), candidates);
 
-  const compact = candidates.map(({ quoted_span, requirement, ...c }) => ({ ...c, requirement: requirement.slice(0, 300), quote: quoted_span.slice(0, 400) }));
+  const compact = candidates.map(({ quoted_span, requirement, ...c }) => ({
+    ...c,
+    requirement: requirement.slice(0, 300),
+    quote: quoted_span.slice(0, 400),
+    substantive: quoteSupportsRule(quoted_span, c.status),
+  }));
   const stream = client.messages.stream({
     model: MODEL,
     max_tokens: 128000,
@@ -136,12 +161,14 @@ async function main(): Promise<void> {
   const sorted = [...result.rules].sort((a, b) => a.jurisdiction.localeCompare(b.jurisdiction) || a.category.localeCompare(b.category));
   sorted.forEach((r, i) => keyToId.set(r.key, `r-${String(i + 1).padStart(4, "0")}`));
 
+  const groups: Record<string, string[]> = {};
   const rules: Rule[] = sorted.flatMap((r) => {
-    const primary = byId.get(r.primary_candidate);
-    if (!primary?.quote_verified) {
+    const primary = pickPrimary(r.primary_candidate, r.merged_candidates, r.status, byId);
+    if (!primary) {
       console.warn(`skip ${r.key}: primary ${r.primary_candidate} not verified`);
       return [];
     }
+    groups[keyToId.get(r.key)!] = [...new Set([r.primary_candidate, ...r.merged_candidates])];
     const conflicts = r.conflicts_with_keys.map((k) => keyToId.get(k)).filter((x): x is string => Boolean(x));
     return [
       {
@@ -174,6 +201,7 @@ async function main(): Promise<void> {
   });
 
   writeJson(path.join(DATA, "rules.json"), rules);
+  writeJson(path.join(DATA, "rule-groups.json"), groups);
   writeJson(path.join(ROOT, "src/data/rules.json"), rules);
   writeJson(path.join(DATA, "no_rule_findings.json"), loadNoRuleFindings());
   writeJson(path.join(DATA, "gaps.json"), result.gaps);

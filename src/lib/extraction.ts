@@ -56,6 +56,11 @@ export const CoverageSchema = z.object({
     .string()
     .nullable()
     .describe("Other coverage conditions that cannot be checked from year built / units / use code (e.g. required notice given, subsidized housing), or null"),
+  depends_on_unknown_fact: z
+    .boolean()
+    .describe(
+      "True only when whether the rule covers a building at all turns on a fact about the building, unit or its history that public records lack and that most otherwise-covered buildings would not meet: only subsidized or program units, only units being converted to condominiums, only demolished protected units, only units registered in a program. False when unverifiable_conditions only describe the conduct the rule regulates (using a pricing algorithm, serving a notice, charging a fee, a tenant's length of tenancy) or a narrow exemption from an otherwise general rule.",
+    ),
 });
 
 export const ExtractedRuleSchema = z.object({
@@ -81,7 +86,9 @@ export const ExtractedRuleSchema = z.object({
   citation: z.string().describe("Official cite, e.g. 'Cal. Civ. Code § 1947.12'"),
   quoted_span: z
     .string()
-    .describe("EXACT contiguous text copied character-for-character from the document that supports the rule; 1-3 sentences"),
+    .describe(
+      "EXACT contiguous text copied character-for-character from the document: the operative sentence that states the obligation, prohibition, number or date (1-3 sentences, a full sentence with a verb). Never a heading, title, menu item or table label.",
+    ),
   confidence: z.number().describe("0 to 1"),
   conflict_note: z
     .string()
@@ -116,7 +123,8 @@ How to extract:
 - One record per distinct legal rule the document states or describes (a cap, a ban, a required cause, a fee limit, a screening restriction). Split a statute into separate records when it creates rules in different categories.
 - Include rules that are enacted but not yet effective (status not_yet_effective), pending bills (pending), and failed/struck measures (failed) when the document describes them.
 - Secondary or summary pages count: if a city web page describes a city ordinance, extract the ordinance with its official citation when the page gives one.
-- quoted_span must be copied EXACTLY from the document text, character for character, contiguous, 1-3 sentences. Never paraphrase, never stitch fragments together, never fix typos. If the supporting text spans a table or list, copy one contiguous line that supports the rule.
+- quoted_span must be copied EXACTLY from the document text, character for character, contiguous, 1-3 sentences. Never paraphrase, never stitch fragments together, never fix typos.
+- quoted_span must be the operative sentence that states the obligation, prohibition, number or date the rule record asserts: a full sentence with a verb, normally 60+ characters. Never quote a heading, page title, menu item, list label or bare table cell (e.g. "Legal Reasons for Eviction" or "Interest Payments on Security Deposits" are headings, not support). If the only supporting text is a list, quote the sentence that introduces or governs the list. When the document states a rate or amount only in a rate table or rate line (an official current-rates page), quote the contiguous label and value lines together, including the dates, e.g. "Security Deposit Interest:\n4.2% for March 1, 2026 - February 28, 2027". If the document has neither an operative sentence nor such a dated rate line for a rule, do not extract that rule from this document. Exception: for a pending or failed bill, the bill's own title ("An Act ...") is acceptable support for the fact that the bill exists.
 - Coverage: fill the structured coverage block precisely. Use certificate_of_occupancy when the law keys on a certificate of occupancy or "first occupied" date, year_built only when it keys on construction date. Leave fields null when the document does not state them. Do not invent cutoffs.
 - yields_to_local: true for state rules that by their own terms do not apply where stricter local rent control / just-cause rules apply (e.g. Cal. Civ. Code 1947.12 and 1946.2 carve-outs).
 - effective_date: use the date the document states. If it only shows enactment (e.g. a chaptered California bill), apply the state's default effective-date rule (California regular-session statutes: January 1 of the following year; urgency statutes: on signing) and say so in conflict_note with confidence <= 0.8.
@@ -124,9 +132,33 @@ How to extract:
 - Category mapping: tenant-protection notice/disclosure ordinances tied to the start or termination of a tenancy (e.g. tenant rights notices, housing stability notification acts), relocation assistance and eviction procedure belong to just_cause_eviction; source-of-income, criminal-history and credit screening limits belong to screening_restrictions; fee caps and allowed upfront charges belong to application_screening_fees.
 - Exemptions are not rules: express a new-construction or owner-occupancy exemption as coverage on the rule it exempts from, not as its own record.
 - If a rule covers only a restricted population (subsidized/affordable units, city-funded units, specific programs), say so in unverifiable_conditions and start that text with "RESTRICTED:".
+- depends_on_unknown_fact: true when coverage turns on a building fact public records lack (restricted population, condo conversion, demolition, program registration); false when the condition is only the regulated conduct or a narrow exemption.
 - If the document is irrelevant to the six categories, return empty arrays.
 - no_rule_findings: explicit statements that no rule exists at a level (e.g. Massachusetts bars local rent control; a ballot question was struck).
 Never invent rules, citations, or dates that the document does not support.`;
+
+const VERB =
+  /\b(shall|must|may|might|is|are|was|were|be|been|being|has|have|had|will|would|can|cannot|could|should|does|do|did|apply|applies|applied|require[sd]?|prohibit(s|ed)?|ban(s|ned)?|bar(s|red)?|allow(s|ed)?|permit(s|ted)?|limit(s|ed)?|cap(s|ped)?|exempt(s|ed)?|cover(s|ed)?|provide[sd]?|include[sd]?|accrue[sd]?|charge[sd]?|increase[sd]?|take[sn]?|took|go(es)?|went|protect(s|ed)?|pay|pays|paid|evict(s|ed)?|terminate[sd]?|receive[sd]?|return(s|ed)?|set(s)?|adopt(s|ed)?|enact(s|ed)?|expire[sd]?|establish(es|ed)?|make[sd]?|made|give[sn]?|gave|need(s|ed)?|tell(s)?|refuse[sd]?|discriminate[sd]?|accept(s|ed)?|use[sd]?|mean[st]?|entitle[sd]?)\b/i;
+
+// Official rate pages state values as "4.2% for March 1, 2026 - February 28, 2027": a figure tied to a date.
+const isDatedRateLine = (text: string) => text.length >= 30 && /\d(\.\d+)?\s?%|\$\s?\d/.test(text) && /\b(19|20)\d\d\b/.test(text);
+
+// A quote supports a rule only if it reads as an operative sentence: long enough, has a verb, and
+// is not a title-case heading or menu label.
+export function isSubstantiveQuote(quote: string): boolean {
+  const text = quote.replace(/\s+/g, " ").trim();
+  if (isDatedRateLine(text)) return true;
+  if (text.length < 60 || !VERB.test(text)) return false;
+  const words = text.split(" ").filter((w) => /^[A-Za-z]/.test(w));
+  const capitalized = words.filter((w) => /^[A-Z]/.test(w)).length;
+  const headingLike = !/[.;:)]$/.test(text) && words.length > 0 && capitalized / words.length > 0.6;
+  return !headingLike;
+}
+
+export function quoteSupportsRule(quote: string, status: string): boolean {
+  if (isSubstantiveQuote(quote)) return true;
+  return (status === "pending" || status === "failed") && /^An Act\b/.test(quote.trim());
+}
 
 const QUOTES = /[\u2018\u2019\u201A\u201B\u2032]/g;
 const DQUOTES = /[\u201C\u201D\u201E\u201F\u2033]/g;

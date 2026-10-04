@@ -10,11 +10,11 @@
       "level": "city",
       "category": "screening_restrictions",
       "status": "in_force",
-      "title": "Cambridge Fair Housing Ordinance – housing discrimination ban including source of income",
-      "requirement": "Landlords, sellers and rental agents may not discriminate in renting, viewing, or the terms and conditions of tenancy based on protected categories, including source of income (Section 8 and public benefits). Applicants may be selected using any reasonable standard, such as ability to pay rent, if it is applied equally and uniformly to all applicants.",
+      "title": "Cambridge Fair Housing Ordinance: housing discrimination ban, including source of income",
+      "requirement": "Landlords and rental agents may not discriminate in renting or in the terms of tenancy based on protected categories. These categories include source of income (such as Section 8 and public benefits), race, disability, family status and others. Applicants may be screened only by reasonable standards, such as ability to pay rent and care for the apartment, applied equally to all.",
       "key_value": null,
-      "coverage_conditions": "Rental housing transactions in the City of Cambridge, including viewing or renting an apartment and the terms and conditions of tenancy.",
-      "exemptions": "Two-family dwellings where the owner lives in the building.",
+      "coverage_conditions": "Rental housing and other real estate transactions in Cambridge; applies to landlords, sellers and rental agents.",
+      "exemptions": "Two-family dwellings where the owner lives in one unit.",
       "coverage": {
         "min_units": null,
         "max_units": null,
@@ -24,16 +24,17 @@
         "age_years_exempt": null,
         "cutoff_basis": "none",
         "owner_type_dependent": true,
-        "unverifiable_conditions": null
+        "unverifiable_conditions": "Exemption for owner-occupied two-family dwellings depends on owner occupancy.",
+        "depends_on_unknown_fact": false
       },
       "yields_to_local": false,
       "effective_date": null,
       "enacted_date": null,
-      "penalty": "After a hearing the Commission may file a criminal complaint, levy civil fines of up to $300 per violation, seek injunctive relief, and seek damages, expenses and other relief. Either party may remove a fair housing case to Superior Court or the Attorney General's Office.",
-      "citation": "Cambridge Fair Housing Ordinance, Cambridge Municipal Code ch. 14.04",
-      "quoted_span": "Source of Income, includes Section 8 and public benefits",
-      "confidence": 0.85,
-      "conflict_note": "This is a summary page from the Human Rights Commission. The ordinance text and its effective date are not given. The page lists other protected categories as well (race, disability, family status, etc.)."
+      "penalty": "The Commission can file a criminal complaint and levy civil fines of up to $300 per violation. It can also seek injunctive relief in Superior Court, damages and expenses.",
+      "citation": "Cambridge Municipal Code ch. 14.04 (Cambridge Fair Housing Ordinance)",
+      "quoted_span": "The Fair Housing Ordinance prohibits discrimination in real estate transactions such as:",
+      "confidence": 0.8,
+      "conflict_note": "The page does not give an effective date. Source of income appears in the shared protected-category list for the Human Rights Ordinance and the Fair Housing Ordinance."
     }
   ],
   "no_rule_findings": []
