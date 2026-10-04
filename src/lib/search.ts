@@ -35,12 +35,16 @@ export function buildIndex(addresses: Address[]): Indexed[] {
   }));
 }
 
-function tokenScore(token: string, words: string[]): number {
+// A finished house number must match exactly ("1 Beacon" is not "197 Beacon"); only the
+// token still being typed can be a prefix.
+function tokenScore(token: string, words: string[], isLast: boolean): number {
+  const numeric = /^\d+$/.test(token);
   let best = -1;
   words.forEach((w, i) => {
     if (w === token) best = Math.max(best, 3 - i * 0.01);
+    else if (numeric && !isLast) return;
     else if (w.startsWith(token)) best = Math.max(best, 2 - i * 0.01);
-    else if (token.length >= 3 && w.includes(token)) best = Math.max(best, 0.5);
+    else if (!numeric && token.length >= 3 && w.includes(token)) best = Math.max(best, 0.5);
   });
   return best;
 }
@@ -52,8 +56,8 @@ export function searchAddresses(index: Indexed[], query: string, limit = 6): Add
   for (const item of index) {
     let total = 0;
     let ok = true;
-    for (const t of tokens) {
-      const s = tokenScore(t, item.words);
+    for (const [i, t] of tokens.entries()) {
+      const s = tokenScore(t, item.words, i === tokens.length - 1);
       if (s < 0) {
         ok = false;
         break;
