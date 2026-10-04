@@ -89,6 +89,8 @@ const MAX_ROOF_ABOVE_GROUND = 150;
 const INSTANT_SETTLE_MS = 200;
 const HOP_GRACE_MS = 1500;
 const MAP_WAIT_MS = 6000;
+const GROUND_RETRIES = 12;
+const GROUND_RETRY_MS = 250;
 
 // Short hop for later lookups: Google's own fly-to arcs over the city and lands
 // relative to the ground, so no probe is needed.
@@ -128,7 +130,7 @@ export default function MapScene({ target, prewarm, offset, skip, reducedMotion,
   const modeRef = useRef<Mode>({ kind: "spin" });
   const cbRef = useRef({ onProgress, onArrive });
   const stepRef = useRef(-1);
-  const [roofAlt, setRoofAlt] = useState<number | null>(null);
+  const [ring, setRing] = useState<{ alt: number; relative: boolean } | null>(null);
   const [mapReady, setMapReady] = useState(false);
 
   const offsetRef = useRef(offset);
@@ -162,7 +164,7 @@ export default function MapScene({ target, prewarm, offset, skip, reducedMotion,
     // reveal the panel if the map never shows up.
     if (!map && !mapReady) {
       const t = window.setTimeout(() => {
-        setRoofAlt(target.height + RING_LIFT);
+        setRing({ alt: target.height + RING_LIFT, relative: true });
         cbRef.current.onProgress(1);
         cbRef.current.onArrive();
       }, MAP_WAIT_MS);
@@ -171,7 +173,15 @@ export default function MapScene({ target, prewarm, offset, skip, reducedMotion,
     const land = (base: Cam, roof: number) => {
       if (map) applyCam(map, framed(base, offsetRef.current, 1));
       modeRef.current = reducedMotion ? { kind: "idle" } : { kind: "orbit", base, start: performance.now() };
-      setRoofAlt(roof + RING_LIFT);
+      setRing({ alt: roof + RING_LIFT, relative: false });
+      cbRef.current.onProgress(1);
+      cbRef.current.onArrive();
+    };
+    // Terrain never reported an elevation: keep the hop's ground-relative camera and
+    // hang the ring at building height above whatever the ground is.
+    const landOnGround = () => {
+      modeRef.current = { kind: "idle" };
+      setRing({ alt: target.height + RING_LIFT, relative: true });
       cbRef.current.onProgress(1);
       cbRef.current.onArrive();
     };
@@ -180,11 +190,19 @@ export default function MapScene({ target, prewarm, offset, skip, reducedMotion,
     // window to measure terrain in, and the hop needs none.
     if (map && (target.style === "hop" || reducedMotion)) {
       let done = false;
-      const finish = () => {
+      let retry = 0;
+      const finish = (tries = 0) => {
         if (done) return;
+        const ground = groundAfterHop(map, final, target.height);
+        if (ground == null && tries < GROUND_RETRIES) {
+          // A zero-length fly-to is dropped while the map is still initializing; ask again.
+          if (instant) hop(map, final, offsetRef.current, target.height, 0);
+          retry = window.setTimeout(() => finish(tries + 1), GROUND_RETRY_MS);
+          return;
+        }
         done = true;
-        const ground = groundAfterHop(map, final, target.height) ?? 0;
-        land({ ...final, alt: ground + target.height / 2 }, ground + target.height);
+        if (ground == null) landOnGround();
+        else land({ ...final, alt: ground + target.height / 2 }, ground + target.height);
       };
       const duration = instant ? 0 : HOP_MS;
       hop(map, final, offsetRef.current, target.height, duration);
@@ -196,6 +214,7 @@ export default function MapScene({ target, prewarm, offset, skip, reducedMotion,
       return () => {
         map.removeEventListener("gmp-animationend", onEnd);
         window.clearTimeout(t);
+        window.clearTimeout(retry);
       };
     }
 
@@ -295,17 +314,17 @@ export default function MapScene({ target, prewarm, offset, skip, reducedMotion,
         onError={reportMapFailure}
         style={{ width: "100%", height: "100%" }}
       >
-        {showMarker && target && roofAlt !== null && (
+        {showMarker && target && ring !== null && (
           <>
             <Polyline3D
-              path={ringPath(target.lat, target.lng, RING_METERS, roofAlt)}
-              altitudeMode={AltitudeMode.ABSOLUTE}
+              path={ringPath(target.lat, target.lng, RING_METERS, ring.alt)}
+              altitudeMode={ring.relative ? AltitudeMode.RELATIVE_TO_GROUND : AltitudeMode.ABSOLUTE}
               strokeColor="#C8452C"
               strokeWidth={5}
               outerColor="#FBFAF5"
               outerWidth={0.6}
             />
-            <Marker3D position={{ lat: target.lat, lng: target.lng, altitude: roofAlt + PIN_LIFT }} altitudeMode={AltitudeMode.ABSOLUTE} extruded>
+            <Marker3D position={{ lat: target.lat, lng: target.lng, altitude: ring.alt + PIN_LIFT }} altitudeMode={ring.relative ? AltitudeMode.RELATIVE_TO_GROUND : AltitudeMode.ABSOLUTE} extruded>
               <Pin background="#C8452C" borderColor="#1E2B26" glyphColor="#FBFAF5" />
             </Marker3D>
           </>
