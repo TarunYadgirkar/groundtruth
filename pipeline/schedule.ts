@@ -39,7 +39,7 @@ Return one entry per period for which a document explicitly ties the rule's figu
 - Only figures for THIS rule (e.g. for a rent-increase rule, not deposit interest or registration fees).
 - Return an empty list when the figure is fixed by statute (e.g. "5% + CPI, max 10%", "1 month's rent", "$50 max") or no document dates it. Never invent values or dates.`;
 
-const numbers = (s: string) => s.match(/\d[\d,]*(\.\d+)?/g) ?? [];
+const numbers = (s: string): string[] => s.match(/\d[\d,]*(\.\d+)?/g) ?? [];
 
 function verifyEntry(e: z.infer<typeof ScheduleOut>["entries"][number], docs: Map<string, CorpusDoc>): ScheduledValue | null {
   const doc = docs.get(e.doc_id);
@@ -74,7 +74,11 @@ async function scheduleFor(rule: Rule, docs: CorpusDoc[]): Promise<ScheduledValu
   const kept = out.entries.map((e) => verifyEntry(e, byId)).filter((e): e is ScheduledValue => e !== null);
   const dropped = out.entries.length - kept.length;
   if (dropped) console.warn(`${rule.team_rule_id}: dropped ${dropped} unverified entries`);
-  return kept.sort((a, b) => (a.from ?? "").localeCompare(b.from ?? ""));
+  const unique = kept.filter((e, i) => kept.findIndex((x) => x.from === e.from && x.to === e.to && x.value === e.value) === i);
+  // A fixed formula ("5% + CPI, max 10%") is not a dated figure; keep a schedule only when it dates the rule's own figure.
+  const headline = numbers(rule.key_value ?? "");
+  if (!unique.some((e) => numbers(e.value).some((n) => headline.includes(n)))) return [];
+  return unique.sort((a, b) => (a.from ?? "").localeCompare(b.from ?? ""));
 }
 
 async function runPool<T>(items: T[], limit: number, worker: (item: T) => Promise<void>): Promise<void> {

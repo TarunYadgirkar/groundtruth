@@ -1948,7 +1948,7 @@
     "notes": "Hoboken ban only inside Hoboken, Jersey City ban only inside Jersey City (legal city from Census geocoding), neither in Newark.",
     "rule_ids": [
       "r-0022",
-      "r-0023"
+      "r-0024"
     ],
     "before_after": {
       "A0002": {
@@ -1958,31 +1958,31 @@
         }
       },
       "A0008": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0012": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0017": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0026": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0032": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -1994,13 +1994,13 @@
         }
       },
       "A0042": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0047": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2012,13 +2012,13 @@
         }
       },
       "A0051": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0078": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2042,7 +2042,7 @@
         }
       },
       "A0101": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2054,13 +2054,13 @@
         }
       },
       "A0108": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0116": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2078,7 +2078,7 @@
         }
       },
       "A0131": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2090,25 +2090,25 @@
         }
       },
       "A0139": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0160": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0161": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0163": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2120,13 +2120,13 @@
         }
       },
       "A0171": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0177": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2144,19 +2144,19 @@
         }
       },
       "A0185": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0186": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0187": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2186,7 +2186,7 @@
         }
       },
       "A0243": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2198,7 +2198,7 @@
         }
       },
       "A0250": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2222,13 +2222,13 @@
         }
       },
       "A0265": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0266": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2240,13 +2240,13 @@
         }
       },
       "A0270": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0279": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2258,7 +2258,7 @@
         }
       },
       "A0288": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2282,19 +2282,19 @@
         }
       },
       "A0321": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0325": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0344": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2306,7 +2306,7 @@
         }
       },
       "A0350": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2318,13 +2318,13 @@
         }
       },
       "A0360": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0372": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2336,7 +2336,7 @@
         }
       },
       "A0388": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2348,13 +2348,13 @@
         }
       },
       "A0393": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0394": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2366,31 +2366,31 @@
         }
       },
       "A0404": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0410": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0415": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0416": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0418": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2414,7 +2414,7 @@
         }
       },
       "A0438": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2426,25 +2426,25 @@
         }
       },
       "A0450": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0455": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0459": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
       },
       "A0462": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2468,7 +2468,7 @@
         }
       },
       "A0482": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2486,7 +2486,7 @@
         }
       },
       "A0495": {
-        "r-0023": {
+        "r-0024": {
           "before": "applies",
           "after": "applies"
         }
@@ -2730,845 +2730,845 @@
     ],
     "notes": "NJ FAIR Act: not_yet_effective on 2026-10-01, applies on 2027-07-02; Jersey City and Hoboken addresses flagged for possible preemption conflict with local bans.",
     "rule_ids": [
-      "r-0039"
+      "r-0042"
     ],
     "before_after": {
       "A0002": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0003": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0008": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0011": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0012": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0013": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0017": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0020": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0026": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0028": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0029": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0032": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0040": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0042": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0044": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0047": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0049": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0051": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0057": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0059": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0076": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0078": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0087": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0089": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0090": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0099": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0101": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0102": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0104": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0108": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0110": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0116": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0119": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0120": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0125": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0129": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0130": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0131": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0132": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0136": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0137": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0139": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0146": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0148": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0159": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0160": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0161": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0163": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0168": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0171": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0177": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0181": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0182": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0185": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0186": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0187": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0190": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0204": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0208": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0223": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0227": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0241": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0243": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0244": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0249": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0250": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0254": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0256": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0261": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0264": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0265": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0266": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0269": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0270": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0279": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0287": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0288": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0296": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0297": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0299": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0307": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0308": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0311": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0313": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0320": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0321": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0325": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0326": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0329": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0331": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0337": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0338": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0343": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0344": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0348": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0350": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0352": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0358": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0359": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0360": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0371": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0372": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0377": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0381": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0388": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0389": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0390": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0393": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0394": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0399": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0400": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0404": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0410": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0412": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0415": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0416": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0418": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0424": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0428": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0435": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0436": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0438": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0447": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0448": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0449": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0450": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0455": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0459": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0460": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0462": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0471": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0472": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0475": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0476": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0482": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0489": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0490": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0491": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0495": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
       },
       "A0498": {
-        "r-0039": {
+        "r-0042": {
           "before": "not_yet_effective",
           "after": "applies"
         }
@@ -3691,1106 +3691,1106 @@
     "conflict_flag_address_ids": [],
     "notes": "S.2983 / H.5222 reported as pending (not law); affected set = MA addresses that would be covered if enacted.",
     "rule_ids": [
-      "r-0030",
-      "r-0031"
+      "r-0031",
+      "r-0032"
     ],
     "before_after": {
       "A0006": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0009": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0010": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0015": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0024": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0034": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0036": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0039": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0043": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0046": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0048": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0052": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0053": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0054": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0056": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0063": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0064": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0065": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0068": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0070": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0071": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0073": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0075": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0077": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0082": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0083": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0086": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0093": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0095": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0096": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0098": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0118": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0123": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0124": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0128": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0134": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0140": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0143": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0144": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0149": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0151": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0155": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0166": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0169": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0174": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0175": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0176": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0191": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0194": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0195": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0198": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0199": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0203": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0209": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0211": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0214": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0217": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0218": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0220": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0221": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0226": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0230": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0232": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0233": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0242": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0245": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0258": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0272": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0284": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0286": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0290": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0291": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0292": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0294": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0295": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0298": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0300": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0301": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0302": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0306": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0310": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0312": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0332": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0336": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0339": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0342": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0354": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0356": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0361": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0362": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0366": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0376": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0380": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0403": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0406": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0422": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0423": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0429": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0444": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0446": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0453": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0463": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0464": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0465": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0466": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0467": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0468": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0473": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0485": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
       },
       "A0488": {
-        "r-0030": {
+        "r-0031": {
           "before": "pending",
           "after": "pending"
         },
-        "r-0031": {
+        "r-0032": {
           "before": "pending",
           "after": "pending"
         }
@@ -4800,9 +4800,9 @@
   "T5": {
     "affected_address_ids": [],
     "conflict_flag_address_ids": [],
-    "notes": "Struck ballot question recorded as failed (r-0036); no rent cap reported for Boston or Cambridge.",
+    "notes": "Struck ballot question recorded as failed (r-0037); no rent cap reported for Boston or Cambridge.",
     "rule_ids": [
-      "r-0036"
+      "r-0037"
     ],
     "before_after": {}
   }

@@ -138,7 +138,7 @@ How to extract:
 Never invent rules, citations, or dates that the document does not support.`;
 
 const VERB =
-  /\b(shall|must|may|might|is|are|was|were|be|been|being|has|have|had|will|would|can|cannot|could|should|does|do|did|apply|applies|applied|require[sd]?|prohibit(s|ed)?|ban(s|ned)?|bar(s|red)?|allow(s|ed)?|permit(s|ted)?|limit(s|ed)?|cap(s|ped)?|exempt(s|ed)?|cover(s|ed)?|provide[sd]?|include[sd]?|accrue[sd]?|charge[sd]?|increase[sd]?|take[sn]?|took|go(es)?|went|protect(s|ed)?|pay|pays|paid|evict(s|ed)?|terminate[sd]?|receive[sd]?|return(s|ed)?|set(s)?|adopt(s|ed)?|enact(s|ed)?|expire[sd]?|establish(es|ed)?|make[sd]?|made|give[sn]?|gave|need(s|ed)?|tell(s)?|refuse[sd]?|discriminate[sd]?|accept(s|ed)?|use[sd]?|mean[st]?|entitle[sd]?)\b/i;
+  /\b(shall|must|may|might|is|are|was|were|be|been|being|has|have|had|will|would|can|cannot|could|should|does|do|did|apply|applies|applied|require[sd]?|prohibit(s|ed)?|ban(s|ned)?|bar(s|red)?|allow(s|ed)?|permit(s|ted)?|limit(s|ed)?|cap(s|ped)?|exempt(s|ed)?|cover(s|ed)?|provide[sd]?|include[sd]?|accrue[sd]?|charge[sd]?|increase[sd]?|take[sn]?|took|go(es)?|went|protect(s|ed)?|pay|pays|paid|evict(s|ed)?|terminate[sd]?|receive[sd]?|return(s|ed)?|set(s)?|adopt(s|ed)?|enact(s|ed)?|expire[sd]?|establish(es|ed)?|make[sd]?|made|give[sn]?|gave|need(s|ed)?|tell(s)?|refuse[sd]?|discriminate[sd]?|accept(s|ed)?|use[sd]?|mean[st]?|entitle[sd]?|authoriz(e|es|ed)|constitut(e|es|ed))\b/i;
 
 // Official rate pages state values as "4.2% for March 1, 2026 - February 28, 2027": a figure tied to a date.
 const isDatedRateLine = (text: string) => text.length >= 30 && /\d(\.\d+)?\s?%|\$\s?\d/.test(text) && /\b(19|20)\d\d\b/.test(text);
