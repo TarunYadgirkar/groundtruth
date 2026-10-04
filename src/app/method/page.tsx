@@ -1,25 +1,31 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { METHOD_STATS as S } from "@/lib/method-stats";
+import { COVERED_CITIES } from "@/lib/place";
 
 export const metadata: Metadata = {
   title: "How Groundtruth works",
-  description: "How Groundtruth turns public housing law into address-level answers, and where it falls short.",
+  description: "How Groundtruth turns public housing law and related sources into address-level answers, and where it falls short.",
 };
 
 const pct = (n: number | null) => (n === null ? null : `${(n * 100).toFixed(1)}%`);
 const num = (n: number | null) => (n === null ? null : n.toLocaleString("en-US"));
 
+const LAW_SCOPE_CITIES = ["Los Angeles", "San Francisco", "San Diego", "Berkeley", "Santa Ana", "Jersey City", "Hoboken", "Newark", "Boston", "Cambridge"];
+const CITIES_WITHOUT_RULES = LAW_SCOPE_CITIES.filter((c) => !COVERED_CITIES.some((x) => x.city === c));
+const MISSING_CITY_NOTE =
+  CITIES_WITHOUT_RULES.length === 0 ? "" : ` ${CITIES_WITHOUT_RULES.join(" and ")} ${CITIES_WITHOUT_RULES.length === 1 ? "has" : "have"} no city-level rules yet.`;
+
 const STEPS = [
   {
     name: "Extract",
-    body: "Claude reads each official document in the corpus and writes structured rule records: who is covered, from when, and the exact sentence that says so.",
+    body: "Claude reads each document in the corpus (public law and related sources) and writes structured rule records: who is covered, from when, and the exact sentence that says so.",
     stat: [num(S.rulesExtracted), "rule records"] as const,
     link: { href: "/new-law", label: "Try it on a new law" },
   },
   {
     name: "Verify quotes",
-    body: "Every quoted sentence must appear word for word in the source text. Records whose quote can't be found are dropped and logged, never patched by hand.",
+    body: "Every quoted sentence must appear word for word in the source text. Records whose quote can't be found are dropped and logged. Where a supplied corpus text supports a rule, the citation points to it; rules resting only on captured link-only pages are marked.",
     stat: [S.quotesChecked === null ? null : `${num(S.quotesChecked)} of ${num(S.quotesChecked)}`, "extracted quotes found word for word"] as const,
   },
   {
@@ -45,16 +51,18 @@ const COMMITMENTS = [
   ["Say unknown", "When a rule depends on a fact the public records lack (year built, unit count, who owns the building) the answer is unknown, with the missing fact named."],
   ["Separate law from proposals", "Pending bills sit in their own section and never count as applying. Enacted laws that start later are marked not yet in effect."],
   ["Flag conflicts", "Where two laws may collide, such as a state act that preempts local ordinances, both are flagged for human review instead of picking a winner."],
+  ["Keep live research apart", "Live research (beta) results are fetched separately when you ask, shown in their own section, and never added to the scored outputs."],
   ["Never advise", "Groundtruth describes what public law says. It doesn't tell anyone how to avoid a rule and isn't a compliance certification."],
 ] as const;
 
 const LIMITS = [
-  `The corpus is ${S.documentsInCorpus} documents across three states and nine cities. Laws outside it are invisible to the tool, so “no rule found” means none in this corpus.`,
+  `The corpus is the 54 supplied texts plus captured link-only pages (public law and related sources such as law-firm and news pages) for CA, NJ, MA and ${LAW_SCOPE_CITIES.length} cities. Laws outside it are invisible to the tool, so “no rule found” means none in this corpus.${MISSING_CITY_NOTE}`,
+  "Accuracy figures come from an AI-assisted audit of 27 sample addresses. The same sample guided fixes, so they are not held-out accuracy and not an official score.",
   "Building facts come from assessor records, which miss construction years and unit counts for many New Jersey, Berkeley and Boston buildings.",
   "Year built isn't the certificate-of-occupancy date. Buildings finished in a cutoff year come back unknown.",
   "Owner names are excluded, so small-landlord exemptions can't be resolved.",
   "Addresses looked up live (outside the sample) get city and state rules only; their building facts stay unknown.",
-  "The assistant answers only from the rule records shown for the address. It can still word things imperfectly; the rule list is the record.",
+  "The assistant is told to answer from the rule records shown for the address, but it can still get things wrong. The rule list is the record.",
 ];
 
 function Stat({ value, label }: { value: string | null; label: string }) {
@@ -123,13 +131,13 @@ export default function MethodPage() {
             <div>
               <dt className="sr-only">Precision</dt>
               <dd>
-                <Stat value={pct(S.precision)} label={`precision in an AI-assisted audit of ${S.checkSetSize ?? "sample"} addresses`} />
+                <Stat value={pct(S.precision)} label={`precision in an AI-assisted audit of ${S.checkSetSize ?? "sample"} sample addresses (round 2)`} />
               </dd>
             </div>
             <div>
               <dt className="sr-only">Recall</dt>
               <dd>
-                <Stat value={pct(S.recall)} label="recall on the same audit (round 2, before fixes tuned to it)" />
+                <Stat value={pct(S.recall)} label="recall on the same sample, which also guided fixes, so not held-out accuracy or an official score" />
               </dd>
             </div>
             <div>
@@ -172,7 +180,7 @@ export default function MethodPage() {
 
       <footer className="border-t border-hairline">
         <div className="mx-auto flex max-w-5xl flex-col gap-1 px-4 py-6 font-mono text-[0.75rem] text-ink-muted sm:flex-row sm:justify-between sm:px-8">
-          <span>Not legal advice · Sources: public law as retrieved {S.retrievedOn}</span>
+          <span>Not legal advice · Sources: public law and related sources as retrieved {S.retrievedOn}</span>
           <span>Extraction model: {S.model}</span>
         </div>
       </footer>
