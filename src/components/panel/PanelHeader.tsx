@@ -152,7 +152,7 @@ export default function PanelHeader({ address, record, live, hasUserFacts, unkno
         <h2 ref={headingRef} tabIndex={-1} className="font-wide text-headline text-ink focus-visible:outline-none">{address.street_address}</h2>
         <p className="mt-1.5 text-ui text-ink-muted">
           {[city, `${address.state} ${address.zip}`.trim()].join(", ")}
-          {address.county && <span> · {address.county}</span>}
+          {address.county && !city.startsWith("Unincorporated") && <span> · {address.county}</span>}
         </p>
         {mailedDifferently && (
           <p className="mt-1 font-mono text-[0.75rem] text-ink">

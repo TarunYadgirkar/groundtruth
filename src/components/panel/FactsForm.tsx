@@ -47,6 +47,7 @@ export default function FactsForm({ address, recordYear, recordUnits, hasUserFac
   const needsYear = recordYear == null;
   const needsUnits = recordUnits == null;
   if (!needsYear && !needsUnits) return null;
+  if (unknownCount === 0 && !hasUserFacts) return null;
 
   const missing = [needsYear && "year built", needsUnits && "unit count"].filter(Boolean).join(" and ");
 
@@ -78,7 +79,7 @@ export default function FactsForm({ address, recordYear, recordUnits, hasUserFac
           ) : (
             <>
               <strong className="font-bold">Know your building?</strong> Add the {missing} to resolve unknowns
-              {unknownCount > 0 && <span className="text-ink-muted"> ({unknownCount} {unknownCount === 1 ? "rule depends" : "rules depend"} on facts the records lack)</span>}.
+              <span className="text-ink-muted"> ({unknownCount} {unknownCount === 1 ? "rule depends" : "rules depend"} on facts the records lack)</span>.
             </>
           )}
         </p>
