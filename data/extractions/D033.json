@@ -1,0 +1,41 @@
+{
+  "doc_id": "D033",
+  "url": "https://cdn.prod.website-files.com/58407e2ebca0e34c30a2d39c/6aa82b60e6a4086c0b4658a8_CPI%20Hoboken%20Website%20Cap%20(12).pdf",
+  "retrieved_at": "2026-10-04T06:08Z",
+  "model": "claude-opus-5-5",
+  "rules": [
+    {
+      "canonical_key": "HOBOKEN-155-5-rent-increase-cap",
+      "jurisdiction": "Hoboken, NJ",
+      "level": "city",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Hoboken Rent Leveling – annual rent increase cap (Section 155-5)",
+      "requirement": "Under Hoboken's rent leveling ordinance, as amended February 1, 2023, a landlord may not request or receive a rent increase greater than 5%. The city publishes a regional CPI table for calculating allowable increases.",
+      "key_value": "Max 5% (CPI-based; CPI table published)",
+      "coverage_conditions": "Rental units subject to Hoboken Rent Leveling (Hoboken Code Chapter 155). This document does not state coverage details.",
+      "exemptions": null,
+      "coverage": {
+        "min_units": null,
+        "max_units": null,
+        "built_before": null,
+        "built_on_or_before": null,
+        "built_after": null,
+        "age_years_exempt": null,
+        "cutoff_basis": "none",
+        "owner_type_dependent": false,
+        "unverifiable_conditions": null,
+        "depends_on_unknown_fact": false
+      },
+      "yields_to_local": false,
+      "effective_date": "2023-02-01",
+      "enacted_date": "2023-02-01",
+      "penalty": null,
+      "citation": "Hoboken Code § 155-5",
+      "quoted_span": "No landlord may request or \nreceive a percentage increase in \nrent which is greater than 5%",
+      "confidence": 0.7,
+      "conflict_note": "Source is a city CPI table with a brief note. It states only the 5% ceiling and the February 1, 2023 amendment date. The full CPI formula, coverage and exemptions (e.g., the NJ new-construction exemption) are not stated here. February 1, 2023 may be the adoption date rather than the effective date."
+    }
+  ],
+  "no_rule_findings": []
+}
