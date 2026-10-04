@@ -107,7 +107,7 @@ export default function Landing({ onSelect, onLookupFree, error, autoFocus }: La
             )}
           </AnimatePresence>
         </motion.div>
-        <motion.p {...enter(4, reduce)} className="mt-1 text-caption text-ink-muted">
+        <motion.p {...enter(4, reduce)} className="mt-1 text-center text-caption text-balance text-ink-muted">
           Covers addresses in California, New Jersey and Massachusetts.
         </motion.p>
 
@@ -148,7 +148,7 @@ export default function Landing({ onSelect, onLookupFree, error, autoFocus }: La
         className="flex flex-col items-center gap-1 pb-12 text-center font-mono text-[0.75rem] text-ink-muted sm:flex-row sm:justify-between"
       >
         <span className="tnum">500 sample buildings · CA · NJ · MA · as of Oct 1, 2026</span>
-        <span>Not legal advice · Sources: public law as retrieved {SOURCES_RETRIEVED}</span>
+        <span>Not legal advice · Sources: public law and related sources as retrieved {SOURCES_RETRIEVED}</span>
       </motion.footer>
     </motion.div>
   );
