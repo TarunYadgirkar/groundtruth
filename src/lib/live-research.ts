@@ -74,7 +74,8 @@ export function toRule(r: LiveRule): Rule {
     key_value: r.key_value,
     coverage_conditions: r.coverage_conditions,
     exemptions: r.exemptions,
-    coverage: r.coverage,
+    // Live results are unreviewed: any stated condition we cannot check keeps the rule at unknown.
+    coverage: { ...r.coverage, depends_on_unknown_fact: Boolean(r.coverage.depends_on_unknown_fact || r.coverage.unverifiable_conditions) },
     yields_to_local: r.yields_to_local,
     overrides: [],
     interaction: null,
