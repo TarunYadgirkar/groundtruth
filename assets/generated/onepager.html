@@ -36,7 +36,7 @@ footer { margin-top: 8px; border-top: 1px solid var(--hair); padding-top: 5px; f
 
 <p class="lede"><b>Which rental housing laws apply at this address, on any date?</b> Groundtruth reads state and city housing law, turns it into structured rules with verbatim citations, places each apartment building in its legal jurisdiction, and decides which rules apply. The result for each rule is applies, unknown, superseded, not yet effective, or pending. Type an address, fly from orbit down to the building in Google's photoreal 3D, and drag a date slider to see laws take effect.</p>
 
-<div class="pipe"><span>70 law docs</span><i>→</i><span>Claude extraction (200 rules)</span><i>→</i><span>verbatim quote check 200/200</span><i>→</i><span>consolidation → 55 rules</span><i>→</i><span>Census geocoding → legal city</span><i>→</i><span>deterministic engine</span><i>→</i><span>500 lookups · T1–T5 · UI</span></div>
+<div class="pipe"><span>73 law docs (54 supplied + 19 captured)</span><i>→</i><span>Claude extraction (206 candidates)</span><i>→</i><span>verbatim quote check 206/206</span><i>→</i><span>consolidation → 59 rules + dated values</span><i>→</i><span>Census geocoding → legal city</span><i>→</i><span>deterministic engine</span><i>→</i><span>500 lookups · T1–T5 · UI</span></div>
 
 <div class="grid">
 <section>
@@ -55,7 +55,8 @@ footer { margin-top: 8px; border-top: 1px solid var(--hair); padding-top: 5px; f
   <h2>3 · What worked</h2>
   <ul>
     <li>All five change tests behave as specified: T1 flips 250 CA addresses; T2 hits only Hoboken and Jersey City (90); T3 flips 140 NJ addresses, with conflict flags on the 90 in Hoboken and Jersey City; T4 lists 110 MA addresses as pending; T5 returns 0.</li>
-    <li>An AI-assisted audit of 27 stratified addresses (all 9 cities and the edge cases) scored <b>precision/recall 0.92 → 0.98</b> after pipeline-only fixes.</li>
+    <li>An AI-assisted audit of 27 sample addresses, not held-out, not an official score, went from precision/recall 0.92 to 0.98 after pipeline-only fixes.</li>
+    <li><b>Dated values.</b> Annual increases and deposit interest carry a schedule with a verified quote per period, so San Francisco shows 1.4% on Dec 31, 2025 and 1.6% from Mar 1, 2026.</li>
     <li><span class="mono">/new-law</span>: paste an unseen ordinance and it is extracted, quote-checked and applied to 500 buildings in about 30 s (a fictional Cambridge ban gave 48 of 500).</li>
   </ul>
 </section>
@@ -63,8 +64,8 @@ footer { margin-top: 8px; border-top: 1px solid var(--hair); padding-top: 5px; f
   <h2>4 · What was challenging</h2>
   <ul>
     <li><b>Missing facts.</b> Public records lack owner type and often units or year built. We infer unit ranges from assessor use codes, encode owner-exemption caps, and otherwise return <i>unknown</i> with the exact missing fact.</li>
-    <li><b>Over-splitting.</b> The first extraction produced 120 fragmentary rules. A granularity-aware consolidation pass brought it to 55, close to the answer key's ~58.</li>
-    <li><b>Link-only sources.</b> We captured 16 of 33 one page at a time, as the organizer allowed. ecode360 blocked capture, so Hoboken and Newark local rent control is a known gap.</li>
+    <li><b>Over-splitting.</b> The first extraction produced 120 fragmentary rules. A granularity-aware consolidation pass merged them into 59 rules, each traced to its source documents.</li>
+    <li><b>Link-only sources.</b> We captured 19 pages covering 17 of the 33, one page at a time, as the organizer allowed. ecode360 blocked capture, so Hoboken and Newark rent control comes from official city PDFs (Hoboken Ch. 155 regulations and CPI sheet, Newark Rent Control FAQ).</li>
     <li><b>Geocoding.</b> Fuzzy matches landed on the wrong building. We reject house-number mismatches and fall back to unambiguous postal neighborhoods (499 of 500 resolved).</li>
   </ul>
   <h2>5 · How the time was spent (≈ 20 h)</h2>
