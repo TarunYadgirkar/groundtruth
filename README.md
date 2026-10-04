@@ -18,7 +18,7 @@ Built for the RealPage "Rental Housing Law Navigator" challenge at Hack-Nation's
 
 ## Try it
 
-- Type a sample address (e.g. `6238 De Longpre Ave`, `1031 Clinton St, Hoboken`, `63 Bailey St, Dorchester`) or any address in CA, NJ or MA. Addresses outside the sample get statewide rules plus city rules where the data has them (9 cities; Newark has no city-level rules yet), and you can add year built and unit count to resolve unknowns.
+- Type a sample address (e.g. `6238 De Longpre Ave`, `1031 Clinton St, Hoboken`, `63 Bailey St, Dorchester`) or any address in CA, NJ or MA. Addresses outside the sample get statewide rules plus city rules where the data has them (all 10 law-scope cities), and you can add year built and unit count to resolve unknowns.
 - Drag the date slider, or click 2026-01-02 or 2027-07-02, to watch T1 and T3 happen.
 - Ask: "My landlord wants to raise my rent 10% next month. Is that allowed?"
 - `/new-law` → "Try the sample" runs a fictional ordinance end to end.
@@ -28,7 +28,7 @@ Built for the RealPage "Rental Housing Law Navigator" challenge at Hack-Nation's
 
 ## Deliverables
 
-- `submission/rules.json`: 55 rule records (schema in `starter/schema/rule_record.schema.json`)
+- `submission/rules.json`: 59 rule records (schema in `starter/schema/rule_record.schema.json`)
 - `submission/lookups.json`: results for all 500 sample addresses as of 2026-10-01
 - `submission/changes.json`: T1–T5
 - `METHOD.md`: one-page method note, AI-assisted sample audit and limitations
@@ -62,9 +62,9 @@ npx tsx pipeline/ingest.ts path/to/new-law.txt   # run a new document end to end
 ## Sources
 
 - **Starter manifest:** 87 entries. 54 have supplied text files in `starter/corpus/text/`; 33 are link-only.
-- **Captured link-only pages:** 16 so far (`data/captured/`), plus any captured later with the same script. These are law-firm, news and legislature pages, not always official documents.
+- **Captured link-only pages:** 19 files so far (`data/captured/`), plus any captured later with the same script. These are law-firm, news, legislature and official city pages (Hoboken and Newark rent control came from official city PDFs because their ecode360 pages refused automated access), not always the official code text.
 - **Citations:** after consolidation, a rule that first cited a captured page is switched to supplied-corpus text when that text supports it. Rules that still rest only on captured text carry `source_in_supplied_corpus: false`, and the app notes it on their source line.
-- **Scope:** the manifest covers law for 10 cities (Los Angeles, San Francisco, San Diego, Berkeley, Santa Ana, Jersey City, Hoboken, Newark, Boston, Cambridge) plus CA, NJ and MA statewide law. The 500 sample addresses are in 9 of those cities (all but Santa Ana). The current rules have city-level entries for 9 cities; Newark has none, because its ordinance pages could not be captured.
+- **Scope:** the manifest covers law for 10 cities (Los Angeles, San Francisco, San Diego, Berkeley, Santa Ana, Jersey City, Hoboken, Newark, Boston, Cambridge) plus CA, NJ and MA statewide law. The 500 sample addresses are in 9 of those cities (all but Santa Ana). The current rules have city-level entries for all 10; Hoboken and Newark rest on official regulations and FAQs rather than the full ordinance text.
 
 ## Accuracy
 
