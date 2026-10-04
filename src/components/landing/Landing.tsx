@@ -107,6 +107,9 @@ export default function Landing({ onSelect, onLookupFree, error, autoFocus }: La
             )}
           </AnimatePresence>
         </motion.div>
+        <motion.p {...enter(4, reduce)} className="mt-1 text-caption text-ink-muted">
+          Covers addresses in California, New Jersey and Massachusetts.
+        </motion.p>
 
         <AnimatePresence>
           {error && (
