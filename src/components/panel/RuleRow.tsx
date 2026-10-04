@@ -122,6 +122,7 @@ export default function RuleRow({ rule, evaluation, highlight, placeIds }: RuleR
                 )}
                 {rule.retrieved_at && <span className="tnum">Retrieved {rule.retrieved_at.slice(0, 10)}</span>}
                 {rule.effective_date && <span className="tnum">Effective {formatDate(rule.effective_date)}</span>}
+                {rule.source_in_supplied_corpus === false && <span className="font-sans text-caption">Source captured from a link-only page (not in the supplied corpus)</span>}
               </div>
 
               <ChecksTable evaluation={evaluation} />
