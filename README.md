@@ -2,7 +2,7 @@
 
 **Which rental housing laws apply at this address, on any date.**
 
-Groundtruth reads state and city housing law, turns it into structured rules with verbatim citations, resolves an apartment address to its legal jurisdiction, and decides which rules apply to that building on any date: applies, unknown, superseded, not yet effective, or pending. You type an address, the camera flies from orbit down to the building in Google's photorealistic 3D, and every applicable rule appears with the exact source text it rests on. Drag the date slider and the answers change as laws take effect.
+Groundtruth reads public state and city housing law and related sources, turns it into structured rules with verbatim citations, resolves an apartment address to its legal jurisdiction, and decides which rules apply to that building on any date: applies, unknown, superseded, not yet effective, or pending. You type an address, the camera flies from orbit down to the building in Google's photorealistic 3D, and every applicable rule appears with the exact source text it rests on. Drag the date slider and the answers change as laws take effect.
 
 Built for the RealPage "Rental Housing Law Navigator" challenge at Hack-Nation's 7th Global AI Hackathon (Oct 3–4, 2026).
 
@@ -12,26 +12,26 @@ Built for the RealPage "Rental Housing Law Navigator" challenge at Hack-Nation's
 
 | Module | How |
 |---|---|
-| **A · Extract** | Claude (`claude-opus-5-5`, structured outputs) reads each corpus document and emits rule records in the challenge schema plus a machine-checkable coverage block. Every `quoted_span` is checked verbatim against the source text; rules whose quote can't be found are dropped. A consolidation pass merges duplicates across documents, settles effective dates and precedence, and records conflicts. |
-| **B · Resolve and apply** | Addresses are geocoded with the Census Geocoder (batch, then cleaned one-line retries, then Google) and placed in their legal city with Census incorporated-place boundaries, so "Dorchester" resolves to Boston. A deterministic engine (`src/lib/engine.ts`, no AI) tests each rule's coverage against year built, unit count (record or assessor use code), certificate-of-occupancy cutoffs, owner-type dependence, and restricted programs, then applies state-versus-local precedence. Missing facts produce `unknown`, never a guess. |
+| **A · Extract** | Claude (`claude-opus-5-5`, structured outputs) reads each corpus document and emits rule records in the challenge schema plus a machine-checkable coverage block. Every `quoted_span` is checked verbatim against the source text; rules whose quote can't be found are dropped. A citation-preference pass then switches a rule to supplied-corpus text where that text supports it, and marks the rest as captured-only. A consolidation pass merges duplicates across documents, settles effective dates and precedence, and records conflicts. |
+| **B · Resolve and apply** | Addresses are geocoded with the Census Geocoder (batch, then cleaned one-line retries, then Google) and placed in their legal city with Census incorporated-place boundaries, so "Dorchester" resolves to Boston. A deterministic engine (`src/lib/engine.ts`, no AI) tests each rule's coverage against year built, unit count (record or assessor use code), certificate-of-occupancy cutoffs, owner-type dependence, and restricted programs, then applies state-versus-local precedence. Missing facts produce `unknown`, with the missing fact named. |
 | **C · Track change** | The same engine runs at any as-of date. `submission/changes.json` holds T1–T5 with affected addresses, conflict flags and before/after results. `/new-law` (and `pipeline/ingest.ts`) runs a never-seen document through extraction, verification and the engine and lists the buildings it affects. |
 
 ## Try it
 
-- Type a sample address (e.g. `6238 De Longpre Ave`, `1031 Clinton St, Hoboken`, `63 Bailey St, Dorchester`) or any address in CA, NJ or MA. Addresses outside the sample get statewide rules plus city rules for the 10 covered cities, and you can add year built and unit count to resolve unknowns.
+- Type a sample address (e.g. `6238 De Longpre Ave`, `1031 Clinton St, Hoboken`, `63 Bailey St, Dorchester`) or any address in CA, NJ or MA. Addresses outside the sample get statewide rules plus city rules where the data has them (9 cities; Newark has no city-level rules yet), and you can add year built and unit count to resolve unknowns.
 - Drag the date slider, or click 2026-01-02 or 2027-07-02, to watch T1 and T3 happen.
 - Ask: "My landlord wants to raise my rent 10% next month. Is that allowed?"
 - `/new-law` → "Try the sample" runs a fictional ordinance end to end.
-- Live research (beta): for a CA, NJ or MA city outside the corpus (e.g. Oakland, Somerville, Trenton), or an address in another state (e.g. Austin, TX), click "Research <city> law live". Claude searches and fetches official code sites (3 searches, 5 fetches), returns rule records, and the server keeps only rules whose quote appears verbatim in the page text the fetch tool actually returned. The engine then applies them to the building. Results take about 30 to 50 s, are cached per city for 24 h, and appear in a separate amber section that is never counted in the totals.
+- Live research (beta): for a CA, NJ or MA city outside the corpus (e.g. Oakland, Somerville, Trenton), or an address in another state (e.g. Austin, TX), click "Research <city> law live". Claude searches and fetches public law and related pages (3 searches, 5 fetches), returns rule records, and the server keeps only rules whose quote appears verbatim in the page text the fetch tool actually returned. The engine then applies them to the building. Results take about 30 to 50 s, are cached per city for 24 h, and appear in a separate amber section that is never counted in the totals.
 
 > Live research caveat: those rules are found on the open web at click time. A verified quote proves the text is on that page, not that the page is current, complete or official, and nothing there has been audited like the corpus. They are never written to `submission/`. Scored outputs stay corpus-only.
 
 ## Deliverables
 
-- `submission/rules.json`: 56 rule records (schema in `starter/schema/rule_record.schema.json`)
+- `submission/rules.json`: 55 rule records (schema in `starter/schema/rule_record.schema.json`)
 - `submission/lookups.json`: results for all 500 sample addresses as of 2026-10-01
 - `submission/changes.json`: T1–T5
-- `METHOD.md`: one-page method note, accuracy audit and limitations
+- `METHOD.md`: one-page method note, AI-assisted sample audit and limitations
 
 ## Run it
 
@@ -43,17 +43,32 @@ cp .env.example .env.local   # then fill in both keys
 pnpm dev                     # http://localhost:3000
 ```
 
-Rebuild the data from the starter pack:
+Rebuild the data from the starter pack, in this order:
 
 ```bash
-npx tsx pipeline/extract.ts       # Module A: per-document extraction (data/extractions/)
-npx tsx pipeline/consolidate.ts   # verify quotes, merge, precedence -> data/rules.json
-npx tsx pipeline/geocode.ts       # Module B: legal jurisdiction for 500 addresses
-npx tsx pipeline/submit.ts        # rules.json, lookups.json, changes.json -> submission/
+npx tsx pipeline/capture.ts         # fetch permitted link-only pages, one at a time, with retrieval dates
+npx tsx pipeline/extract.ts         # Module A: per-document extraction (data/extractions/)
+npx tsx pipeline/consolidate.ts     # verify quotes, merge, precedence -> data/rules.json
+npx tsx pipeline/prefer-supplied.ts # cite supplied-corpus text where it supports the rule; mark captured-only rules
+npx tsx pipeline/geocode.ts         # Module B: legal jurisdiction for 500 addresses
+npx tsx pipeline/rooftop.ts         # camera points for the 3D view only (no effect on jurisdiction or rules)
+npx tsx pipeline/zips.ts            # display ZIPs for rows with out-of-state mailing ZIPs
+npx tsx pipeline/submit.ts          # rules.json, lookups.json, changes.json -> submission/
 npx tsx pipeline/ingest.ts path/to/new-law.txt   # run a new document end to end
 ```
 
 `pipeline/capture.ts` fetches the starter pack's link-only sources one page at a time, with retrieval dates recorded. The RealPage organizer confirmed in the event Discord that teams may capture link-only pages. Sites that refused automated access were not captured.
+
+## Sources
+
+- **Starter manifest:** 87 entries. 54 have supplied text files in `starter/corpus/text/`; 33 are link-only.
+- **Captured link-only pages:** 16 so far (`data/captured/`), plus any captured later with the same script. These are law-firm, news and legislature pages, not always official documents.
+- **Citations:** after consolidation, a rule that first cited a captured page is switched to supplied-corpus text when that text supports it. Rules that still rest only on captured text carry `source_in_supplied_corpus: false`, and the app notes it on their source line.
+- **Scope:** the manifest covers law for 10 cities (Los Angeles, San Francisco, San Diego, Berkeley, Santa Ana, Jersey City, Hoboken, Newark, Boston, Cambridge) plus CA, NJ and MA statewide law. The 500 sample addresses are in 9 of those cities (all but Santa Ana). The current rules have city-level entries for 9 cities; Newark has none, because its ordinance pages could not be captured.
+
+## Accuracy
+
+There is no public answer key. A Claude review pass audited 27 sample addresses against the corpus text (`data/audit.md`). The same sample guided the fixes, so these are AI-assisted sample results, not held-out accuracy and not an official score. Round 2 scored 0.983 precision and 0.983 recall; round 3 scored 1.000 on that same sample and is optimistic. T1 to T5 match `starter/dev/change_tests.json`.
 
 ## Layout
 
