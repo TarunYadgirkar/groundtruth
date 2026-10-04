@@ -61,7 +61,7 @@ const LIMITS = [
   "Building facts come from assessor records, which miss construction years and unit counts for many New Jersey, Berkeley and Boston buildings.",
   "Year built isn't the certificate-of-occupancy date. Buildings finished in a cutoff year come back unknown.",
   "Owner names are excluded, so small-landlord exemptions can't be resolved.",
-  "Addresses looked up live (outside the sample) get city and state rules only; their building facts stay unknown.",
+  "Addresses looked up live (outside the sample) get city and state rules only. Their building facts stay unknown unless you enter year built and unit count.",
   "The assistant is told to answer from the rule records shown for the address, but it can still get things wrong. The rule list is the record.",
 ];
 
