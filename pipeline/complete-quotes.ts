@@ -74,10 +74,10 @@ function main(): void {
     console.log(`\n${id}\n  before: ${JSON.stringify(before)}\n  after:  ${JSON.stringify(after)}`);
   };
   const out = rules.map((rule) => {
-    const quoted_span = complete(rule.quoted_span, docs.get(rule.source_doc_id));
+    const quoted_span = complete(rule.quoted_span, docs.get(rule.source_doc_id ?? ""));
     report(rule.team_rule_id, rule.quoted_span, quoted_span);
     const value_schedule = rule.value_schedule?.map((e, i): ScheduledValue => {
-      const q = complete(e.quoted_span, docs.get(e.source_doc_id ?? rule.source_doc_id));
+      const q = complete(e.quoted_span, docs.get(e.source_doc_id ?? rule.source_doc_id ?? ""));
       report(`${rule.team_rule_id} schedule[${i}]`, e.quoted_span, q);
       return { ...e, quoted_span: q };
     });

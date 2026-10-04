@@ -183,15 +183,26 @@ export interface ValueAt {
   value: string | null;
   entry: ScheduledValue | null;
   scheduled: boolean;
+  // The rule's requirement and main quote are written for one period (the default as-of date). When the
+  // as-of date picks a different figure, textEntry is the period that static text describes.
+  textDiffers: boolean;
+  textEntry: ScheduledValue | null;
+}
+
+const figures = (s: string): string[] => s.match(/\d[\d,]*(\.\d+)?/g) ?? [];
+
+function entryAt(schedule: ScheduledValue[], asOf: string): ScheduledValue | null {
+  return schedule.find((e) => (!e.from || normalizeDate(e.from)! <= asOf) && (!e.to || normalizeDate(e.to)! >= asOf)) ?? null;
 }
 
 // Dated values (annual allowable increases, relocation amounts, interest rates) come from the rule's
 // value_schedule; outside every stated interval the value is unknown rather than the latest one.
 export function valueAt(rule: Pick<Rule, "key_value" | "value_schedule">, asOf: string): ValueAt {
   const schedule = rule.value_schedule ?? [];
-  if (!schedule.length) return { value: rule.key_value, entry: null, scheduled: false };
-  const entry = schedule.find((e) => (!e.from || normalizeDate(e.from)! <= asOf) && (!e.to || normalizeDate(e.to)! >= asOf)) ?? null;
-  return { value: entry?.value ?? null, entry, scheduled: true };
+  if (!schedule.length) return { value: rule.key_value, entry: null, scheduled: false, textDiffers: false, textEntry: null };
+  const entry = entryAt(schedule, asOf);
+  const textDiffers = !entry || !figures(entry.value).every((n) => (rule.key_value ?? "").includes(n));
+  return { value: entry?.value ?? null, entry, scheduled: true, textDiffers, textEntry: textDiffers ? entryAt(schedule, DEFAULT_AS_OF) : null };
 }
 
 export function evaluateAddress(address: Address, rules: Rule[], asOf: string = DEFAULT_AS_OF): Evaluation[] {

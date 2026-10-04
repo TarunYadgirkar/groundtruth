@@ -6,7 +6,7 @@ import { ArrowSquareOutIcon, CaretDownIcon, FlagIcon, ScalesIcon } from "@phosph
 import { ruleById } from "@/lib/data";
 import { valueAt } from "@/lib/engine";
 import { formatDate } from "@/lib/labels";
-import type { Evaluation, Rule } from "@/lib/types";
+import type { Evaluation, Rule, ScheduledValue } from "@/lib/types";
 import ChecksTable from "./ChecksTable";
 import StatusPill from "./StatusPill";
 
@@ -42,6 +42,27 @@ function conflictTargets(rule: Rule, placeIds: ReadonlySet<string>): string {
 function periodLabel(from: string | null, to: string | null): string {
   if (from && to) return `${formatDate(from)} to ${formatDate(to)}`;
   return from ? `from ${formatDate(from)}` : `until ${formatDate(to!)}`;
+}
+
+function Quote({ label, text }: { label: string; text: string }) {
+  return (
+    <blockquote className="relative rounded-[var(--radius-chip)] bg-surface-sunk py-2.5 pl-4 pr-3 text-ui text-ink">
+      <span aria-hidden className="absolute inset-y-2 left-0 w-[2px] rounded-full bg-ink/70" />
+      <span className="eyebrow mb-1 block text-ink-muted">{label}</span>
+      <p className="font-mono text-[0.8125rem] leading-[1.55]">“{text}”</p>
+    </blockquote>
+  );
+}
+
+function entryLabel(entry: ScheduledValue, ruleDocId: string | null): string {
+  const doc = entry.source_doc_id && entry.source_doc_id !== ruleDocId ? ` (${entry.source_doc_id})` : "";
+  return `${entry.value} applies ${periodLabel(entry.from, entry.to)}${doc}`;
+}
+
+function periodNote(selected: ScheduledValue | null, textEntry: ScheduledValue | null): string {
+  const lead = selected ? "Rate shown above is for the selected date" : "No rate is stated for the selected date";
+  const period = textEntry ? periodLabel(textEntry.from, textEntry.to) : "a different period";
+  return `${lead}; the text below describes ${period}.`;
 }
 
 export default function RuleRow({ rule, evaluation, highlight, placeIds, asOf }: RuleRowProps) {
@@ -113,13 +134,14 @@ export default function RuleRow({ rule, evaluation, highlight, placeIds, asOf }:
             className="relative overflow-hidden"
           >
             <div className="flex flex-col gap-3 pb-4">
+              {dated.textDiffers && <p className="text-caption text-ink-muted">{periodNote(dated.entry, dated.textEntry)}</p>}
               <p className="text-ui text-ink">{rule.requirement}</p>
 
-              <blockquote className="relative rounded-[var(--radius-chip)] bg-surface-sunk py-2.5 pl-4 pr-3 text-ui text-ink">
-                <span aria-hidden className="absolute inset-y-2 left-0 w-[2px] rounded-full bg-ink/70" />
-                <span className="eyebrow mb-1 block text-ink-muted">Source text, quoted exactly</span>
-                <p className="font-mono text-[0.8125rem] leading-[1.55]">“{rule.quoted_span}”</p>
-              </blockquote>
+              {dated.textDiffers && dated.entry ? (
+                <Quote label={`Source text for the selected date: ${entryLabel(dated.entry, rule.source_doc_id)}`} text={dated.entry.quoted_span} />
+              ) : (
+                <Quote label="Source text, quoted exactly" text={rule.quoted_span} />
+              )}
 
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[0.75rem] text-ink-muted">
                 {href ? (
@@ -135,15 +157,10 @@ export default function RuleRow({ rule, evaluation, highlight, placeIds, asOf }:
                 {rule.source_in_supplied_corpus === false && <span className="font-sans text-caption">Source captured from a link-only page (not in the supplied corpus)</span>}
               </div>
 
-              {dated.entry && (
-                <blockquote className="relative rounded-[var(--radius-chip)] bg-surface-sunk py-2.5 pl-4 pr-3 text-ui text-ink">
-                  <span aria-hidden className="absolute inset-y-2 left-0 w-[2px] rounded-full bg-ink/70" />
-                  <span className="eyebrow mb-1 block text-ink-muted">
-                    {dated.entry.value} applies {periodLabel(dated.entry.from, dated.entry.to)}
-                    {dated.entry.source_doc_id && dated.entry.source_doc_id !== rule.source_doc_id ? ` (${dated.entry.source_doc_id})` : ""}
-                  </span>
-                  <p className="font-mono text-[0.8125rem] leading-[1.55]">“{dated.entry.quoted_span}”</p>
-                </blockquote>
+              {dated.textDiffers && dated.entry ? (
+                <Quote label={dated.textEntry ? `Source text for ${periodLabel(dated.textEntry.from, dated.textEntry.to)}` : "Source text for another period"} text={rule.quoted_span} />
+              ) : (
+                dated.entry && <Quote label={entryLabel(dated.entry, rule.source_doc_id)} text={dated.entry.quoted_span} />
               )}
 
               <ChecksTable evaluation={evaluation} />

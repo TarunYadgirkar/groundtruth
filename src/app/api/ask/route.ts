@@ -18,7 +18,7 @@ Rules you must follow:
 - Every claim about a law must cite the team_rule_id it comes from, and every cited id goes in cited_rule_ids.
 - If the records don't answer the question, say "That's not in the record for this address." and explain what is missing (for example a building fact marked unknown).
 - "unknown" means coverage depends on a fact the public data lacks. Explain which fact. Never guess it.
-- key_value is the figure in force on the as-of date. If it says it is not stated for this date, say the record has no figure for that date; never substitute another period's figure.
+- key_value is the figure in force on the as-of date. When requirement_note is present, the requirement text states another period's figure; use key_value instead. If it says it is not stated for this date, say the record has no figure for that date; never substitute another period's figure.
 - "pending" means a bill, not law. "not_yet_effective" means enacted but not yet in force on the as-of date. Keep enacted and pending law clearly separate.
 - Never suggest ways to avoid a rule. Never present the answer as legal advice.
 - Keep the answer under 90 words, plain language, no markdown.
@@ -45,6 +45,10 @@ function buildContext(address: Address, asOf: string): string {
       jurisdiction: r?.jurisdiction,
       category: r?.category,
       requirement: r?.requirement,
+      ...(dated?.textDiffers && {
+        requirement_note: `The requirement text describes ${dated.textEntry ? `${dated.textEntry.from ?? "…"} to ${dated.textEntry.to ?? "…"}` : "a different period"}, not the as-of date. Use key_value for the as-of date.`,
+        dated_quote: dated.entry?.quoted_span,
+      }),
       key_value: dated?.scheduled ? (dated.value ?? "not stated in the record for this as-of date") : r?.key_value,
       effective_date: r?.effective_date,
       citation: r?.citation,
