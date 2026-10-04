@@ -50,6 +50,8 @@ npx tsx pipeline/capture.ts         # fetch permitted link-only pages, one at a 
 npx tsx pipeline/extract.ts         # Module A: per-document extraction (data/extractions/)
 npx tsx pipeline/consolidate.ts     # verify quotes, merge, precedence -> data/rules.json
 npx tsx pipeline/prefer-supplied.ts # cite supplied-corpus text where it supports the rule; mark captured-only rules
+npx tsx pipeline/schedule.ts        # dated values (annual increases, deposit interest) as verified value_schedule
+npx tsx pipeline/complete-quotes.ts # extend quotes that stop mid-sentence to the sentence end (exact source text)
 npx tsx pipeline/geocode.ts         # Module B: legal jurisdiction for 500 addresses
 npx tsx pipeline/rooftop.ts         # camera points for the 3D view only (no effect on jurisdiction or rules)
 npx tsx pipeline/zips.ts            # display ZIPs for rows with out-of-state mailing ZIPs
