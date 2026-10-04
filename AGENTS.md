@@ -10,7 +10,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 ## Ongoing
 
-Updated: 2026-10-04T07:01Z (Oct 4, 12:01 AM PT) by claude session
+Updated: 2026-10-04T11:20Z (Oct 4, 4:20 AM PT) by claude session
 
 Context: Hack-Nation 7 (Oct 3–4, 2026), RealPage "Rental Housing Law Navigator" challenge, solo (Tarun Yadgirkar), team "Groundtruth". **Hard deadline Sun Oct 4, 6:00 AM PT**, and BOTH HackOS and the Google Form must be submitted (no resubmissions on the form). Live: https://groundtruth-rho.vercel.app · Repo: https://github.com/TarunYadgirkar/groundtruth. Rules and logistics notes are in `../README.md` and `../EVENT-CONTEXT.md` (outside the repo). The v5 participant guide in `starter/README.md` is authoritative: no score.py, no dev answer key, no hour-16 ordinance. `starter/` is byte-identical to the organizer's Discord zip `MIT-hackathon-PARTICIPANT-PACK-CLEAN-NO-HOUR16.zip` (checked with diff). The organizer (Discord, 3:20 PM) said captured link-only texts do not count toward the citation metric.
 
@@ -33,12 +33,14 @@ In flight:
 - none
 
 Blocked:
-- Team intro video (≤60 s, MP4/MOV, Tarun on camera) and team photo: needed for both HackOS and the Google Form. Only Tarun can make these.
+- none
 
-Next (remaining: team video and photo from Tarun, then HackOS and Google Form submissions):
-0. Follow `PLAN.md` for the updated remaining-work checklist. October 3 review found unresolved temporal-value errors, heading-only citations, incomplete Hoboken/Newark local coverage, conditional beta rules marked applies, and Q&A citation validation that fails open. Published T1–T5 match, but this is not complete legal accuracy or an official score. Correctness and copy cleanup precede optional additions.
-1. Get the team intro video and photo from Tarun (put them in `assets/generated/`).
-2. HackOS (app.hack-nation.ai → Team & Submission): upload the team photo, team intro, product demo = `demo-vo.mp4`, technical walkthrough = `tech-vo.mp4`, then Save draft. Show Tarun before clicking Submit project.
-3. Google Form (forms.gle/VS65tsovASMuBwEn9): Solo; team name N/A; email tyadgirkar@gmail.com; name; affiliation (draft said Berkeley); challenge "2. RealPage"; upload the 3 videos; GitHub URL; live demo URL; team picture; T&C. Show Tarun the filled form before Submit (no resubmissions).
-4. Complete the P1 accuracy, evidence, and copy tasks in `PLAN.md` before optional additions. Missing Newark/Hoboken coverage is a correctness gap, not optional polish. Qualify audit figures as AI-assisted sample results. Shared API budgets and reproducible rebuild steps are tracked under P2.
+SUBMITTED (Oct 4, ~4:15 AM PT), both required:
+- HackOS: team "Groundtruth", status submitted · eligible, 3/3 videos plus team photo. Uploaded copies were ~9 MB re-encodes (browser tool limit), 1080p. Edits stay open until 6:15 AM PT.
+- Google Form: "Your response has been recorded." Solo, N/A, tarun_yadgirkar@berkeley.edu, University of California, Berkeley, 2. RealPage, full-quality videos plus photo, GitHub, live URL, T&C. No resubmissions allowed.
+- Team video: `assets/generated/videos/team-vo.mp4` (56.9 s, cut from Tarun's 61 s take, 14th-hackathon line removed). Photo: `assets/generated/team-photo.jpg`. Copies of all 4 upload files: `../submissions/`.
+
+Next (post-submission, optional):
+1. Wait for judging. Nothing else is required.
+2. If continuing the project: remaining PLAN.md P1/P2 items (shared rate-limit store, held-out check set, copy cleanup).
 5. Local dev: `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=<key> npx next dev -p 3000`. The `.env.local` copy of the Maps key was mistyped earlier; the console key ends `…3y8`, and process env overrides the file. Keys live in `.env.local` (Anthropic, ElevenLabs); never commit them. The pipeline's server-side Google geocoding (`geocode.ts`/`rooftop.ts`) needs an unrestricted key and is already done.
