@@ -21,6 +21,15 @@ export interface Coverage {
   owner_type_dependent: boolean;
   owner_exemption_max_units: number | null;
   unverifiable_conditions: string | null;
+  depends_on_unknown_fact?: boolean;
+}
+
+export interface ScheduledValue {
+  from: string | null;
+  to: string | null;
+  value: string;
+  quoted_span: string;
+  source_doc_id?: string;
 }
 
 export interface Rule {
@@ -49,6 +58,7 @@ export interface Rule {
   conflict_note: string | null;
   conflicts_with: string[];
   source_in_supplied_corpus?: boolean;
+  value_schedule?: ScheduledValue[];
 }
 
 export interface Address {

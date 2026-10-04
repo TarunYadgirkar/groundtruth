@@ -1,4 +1,4 @@
-import type { Address, CheckRow, Evaluation, LookupResult, Rule } from "./types";
+import type { Address, CheckRow, Evaluation, LookupResult, Rule, ScheduledValue } from "./types";
 
 export const DEFAULT_AS_OF = "2026-10-01";
 
@@ -138,14 +138,17 @@ function ownerCheck(rule: Rule, units: UnitRange): Check {
   return { covered: "unknown", reasons: ["Coverage depends on the owner type or owner occupancy, which the records deliberately omit."], rows: [{ fact: "Owner type", building: "Not in records", requirement: "Depends on owner", outcome: "unknown" }] };
 }
 
+// Coverage that turns on a fact public records lack (a subsidy program, a condo conversion, a demolition)
+// cannot be confirmed, so the rule is unknown rather than applies.
 function populationCheck(rule: Rule): Check {
   const note = rule.coverage.unverifiable_conditions ?? "";
-  if (!/^RESTRICTED:/i.test(note)) return { covered: "yes", reasons: [], rows: [] };
-  const population = note.replace(/^RESTRICTED:\s*/i, "");
+  const restricted = /^RESTRICTED:/i.test(note);
+  if (!restricted && !rule.coverage.depends_on_unknown_fact) return { covered: "yes", reasons: [], rows: [] };
+  const condition = note.replace(/^RESTRICTED:\s*/i, "") || "a condition not in the records";
   return {
     covered: "unknown",
-    reasons: [`Covers only ${population}; program participation is not in the records.`],
-    rows: [{ fact: "Program / subsidy", building: "Not in records", requirement: population, outcome: "unknown" }],
+    reasons: [restricted ? `Covers only ${condition}; program participation is not in the records.` : `Coverage depends on ${condition}, which is not in the records.`],
+    rows: [{ fact: restricted ? "Program / subsidy" : "Other condition", building: "Not in records", requirement: condition, outcome: "unknown" }],
   };
 }
 
@@ -174,6 +177,21 @@ function evaluateOne(rule: Rule, a: Address, asOf: string): { result: LookupResu
   }
 
   return { result: covered === "unknown" ? "unknown" : "applies", reasons, rows };
+}
+
+export interface ValueAt {
+  value: string | null;
+  entry: ScheduledValue | null;
+  scheduled: boolean;
+}
+
+// Dated values (annual allowable increases, relocation amounts, interest rates) come from the rule's
+// value_schedule; outside every stated interval the value is unknown rather than the latest one.
+export function valueAt(rule: Pick<Rule, "key_value" | "value_schedule">, asOf: string): ValueAt {
+  const schedule = rule.value_schedule ?? [];
+  if (!schedule.length) return { value: rule.key_value, entry: null, scheduled: false };
+  const entry = schedule.find((e) => (!e.from || normalizeDate(e.from)! <= asOf) && (!e.to || normalizeDate(e.to)! >= asOf)) ?? null;
+  return { value: entry?.value ?? null, entry, scheduled: true };
 }
 
 export function evaluateAddress(address: Address, rules: Rule[], asOf: string = DEFAULT_AS_OF): Evaluation[] {

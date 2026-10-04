@@ -4,6 +4,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowSquareOutIcon, CaretDownIcon, FlagIcon, ScalesIcon } from "@phosphor-icons/react";
 import { ruleById } from "@/lib/data";
+import { valueAt } from "@/lib/engine";
 import { formatDate } from "@/lib/labels";
 import type { Evaluation, Rule } from "@/lib/types";
 import ChecksTable from "./ChecksTable";
@@ -14,6 +15,7 @@ interface RuleRowProps {
   evaluation: Evaluation;
   highlight: number | null;
   placeIds: ReadonlySet<string>;
+  asOf: string;
 }
 
 function safeUrl(url: string): string | undefined {
@@ -37,7 +39,12 @@ function conflictTargets(rule: Rule, placeIds: ReadonlySet<string>): string {
     .join(", ");
 }
 
-export default function RuleRow({ rule, evaluation, highlight, placeIds }: RuleRowProps) {
+function periodLabel(from: string | null, to: string | null): string {
+  if (from && to) return `${formatDate(from)} to ${formatDate(to)}`;
+  return from ? `from ${formatDate(from)}` : `until ${formatDate(to!)}`;
+}
+
+export default function RuleRow({ rule, evaluation, highlight, placeIds, asOf }: RuleRowProps) {
   const [open, setOpen] = useState(false);
   const bodyId = useId();
   const ref = useRef<HTMLLIElement>(null);
@@ -56,6 +63,7 @@ export default function RuleRow({ rule, evaluation, highlight, placeIds }: RuleR
   }, [highlight, reduce]);
 
   const href = safeUrl(rule.source_url);
+  const dated = valueAt(rule, asOf);
 
   return (
     <li ref={ref} className="relative">
@@ -75,6 +83,8 @@ export default function RuleRow({ rule, evaluation, highlight, placeIds }: RuleR
       >
         <div className="min-w-0 flex-1">
           <div className="text-ui font-bold text-ink">{rule.title}</div>
+          {dated.value && <div className="tnum mt-0.5 text-caption text-ink">{dated.value}</div>}
+          {dated.scheduled && !dated.value && <div className="mt-0.5 text-caption text-ink-muted">Rate not stated for {formatDate(asOf)}</div>}
           <div className="mt-0.5 flex flex-wrap items-center gap-x-2 font-mono text-[0.75rem] text-ink-muted">
             <span className="break-words">{rule.citation}</span>
             {evaluation.conflict_flag && (
@@ -124,6 +134,17 @@ export default function RuleRow({ rule, evaluation, highlight, placeIds }: RuleR
                 {rule.effective_date && <span className="tnum">Effective {formatDate(rule.effective_date)}</span>}
                 {rule.source_in_supplied_corpus === false && <span className="font-sans text-caption">Source captured from a link-only page (not in the supplied corpus)</span>}
               </div>
+
+              {dated.entry && (
+                <blockquote className="relative rounded-[var(--radius-chip)] bg-surface-sunk py-2.5 pl-4 pr-3 text-ui text-ink">
+                  <span aria-hidden className="absolute inset-y-2 left-0 w-[2px] rounded-full bg-ink/70" />
+                  <span className="eyebrow mb-1 block text-ink-muted">
+                    {dated.entry.value} applies {periodLabel(dated.entry.from, dated.entry.to)}
+                    {dated.entry.source_doc_id && dated.entry.source_doc_id !== rule.source_doc_id ? ` (${dated.entry.source_doc_id})` : ""}
+                  </span>
+                  <p className="font-mono text-[0.8125rem] leading-[1.55]">“{dated.entry.quoted_span}”</p>
+                </blockquote>
+              )}
 
               <ChecksTable evaluation={evaluation} />
 

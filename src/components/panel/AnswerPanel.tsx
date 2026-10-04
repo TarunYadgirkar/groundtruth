@@ -203,7 +203,7 @@ export default function AnswerPanel({ address, record, live, hasUserFacts, onFac
                       ) : (
                         <ul className="flex flex-col divide-y divide-hairline">
                           {list.map((r) => (
-                            <RuleRow key={r.rule.team_rule_id} rule={r.rule} evaluation={r.evaluation} highlight={highlight?.id === r.rule.team_rule_id ? highlight.nonce : null} placeIds={placeIds} />
+                            <RuleRow key={r.rule.team_rule_id} rule={r.rule} evaluation={r.evaluation} highlight={highlight?.id === r.rule.team_rule_id ? highlight.nonce : null} placeIds={placeIds} asOf={asOf} />
                           ))}
                         </ul>
                       )}
@@ -225,7 +225,7 @@ export default function AnswerPanel({ address, record, live, hasUserFacts, onFac
                     </div>
                     <ul className="mt-1 flex flex-col divide-y divide-hairline">
                       {sortRows(pending).map((r) => (
-                        <RuleRow key={r.rule.team_rule_id} rule={r.rule} evaluation={r.evaluation} highlight={highlight?.id === r.rule.team_rule_id ? highlight.nonce : null} placeIds={placeIds} />
+                        <RuleRow key={r.rule.team_rule_id} rule={r.rule} evaluation={r.evaluation} highlight={highlight?.id === r.rule.team_rule_id ? highlight.nonce : null} placeIds={placeIds} asOf={asOf} />
                       ))}
                     </ul>
                   </motion.section>
